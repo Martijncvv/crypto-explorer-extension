@@ -42,7 +42,9 @@ function fetchCoinsList() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "setStoredCoins": () => (/* binding */ setStoredCoins),
-/* harmony export */   "getStoredCoins": () => (/* binding */ getStoredCoins)
+/* harmony export */   "getStoredCoins": () => (/* binding */ getStoredCoins),
+/* harmony export */   "setStoredTicker": () => (/* binding */ setStoredTicker),
+/* harmony export */   "getStoredTicker": () => (/* binding */ getStoredTicker)
 /* harmony export */ });
 function setStoredCoins(coins) {
     const vals = {
@@ -60,6 +62,23 @@ function getStoredCoins() {
         chrome.storage.local.get(keys, (res) => {
             var _a;
             resolve((_a = res.coins) !== null && _a !== void 0 ? _a : []);
+        });
+    });
+}
+function setStoredTicker(ticker) {
+    return new Promise((resolve) => {
+        chrome.storage.local.set({ ticker: ticker }, function () {
+            console.log('Value is set to ' + ticker);
+            resolve();
+        });
+    });
+}
+function getStoredTicker() {
+    return new Promise((resolve) => {
+        chrome.storage.local.get(['ticker'], function (result) {
+            var _a;
+            console.log('Value currently is ' + result.ticker);
+            resolve((_a = result.ticker) !== null && _a !== void 0 ? _a : '');
         });
     });
 }
@@ -134,8 +153,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_storage__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/storage */ "./src/utils/storage.ts");
 
 
-console.log('BACKGROUND CONSOLE LOG');
-chrome.runtime.onInstalled.addListener(() => {
+console.log('BACKGROUND script is running');
+chrome.runtime.onStartup.addListener(() => {
     (0,_utils_api__WEBPACK_IMPORTED_MODULE_0__.fetchCoinsList)().then((data) => {
         (0,_utils_storage__WEBPACK_IMPORTED_MODULE_1__.setStoredCoins)(data);
         console.log('Coins fetched');

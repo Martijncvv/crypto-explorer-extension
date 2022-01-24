@@ -365,10 +365,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_InfoField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/InfoField */ "./src/components/InfoField/index.tsx");
 /* harmony import */ var _components_LinksField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/LinksField */ "./src/components/LinksField/index.tsx");
 /* harmony import */ var _components_PriceGraphField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/PriceGraphField */ "./src/components/PriceGraphField/index.tsx");
-/* harmony import */ var _utils_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/storage */ "./src/utils/storage.ts");
-/* harmony import */ var _popup_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./popup.css */ "./src/popup/popup.css");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _popup_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./popup.css */ "./src/popup/popup.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _utils_storage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../utils/storage */ "./src/utils/storage.ts");
 
 
 
@@ -381,26 +381,24 @@ __webpack_require__.r(__webpack_exports__);
 
 const links = ['link1', 'link2', 'link3'];
 const App = () => {
-    const [coinList, setCoinList] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)([]);
-    (0,react__WEBPACK_IMPORTED_MODULE_8__.useEffect)(() => {
-        (0,_utils_storage__WEBPACK_IMPORTED_MODULE_6__.getStoredCoins)().then((coinList) => {
-            setCoinList(coinList);
-            console.log('coindata from storage');
-            console.log(coinList);
+    const [coinList, setCoinList] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)([]);
+    (0,react__WEBPACK_IMPORTED_MODULE_7__.useEffect)(() => {
+        (0,_utils_storage__WEBPACK_IMPORTED_MODULE_9__.getStoredTicker)().then((ticker) => {
+            console.log('popup ticker :', ticker);
         });
     }, []);
-    return (react__WEBPACK_IMPORTED_MODULE_8__.createElement(react__WEBPACK_IMPORTED_MODULE_8__.Fragment, null,
-        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_HeaderField__WEBPACK_IMPORTED_MODULE_2__.default, { coinName: 'HEADDERR' }),
-        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "InfoField1", attributeValue: 1 }),
-        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "InfoField22", attributeValue: 22 }),
-        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_LinksField__WEBPACK_IMPORTED_MODULE_4__.default, { links: links }),
-        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_DescriptionField__WEBPACK_IMPORTED_MODULE_0__.default, { coinDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." }),
-        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_PriceGraphField__WEBPACK_IMPORTED_MODULE_5__.default, { priceData: "pricedata_test" }),
-        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_FooterField__WEBPACK_IMPORTED_MODULE_1__.default, null)));
+    return (react__WEBPACK_IMPORTED_MODULE_7__.createElement(react__WEBPACK_IMPORTED_MODULE_7__.Fragment, null,
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_HeaderField__WEBPACK_IMPORTED_MODULE_2__.default, { coinName: 'HEADDERR' }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "InfoField1", attributeValue: 1 }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "InfoField22", attributeValue: 22 }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_LinksField__WEBPACK_IMPORTED_MODULE_4__.default, { links: links }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_DescriptionField__WEBPACK_IMPORTED_MODULE_0__.default, { coinDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_PriceGraphField__WEBPACK_IMPORTED_MODULE_5__.default, { priceData: "pricedata_test" }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_FooterField__WEBPACK_IMPORTED_MODULE_1__.default, null)));
 };
 const root = document.createElement('div');
 document.body.appendChild(root);
-react_dom__WEBPACK_IMPORTED_MODULE_9__.render(react__WEBPACK_IMPORTED_MODULE_8__.createElement(App, null), root);
+react_dom__WEBPACK_IMPORTED_MODULE_8__.render(react__WEBPACK_IMPORTED_MODULE_7__.createElement(App, null), root);
 
 
 /***/ }),
@@ -414,7 +412,9 @@ react_dom__WEBPACK_IMPORTED_MODULE_9__.render(react__WEBPACK_IMPORTED_MODULE_8__
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "setStoredCoins": () => (/* binding */ setStoredCoins),
-/* harmony export */   "getStoredCoins": () => (/* binding */ getStoredCoins)
+/* harmony export */   "getStoredCoins": () => (/* binding */ getStoredCoins),
+/* harmony export */   "setStoredTicker": () => (/* binding */ setStoredTicker),
+/* harmony export */   "getStoredTicker": () => (/* binding */ getStoredTicker)
 /* harmony export */ });
 function setStoredCoins(coins) {
     const vals = {
@@ -432,6 +432,23 @@ function getStoredCoins() {
         chrome.storage.local.get(keys, (res) => {
             var _a;
             resolve((_a = res.coins) !== null && _a !== void 0 ? _a : []);
+        });
+    });
+}
+function setStoredTicker(ticker) {
+    return new Promise((resolve) => {
+        chrome.storage.local.set({ ticker: ticker }, function () {
+            console.log('Value is set to ' + ticker);
+            resolve();
+        });
+    });
+}
+function getStoredTicker() {
+    return new Promise((resolve) => {
+        chrome.storage.local.get(['ticker'], function (result) {
+            var _a;
+            console.log('Value currently is ' + result.ticker);
+            resolve((_a = result.ticker) !== null && _a !== void 0 ? _a : '');
         });
     });
 }

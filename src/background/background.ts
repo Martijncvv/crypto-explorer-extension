@@ -1,9 +1,9 @@
 import { fetchCoinsList } from '../utils/api'
 import { setStoredCoins } from '../utils/storage'
 
-console.log('BACKGROUND CONSOLE LOG')
+console.log('BACKGROUND script is running')
 
-chrome.runtime.onInstalled.addListener(() => {
+chrome.runtime.onStartup.addListener(() => {
 	fetchCoinsList().then((data) => {
 		setStoredCoins(data)
 		console.log('Coins fetched')

@@ -10,16 +10,15 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 import { CoinGeckoCoinList } from '../utils/api'
+import { getStoredTicker } from '../utils/storage'
 
 const links: string[] = ['link1', 'link2', 'link3']
 const App: React.FC<{}> = () => {
 	const [coinList, setCoinList] = useState<CoinGeckoCoinList>([])
 
 	useEffect(() => {
-		getStoredCoins().then((coinList) => {
-			setCoinList(coinList)
-			console.log('coindata from storage')
-			console.log(coinList)
+		getStoredTicker().then((ticker) => {
+			console.log('popup ticker :', ticker)
 		})
 	}, [])
 
