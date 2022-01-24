@@ -2,6 +2,32 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/HeaderField/HeaderField.css":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/HeaderField/HeaderField.css ***!
+  \******************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#header {\n\theight: 66px;\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n", "",{"version":3,"sources":["webpack://./src/components/HeaderField/HeaderField.css"],"names":[],"mappings":"AAAA;CACC,YAAY;CACZ;;;;EAIC;AACF","sourcesContent":["#header {\n\theight: 66px;\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/popup/popup.css":
 /*!*******************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/popup/popup.css ***!
@@ -21,10 +47,39 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n  background-color: #1c1c1c;\n}\n", "",{"version":3,"sources":["webpack://./src/popup/popup.css"],"names":[],"mappings":"AAAA;EACE,yBAAyB;AAC3B","sourcesContent":["body {\n  background-color: #1c1c1c;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n\twidth: 285px;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n\nh1 {\n\tmargin: 0;\n}\n", "",{"version":3,"sources":["webpack://./src/popup/popup.css"],"names":[],"mappings":"AAAA;CACC,YAAY;CACZ,UAAU;CACV,SAAS;CACT,oCAAoC;AACrC;;AAEA;CACC,SAAS;AACV","sourcesContent":["body {\n\twidth: 285px;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n\nh1 {\n\tmargin: 0;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
+
+/***/ }),
+
+/***/ "./src/components/HeaderField/HeaderField.css":
+/*!****************************************************!*\
+  !*** ./src/components/HeaderField/HeaderField.css ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_HeaderField_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./HeaderField.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/HeaderField/HeaderField.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_HeaderField_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_HeaderField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
@@ -147,13 +202,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _HeaderField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HeaderField */ "./src/components/HeaderField/HeaderField.tsx");
+/* harmony import */ var _HeaderField_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HeaderField.css */ "./src/components/HeaderField/HeaderField.css");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
 const HeaderField = ({ coinName }) => {
-    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null,
-        "test",
+    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "header" },
         react__WEBPACK_IMPORTED_MODULE_1__.createElement("h1", null, coinName)));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeaderField);
@@ -305,15 +359,17 @@ __webpack_require__.r(__webpack_exports__);
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _components_InfoField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/InfoField */ "./src/components/InfoField/index.tsx");
-/* harmony import */ var _components_HeaderField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/HeaderField */ "./src/components/HeaderField/index.tsx");
-/* harmony import */ var _components_LinksField__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/LinksField */ "./src/components/LinksField/index.tsx");
-/* harmony import */ var _components_DescriptionField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/DescriptionField */ "./src/components/DescriptionField/index.tsx");
-/* harmony import */ var _components_FooterField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/FooterField */ "./src/components/FooterField/index.tsx");
+/* harmony import */ var _components_DescriptionField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/DescriptionField */ "./src/components/DescriptionField/index.tsx");
+/* harmony import */ var _components_FooterField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/FooterField */ "./src/components/FooterField/index.tsx");
+/* harmony import */ var _components_HeaderField__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/HeaderField */ "./src/components/HeaderField/index.tsx");
+/* harmony import */ var _components_InfoField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/InfoField */ "./src/components/InfoField/index.tsx");
+/* harmony import */ var _components_LinksField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/LinksField */ "./src/components/LinksField/index.tsx");
 /* harmony import */ var _components_PriceGraphField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/PriceGraphField */ "./src/components/PriceGraphField/index.tsx");
-/* harmony import */ var _popup_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./popup.css */ "./src/popup/popup.css");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _utils_storage__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../utils/storage */ "./src/utils/storage.ts");
+/* harmony import */ var _popup_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./popup.css */ "./src/popup/popup.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+
 
 
 
@@ -325,18 +381,60 @@ __webpack_require__.r(__webpack_exports__);
 
 const links = ['link1', 'link2', 'link3'];
 const App = () => {
-    return (react__WEBPACK_IMPORTED_MODULE_7__.createElement(react__WEBPACK_IMPORTED_MODULE_7__.Fragment, null,
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_HeaderField__WEBPACK_IMPORTED_MODULE_1__.default, { coinName: 'HEADDERR' }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_0__.default, { attributeName: "InfoField1", attributeValue: 1 }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_0__.default, { attributeName: "InfoField22", attributeValue: 22 }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_LinksField__WEBPACK_IMPORTED_MODULE_2__.default, { links: links }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_DescriptionField__WEBPACK_IMPORTED_MODULE_3__.default, { coinDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_PriceGraphField__WEBPACK_IMPORTED_MODULE_5__.default, { priceData: "pricedata_test" }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_FooterField__WEBPACK_IMPORTED_MODULE_4__.default, null)));
+    const [coinList, setCoinList] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)([]);
+    (0,react__WEBPACK_IMPORTED_MODULE_8__.useEffect)(() => {
+        (0,_utils_storage__WEBPACK_IMPORTED_MODULE_6__.getStoredCoins)().then((coinList) => {
+            setCoinList(coinList);
+            console.log('coindata from storage');
+            console.log(coinList);
+        });
+    }, []);
+    return (react__WEBPACK_IMPORTED_MODULE_8__.createElement(react__WEBPACK_IMPORTED_MODULE_8__.Fragment, null,
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_HeaderField__WEBPACK_IMPORTED_MODULE_2__.default, { coinName: 'HEADDERR' }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "InfoField1", attributeValue: 1 }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "InfoField22", attributeValue: 22 }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_LinksField__WEBPACK_IMPORTED_MODULE_4__.default, { links: links }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_DescriptionField__WEBPACK_IMPORTED_MODULE_0__.default, { coinDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_PriceGraphField__WEBPACK_IMPORTED_MODULE_5__.default, { priceData: "pricedata_test" }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_FooterField__WEBPACK_IMPORTED_MODULE_1__.default, null)));
 };
 const root = document.createElement('div');
 document.body.appendChild(root);
-react_dom__WEBPACK_IMPORTED_MODULE_8__.render(react__WEBPACK_IMPORTED_MODULE_7__.createElement(App, null), root);
+react_dom__WEBPACK_IMPORTED_MODULE_9__.render(react__WEBPACK_IMPORTED_MODULE_8__.createElement(App, null), root);
+
+
+/***/ }),
+
+/***/ "./src/utils/storage.ts":
+/*!******************************!*\
+  !*** ./src/utils/storage.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "setStoredCoins": () => (/* binding */ setStoredCoins),
+/* harmony export */   "getStoredCoins": () => (/* binding */ getStoredCoins)
+/* harmony export */ });
+function setStoredCoins(coins) {
+    const vals = {
+        coins,
+    };
+    return new Promise((resolve) => {
+        chrome.storage.local.set(vals, () => {
+            resolve();
+        });
+    });
+}
+function getStoredCoins() {
+    const keys = ['coins'];
+    return new Promise((resolve) => {
+        chrome.storage.local.get(keys, (res) => {
+            var _a;
+            resolve((_a = res.coins) !== null && _a !== void 0 ? _a : []);
+        });
+    });
+}
 
 
 /***/ })

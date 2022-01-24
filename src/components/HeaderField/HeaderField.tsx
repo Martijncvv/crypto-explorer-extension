@@ -1,4 +1,4 @@
-import './HeaderField'
+import './HeaderField.css'
 import React from 'react'
 
 interface HeaderFieldProps {
@@ -7,8 +7,7 @@ interface HeaderFieldProps {
 
 const HeaderField: React.FC<HeaderFieldProps> = ({ coinName }) => {
 	return (
-		<div>
-			test
+		<div id="header">
 			<h1>{coinName}</h1>
 		</div>
 	)

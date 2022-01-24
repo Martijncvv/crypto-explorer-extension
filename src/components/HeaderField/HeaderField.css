@@ -1,0 +1,8 @@
+#header {
+	height: 66px;
+	background-image: linear-gradient(
+		to right,
+		rgba(254, 95, 157, 1),
+		rgba(255, 139, 79, 1)
+	);
+}

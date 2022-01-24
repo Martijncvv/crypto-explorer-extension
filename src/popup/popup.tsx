@@ -1,15 +1,28 @@
-import InfoField from '../components/InfoField'
-import HeaderField from '../components/HeaderField'
-import LinksField from '../components/LinksField'
 import DescriptionField from '../components/DescriptionField'
 import FooterField from '../components/FooterField'
+import HeaderField from '../components/HeaderField'
+import InfoField from '../components/InfoField'
+import LinksField from '../components/LinksField'
 import PriceGraphField from '../components/PriceGraphField'
+import { getStoredCoins } from '../utils/storage'
 import './popup.css'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
+
+import { CoinGeckoCoinList } from '../utils/api'
 
 const links: string[] = ['link1', 'link2', 'link3']
 const App: React.FC<{}> = () => {
+	const [coinList, setCoinList] = useState<CoinGeckoCoinList>([])
+
+	useEffect(() => {
+		getStoredCoins().then((coinList) => {
+			setCoinList(coinList)
+			console.log('coindata from storage')
+			console.log(coinList)
+		})
+	}, [])
+
 	return (
 		<>
 			<HeaderField coinName={'HEADDERR'} />

@@ -1,4 +1,12 @@
-// TODO: background script
+import { fetchCoinsList } from '../utils/api'
+import { setStoredCoins } from '../utils/storage'
+
+console.log('BACKGROUND CONSOLE LOG')
+
 chrome.runtime.onInstalled.addListener(() => {
-  // TODO: on installed function
+	fetchCoinsList().then((data) => {
+		setStoredCoins(data)
+		console.log('Coins fetched')
+		console.log(data)
+	})
 })
