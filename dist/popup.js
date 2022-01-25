@@ -381,16 +381,40 @@ __webpack_require__.r(__webpack_exports__);
 
 const links = ['link1', 'link2', 'link3'];
 const App = () => {
-    const [coinList, setCoinList] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)([]);
+    const [name, setName] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
+    const [icon, setIcon] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
+    const [ticker, setTicker] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
+    const [priceUSD, setPriceUSD] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [marketCap, setMarketCap] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [marketCapRank, setMarketCapRank] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [totalVolumeUSD, setTotalVolumeUSD] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [athUSD, setAthUSD] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [atlUSD, setAtlUSD] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [circSupply, setCircSupply] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [totalSupply, setTotalSupply] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [description, setDescription] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
+    const [websiteLink, setWebsiteLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
+    const [blockExplorerLink, setBlockExplorerLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
+    const [coingeckoLink, setCoingeckoLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
+    const [twitterLink, setTwitterLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
+    const [telegramLink, setTelegramLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
+    const [priceBTC, setPriceBTC] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [totalVolumeBTC, setTotalVolumeBTC] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [athBTC, setAthBTC] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [atlBTC, setAtlBTC] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
     (0,react__WEBPACK_IMPORTED_MODULE_7__.useEffect)(() => {
-        (0,_utils_storage__WEBPACK_IMPORTED_MODULE_9__.getStoredTicker)().then((ticker) => {
-            console.log('popup ticker :', ticker);
+        (0,_utils_storage__WEBPACK_IMPORTED_MODULE_9__.getStoredCoinsInfo)().then((coinsInfo) => {
+            console.log('popupjs', coinsInfo);
         });
     }, []);
     return (react__WEBPACK_IMPORTED_MODULE_7__.createElement(react__WEBPACK_IMPORTED_MODULE_7__.Fragment, null,
         react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_HeaderField__WEBPACK_IMPORTED_MODULE_2__.default, { coinName: 'HEADDERR' }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "InfoField1", attributeValue: 1 }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "InfoField22", attributeValue: 22 }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "price", attributeValue: 1 }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "market Cap (rank)", attributeValue: 22 }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "total volume (24h)", attributeValue: 22 }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "all-time high", attributeValue: 22 }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "all-time low", attributeValue: 22 }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "Circ. Supply (total)", attributeValue: 22 }),
         react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_LinksField__WEBPACK_IMPORTED_MODULE_4__.default, { links: links }),
         react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_DescriptionField__WEBPACK_IMPORTED_MODULE_0__.default, { coinDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." }),
         react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_PriceGraphField__WEBPACK_IMPORTED_MODULE_5__.default, { priceData: "pricedata_test" }),
@@ -413,8 +437,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "setStoredCoins": () => (/* binding */ setStoredCoins),
 /* harmony export */   "getStoredCoins": () => (/* binding */ getStoredCoins),
-/* harmony export */   "setStoredTicker": () => (/* binding */ setStoredTicker),
-/* harmony export */   "getStoredTicker": () => (/* binding */ getStoredTicker)
+/* harmony export */   "setStoredCoinsInfo": () => (/* binding */ setStoredCoinsInfo),
+/* harmony export */   "getStoredCoinsInfo": () => (/* binding */ getStoredCoinsInfo)
 /* harmony export */ });
 function setStoredCoins(coins) {
     const vals = {
@@ -435,20 +459,22 @@ function getStoredCoins() {
         });
     });
 }
-function setStoredTicker(ticker) {
+function setStoredCoinsInfo(coinsInfo) {
+    const vals = {
+        coinsInfo,
+    };
     return new Promise((resolve) => {
-        chrome.storage.local.set({ ticker: ticker }, function () {
-            console.log('Value is set to ' + ticker);
+        chrome.storage.local.set(vals, () => {
             resolve();
         });
     });
 }
-function getStoredTicker() {
+function getStoredCoinsInfo() {
+    const keys = ['coinsInfo'];
     return new Promise((resolve) => {
-        chrome.storage.local.get(['ticker'], function (result) {
+        chrome.storage.local.get(keys, (res) => {
             var _a;
-            console.log('Value currently is ' + result.ticker);
-            resolve((_a = result.ticker) !== null && _a !== void 0 ? _a : '');
+            resolve((_a = res.coinsInfo) !== null && _a !== void 0 ? _a : []);
         });
     });
 }

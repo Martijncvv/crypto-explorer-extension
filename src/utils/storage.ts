@@ -1,33 +1,8 @@
-import { CoinGeckoCoinList } from './api'
+import { CoinGeckoCoinList, AdvancedCoinInfo } from './api'
 
 export interface LocalStorage {
 	coins?: CoinGeckoCoinList
-	ticker?: string
-	tickerInfo?: AdvancedCoinInfo
-}
-
-export interface AdvancedCoinInfo {
-	symbol: string
-	name: string
-	image: string
-	description: string
-	currentPriceUSD: number
-	totalVolumeUSD: number
-	athUSD: number
-	atlUSD: number
-	marketCapUSD: number
-	currentPriceBTC: number
-	totalVolumeBTC: number
-	athBTC: number
-	atlBTC: number
-	marketCapBTC: number
-	totalSupply: number
-	circSupply: number
-	website: string
-	coingecko: string
-	twitter: string
-	telegram: string
-	blockExplorer: string
+	coinsInfo?: AdvancedCoinInfo[]
 }
 
 export type LocalStorageKeys = keyof LocalStorage
@@ -53,20 +28,25 @@ export function getStoredCoins(): Promise<CoinGeckoCoinList> {
 	})
 }
 
-export function setStoredTicker(ticker: string): Promise<void> {
+export function setStoredCoinsInfo(
+	coinsInfo: AdvancedCoinInfo[]
+): Promise<void> {
+	const vals: LocalStorage = {
+		coinsInfo,
+	}
+
 	return new Promise((resolve) => {
-		chrome.storage.local.set({ ticker: ticker }, function() {
-			console.log('Value is set to ' + ticker)
+		chrome.storage.local.set(vals, () => {
 			resolve()
 		})
 	})
 }
 
-export function getStoredTicker(): Promise<string> {
+export function getStoredCoinsInfo(): Promise<AdvancedCoinInfo[]> {
+	const keys: LocalStorageKeys[] = ['coinsInfo']
 	return new Promise((resolve) => {
-		chrome.storage.local.get(['ticker'], function(result) {
-			console.log('Value currently is ' + result.ticker)
-			resolve(result.ticker ?? '')
+		chrome.storage.local.get(keys, (res: LocalStorage) => {
+			resolve(res.coinsInfo ?? [])
 		})
 	})
 }
