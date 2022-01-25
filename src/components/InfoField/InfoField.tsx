@@ -3,7 +3,7 @@ import React from 'react'
 
 interface InfoFieldProps {
 	attributeName: string
-	attributeValue: number
+	attributeValue: string
 }
 
 const InfoField: React.FC<InfoFieldProps> = ({
@@ -12,8 +12,9 @@ const InfoField: React.FC<InfoFieldProps> = ({
 }) => {
 	return (
 		<div>
-			<h1>{attributeName}</h1>
-			<h1>{attributeValue}</h1>
+			<p>
+				{attributeName} {attributeValue}
+			</p>
 		</div>
 	)
 }

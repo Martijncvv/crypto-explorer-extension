@@ -6,28 +6,42 @@ export interface SimpleCoinInfo {
 	name: string
 }
 export interface AdvancedCoinInfo {
+	id: string
 	symbol: string
 	name: string
-	image: string
+	image: size
 	coingecko_rank: number
-	description: string
-	currentPriceUSD: number
-	totalVolumeUSD: number
-	athUSD: number
-	atlUSD: number
-	marketCapUSD: number
-	currentPriceBTC: number
-	totalVolumeBTC: number
-	athBTC: number
-	atlBTC: number
-	marketCapBTC: number
-	totalSupply: number
-	circSupply: number
-	website: string
-	coingecko: string
-	twitter: string
-	telegram: string
-	blockExplorer: string
+	description: language
+	market_data: market_data
+	market_cap_rank: number
+	links: links
+}
+export interface market_data {
+	market_cap: quote
+	current_price: quote
+	total_volume: quote
+	ath: quote
+	atl: quote
+	circulating_supply: number
+	total_supply: number
+}
+export interface quote {
+	usd: number
+	btc: number
+}
+export interface language {
+	en: string
+}
+export interface size {
+	large: string
+	small: string
+	thumb: string
+}
+export interface links {
+	homepage: string[]
+	twitter_screen_name: string
+	telegram_channel_identifier: string
+	blockchain_site: string[]
 }
 
 export type CoinGeckoCoinList = SimpleCoinInfo[]

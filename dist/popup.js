@@ -47,7 +47,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n\twidth: 285px;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n\nh1 {\n\tmargin: 0;\n}\n", "",{"version":3,"sources":["webpack://./src/popup/popup.css"],"names":[],"mappings":"AAAA;CACC,YAAY;CACZ,UAAU;CACV,SAAS;CACT,oCAAoC;AACrC;;AAEA;CACC,SAAS;AACV","sourcesContent":["body {\n\twidth: 285px;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n\nh1 {\n\tmargin: 0;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n\twidth: 330px;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n\nh1 {\n\tmargin: 0;\n}\n", "",{"version":3,"sources":["webpack://./src/popup/popup.css"],"names":[],"mappings":"AAAA;CACC,YAAY;CACZ,UAAU;CACV,SAAS;CACT,oCAAoC;AACrC;;AAEA;CACC,SAAS;AACV","sourcesContent":["body {\n\twidth: 330px;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n\nh1 {\n\tmargin: 0;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -168,7 +168,7 @@ __webpack_require__.r(__webpack_exports__);
 
 const FooterField = ({}) => {
     return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null,
-        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null, "Credits too Coingecko fam ")));
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null, "Credits to Coingecko fam ")));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FooterField);
 
@@ -206,7 +206,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
-const HeaderField = ({ coinName }) => {
+const HeaderField = ({ coinName, coinIcon }) => {
     return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "header" },
         react__WEBPACK_IMPORTED_MODULE_1__.createElement("h1", null, coinName)));
 };
@@ -248,8 +248,10 @@ __webpack_require__.r(__webpack_exports__);
 
 const InfoField = ({ attributeName, attributeValue, }) => {
     return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null,
-        react__WEBPACK_IMPORTED_MODULE_1__.createElement("h1", null, attributeName),
-        react__WEBPACK_IMPORTED_MODULE_1__.createElement("h1", null, attributeValue)));
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null,
+            attributeName,
+            " ",
+            attributeValue)));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InfoField);
 
@@ -379,17 +381,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const links = ['link1', 'link2', 'link3'];
 const App = () => {
+    const [quote, setQuote] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('usd');
     const [name, setName] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
     const [icon, setIcon] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
     const [ticker, setTicker] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
-    const [priceUSD, setPriceUSD] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
     const [marketCap, setMarketCap] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
     const [marketCapRank, setMarketCapRank] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [totalVolumeUSD, setTotalVolumeUSD] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [athUSD, setAthUSD] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [atlUSD, setAtlUSD] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
     const [circSupply, setCircSupply] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
     const [totalSupply, setTotalSupply] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
     const [description, setDescription] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
@@ -398,25 +396,57 @@ const App = () => {
     const [coingeckoLink, setCoingeckoLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
     const [twitterLink, setTwitterLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
     const [telegramLink, setTelegramLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
-    const [priceBTC, setPriceBTC] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [totalVolumeBTC, setTotalVolumeBTC] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [athBTC, setAthBTC] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [atlBTC, setAtlBTC] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [price, setPrice] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [totalVolume, setTotalVolume] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [ath, setAth] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    const [atl, setAtl] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
+    function amountFormatter(amount) {
+        if (quote === 'usd') {
+        }
+        return;
+    }
     (0,react__WEBPACK_IMPORTED_MODULE_7__.useEffect)(() => {
         (0,_utils_storage__WEBPACK_IMPORTED_MODULE_9__.getStoredCoinsInfo)().then((coinsInfo) => {
-            console.log('popupjs', coinsInfo);
+            console.log(coinsInfo);
+            let coinInfo = coinsInfo[0];
+            console.log('popup.js coininfo: ', coinInfo);
+            if (coinInfo != undefined) {
+                setName(coinInfo.name);
+                setIcon(coinInfo.image.large);
+                setTicker(coinInfo.symbol);
+                setDescription(coinInfo.description.en);
+                setMarketCap(coinInfo.market_data.market_cap.usd);
+                setMarketCapRank(coinInfo.market_cap_rank);
+                setCircSupply(coinInfo.market_data.circulating_supply);
+                setTotalSupply(coinInfo.market_data.total_supply);
+                setWebsiteLink(coinInfo.links.homepage[0]);
+                setBlockExplorerLink(coinInfo.links.blockchain_site[0]);
+                setCoingeckoLink(`https://www.coingecko.com/en/coins/${coinInfo.id}`);
+                setTwitterLink(coinInfo.links.twitter_screen_name);
+                setTelegramLink(coinInfo.links.telegram_channel_identifier);
+                setPrice(coinInfo.market_data.current_price.usd);
+                setTotalVolume(coinInfo.market_data.total_volume.usd);
+                setAth(coinInfo.market_data.ath.usd);
+                setAtl(coinInfo.market_data.atl.usd);
+            }
         });
     }, []);
     return (react__WEBPACK_IMPORTED_MODULE_7__.createElement(react__WEBPACK_IMPORTED_MODULE_7__.Fragment, null,
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_HeaderField__WEBPACK_IMPORTED_MODULE_2__.default, { coinName: 'HEADDERR' }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "price", attributeValue: 1 }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "market Cap (rank)", attributeValue: 22 }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "total volume (24h)", attributeValue: 22 }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "all-time high", attributeValue: 22 }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "all-time low", attributeValue: 22 }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "Circ. Supply (total)", attributeValue: 22 }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_LinksField__WEBPACK_IMPORTED_MODULE_4__.default, { links: links }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_DescriptionField__WEBPACK_IMPORTED_MODULE_0__.default, { coinDescription: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book." }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_HeaderField__WEBPACK_IMPORTED_MODULE_2__.default, { coinName: name, coinIcon: icon }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: `${ticker} price`, attributeValue: `$${price}` }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "market Cap (rank)", attributeValue: `$${marketCap} (${marketCapRank})` }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "total volume (24h)", attributeValue: `$${totalVolume}` }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "all-time high", attributeValue: `$${ath}` }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "all-time low", attributeValue: `$${atl}` }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "Circ. Supply (total)", attributeValue: `${circSupply} (${totalSupply})` }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_LinksField__WEBPACK_IMPORTED_MODULE_4__.default, { links: [
+                blockExplorerLink,
+                coingeckoLink,
+                twitterLink,
+                telegramLink,
+                websiteLink,
+            ] }),
+        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_DescriptionField__WEBPACK_IMPORTED_MODULE_0__.default, { coinDescription: description }),
         react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_PriceGraphField__WEBPACK_IMPORTED_MODULE_5__.default, { priceData: "pricedata_test" }),
         react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_FooterField__WEBPACK_IMPORTED_MODULE_1__.default, null)));
 };

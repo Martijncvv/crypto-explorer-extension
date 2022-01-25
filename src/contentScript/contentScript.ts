@@ -13,19 +13,19 @@ async function getSelection() {
 		.replace(/[#$?!.,:]/g, '')
 		.toLowerCase()
 
-	if (selectedTicker === '') {
+	if (selectedTicker === '' || selectedTicker.length > 5) {
 		return
 	}
 
 	console.log('mouseup eventListener')
 
 	const coinList = await getStoredCoins()
-	console.log('CoinList: ', coinList)
+	// console.log('CoinList: ', coinList)
 
 	const filteredCoins: SimpleCoinInfo[] = await coinList.filter(
 		(coin) => coin.symbol === selectedTicker
 	)
-	console.log('FilteredCoins: ', filteredCoins)
+	// console.log('FilteredCoins: ', filteredCoins)
 	console.log('selectedTicker: ', selectedTicker)
 
 	let coinsInfo: AdvancedCoinInfo[] = []
@@ -37,17 +37,17 @@ async function getSelection() {
 		})
 	)
 	await console.log('coinsInfo1: ', coinsInfo)
-	// await coinsInfo.sort((a, b) => {
-	// 	if (a.coingecko_rank === 0 || a.coingecko_rank === null) {
-	// 		a.coingecko_rank = 9999
-	// 	}
-	// 	if (b.coingecko_rank === 0 || b.coingecko_rank === null) {
-	// 		b.coingecko_rank = 9999
-	// 	}
+	await coinsInfo.sort((a, b) => {
+		if (a.coingecko_rank === 0 || a.coingecko_rank === null) {
+			a.coingecko_rank = 9999
+		}
+		if (b.coingecko_rank === 0 || b.coingecko_rank === null) {
+			b.coingecko_rank = 9999
+		}
 
-	// 	return a.coingecko_rank - b.coingecko_rank
-	// })
+		return a.coingecko_rank - b.coingecko_rank
+	})
 
-	// await console.log('coinsInfo2: ', coinsInfo)
+	await console.log('coinsInfo2: ', coinsInfo)
 	await setStoredCoinsInfo(coinsInfo)
 }

@@ -183,14 +183,14 @@ function getSelection() {
             .trim()
             .replace(/[#$?!.,:]/g, '')
             .toLowerCase();
-        if (selectedTicker === '') {
+        if (selectedTicker === '' || selectedTicker.length > 5) {
             return;
         }
         console.log('mouseup eventListener');
         const coinList = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_0__.getStoredCoins)();
-        console.log('CoinList: ', coinList);
+        // console.log('CoinList: ', coinList)
         const filteredCoins = yield coinList.filter((coin) => coin.symbol === selectedTicker);
-        console.log('FilteredCoins: ', filteredCoins);
+        // console.log('FilteredCoins: ', filteredCoins)
         console.log('selectedTicker: ', selectedTicker);
         let coinsInfo = [];
         yield Promise.all(filteredCoins.map((coin) => __awaiter(this, void 0, void 0, function* () {
@@ -198,16 +198,16 @@ function getSelection() {
             coinsInfo.push(coinInfo);
         })));
         yield console.log('coinsInfo1: ', coinsInfo);
-        // await coinsInfo.sort((a, b) => {
-        // 	if (a.coingecko_rank === 0 || a.coingecko_rank === null) {
-        // 		a.coingecko_rank = 9999
-        // 	}
-        // 	if (b.coingecko_rank === 0 || b.coingecko_rank === null) {
-        // 		b.coingecko_rank = 9999
-        // 	}
-        // 	return a.coingecko_rank - b.coingecko_rank
-        // })
-        // await console.log('coinsInfo2: ', coinsInfo)
+        yield coinsInfo.sort((a, b) => {
+            if (a.coingecko_rank === 0 || a.coingecko_rank === null) {
+                a.coingecko_rank = 9999;
+            }
+            if (b.coingecko_rank === 0 || b.coingecko_rank === null) {
+                b.coingecko_rank = 9999;
+            }
+            return a.coingecko_rank - b.coingecko_rank;
+        });
+        yield console.log('coinsInfo2: ', coinsInfo);
         yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_0__.setStoredCoinsInfo)(coinsInfo);
     });
 }
