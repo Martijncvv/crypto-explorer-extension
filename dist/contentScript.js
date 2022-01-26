@@ -2,46 +2,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/utils/api.ts":
-/*!**************************!*\
-  !*** ./src/utils/api.ts ***!
-  \**************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "fetchCoinsList": () => (/* binding */ fetchCoinsList),
-/* harmony export */   "fetchCoinInfo": () => (/* binding */ fetchCoinInfo)
-/* harmony export */ });
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list';
-function fetchCoinsList() {
-    return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch(COINGECKO_COINS_LIST_API);
-        const data = yield res.json();
-        return data;
-    });
-}
-function fetchCoinInfo(coinId) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch(`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`);
-        const data = yield res.json();
-        return data;
-    });
-}
-// https://api.coingecko.com/api/v3/coins/ripple?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false
-
-
-/***/ }),
-
 /***/ "./src/utils/storage.ts":
 /*!******************************!*\
   !*** ./src/utils/storage.ts ***!
@@ -50,12 +10,12 @@ function fetchCoinInfo(coinId) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "setStoredCoins": () => (/* binding */ setStoredCoins),
-/* harmony export */   "getStoredCoins": () => (/* binding */ getStoredCoins),
-/* harmony export */   "setStoredCoinsInfo": () => (/* binding */ setStoredCoinsInfo),
-/* harmony export */   "getStoredCoinsInfo": () => (/* binding */ getStoredCoinsInfo)
+/* harmony export */   "setStoredCoinList": () => (/* binding */ setStoredCoinList),
+/* harmony export */   "getStoredCoinList": () => (/* binding */ getStoredCoinList),
+/* harmony export */   "setStoredCoinIds": () => (/* binding */ setStoredCoinIds),
+/* harmony export */   "getStoredCoinIds": () => (/* binding */ getStoredCoinIds)
 /* harmony export */ });
-function setStoredCoins(coins) {
+function setStoredCoinList(coins) {
     const vals = {
         coins,
     };
@@ -65,7 +25,7 @@ function setStoredCoins(coins) {
         });
     });
 }
-function getStoredCoins() {
+function getStoredCoinList() {
     const keys = ['coins'];
     return new Promise((resolve) => {
         chrome.storage.local.get(keys, (res) => {
@@ -74,9 +34,9 @@ function getStoredCoins() {
         });
     });
 }
-function setStoredCoinsInfo(coinsInfo) {
+function setStoredCoinIds(coinIds) {
     const vals = {
-        coinsInfo,
+        coinIds,
     };
     return new Promise((resolve) => {
         chrome.storage.local.set(vals, () => {
@@ -84,12 +44,12 @@ function setStoredCoinsInfo(coinsInfo) {
         });
     });
 }
-function getStoredCoinsInfo() {
-    const keys = ['coinsInfo'];
+function getStoredCoinIds() {
+    const keys = ['coinIds'];
     return new Promise((resolve) => {
         chrome.storage.local.get(keys, (res) => {
             var _a;
-            resolve((_a = res.coinsInfo) !== null && _a !== void 0 ? _a : []);
+            resolve((_a = res.coinIds) !== null && _a !== void 0 ? _a : []);
         });
     });
 }
@@ -161,7 +121,6 @@ var __webpack_exports__ = {};
   \********************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_storage__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/storage */ "./src/utils/storage.ts");
-/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../utils/api */ "./src/utils/api.ts");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -171,7 +130,6 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-
 
 console.log('CONTENTSCRIPT is running');
 window.addEventListener('mouseup', getSelection);
@@ -183,32 +141,20 @@ function getSelection() {
             .trim()
             .replace(/[#$?!.,:]/g, '')
             .toLowerCase();
-        if (selectedTicker === '' || selectedTicker.length > 5) {
+        if (selectedTicker === '' || selectedTicker.length > 6) {
             return;
         }
         console.log('mouseup eventListener');
-        const coinList = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_0__.getStoredCoins)();
-        // console.log('CoinList: ', coinList)
-        const filteredCoins = yield coinList.filter((coin) => coin.symbol === selectedTicker);
-        // console.log('FilteredCoins: ', filteredCoins)
-        console.log('selectedTicker: ', selectedTicker);
-        let coinsInfo = [];
-        yield Promise.all(filteredCoins.map((coin) => __awaiter(this, void 0, void 0, function* () {
-            let coinInfo = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_1__.fetchCoinInfo)(coin.id);
-            coinsInfo.push(coinInfo);
-        })));
-        yield console.log('coinsInfo1: ', coinsInfo);
-        yield coinsInfo.sort((a, b) => {
-            if (a.coingecko_rank === 0 || a.coingecko_rank === null) {
-                a.coingecko_rank = 9999;
-            }
-            if (b.coingecko_rank === 0 || b.coingecko_rank === null) {
-                b.coingecko_rank = 9999;
-            }
-            return a.coingecko_rank - b.coingecko_rank;
+        const coinList = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_0__.getStoredCoinList)();
+        const filteredCoinTickers = yield coinList.filter((coin) => coin.symbol === selectedTicker);
+        console.log('CS: selectedTicker: ', selectedTicker);
+        console.log('CS: filterCoinTickers: ', filteredCoinTickers);
+        let coinIds = [];
+        filteredCoinTickers.forEach((coin) => {
+            coinIds.push(coin.id);
         });
-        yield console.log('coinsInfo2: ', coinsInfo);
-        yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_0__.setStoredCoinsInfo)(coinsInfo);
+        console.log('CS: coinIds: ', coinIds);
+        yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_0__.setStoredCoinIds)(coinIds);
     });
 }
 

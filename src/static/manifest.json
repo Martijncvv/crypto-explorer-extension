@@ -23,5 +23,14 @@
 			"matches": ["<all_urls>"],
 			"js": ["contentScript.js"]
 		}
-	]
+	],
+	"commands": {
+		"_execute_browser_action": {
+			"suggested_key": {
+				"default": "Ctrl+Shift+L",
+				"mac": "MacCtrl+Shift+L"
+			},
+			"description": "Opens CG Explorer"
+		}
+	}
 }

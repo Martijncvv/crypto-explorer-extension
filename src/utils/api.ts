@@ -1,5 +1,7 @@
 const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list'
 
+export type apiStatus = 'idle' | 'fetching' | 'error' | 'finished'
+
 export interface SimpleCoinInfo {
 	id: string
 	symbol: string

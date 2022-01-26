@@ -28,6 +28,32 @@ ___CSS_LOADER_EXPORT___.push([module.id, "#header {\n\theight: 66px;\n\tbackgrou
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/SearchField/SearchField.css":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/SearchField/SearchField.css ***!
+  \******************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/popup/popup.css":
 /*!*******************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/popup/popup.css ***!
@@ -80,6 +106,35 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_HeaderField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./src/components/SearchField/SearchField.css":
+/*!****************************************************!*\
+  !*** ./src/components/SearchField/SearchField.css ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_SearchField_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./SearchField.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/SearchField/SearchField.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_SearchField_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_SearchField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
@@ -354,6 +409,80 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/components/SearchField/SearchField.tsx":
+/*!****************************************************!*\
+  !*** ./src/components/SearchField/SearchField.tsx ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SearchField_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SearchField.css */ "./src/components/SearchField/SearchField.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/storage */ "./src/utils/storage.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
+
+const SearchField = ({ parentCallback }) => {
+    const [searchInput, setSearchInput] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');
+    let [coinSuggestions, setCoinSuggestions] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        getSearchData();
+    }, [searchInput]);
+    function getSearchData() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const coinList = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.getStoredCoinList)();
+            if (searchInput.length != 0) {
+                setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput));
+            }
+        });
+    }
+    function handleCoinButtonClick(coinId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            console.log('handleCoinButtonClick: ', coinId);
+            yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.setStoredCoinIds)([coinId]);
+            yield parentCallback();
+        });
+    }
+    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null,
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null,
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", { type: "text", id: "searchInput", placeholder: "Search Ticker", onChange: (event) => setSearchInput(event.target.value.toLowerCase()) }),
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null, coinSuggestions.map((coin, index) => (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { key: index },
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { onClick: () => handleCoinButtonClick(`${coin.id}`) }, coin.name))))))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchField);
+
+
+/***/ }),
+
+/***/ "./src/components/SearchField/index.tsx":
+/*!**********************************************!*\
+  !*** ./src/components/SearchField/index.tsx ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _SearchField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./SearchField */ "./src/components/SearchField/SearchField.tsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_SearchField__WEBPACK_IMPORTED_MODULE_0__.default);
+
+
+/***/ }),
+
 /***/ "./src/popup/popup.tsx":
 /*!*****************************!*\
   !*** ./src/popup/popup.tsx ***!
@@ -364,13 +493,26 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_DescriptionField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../components/DescriptionField */ "./src/components/DescriptionField/index.tsx");
 /* harmony import */ var _components_FooterField__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/FooterField */ "./src/components/FooterField/index.tsx");
 /* harmony import */ var _components_HeaderField__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/HeaderField */ "./src/components/HeaderField/index.tsx");
-/* harmony import */ var _components_InfoField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/InfoField */ "./src/components/InfoField/index.tsx");
-/* harmony import */ var _components_LinksField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/LinksField */ "./src/components/LinksField/index.tsx");
-/* harmony import */ var _components_PriceGraphField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/PriceGraphField */ "./src/components/PriceGraphField/index.tsx");
-/* harmony import */ var _popup_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./popup.css */ "./src/popup/popup.css");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _utils_storage__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../utils/storage */ "./src/utils/storage.ts");
+/* harmony import */ var _components_SearchField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/SearchField */ "./src/components/SearchField/index.tsx");
+/* harmony import */ var _components_InfoField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/InfoField */ "./src/components/InfoField/index.tsx");
+/* harmony import */ var _components_LinksField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/LinksField */ "./src/components/LinksField/index.tsx");
+/* harmony import */ var _components_PriceGraphField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/PriceGraphField */ "./src/components/PriceGraphField/index.tsx");
+/* harmony import */ var _popup_css__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./popup.css */ "./src/popup/popup.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../utils/api */ "./src/utils/api.ts");
+/* harmony import */ var _utils_storage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../utils/storage */ "./src/utils/storage.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
 
 
 
@@ -382,77 +524,126 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const App = () => {
-    const [quote, setQuote] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('usd');
-    const [name, setName] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
-    const [icon, setIcon] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
-    const [ticker, setTicker] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
-    const [marketCap, setMarketCap] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [marketCapRank, setMarketCapRank] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [circSupply, setCircSupply] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [totalSupply, setTotalSupply] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [description, setDescription] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
-    const [websiteLink, setWebsiteLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
-    const [blockExplorerLink, setBlockExplorerLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
-    const [coingeckoLink, setCoingeckoLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
-    const [twitterLink, setTwitterLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
-    const [telegramLink, setTelegramLink] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)('');
-    const [price, setPrice] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [totalVolume, setTotalVolume] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [ath, setAth] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    const [atl, setAtl] = (0,react__WEBPACK_IMPORTED_MODULE_7__.useState)(0);
-    function amountFormatter(amount) {
-        if (quote === 'usd') {
-        }
-        return;
-    }
-    (0,react__WEBPACK_IMPORTED_MODULE_7__.useEffect)(() => {
-        (0,_utils_storage__WEBPACK_IMPORTED_MODULE_9__.getStoredCoinsInfo)().then((coinsInfo) => {
-            console.log(coinsInfo);
-            let coinInfo = coinsInfo[0];
-            console.log('popup.js coininfo: ', coinInfo);
-            if (coinInfo != undefined) {
-                setName(coinInfo.name);
-                setIcon(coinInfo.image.large);
-                setTicker(coinInfo.symbol);
-                setDescription(coinInfo.description.en);
-                setMarketCap(coinInfo.market_data.market_cap.usd);
-                setMarketCapRank(coinInfo.market_cap_rank);
-                setCircSupply(coinInfo.market_data.circulating_supply);
-                setTotalSupply(coinInfo.market_data.total_supply);
-                setWebsiteLink(coinInfo.links.homepage[0]);
-                setBlockExplorerLink(coinInfo.links.blockchain_site[0]);
-                setCoingeckoLink(`https://www.coingecko.com/en/coins/${coinInfo.id}`);
-                setTwitterLink(coinInfo.links.twitter_screen_name);
-                setTelegramLink(coinInfo.links.telegram_channel_identifier);
-                setPrice(coinInfo.market_data.current_price.usd);
-                setTotalVolume(coinInfo.market_data.total_volume.usd);
-                setAth(coinInfo.market_data.ath.usd);
-                setAtl(coinInfo.market_data.atl.usd);
-            }
-        });
+    const [quote, setQuote] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('usd');
+    const [apiStatus, setApiStatus] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('idle');
+    const [name, setName] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
+    const [icon, setIcon] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
+    const [ticker, setTicker] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
+    const [marketCap, setMarketCap] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)(0);
+    const [marketCapRank, setMarketCapRank] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)(0);
+    const [circSupply, setCircSupply] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)(0);
+    const [totalSupply, setTotalSupply] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)(0);
+    const [description, setDescription] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
+    const [websiteLink, setWebsiteLink] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
+    const [blockExplorerLink, setBlockExplorerLink] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
+    const [coingeckoLink, setCoingeckoLink] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
+    const [twitterLink, setTwitterLink] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
+    const [telegramLink, setTelegramLink] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
+    const [price, setPrice] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)(0);
+    const [totalVolume, setTotalVolume] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)(0);
+    const [ath, setAth] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)(0);
+    const [atl, setAtl] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)(0);
+    (0,react__WEBPACK_IMPORTED_MODULE_8__.useEffect)(() => {
+        displayCoinData();
     }, []);
-    return (react__WEBPACK_IMPORTED_MODULE_7__.createElement(react__WEBPACK_IMPORTED_MODULE_7__.Fragment, null,
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_HeaderField__WEBPACK_IMPORTED_MODULE_2__.default, { coinName: name, coinIcon: icon }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: `${ticker} price`, attributeValue: `$${price}` }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "market Cap (rank)", attributeValue: `$${marketCap} (${marketCapRank})` }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "total volume (24h)", attributeValue: `$${totalVolume}` }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "all-time high", attributeValue: `$${ath}` }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "all-time low", attributeValue: `$${atl}` }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "Circ. Supply (total)", attributeValue: `${circSupply} (${totalSupply})` }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_LinksField__WEBPACK_IMPORTED_MODULE_4__.default, { links: [
+    function searchFieldCallback() {
+        displayCoinData();
+    }
+    function displayCoinData() {
+        return __awaiter(this, void 0, void 0, function* () {
+            (0,_utils_storage__WEBPACK_IMPORTED_MODULE_11__.getStoredCoinIds)().then((coinIds) => {
+                setApiStatus('fetching');
+                (0,_utils_api__WEBPACK_IMPORTED_MODULE_10__.fetchCoinInfo)(coinIds[0]).then((coinInfo) => {
+                    setApiStatus('finished');
+                    console.log('PU: coinIds: ', coinIds);
+                    console.log('PU: coininfo: ', coinInfo);
+                    if (coinInfo != undefined) {
+                        setName(coinInfo.name);
+                        setIcon(coinInfo.image.large);
+                        setTicker(coinInfo.symbol);
+                        setDescription(coinInfo.description.en);
+                        setMarketCap(coinInfo.market_data.market_cap.usd);
+                        setMarketCapRank(coinInfo.market_cap_rank);
+                        setCircSupply(coinInfo.market_data.circulating_supply);
+                        setTotalSupply(coinInfo.market_data.total_supply);
+                        setWebsiteLink(coinInfo.links.homepage[0]);
+                        setBlockExplorerLink(coinInfo.links.blockchain_site[0]);
+                        setCoingeckoLink(`https://www.coingecko.com/en/coins/${coinInfo.id}`);
+                        setTwitterLink(coinInfo.links.twitter_screen_name);
+                        setTelegramLink(coinInfo.links.telegram_channel_identifier);
+                        setPrice(coinInfo.market_data.current_price.usd);
+                        setTotalVolume(coinInfo.market_data.total_volume.usd);
+                        setAth(coinInfo.market_data.ath.usd);
+                        setAtl(coinInfo.market_data.atl.usd);
+                    }
+                });
+            });
+        });
+    }
+    return (react__WEBPACK_IMPORTED_MODULE_8__.createElement(react__WEBPACK_IMPORTED_MODULE_8__.Fragment, null,
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_HeaderField__WEBPACK_IMPORTED_MODULE_2__.default, { coinName: name, coinIcon: icon }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_SearchField__WEBPACK_IMPORTED_MODULE_3__.default, { parentCallback: searchFieldCallback }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_4__.default, { attributeName: "API Status", attributeValue: `${apiStatus}` }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_4__.default, { attributeName: `${ticker} price`, attributeValue: `$${price}` }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_4__.default, { attributeName: "market Cap (rank)", attributeValue: `$${marketCap} (${marketCapRank})` }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_4__.default, { attributeName: "total volume (24h)", attributeValue: `$${totalVolume}` }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_4__.default, { attributeName: "all-time high", attributeValue: `$${ath}` }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_4__.default, { attributeName: "all-time low", attributeValue: `$${atl}` }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_4__.default, { attributeName: "Circ. Supply (total)", attributeValue: `${circSupply} (${totalSupply})` }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_LinksField__WEBPACK_IMPORTED_MODULE_5__.default, { links: [
                 blockExplorerLink,
                 coingeckoLink,
                 twitterLink,
                 telegramLink,
                 websiteLink,
             ] }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_DescriptionField__WEBPACK_IMPORTED_MODULE_0__.default, { coinDescription: description }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_PriceGraphField__WEBPACK_IMPORTED_MODULE_5__.default, { priceData: "pricedata_test" }),
-        react__WEBPACK_IMPORTED_MODULE_7__.createElement(_components_FooterField__WEBPACK_IMPORTED_MODULE_1__.default, null)));
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_DescriptionField__WEBPACK_IMPORTED_MODULE_0__.default, { coinDescription: description }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_PriceGraphField__WEBPACK_IMPORTED_MODULE_6__.default, { priceData: "pricedata_test" }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_FooterField__WEBPACK_IMPORTED_MODULE_1__.default, null)));
 };
 const root = document.createElement('div');
 document.body.appendChild(root);
-react_dom__WEBPACK_IMPORTED_MODULE_8__.render(react__WEBPACK_IMPORTED_MODULE_7__.createElement(App, null), root);
+react_dom__WEBPACK_IMPORTED_MODULE_9__.render(react__WEBPACK_IMPORTED_MODULE_8__.createElement(App, null), root);
+
+
+/***/ }),
+
+/***/ "./src/utils/api.ts":
+/*!**************************!*\
+  !*** ./src/utils/api.ts ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fetchCoinsList": () => (/* binding */ fetchCoinsList),
+/* harmony export */   "fetchCoinInfo": () => (/* binding */ fetchCoinInfo)
+/* harmony export */ });
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list';
+function fetchCoinsList() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const res = yield fetch(COINGECKO_COINS_LIST_API);
+        const data = yield res.json();
+        return data;
+    });
+}
+function fetchCoinInfo(coinId) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const res = yield fetch(`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`);
+        const data = yield res.json();
+        return data;
+    });
+}
+// https://api.coingecko.com/api/v3/coins/ripple?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false
 
 
 /***/ }),
@@ -465,12 +656,12 @@ react_dom__WEBPACK_IMPORTED_MODULE_8__.render(react__WEBPACK_IMPORTED_MODULE_7__
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "setStoredCoins": () => (/* binding */ setStoredCoins),
-/* harmony export */   "getStoredCoins": () => (/* binding */ getStoredCoins),
-/* harmony export */   "setStoredCoinsInfo": () => (/* binding */ setStoredCoinsInfo),
-/* harmony export */   "getStoredCoinsInfo": () => (/* binding */ getStoredCoinsInfo)
+/* harmony export */   "setStoredCoinList": () => (/* binding */ setStoredCoinList),
+/* harmony export */   "getStoredCoinList": () => (/* binding */ getStoredCoinList),
+/* harmony export */   "setStoredCoinIds": () => (/* binding */ setStoredCoinIds),
+/* harmony export */   "getStoredCoinIds": () => (/* binding */ getStoredCoinIds)
 /* harmony export */ });
-function setStoredCoins(coins) {
+function setStoredCoinList(coins) {
     const vals = {
         coins,
     };
@@ -480,7 +671,7 @@ function setStoredCoins(coins) {
         });
     });
 }
-function getStoredCoins() {
+function getStoredCoinList() {
     const keys = ['coins'];
     return new Promise((resolve) => {
         chrome.storage.local.get(keys, (res) => {
@@ -489,9 +680,9 @@ function getStoredCoins() {
         });
     });
 }
-function setStoredCoinsInfo(coinsInfo) {
+function setStoredCoinIds(coinIds) {
     const vals = {
-        coinsInfo,
+        coinIds,
     };
     return new Promise((resolve) => {
         chrome.storage.local.set(vals, () => {
@@ -499,12 +690,12 @@ function setStoredCoinsInfo(coinsInfo) {
         });
     });
 }
-function getStoredCoinsInfo() {
-    const keys = ['coinsInfo'];
+function getStoredCoinIds() {
+    const keys = ['coinIds'];
     return new Promise((resolve) => {
         chrome.storage.local.get(keys, (res) => {
             var _a;
-            resolve((_a = res.coinsInfo) !== null && _a !== void 0 ? _a : []);
+            resolve((_a = res.coinIds) !== null && _a !== void 0 ? _a : []);
         });
     });
 }

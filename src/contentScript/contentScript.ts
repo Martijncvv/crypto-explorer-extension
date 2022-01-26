@@ -1,5 +1,5 @@
-import { getStoredCoins, setStoredCoinsInfo } from '../utils/storage'
-import { fetchCoinInfo, AdvancedCoinInfo, SimpleCoinInfo } from '../utils/api'
+import { getStoredCoinList, setStoredCoinIds } from '../utils/storage'
+import { SimpleCoinInfo } from '../utils/api'
 
 console.log('CONTENTSCRIPT is running')
 
@@ -13,41 +13,26 @@ async function getSelection() {
 		.replace(/[#$?!.,:]/g, '')
 		.toLowerCase()
 
-	if (selectedTicker === '' || selectedTicker.length > 5) {
+	if (selectedTicker === '' || selectedTicker.length > 6) {
 		return
 	}
 
 	console.log('mouseup eventListener')
 
-	const coinList = await getStoredCoins()
-	// console.log('CoinList: ', coinList)
+	const coinList: SimpleCoinInfo[] = await getStoredCoinList()
 
-	const filteredCoins: SimpleCoinInfo[] = await coinList.filter(
+	const filteredCoinTickers: SimpleCoinInfo[] = await coinList.filter(
 		(coin) => coin.symbol === selectedTicker
 	)
-	// console.log('FilteredCoins: ', filteredCoins)
-	console.log('selectedTicker: ', selectedTicker)
 
-	let coinsInfo: AdvancedCoinInfo[] = []
+	console.log('CS: selectedTicker: ', selectedTicker)
+	console.log('CS: filterCoinTickers: ', filteredCoinTickers)
 
-	await Promise.all(
-		filteredCoins.map(async (coin) => {
-			let coinInfo: AdvancedCoinInfo = await fetchCoinInfo(coin.id)
-			coinsInfo.push(coinInfo)
-		})
-	)
-	await console.log('coinsInfo1: ', coinsInfo)
-	await coinsInfo.sort((a, b) => {
-		if (a.coingecko_rank === 0 || a.coingecko_rank === null) {
-			a.coingecko_rank = 9999
-		}
-		if (b.coingecko_rank === 0 || b.coingecko_rank === null) {
-			b.coingecko_rank = 9999
-		}
-
-		return a.coingecko_rank - b.coingecko_rank
+	let coinIds: string[] = []
+	filteredCoinTickers.forEach((coin) => {
+		coinIds.push(coin.id)
 	})
+	console.log('CS: coinIds: ', coinIds)
 
-	await console.log('coinsInfo2: ', coinsInfo)
-	await setStoredCoinsInfo(coinsInfo)
+	await setStoredCoinIds(coinIds)
 }

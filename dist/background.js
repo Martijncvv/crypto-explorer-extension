@@ -50,12 +50,12 @@ function fetchCoinInfo(coinId) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "setStoredCoins": () => (/* binding */ setStoredCoins),
-/* harmony export */   "getStoredCoins": () => (/* binding */ getStoredCoins),
-/* harmony export */   "setStoredCoinsInfo": () => (/* binding */ setStoredCoinsInfo),
-/* harmony export */   "getStoredCoinsInfo": () => (/* binding */ getStoredCoinsInfo)
+/* harmony export */   "setStoredCoinList": () => (/* binding */ setStoredCoinList),
+/* harmony export */   "getStoredCoinList": () => (/* binding */ getStoredCoinList),
+/* harmony export */   "setStoredCoinIds": () => (/* binding */ setStoredCoinIds),
+/* harmony export */   "getStoredCoinIds": () => (/* binding */ getStoredCoinIds)
 /* harmony export */ });
-function setStoredCoins(coins) {
+function setStoredCoinList(coins) {
     const vals = {
         coins,
     };
@@ -65,7 +65,7 @@ function setStoredCoins(coins) {
         });
     });
 }
-function getStoredCoins() {
+function getStoredCoinList() {
     const keys = ['coins'];
     return new Promise((resolve) => {
         chrome.storage.local.get(keys, (res) => {
@@ -74,9 +74,9 @@ function getStoredCoins() {
         });
     });
 }
-function setStoredCoinsInfo(coinsInfo) {
+function setStoredCoinIds(coinIds) {
     const vals = {
-        coinsInfo,
+        coinIds,
     };
     return new Promise((resolve) => {
         chrome.storage.local.set(vals, () => {
@@ -84,12 +84,12 @@ function setStoredCoinsInfo(coinsInfo) {
         });
     });
 }
-function getStoredCoinsInfo() {
-    const keys = ['coinsInfo'];
+function getStoredCoinIds() {
+    const keys = ['coinIds'];
     return new Promise((resolve) => {
         chrome.storage.local.get(keys, (res) => {
             var _a;
-            resolve((_a = res.coinsInfo) !== null && _a !== void 0 ? _a : []);
+            resolve((_a = res.coinIds) !== null && _a !== void 0 ? _a : []);
         });
     });
 }
@@ -185,7 +185,7 @@ chrome.runtime.onInstalled.addListener(() => __awaiter(void 0, void 0, void 0, f
     }
 }));
 (0,_utils_api__WEBPACK_IMPORTED_MODULE_0__.fetchCoinsList)().then((data) => {
-    (0,_utils_storage__WEBPACK_IMPORTED_MODULE_1__.setStoredCoins)(data);
+    (0,_utils_storage__WEBPACK_IMPORTED_MODULE_1__.setStoredCoinList)(data);
     console.log('Coins fetched');
     console.log(data);
 });
