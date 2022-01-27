@@ -47,7 +47,33 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "h1 {\n\tmargin: 0;\n\tcolor: rgb(248, 248, 248);\n}\n\nimg {\n\theight: 30px;\n}\n\n#header {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\n\theight: 70px;\n\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n\n#img-box {\n\theight: 50px;\n\twidth: 50px;\n\tmargin: 0 11px;\n\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tborder-radius: 24px;\n\tbackground-color: rgb(248, 248, 248);\n}\n", "",{"version":3,"sources":["webpack://./src/components/HeaderField/HeaderField.css"],"names":[],"mappings":"AAAA;CACC,SAAS;CACT,yBAAyB;AAC1B;;AAEA;CACC,YAAY;AACb;;AAEA;CACC,aAAa;CACb,mBAAmB;CACnB,2BAA2B;;CAE3B,YAAY;;CAEZ;;;;EAIC;AACF;;AAEA;CACC,YAAY;CACZ,WAAW;CACX,cAAc;;CAEd,aAAa;CACb,uBAAuB;CACvB,mBAAmB;;CAEnB,mBAAmB;CACnB,oCAAoC;AACrC","sourcesContent":["h1 {\n\tmargin: 0;\n\tcolor: rgb(248, 248, 248);\n}\n\nimg {\n\theight: 30px;\n}\n\n#header {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\n\theight: 70px;\n\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n\n#img-box {\n\theight: 50px;\n\twidth: 50px;\n\tmargin: 0 11px;\n\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tborder-radius: 24px;\n\tbackground-color: rgb(248, 248, 248);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "h1 {\n\tmargin: 0;\n\tfont-size: 26px;\n\tcolor: rgb(248, 248, 248);\n}\n\nimg {\n\theight: 30px;\n}\n\n#header {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\n\theight: 70px;\n\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n\n#img-box {\n\theight: 42px;\n\twidth: 42px;\n\tmargin: 0 14px;\n\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tborder-radius: 21px;\n\tbackground-color: rgb(248, 248, 248);\n}\n", "",{"version":3,"sources":["webpack://./src/components/HeaderField/HeaderField.css"],"names":[],"mappings":"AAAA;CACC,SAAS;CACT,eAAe;CACf,yBAAyB;AAC1B;;AAEA;CACC,YAAY;AACb;;AAEA;CACC,aAAa;CACb,mBAAmB;CACnB,2BAA2B;;CAE3B,YAAY;;CAEZ;;;;EAIC;AACF;;AAEA;CACC,YAAY;CACZ,WAAW;CACX,cAAc;;CAEd,aAAa;CACb,uBAAuB;CACvB,mBAAmB;;CAEnB,mBAAmB;CACnB,oCAAoC;AACrC","sourcesContent":["h1 {\n\tmargin: 0;\n\tfont-size: 26px;\n\tcolor: rgb(248, 248, 248);\n}\n\nimg {\n\theight: 30px;\n}\n\n#header {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\n\theight: 70px;\n\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n\n#img-box {\n\theight: 42px;\n\twidth: 42px;\n\tmargin: 0 14px;\n\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tborder-radius: 21px;\n\tbackground-color: rgb(248, 248, 248);\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/InfoField/InfoField.css":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/InfoField/InfoField.css ***!
+  \**************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".info-field {\n\tdisplay: flex;\n\tpadding: 12px 0 7px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n\t/* justify-content: center; */\n}\n\n.attribute-name {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\tpadding: 0 0 0 14px;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\ttext-transform: capitalize;\n}\n.attribute-value {\n\tmargin: 0;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n", "",{"version":3,"sources":["webpack://./src/components/InfoField/InfoField.css"],"names":[],"mappings":"AAAA;CACC,aAAa;CACb,mBAAmB;;CAEnB,2CAA2C;CAC3C,6BAA6B;AAC9B;;AAEA;CACC,sBAAsB;CACtB,UAAU;CACV,SAAS;CACT,mBAAmB;;CAEnB,sBAAsB;CACtB,eAAe;CACf,gBAAgB;CAChB,0BAA0B;AAC3B;AACA;CACC,SAAS;;CAET,eAAe;CACf,0BAA0B;AAC3B","sourcesContent":[".info-field {\n\tdisplay: flex;\n\tpadding: 12px 0 7px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n\t/* justify-content: center; */\n}\n\n.attribute-name {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\tpadding: 0 0 0 14px;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\ttext-transform: capitalize;\n}\n.attribute-value {\n\tmargin: 0;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -99,7 +125,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "body {\n\twidth: 330px;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n\nh1 {\n\tfont-size: 28px;\n\tmargin: 0;\n}\n", "",{"version":3,"sources":["webpack://./src/popup/popup.css"],"names":[],"mappings":"AAAA;CACC,YAAY;CACZ,UAAU;CACV,SAAS;CACT,oCAAoC;AACrC;;AAEA;CACC,eAAe;CACf,SAAS;AACV","sourcesContent":["body {\n\twidth: 330px;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n\nh1 {\n\tfont-size: 28px;\n\tmargin: 0;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n\twidth: 330px;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n", "",{"version":3,"sources":["webpack://./src/popup/popup.css"],"names":[],"mappings":"AAAA;CACC,YAAY;CACZ,UAAU;CACV,SAAS;CACT,oCAAoC;AACrC","sourcesContent":["body {\n\twidth: 330px;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -161,6 +187,35 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_HeaderField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./src/components/InfoField/InfoField.css":
+/*!************************************************!*\
+  !*** ./src/components/InfoField/InfoField.css ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_InfoField_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./InfoField.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/InfoField/InfoField.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_InfoField_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_InfoField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
 
 /***/ }),
 
@@ -359,16 +414,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _InfoField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InfoField */ "./src/components/InfoField/InfoField.tsx");
+/* harmony import */ var _InfoField_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InfoField.css */ "./src/components/InfoField/InfoField.css");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 
 
 const InfoField = ({ attributeName, attributeValue, }) => {
-    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null,
-        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null,
-            attributeName,
-            " ",
-            attributeValue)));
+    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { className: "info-field" },
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", { className: "attribute-name" }, attributeName),
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", { className: "attribute-value" }, attributeValue)));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InfoField);
 
@@ -670,8 +723,7 @@ const App = () => {
     return (react__WEBPACK_IMPORTED_MODULE_8__.createElement(react__WEBPACK_IMPORTED_MODULE_8__.Fragment, null,
         react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_HeaderField__WEBPACK_IMPORTED_MODULE_2__.default, { coinName: name, coinIcon: icon }),
         react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_SearchField__WEBPACK_IMPORTED_MODULE_6__.default, { searchCallback: searchCallback, activeCoin: coin, setQuote: setQuote }),
-        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: `${ticker} price`, attributeValue: `${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(price)}` }),
-        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: `Quote: `, attributeValue: `${quote}` }),
+        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: `${ticker.toUpperCase()} price`, attributeValue: `${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(price)}` }),
         react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "market Cap (rank)", attributeValue: `${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(marketCap)} (${marketCapRank})` }),
         react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "total( volume (24h)", attributeValue: `${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(totalVolume)}` }),
         react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "all-time high", attributeValue: `${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(ath)}` }),

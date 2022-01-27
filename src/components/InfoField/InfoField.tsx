@@ -1,4 +1,4 @@
-import './InfoField'
+import './InfoField.css'
 import React from 'react'
 
 interface InfoFieldProps {
@@ -11,10 +11,9 @@ const InfoField: React.FC<InfoFieldProps> = ({
 	attributeValue,
 }) => {
 	return (
-		<div>
-			<p>
-				{attributeName} {attributeValue}
-			</p>
+		<div className="info-field">
+			<p className="attribute-name">{attributeName}</p>
+			<p className="attribute-value">{attributeValue}</p>
 		</div>
 	)
 }

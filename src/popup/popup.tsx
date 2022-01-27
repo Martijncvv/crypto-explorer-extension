@@ -105,10 +105,10 @@ const App: React.FC<{}> = () => {
 			/>
 
 			<InfoField
-				attributeName={`${ticker} price`}
+				attributeName={`${ticker.toUpperCase()} price`}
 				attributeValue={`${amountFormatter(price)}`}
 			/>
-			<InfoField attributeName={`Quote: `} attributeValue={`${quote}`} />
+
 			<InfoField
 				attributeName="market Cap (rank)"
 				attributeValue={`${amountFormatter(marketCap)} (${marketCapRank})`}

@@ -1,0 +1,25 @@
+.info-field {
+	display: flex;
+	padding: 12px 0 7px;
+
+	border-bottom: 1px solid rgb(231, 231, 231);
+	/* justify-content: center; */
+}
+
+.attribute-name {
+	box-sizing: border-box;
+	width: 61%;
+	margin: 0;
+	padding: 0 0 0 14px;
+
+	vertical-align: middle;
+	font-size: 14px;
+	font-weight: 650;
+	text-transform: capitalize;
+}
+.attribute-value {
+	margin: 0;
+
+	font-size: 14px;
+	text-transform: capitalize;
+}
