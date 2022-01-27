@@ -12,10 +12,10 @@ chrome.runtime.onInstalled.addListener(async () => {
 			})
 		}
 	}
+	// setStoredCoinIds(['bitcoin'])
 })
 
 fetchCoinsList().then((data) => {
 	setStoredCoinList(data)
 	console.log('Coins fetched')
-	console.log(data)
 })

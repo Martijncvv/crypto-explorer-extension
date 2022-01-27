@@ -1,4 +1,4 @@
-import { getStoredCoinList, setStoredCoinIds } from '../utils/storage'
+import { getStoredCoinList, setStoredCoins } from '../utils/storage'
 import { SimpleCoinInfo } from '../utils/api'
 
 console.log('CONTENTSCRIPT is running')
@@ -10,7 +10,7 @@ async function getSelection() {
 		.getSelection()
 		.toString()
 		.trim()
-		.replace(/[#$?!.,:]/g, '')
+		.replace(/[#$?!.,:"']/g, '')
 		.toLowerCase()
 
 	if (selectedTicker === '' || selectedTicker.length > 6) {
@@ -21,18 +21,22 @@ async function getSelection() {
 
 	const coinList: SimpleCoinInfo[] = await getStoredCoinList()
 
-	const filteredCoinTickers: SimpleCoinInfo[] = await coinList.filter(
+	const filteredCoinTickers: SimpleCoinInfo[] = coinList.filter(
 		(coin) => coin.symbol === selectedTicker
 	)
 
 	console.log('CS: selectedTicker: ', selectedTicker)
 	console.log('CS: filterCoinTickers: ', filteredCoinTickers)
 
-	let coinIds: string[] = []
-	filteredCoinTickers.forEach((coin) => {
-		coinIds.push(coin.id)
+	let coinIds: SimpleCoinInfo[] = []
+	filteredCoinTickers.forEach((coin: SimpleCoinInfo) => {
+		coinIds.push({
+			id: coin.id,
+			symbol: coin.symbol,
+			name: coin.name,
+		})
 	})
 	console.log('CS: coinIds: ', coinIds)
 
-	await setStoredCoinIds(coinIds)
+	setStoredCoins(coinIds)
 }

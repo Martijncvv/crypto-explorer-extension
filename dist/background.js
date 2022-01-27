@@ -32,7 +32,11 @@ function fetchCoinsList() {
 }
 function fetchCoinInfo(coinId) {
     return __awaiter(this, void 0, void 0, function* () {
+        coinId = coinId ? coinId : 'bitcoin';
         const res = yield fetch(`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`);
+        if (!res.ok) {
+            throw new Error(`Fetch error: ${coinId}`);
+        }
         const data = yield res.json();
         return data;
     });
@@ -52,8 +56,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "setStoredCoinList": () => (/* binding */ setStoredCoinList),
 /* harmony export */   "getStoredCoinList": () => (/* binding */ getStoredCoinList),
-/* harmony export */   "setStoredCoinIds": () => (/* binding */ setStoredCoinIds),
-/* harmony export */   "getStoredCoinIds": () => (/* binding */ getStoredCoinIds)
+/* harmony export */   "setStoredCoins": () => (/* binding */ setStoredCoins),
+/* harmony export */   "getStoredCoins": () => (/* binding */ getStoredCoins)
 /* harmony export */ });
 function setStoredCoinList(coins) {
     const vals = {
@@ -74,7 +78,7 @@ function getStoredCoinList() {
         });
     });
 }
-function setStoredCoinIds(coinIds) {
+function setStoredCoins(coinIds) {
     const vals = {
         coinIds,
     };
@@ -84,7 +88,7 @@ function setStoredCoinIds(coinIds) {
         });
     });
 }
-function getStoredCoinIds() {
+function getStoredCoins() {
     const keys = ['coinIds'];
     return new Promise((resolve) => {
         chrome.storage.local.get(keys, (res) => {
@@ -183,11 +187,11 @@ chrome.runtime.onInstalled.addListener(() => __awaiter(void 0, void 0, void 0, f
             });
         }
     }
+    // setStoredCoinIds(['bitcoin'])
 }));
 (0,_utils_api__WEBPACK_IMPORTED_MODULE_0__.fetchCoinsList)().then((data) => {
     (0,_utils_storage__WEBPACK_IMPORTED_MODULE_1__.setStoredCoinList)(data);
     console.log('Coins fetched');
-    console.log(data);
 });
 
 })();

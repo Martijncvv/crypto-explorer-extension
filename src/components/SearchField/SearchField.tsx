@@ -1,15 +1,22 @@
 import './SearchField.css'
 import React, { useState, useEffect } from 'react'
 
-import { getStoredCoinList, setStoredCoinIds } from '../../utils/storage'
+import { getStoredCoinList, setStoredCoins } from '../../utils/storage'
 import { SimpleCoinInfo } from '../../utils/api'
 
 interface SearchFieldProps {
-	parentCallback: any
+	searchCallback: Function
+	setQuote: Function
+	activeCoin: string
 }
 
-const SearchField: React.FC<SearchFieldProps> = ({ parentCallback }) => {
+const SearchField: React.FC<SearchFieldProps> = ({
+	searchCallback,
+	setQuote,
+	activeCoin,
+}) => {
 	const [searchInput, setSearchInput] = useState<string>('')
+	const [checked, setChecked] = React.useState(true)
 	let [coinSuggestions, setCoinSuggestions] = useState<SimpleCoinInfo[]>([])
 
 	useEffect(() => {
@@ -24,32 +31,52 @@ const SearchField: React.FC<SearchFieldProps> = ({ parentCallback }) => {
 		}
 	}
 
-	async function handleCoinButtonClick(coinId: string) {
-		console.log('handleCoinButtonClick: ', coinId)
-		await setStoredCoinIds([coinId])
-		await parentCallback()
+	const handleChange = () => {
+		if (!checked) {
+			setQuote('usd')
+		} else {
+			setQuote('btc')
+		}
+		setChecked(!checked)
+	}
+
+	async function handleCoinButtonClick(
+		id: string,
+		symbol: string,
+		name: string
+	) {
+		console.log('handleCoinButtonClick: ', { id, symbol, name })
+		await setStoredCoins([{ id, symbol, name }])
+		await searchCallback()
 	}
 
 	return (
 		<div>
-			<div>
-				<input
-					type="text"
-					id="searchInput"
-					placeholder="Search Ticker"
-					onChange={(event) => setSearchInput(event.target.value.toLowerCase())}
-				></input>
-
-				<div>
-					{coinSuggestions.map((coin, index) => (
-						<div key={index}>
-							<button onClick={() => handleCoinButtonClick(`${coin.id}`)}>
+			<div id="navbar">
+				{coinSuggestions.map(
+					(coin, index) =>
+						activeCoin != coin.id && (
+							<button
+								className="navItem"
+								key={index}
+								onClick={() =>
+									handleCoinButtonClick(coin.id, coin.symbol, coin.name)
+								}
+							>
 								{coin.name}
 							</button>
-						</div>
-					))}
-				</div>
+						)
+				)}
 			</div>
+
+			<input
+				type="text"
+				id="searchInput"
+				placeholder="Search Ticker"
+				onChange={(event) => setSearchInput(event.target.value.toLowerCase())}
+			></input>
+
+			<input type="checkbox" checked={checked} onChange={handleChange} />
 		</div>
 	)
 }

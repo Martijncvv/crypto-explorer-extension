@@ -1,0 +1,15 @@
+#navbar {
+	display: flex;
+	flex-wrap: wrap;
+}
+.navItem {
+	min-width: 30%;
+	height: 30px;
+	flex-grow: 1;
+	background-color: rgb(248, 248, 248);
+	border: none;
+}
+.navItem:hover {
+	background-color: rgb(190, 190, 190);
+	border: none;
+}

@@ -4,14 +4,14 @@
 	"version": "1.0.0",
 	"manifest_version": 3,
 	"icons": {
-		"16": "coingecko_logo.png",
-		"48": "coingecko_logo.png",
-		"128": "coingecko_logo.png"
+		"16": "images/coingecko_logo.png",
+		"48": "images/coingecko_logo.png",
+		"128": "images/coingecko_logo.png"
 	},
 	"action": {
 		"default_popup": "popup.html",
 		"default_title": "Crypto Explorer Extension",
-		"default_icon": "coingecko_logo.png"
+		"default_icon": "images/coingecko_logo.png"
 	},
 	"permissions": ["storage", "activeTab", "scripting"],
 

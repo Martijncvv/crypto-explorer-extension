@@ -1,7 +1,5 @@
 const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list'
 
-export type apiStatus = 'idle' | 'fetching' | 'error' | 'finished'
-
 export interface SimpleCoinInfo {
 	id: string
 	symbol: string
@@ -54,10 +52,15 @@ export async function fetchCoinsList(): Promise<CoinGeckoCoinList> {
 	const data: CoinGeckoCoinList = await res.json()
 	return data
 }
+
 export async function fetchCoinInfo(coinId: string): Promise<AdvancedCoinInfo> {
+	coinId = coinId ? coinId : 'bitcoin'
 	const res = await fetch(
 		`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`
 	)
+	if (!res.ok) {
+		throw new Error(`Fetch error: ${coinId}`)
+	}
 
 	const data = await res.json()
 	return data

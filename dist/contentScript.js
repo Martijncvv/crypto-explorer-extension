@@ -12,8 +12,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "setStoredCoinList": () => (/* binding */ setStoredCoinList),
 /* harmony export */   "getStoredCoinList": () => (/* binding */ getStoredCoinList),
-/* harmony export */   "setStoredCoinIds": () => (/* binding */ setStoredCoinIds),
-/* harmony export */   "getStoredCoinIds": () => (/* binding */ getStoredCoinIds)
+/* harmony export */   "setStoredCoins": () => (/* binding */ setStoredCoins),
+/* harmony export */   "getStoredCoins": () => (/* binding */ getStoredCoins)
 /* harmony export */ });
 function setStoredCoinList(coins) {
     const vals = {
@@ -34,7 +34,7 @@ function getStoredCoinList() {
         });
     });
 }
-function setStoredCoinIds(coinIds) {
+function setStoredCoins(coinIds) {
     const vals = {
         coinIds,
     };
@@ -44,7 +44,7 @@ function setStoredCoinIds(coinIds) {
         });
     });
 }
-function getStoredCoinIds() {
+function getStoredCoins() {
     const keys = ['coinIds'];
     return new Promise((resolve) => {
         chrome.storage.local.get(keys, (res) => {
@@ -139,22 +139,26 @@ function getSelection() {
             .getSelection()
             .toString()
             .trim()
-            .replace(/[#$?!.,:]/g, '')
+            .replace(/[#$?!.,:"']/g, '')
             .toLowerCase();
         if (selectedTicker === '' || selectedTicker.length > 6) {
             return;
         }
         console.log('mouseup eventListener');
         const coinList = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_0__.getStoredCoinList)();
-        const filteredCoinTickers = yield coinList.filter((coin) => coin.symbol === selectedTicker);
+        const filteredCoinTickers = coinList.filter((coin) => coin.symbol === selectedTicker);
         console.log('CS: selectedTicker: ', selectedTicker);
         console.log('CS: filterCoinTickers: ', filteredCoinTickers);
         let coinIds = [];
         filteredCoinTickers.forEach((coin) => {
-            coinIds.push(coin.id);
+            coinIds.push({
+                id: coin.id,
+                symbol: coin.symbol,
+                name: coin.name,
+            });
         });
         console.log('CS: coinIds: ', coinIds);
-        yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_0__.setStoredCoinIds)(coinIds);
+        (0,_utils_storage__WEBPACK_IMPORTED_MODULE_0__.setStoredCoins)(coinIds);
     });
 }
 

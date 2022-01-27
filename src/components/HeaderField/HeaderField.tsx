@@ -9,7 +9,16 @@ interface HeaderFieldProps {
 const HeaderField: React.FC<HeaderFieldProps> = ({ coinName, coinIcon }) => {
 	return (
 		<div id="header">
-			<h1>{coinName}</h1>
+			<div id="img-box">
+				<img src={coinIcon} />
+			</div>
+			<div>
+				{coinName.length > 15 ? (
+					<h1 style={{ fontSize: '22px' }}>{coinName}</h1>
+				) : (
+					<h1>{coinName}</h1>
+				)}
+			</div>
 		</div>
 	)
 }

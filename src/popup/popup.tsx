@@ -1,21 +1,23 @@
 import DescriptionField from '../components/DescriptionField'
 import FooterField from '../components/FooterField'
 import HeaderField from '../components/HeaderField'
-import SearchField from '../components/SearchField'
 import InfoField from '../components/InfoField'
 import LinksField from '../components/LinksField'
 import PriceGraphField from '../components/PriceGraphField'
+import SearchField from '../components/SearchField'
 
 import './popup.css'
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
-import { AdvancedCoinInfo, fetchCoinInfo, apiStatus } from '../utils/api'
-import { getStoredCoinIds, setStoredCoinIds } from '../utils/storage'
+import { SimpleCoinInfo, AdvancedCoinInfo, fetchCoinInfo } from '../utils/api'
+import { getStoredCoins } from '../utils/storage'
+import { amountFormatter } from '../utils/amountFormatter'
 
 const App: React.FC<{}> = () => {
 	const [quote, setQuote] = useState<string>('usd')
-	const [apiStatus, setApiStatus] = useState<apiStatus>('idle')
+	const [apiStatus, setApiStatus] = useState<string>('active')
+	const [coin, setCoin] = useState<string>('')
 
 	const [name, setName] = useState<string>('')
 	const [icon, setIcon] = useState<string>('')
@@ -38,18 +40,20 @@ const App: React.FC<{}> = () => {
 	const [atl, setAtl] = useState<number>(0)
 
 	useEffect(() => {
-		displayCoinData()
+		setCoinData()
 	}, [])
 
-	function searchFieldCallback(): void {
-		displayCoinData()
+	function searchCallback(): void {
+		setCoinData()
 	}
 
-	async function displayCoinData() {
-		getStoredCoinIds().then((coinIds) => {
-			setApiStatus('fetching')
-			fetchCoinInfo(coinIds[0]).then((coinInfo: AdvancedCoinInfo) => {
-				setApiStatus('finished')
+	async function setCoinData() {
+		getStoredCoins().then((coinIds) => {
+			setApiStatus(`Fetching: ${coinIds[0].id}`)
+			setCoin(coinIds[0].id)
+
+			fetchCoinInfo(coinIds[0].id).then((coinInfo: AdvancedCoinInfo) => {
+				setApiStatus('Fetch finished')
 
 				console.log('PU: coinIds: ', coinIds)
 				console.log('PU: coininfo: ', coinInfo)
@@ -70,37 +74,62 @@ const App: React.FC<{}> = () => {
 					setTwitterLink(coinInfo.links.twitter_screen_name)
 					setTelegramLink(coinInfo.links.telegram_channel_identifier)
 
-					setPrice(coinInfo.market_data.current_price.usd)
-					setTotalVolume(coinInfo.market_data.total_volume.usd)
-					setAth(coinInfo.market_data.ath.usd)
-					setAtl(coinInfo.market_data.atl.usd)
+					if (quote === 'usd') {
+						setPrice(coinInfo.market_data.current_price.usd)
+						setTotalVolume(coinInfo.market_data.total_volume.usd)
+						setAth(coinInfo.market_data.ath.usd)
+						setAtl(coinInfo.market_data.atl.usd)
+					} else {
+						setPrice(coinInfo.market_data.current_price.btc)
+						setTotalVolume(coinInfo.market_data.total_volume.btc)
+						setAth(coinInfo.market_data.ath.btc)
+						setAtl(coinInfo.market_data.atl.btc)
+					}
+				} else {
+					setApiStatus('Fetch error')
 				}
 			})
 		})
 	}
 
+	console.log('Quote: ', quote)
+
 	return (
 		<>
 			<HeaderField coinName={name} coinIcon={icon} />
-			<SearchField parentCallback={searchFieldCallback} />
-			<InfoField attributeName="API Status" attributeValue={`${apiStatus}`} />
+
+			<SearchField
+				searchCallback={searchCallback}
+				activeCoin={coin}
+				setQuote={setQuote}
+			/>
+
 			<InfoField
 				attributeName={`${ticker} price`}
-				attributeValue={`$${price}`}
+				attributeValue={`${amountFormatter(price)}`}
 			/>
+			<InfoField attributeName={`Quote: `} attributeValue={`${quote}`} />
 			<InfoField
 				attributeName="market Cap (rank)"
-				attributeValue={`$${marketCap} (${marketCapRank})`}
+				attributeValue={`${amountFormatter(marketCap)} (${marketCapRank})`}
 			/>
 			<InfoField
-				attributeName="total volume (24h)"
-				attributeValue={`$${totalVolume}`}
+				attributeName="total( volume (24h)"
+				attributeValue={`${amountFormatter(totalVolume)}`}
 			/>
-			<InfoField attributeName="all-time high" attributeValue={`$${ath}`} />
-			<InfoField attributeName="all-time low" attributeValue={`$${atl}`} />
+			<InfoField
+				attributeName="all-time high"
+				attributeValue={`${amountFormatter(ath)}`}
+			/>
+			<InfoField
+				attributeName="all-time low"
+				attributeValue={`${amountFormatter(atl)}`}
+			/>
 			<InfoField
 				attributeName="Circ. Supply (total)"
-				attributeValue={`${circSupply} (${totalSupply})`}
+				attributeValue={`${amountFormatter(circSupply)} (${amountFormatter(
+					totalSupply
+				)})`}
 			/>
 
 			<LinksField
