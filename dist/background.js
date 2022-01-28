@@ -11,7 +11,8 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "fetchCoinsList": () => (/* binding */ fetchCoinsList),
-/* harmony export */   "fetchCoinInfo": () => (/* binding */ fetchCoinInfo)
+/* harmony export */   "fetchCoinInfo": () => (/* binding */ fetchCoinInfo),
+/* harmony export */   "fetchPriceHistoryData": () => (/* binding */ fetchPriceHistoryData)
 /* harmony export */ });
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -35,13 +36,22 @@ function fetchCoinInfo(coinId) {
         coinId = coinId ? coinId : 'bitcoin';
         const res = yield fetch(`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`);
         if (!res.ok) {
-            throw new Error(`Fetch error: ${coinId}`);
+            throw new Error(`Fetch error, coin info data: ${coinId}`);
         }
         const data = yield res.json();
         return data;
     });
 }
-// https://api.coingecko.com/api/v3/coins/ripple?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false
+function fetchPriceHistoryData(coinId, quote) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const res = yield fetch(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${quote}&days=30&interval=daily`);
+        if (!res.ok) {
+            throw new Error(`Fetch error, price history data: ${coinId}`);
+        }
+        const priceData = yield res.json();
+        return priceData;
+    });
+}
 
 
 /***/ }),

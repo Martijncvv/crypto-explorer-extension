@@ -89,14 +89,14 @@ const SearchField: React.FC<SearchFieldProps> = ({
 					/>
 				</Box>
 				<div>
-					USD
+					$
 					<Switch
 						color="warning"
 						checked={checked}
 						onChange={handleQuoteChange}
 						size="small"
 					/>
-					BTC
+					₿
 				</div>
 			</div>
 

@@ -4,7 +4,7 @@ const CoinGeckoIcon = require('../../static/images/Coingecko_Icon_Circle_Color.p
 
 const FooterField: React.FC<{}> = ({}) => {
 	return (
-		<div>
+		<div id="footer-field">
 			<p>
 				Powered by CoinGecko API{' '}
 				<img id="coingecko_footer_icon" src={CoinGeckoIcon} />{' '}

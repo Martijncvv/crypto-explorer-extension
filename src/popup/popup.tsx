@@ -10,7 +10,7 @@ import './popup.css'
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
-import { SimpleCoinInfo, AdvancedCoinInfo, fetchCoinInfo } from '../utils/api'
+import { AdvancedCoinInfo, SimpleCoinInfo, fetchCoinInfo } from '../utils/api'
 import { getStoredCoins } from '../utils/storage'
 import { amountFormatter } from '../utils/amountFormatter'
 
@@ -20,8 +20,9 @@ const App: React.FC<{}> = () => {
 	const [coinTicker, setCoinTicker] = useState<string>('')
 
 	const [name, setName] = useState<string>('')
+	const [id, setId] = useState<string>('')
 	const [icon, setIcon] = useState<string>('')
-	const [ticker, setTicker] = useState<string>('')
+	const [symbol, setSymbol] = useState<string>('')
 	const [marketCap, setMarketCap] = useState<string>('')
 	const [marketCapRank, setMarketCapRank] = useState<number>(0)
 	const [circSupply, setCircSupply] = useState<string>('')
@@ -49,19 +50,18 @@ const App: React.FC<{}> = () => {
 
 	async function setCoinData() {
 		getStoredCoins().then((coinIds) => {
-			setApiStatus(`Fetching: ${coinIds[0].id}`)
-			setCoinTicker(coinIds[0].symbol)
+			// setCoinTicker(coinIds[0].symbol)
+			// setSymbol(coinIds[0].symbol)
 
 			fetchCoinInfo(coinIds[0].id).then((coinInfo: AdvancedCoinInfo) => {
-				setApiStatus('Fetch finished')
-
 				console.log('PU: coinIds: ', coinIds)
 				console.log('PU: coininfo: ', coinInfo)
 
 				if (coinInfo != undefined) {
+					setId(coinInfo.id)
 					setName(coinInfo.name)
 					setIcon(coinInfo.image.large)
-					setTicker(coinInfo.symbol)
+					setSymbol(coinInfo.symbol)
 					setDescription(coinInfo.description.en)
 					setMarketCap(
 						`$${amountFormatter(coinInfo.market_data.market_cap.usd)}`
@@ -98,7 +98,7 @@ const App: React.FC<{}> = () => {
 						setAtl(`₿${amountFormatter(coinInfo.market_data.atl.btc)}`)
 					}
 				} else {
-					setApiStatus('Fetch error')
+					console.log('Fetch error')
 				}
 			})
 		})
@@ -112,12 +112,12 @@ const App: React.FC<{}> = () => {
 
 			<SearchField
 				searchCallback={searchCallback}
-				activeCoinTicker={coinTicker}
+				activeCoinTicker={symbol}
 				setQuote={setQuote}
 			/>
 
 			<InfoField
-				attributeName={`${ticker.toUpperCase()} price`}
+				attributeName={`${symbol.toUpperCase()} price`}
 				attributeValue={`${price}`}
 			/>
 
@@ -136,16 +136,14 @@ const App: React.FC<{}> = () => {
 				attributeValue={`${circSupply} (${totalSupply})`}
 			/>
 
+			<PriceGraphField coinId={id} quote={quote} />
 			<DescriptionField coinDescription={description} />
-			<PriceGraphField priceData="pricedata_test" />
 			<LinksField
-				links={[
-					blockExplorerLink,
-					coingeckoLink,
-					twitterLink,
-					telegramLink,
-					websiteLink,
-				]}
+				blockExplorerLink={blockExplorerLink}
+				coingeckoLink={coingeckoLink}
+				twitterLink={twitterLink}
+				telegramLink={telegramLink}
+				websiteLink={websiteLink}
 			/>
 			<FooterField />
 		</>

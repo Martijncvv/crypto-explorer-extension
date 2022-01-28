@@ -18,6 +18,8 @@
 	"background": {
 		"service_worker": "background.js"
 	},
+	"content_security_policy": "script-src 'self' https://www.gstatic.com/charts/loader.js script-src-elem 'self' https://www.gstatic.com object-src 'self'",
+
 	"content_scripts": [
 		{
 			"matches": ["<all_urls>"],
@@ -27,8 +29,8 @@
 	"commands": {
 		"_execute_browser_action": {
 			"suggested_key": {
-				"default": "Ctrl+Shift+L",
-				"mac": "MacCtrl+Shift+L"
+				"default": "Ctrl+Shift+F",
+				"mac": "MacCtrl+Shift+F"
 			},
 			"description": "Opens CG Explorer"
 		}

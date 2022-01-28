@@ -9,39 +9,50 @@ export interface AdvancedCoinInfo {
 	id: string
 	symbol: string
 	name: string
-	image: size
+	image: Size
 	coingecko_rank: number
-	description: language
-	market_data: market_data
+	description: Language
+	market_data: Market_data
 	market_cap_rank: number
-	links: links
+	links: Links
 }
-export interface market_data {
-	market_cap: quote
-	current_price: quote
-	total_volume: quote
-	ath: quote
-	atl: quote
+interface Market_data {
+	market_cap: Quote
+	current_price: Quote
+	total_volume: Quote
+	ath: Quote
+	atl: Quote
 	circulating_supply: number
 	total_supply: number
 }
-export interface quote {
+interface Quote {
 	usd: number
 	btc: number
 }
-export interface language {
+interface Language {
 	en: string
 }
-export interface size {
+interface Size {
 	large: string
 	small: string
 	thumb: string
 }
-export interface links {
+interface Links {
 	homepage: string[]
 	twitter_screen_name: string
 	telegram_channel_identifier: string
 	blockchain_site: string[]
+}
+export interface PriceData {
+	prices: UnixPriceArray[]
+	market_caps: UnixPriceArray[]
+	total_volumes: UnixPriceArray[]
+}
+interface UnixPriceArray {
+	UnixPrice: UnixPrice[]
+}
+interface UnixPrice {
+	value: number
 }
 
 export type CoinGeckoCoinList = SimpleCoinInfo[]
@@ -59,10 +70,24 @@ export async function fetchCoinInfo(coinId: string): Promise<AdvancedCoinInfo> {
 		`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`
 	)
 	if (!res.ok) {
-		throw new Error(`Fetch error: ${coinId}`)
+		throw new Error(`Fetch error, coin info data: ${coinId}`)
 	}
 
 	const data = await res.json()
 	return data
 }
-// https://api.coingecko.com/api/v3/coins/ripple?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false
+
+export async function fetchPriceHistoryData(
+	coinId: string,
+	quote: string
+): Promise<PriceData> {
+	const res = await fetch(
+		`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${quote}&days=30&interval=daily`
+	)
+	if (!res.ok) {
+		throw new Error(`Fetch error, price history data: ${coinId}`)
+	}
+
+	const priceData = await res.json()
+	return priceData
+}
