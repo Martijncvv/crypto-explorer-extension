@@ -81,6 +81,9 @@ export async function fetchPriceHistoryData(
 	coinId: string,
 	quote: string
 ): Promise<PriceData> {
+	coinId = coinId ? coinId : 'bitcoin'
+	quote = quote ? quote : 'usd'
+
 	const res = await fetch(
 		`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${quote}&days=30&interval=daily`
 	)

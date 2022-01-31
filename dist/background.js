@@ -44,6 +44,8 @@ function fetchCoinInfo(coinId) {
 }
 function fetchPriceHistoryData(coinId, quote) {
     return __awaiter(this, void 0, void 0, function* () {
+        coinId = coinId ? coinId : 'bitcoin';
+        quote = quote ? quote : 'usd';
         const res = yield fetch(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${quote}&days=30&interval=daily`);
         if (!res.ok) {
             throw new Error(`Fetch error, price history data: ${coinId}`);

@@ -1,3 +1,10 @@
 #price-graph-field {
-	margin: 0 14px;
+	margin: 10px 14px 0;
+	height: 125px;
+	width: 100%;
+}
+#graph-title {
+	font-weight: 400;
+	color: rgb(100, 100, 100);
+	margin: 0 0 3px;
 }

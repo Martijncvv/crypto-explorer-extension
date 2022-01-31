@@ -10,14 +10,14 @@ const DescriptionField: React.FC<DescriptionFieldProps> = ({
 }) => {
 	const [readMore, setReadMore] = useState<boolean>(false)
 
-	if (coinDescription.length === 0) {
+	if (!coinDescription.length) {
 		coinDescription = 'Description not available'
 	}
 
 	function createMarkup() {
 		return { __html: coinDescription }
 	}
-	console.log(readMore)
+	setReadMore
 
 	return (
 		<div id="description-field">

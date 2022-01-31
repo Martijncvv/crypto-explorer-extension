@@ -2,7 +2,6 @@ import './SearchField.css'
 import React, { useState, useEffect } from 'react'
 
 import Switch from '@mui/material/Switch'
-// import SearchIcon from '@mui/icons-material/Search'
 import Box from '@mui/material/Box'
 import TextField from '@mui/material/TextField'
 
@@ -61,34 +60,17 @@ const SearchField: React.FC<SearchFieldProps> = ({
 	}
 	const label = { inputProps: { 'aria-label': 'Switch demo' } }
 
-	console.log('activeCoinId: ', activeCoinId)
-	console.log('coinSuggestions: ', coinSuggestions)
-	console.log(coinSuggestions)
-
 	return (
 		<div id="search-field">
 			<div id="input-field">
-				{/* <input
-					type="text"
-					id="searchInput"
-					placeholder="Search Ticker"
+				<input
+					id="search-input"
+					placeholder="Search ticker"
 					value={searchInput}
 					onChange={(event) => setSearchInput(event.target.value.toLowerCase())}
-				></input> */}
-				<Box sx={{ display: 'flex', alignItems: 'flex-end' }}>
-					<TextField
-						id="standard-basic"
-						// label="Search ticker"
-						variant="standard"
-						// placeholder="Search ticker"
-						color="warning"
-						value={searchInput}
-						onChange={(event) =>
-							setSearchInput(event.target.value.toLowerCase())
-						}
-					/>
-				</Box>
-				<div>
+				/>
+
+				<div id="quote-switch">
 					$
 					<Switch
 						color="warning"

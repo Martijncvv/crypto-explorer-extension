@@ -50,13 +50,7 @@ const App: React.FC<{}> = () => {
 
 	async function setCoinData() {
 		getStoredCoins().then((coinIds) => {
-			// setCoinTicker(coinIds[0].symbol)
-			// setSymbol(coinIds[0].symbol)
-
 			fetchCoinInfo(coinIds[0].id).then((coinInfo: AdvancedCoinInfo) => {
-				console.log('PU: coinIds: ', coinIds)
-				console.log('PU: coininfo: ', coinInfo)
-
 				if (coinInfo != undefined) {
 					setId(coinInfo.id)
 					setName(coinInfo.name)
@@ -104,23 +98,18 @@ const App: React.FC<{}> = () => {
 		})
 	}
 
-	console.log('Quote: ', quote)
-
 	return (
 		<>
 			<HeaderField coinName={name} coinIcon={icon} />
-
 			<SearchField
 				searchCallback={searchCallback}
 				activeCoinTicker={symbol}
 				setQuote={setQuote}
 			/>
-
 			<InfoField
 				attributeName={`${symbol.toUpperCase()} price`}
 				attributeValue={`${price}`}
 			/>
-
 			<InfoField
 				attributeName="market Cap (rank)"
 				attributeValue={`${marketCap} (${marketCapRank})`}
@@ -135,9 +124,8 @@ const App: React.FC<{}> = () => {
 				attributeName="Circ. Supply (total)"
 				attributeValue={`${circSupply} (${totalSupply})`}
 			/>
-
-			<PriceGraphField coinId={id} quote={quote} />
 			<DescriptionField coinDescription={description} />
+			<PriceGraphField coinId={id} quote={quote} />
 			<LinksField
 				blockExplorerLink={blockExplorerLink}
 				coingeckoLink={coingeckoLink}
