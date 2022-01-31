@@ -1,5 +1,5 @@
 import { fetchCoinsList } from '../utils/api'
-import { setStoredCoinList } from '../utils/storage'
+import { setStoredCoinList, setStoredCoins } from '../utils/storage'
 
 console.log('BACKGROUND script is running')
 
@@ -12,10 +12,11 @@ chrome.runtime.onInstalled.addListener(async () => {
 			})
 		}
 	}
-	// setStoredCoinIds(['bitcoin'])
 })
 
 fetchCoinsList().then((data) => {
 	setStoredCoinList(data)
 	console.log('Coins fetched')
 })
+
+setStoredCoins([{ id: 'bitcoin', symbol: 'btc', name: 'bitcoin' }])

@@ -1,5 +1,5 @@
 #description-field {
-	margin: 0 14px;
+	margin: 0 16px;
 }
 #description {
 	max-height: 95px;
@@ -14,7 +14,7 @@
 	margin-left: 1px;
 
 	display: -webkit-box;
-	-webkit-line-clamp: 2;
+	-webkit-line-clamp: 1;
 	-webkit-box-orient: vertical;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -45,6 +45,6 @@
 #title {
 	margin: 10px 0 0 0;
 	padding-bottom: 4px;
-	font-size: 16px;
+	font-size: 14px;
 	font-weight: 650;
 }

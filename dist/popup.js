@@ -21,7 +21,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#description-field {\n\tmargin: 0 14px;\n}\n#description {\n\tmax-height: 95px;\n\tmargin-left: 1px;\n\tfont-size: 14px;\n\toverflow-y: scroll;\n}\n#description-preview {\n\tfont-size: 14px;\n\tmax-height: 90px;\n\twidth: 285px;\n\tmargin-left: 1px;\n\n\tdisplay: -webkit-box;\n\t-webkit-line-clamp: 2;\n\t-webkit-box-orient: vertical;\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n}\n\n#read-more-button {\n\theight: 20px;\n\tmargin-left: 1px;\n\tpadding: 0px;\n\n\tbackground-color: rgb(248, 248, 248);\n\tcolor: rgba(255, 139, 79, 1);\n\tborder: none;\n}\n\n#read-more-button:hover {\n\tborder-bottom: solid 2px rgba(255, 255, 255, 0);\n}\n\n#description-field a {\n\tcolor: rgba(255, 139, 79, 1);\n\ttext-decoration: none;\n}\n#description-field a:hover {\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n\n#title {\n\tmargin: 10px 0 0 0;\n\tpadding-bottom: 4px;\n\tfont-size: 16px;\n\tfont-weight: 650;\n}\n", "",{"version":3,"sources":["webpack://./src/components/DescriptionField/DescriptionField.css"],"names":[],"mappings":"AAAA;CACC,cAAc;AACf;AACA;CACC,gBAAgB;CAChB,gBAAgB;CAChB,eAAe;CACf,kBAAkB;AACnB;AACA;CACC,eAAe;CACf,gBAAgB;CAChB,YAAY;CACZ,gBAAgB;;CAEhB,oBAAoB;CACpB,qBAAqB;CACrB,4BAA4B;CAC5B,gBAAgB;CAChB,uBAAuB;AACxB;;AAEA;CACC,YAAY;CACZ,gBAAgB;CAChB,YAAY;;CAEZ,oCAAoC;CACpC,4BAA4B;CAC5B,YAAY;AACb;;AAEA;CACC,+CAA+C;AAChD;;AAEA;CACC,4BAA4B;CAC5B,qBAAqB;AACtB;AACA;CACC,gDAAgD;AACjD;;AAEA;CACC,kBAAkB;CAClB,mBAAmB;CACnB,eAAe;CACf,gBAAgB;AACjB","sourcesContent":["#description-field {\n\tmargin: 0 14px;\n}\n#description {\n\tmax-height: 95px;\n\tmargin-left: 1px;\n\tfont-size: 14px;\n\toverflow-y: scroll;\n}\n#description-preview {\n\tfont-size: 14px;\n\tmax-height: 90px;\n\twidth: 285px;\n\tmargin-left: 1px;\n\n\tdisplay: -webkit-box;\n\t-webkit-line-clamp: 2;\n\t-webkit-box-orient: vertical;\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n}\n\n#read-more-button {\n\theight: 20px;\n\tmargin-left: 1px;\n\tpadding: 0px;\n\n\tbackground-color: rgb(248, 248, 248);\n\tcolor: rgba(255, 139, 79, 1);\n\tborder: none;\n}\n\n#read-more-button:hover {\n\tborder-bottom: solid 2px rgba(255, 255, 255, 0);\n}\n\n#description-field a {\n\tcolor: rgba(255, 139, 79, 1);\n\ttext-decoration: none;\n}\n#description-field a:hover {\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n\n#title {\n\tmargin: 10px 0 0 0;\n\tpadding-bottom: 4px;\n\tfont-size: 16px;\n\tfont-weight: 650;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#description-field {\n\tmargin: 0 16px;\n}\n#description {\n\tmax-height: 95px;\n\tmargin-left: 1px;\n\tfont-size: 14px;\n\toverflow-y: scroll;\n}\n#description-preview {\n\tfont-size: 14px;\n\tmax-height: 90px;\n\twidth: 285px;\n\tmargin-left: 1px;\n\n\tdisplay: -webkit-box;\n\t-webkit-line-clamp: 1;\n\t-webkit-box-orient: vertical;\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n}\n\n#read-more-button {\n\theight: 20px;\n\tmargin-left: 1px;\n\tpadding: 0px;\n\n\tbackground-color: rgb(248, 248, 248);\n\tcolor: rgba(255, 139, 79, 1);\n\tborder: none;\n}\n\n#read-more-button:hover {\n\tborder-bottom: solid 2px rgba(255, 255, 255, 0);\n}\n\n#description-field a {\n\tcolor: rgba(255, 139, 79, 1);\n\ttext-decoration: none;\n}\n#description-field a:hover {\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n\n#title {\n\tmargin: 10px 0 0 0;\n\tpadding-bottom: 4px;\n\tfont-size: 14px;\n\tfont-weight: 650;\n}\n", "",{"version":3,"sources":["webpack://./src/components/DescriptionField/DescriptionField.css"],"names":[],"mappings":"AAAA;CACC,cAAc;AACf;AACA;CACC,gBAAgB;CAChB,gBAAgB;CAChB,eAAe;CACf,kBAAkB;AACnB;AACA;CACC,eAAe;CACf,gBAAgB;CAChB,YAAY;CACZ,gBAAgB;;CAEhB,oBAAoB;CACpB,qBAAqB;CACrB,4BAA4B;CAC5B,gBAAgB;CAChB,uBAAuB;AACxB;;AAEA;CACC,YAAY;CACZ,gBAAgB;CAChB,YAAY;;CAEZ,oCAAoC;CACpC,4BAA4B;CAC5B,YAAY;AACb;;AAEA;CACC,+CAA+C;AAChD;;AAEA;CACC,4BAA4B;CAC5B,qBAAqB;AACtB;AACA;CACC,gDAAgD;AACjD;;AAEA;CACC,kBAAkB;CAClB,mBAAmB;CACnB,eAAe;CACf,gBAAgB;AACjB","sourcesContent":["#description-field {\n\tmargin: 0 16px;\n}\n#description {\n\tmax-height: 95px;\n\tmargin-left: 1px;\n\tfont-size: 14px;\n\toverflow-y: scroll;\n}\n#description-preview {\n\tfont-size: 14px;\n\tmax-height: 90px;\n\twidth: 285px;\n\tmargin-left: 1px;\n\n\tdisplay: -webkit-box;\n\t-webkit-line-clamp: 1;\n\t-webkit-box-orient: vertical;\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n}\n\n#read-more-button {\n\theight: 20px;\n\tmargin-left: 1px;\n\tpadding: 0px;\n\n\tbackground-color: rgb(248, 248, 248);\n\tcolor: rgba(255, 139, 79, 1);\n\tborder: none;\n}\n\n#read-more-button:hover {\n\tborder-bottom: solid 2px rgba(255, 255, 255, 0);\n}\n\n#description-field a {\n\tcolor: rgba(255, 139, 79, 1);\n\ttext-decoration: none;\n}\n#description-field a:hover {\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n\n#title {\n\tmargin: 10px 0 0 0;\n\tpadding-bottom: 4px;\n\tfont-size: 14px;\n\tfont-weight: 650;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -73,7 +73,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "h1 {\n\tmargin: 0;\n\tfont-size: 26px;\n\tcolor: rgb(248, 248, 248);\n}\n\nimg {\n\theight: 30px;\n}\n\n#header {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\n\theight: 70px;\n\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n\n#img-box {\n\theight: 42px;\n\twidth: 42px;\n\tmargin: 0 14px;\n\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tborder-radius: 21px;\n\tbackground-color: rgb(248, 248, 248);\n}\n", "",{"version":3,"sources":["webpack://./src/components/HeaderField/HeaderField.css"],"names":[],"mappings":"AAAA;CACC,SAAS;CACT,eAAe;CACf,yBAAyB;AAC1B;;AAEA;CACC,YAAY;AACb;;AAEA;CACC,aAAa;CACb,mBAAmB;CACnB,2BAA2B;;CAE3B,YAAY;;CAEZ;;;;EAIC;AACF;;AAEA;CACC,YAAY;CACZ,WAAW;CACX,cAAc;;CAEd,aAAa;CACb,uBAAuB;CACvB,mBAAmB;;CAEnB,mBAAmB;CACnB,oCAAoC;AACrC","sourcesContent":["h1 {\n\tmargin: 0;\n\tfont-size: 26px;\n\tcolor: rgb(248, 248, 248);\n}\n\nimg {\n\theight: 30px;\n}\n\n#header {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\n\theight: 70px;\n\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n\n#img-box {\n\theight: 42px;\n\twidth: 42px;\n\tmargin: 0 14px;\n\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tborder-radius: 21px;\n\tbackground-color: rgb(248, 248, 248);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "h1 {\n\tmargin: 0;\n\tfont-size: 26px;\n\tcolor: rgb(248, 248, 248);\n}\n\nimg {\n\theight: 28px;\n\tborder-radius: 5px;\n}\n\n#header {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\n\theight: 70px;\n\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n\n#img-box {\n\theight: 42px;\n\twidth: 42px;\n\tmargin: 0 16px;\n\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tborder-radius: 21px;\n\tbackground-color: rgb(248, 248, 248);\n}\n", "",{"version":3,"sources":["webpack://./src/components/HeaderField/HeaderField.css"],"names":[],"mappings":"AAAA;CACC,SAAS;CACT,eAAe;CACf,yBAAyB;AAC1B;;AAEA;CACC,YAAY;CACZ,kBAAkB;AACnB;;AAEA;CACC,aAAa;CACb,mBAAmB;CACnB,2BAA2B;;CAE3B,YAAY;;CAEZ;;;;EAIC;AACF;;AAEA;CACC,YAAY;CACZ,WAAW;CACX,cAAc;;CAEd,aAAa;CACb,uBAAuB;CACvB,mBAAmB;;CAEnB,mBAAmB;CACnB,oCAAoC;AACrC","sourcesContent":["h1 {\n\tmargin: 0;\n\tfont-size: 26px;\n\tcolor: rgb(248, 248, 248);\n}\n\nimg {\n\theight: 28px;\n\tborder-radius: 5px;\n}\n\n#header {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\n\theight: 70px;\n\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n\n#img-box {\n\theight: 42px;\n\twidth: 42px;\n\tmargin: 0 16px;\n\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tborder-radius: 21px;\n\tbackground-color: rgb(248, 248, 248);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -99,7 +99,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".info-field {\n\tdisplay: flex;\n\tmargin: 0 14px;\n\tpadding: 12px 0 7px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n\t/* justify-content: center; */\n}\n\n.attribute-name {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\t/* padding: 0 0 0 14px; */\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\ttext-transform: capitalize;\n}\n.attribute-value {\n\tmargin: 0;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n", "",{"version":3,"sources":["webpack://./src/components/InfoField/InfoField.css"],"names":[],"mappings":"AAAA;CACC,aAAa;CACb,cAAc;CACd,mBAAmB;;CAEnB,2CAA2C;CAC3C,6BAA6B;AAC9B;;AAEA;CACC,sBAAsB;CACtB,UAAU;CACV,SAAS;CACT,yBAAyB;;CAEzB,sBAAsB;CACtB,eAAe;CACf,gBAAgB;CAChB,0BAA0B;AAC3B;AACA;CACC,SAAS;;CAET,eAAe;CACf,0BAA0B;AAC3B","sourcesContent":[".info-field {\n\tdisplay: flex;\n\tmargin: 0 14px;\n\tpadding: 12px 0 7px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n\t/* justify-content: center; */\n}\n\n.attribute-name {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\t/* padding: 0 0 0 14px; */\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\ttext-transform: capitalize;\n}\n.attribute-value {\n\tmargin: 0;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, ".info-field {\n\tdisplay: flex;\n\tmargin: 0 16px;\n\tpadding: 12px 0 7px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n}\n\n.attribute-name {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\ttext-transform: capitalize;\n}\n.attribute-value {\n\tmargin: 0;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n", "",{"version":3,"sources":["webpack://./src/components/InfoField/InfoField.css"],"names":[],"mappings":"AAAA;CACC,aAAa;CACb,cAAc;CACd,mBAAmB;;CAEnB,2CAA2C;AAC5C;;AAEA;CACC,sBAAsB;CACtB,UAAU;CACV,SAAS;;CAET,sBAAsB;CACtB,eAAe;CACf,gBAAgB;CAChB,0BAA0B;AAC3B;AACA;CACC,SAAS;;CAET,eAAe;CACf,0BAA0B;AAC3B","sourcesContent":[".info-field {\n\tdisplay: flex;\n\tmargin: 0 16px;\n\tpadding: 12px 0 7px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n}\n\n.attribute-name {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\ttext-transform: capitalize;\n}\n.attribute-value {\n\tmargin: 0;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -125,7 +125,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#links-field {\n\tmargin-top: 7px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.link-icon {\n\theight: 18px;\n\tmargin: 0 6px;\n}\n.link-icon:hover {\n\t-webkit-filter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n\tfilter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n}\n", "",{"version":3,"sources":["webpack://./src/components/LinksField/LinksField.css"],"names":[],"mappings":"AAAA;CACC,eAAe;CACf,aAAa;CACb,uBAAuB;CACvB,mBAAmB;AACpB;;AAEA;CACC,YAAY;CACZ,aAAa;AACd;AACA;CACC,gEAAgE;CAChE,wDAAwD;AACzD","sourcesContent":["#links-field {\n\tmargin-top: 7px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.link-icon {\n\theight: 18px;\n\tmargin: 0 6px;\n}\n.link-icon:hover {\n\t-webkit-filter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n\tfilter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#links-field {\n\tmargin-top: 14px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.link-icon {\n\theight: 18px;\n\tmargin: 0 6px;\n}\n.link-icon:hover {\n\t-webkit-filter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n\tfilter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n}\n", "",{"version":3,"sources":["webpack://./src/components/LinksField/LinksField.css"],"names":[],"mappings":"AAAA;CACC,gBAAgB;CAChB,aAAa;CACb,uBAAuB;CACvB,mBAAmB;AACpB;;AAEA;CACC,YAAY;CACZ,aAAa;AACd;AACA;CACC,gEAAgE;CAChE,wDAAwD;AACzD","sourcesContent":["#links-field {\n\tmargin-top: 14px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.link-icon {\n\theight: 18px;\n\tmargin: 0 6px;\n}\n.link-icon:hover {\n\t-webkit-filter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n\tfilter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -151,7 +151,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#price-graph-field {\n\tmargin: 10px 14px 0;\n\theight: 125px;\n\twidth: 100%;\n}\n#graph-title {\n\tfont-weight: 400;\n\tcolor: rgb(100, 100, 100);\n\tmargin: 0 0 3px;\n}\n", "",{"version":3,"sources":["webpack://./src/components/PriceGraphField/PriceGraphField.css"],"names":[],"mappings":"AAAA;CACC,mBAAmB;CACnB,aAAa;CACb,WAAW;AACZ;AACA;CACC,gBAAgB;CAChB,yBAAyB;CACzB,eAAe;AAChB","sourcesContent":["#price-graph-field {\n\tmargin: 10px 14px 0;\n\theight: 125px;\n\twidth: 100%;\n}\n#graph-title {\n\tfont-weight: 400;\n\tcolor: rgb(100, 100, 100);\n\tmargin: 0 0 3px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#price-graph-field {\n\tmargin: 8px 16px 0;\n\theight: 125px;\n\twidth: 100%;\n}\n#graph-title {\n\tfont-weight: 400;\n\tcolor: rgb(100, 100, 100);\n\tmargin: 0 0 3px;\n}\n", "",{"version":3,"sources":["webpack://./src/components/PriceGraphField/PriceGraphField.css"],"names":[],"mappings":"AAAA;CACC,kBAAkB;CAClB,aAAa;CACb,WAAW;AACZ;AACA;CACC,gBAAgB;CAChB,yBAAyB;CACzB,eAAe;AAChB","sourcesContent":["#price-graph-field {\n\tmargin: 8px 16px 0;\n\theight: 125px;\n\twidth: 100%;\n}\n#graph-title {\n\tfont-weight: 400;\n\tcolor: rgb(100, 100, 100);\n\tmargin: 0 0 3px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -177,7 +177,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#search-field {\n\tmargin: 0 14px;\n}\n#input-field {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tjustify-content: space-between;\n\t/* align-items: center; */\n}\n#search-input {\n\twidth: 30%;\n\t/* background-color: rgb(248, 248, 248); */\n\tborder: none;\n\tborder-bottom: 1px solid rgb(255, 139, 79);\n}\n#quote-switch {\n\t/* background-color: red; */\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n#nav-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.nav-item {\n\tmin-width: 30%;\n\theight: 30px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.nav-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-nav-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n", "",{"version":3,"sources":["webpack://./src/components/SearchField/SearchField.css"],"names":[],"mappings":"AAAA;CACC,cAAc;AACf;AACA;CACC,aAAa;CACb,eAAe;CACf,8BAA8B;CAC9B,yBAAyB;AAC1B;AACA;CACC,UAAU;CACV,0CAA0C;CAC1C,YAAY;CACZ,0CAA0C;AAC3C;AACA;CACC,2BAA2B;CAC3B,aAAa;CACb,uBAAuB;CACvB,mBAAmB;AACpB;;AAEA;CACC,aAAa;CACb,eAAe;AAChB;AACA;CACC,cAAc;CACd,YAAY;CACZ,YAAY;CACZ,oCAAoC;CACpC,YAAY;AACb;AACA;CACC,oCAAoC;CACpC,YAAY;AACb;AACA;CACC,gBAAgB;CAChB,gDAAgD;AACjD","sourcesContent":["#search-field {\n\tmargin: 0 14px;\n}\n#input-field {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tjustify-content: space-between;\n\t/* align-items: center; */\n}\n#search-input {\n\twidth: 30%;\n\t/* background-color: rgb(248, 248, 248); */\n\tborder: none;\n\tborder-bottom: 1px solid rgb(255, 139, 79);\n}\n#quote-switch {\n\t/* background-color: red; */\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n#nav-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.nav-item {\n\tmin-width: 30%;\n\theight: 30px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.nav-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-nav-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#search-field {\n\tmargin: 0 16px;\n}\n#input-field {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tjustify-content: space-between;\n\tmargin-top: 8px;\n}\n\n#search-input {\n\twidth: 100px;\n\tborder: none;\n\tborder-radius: 5px;\n\tdisplay: block;\n\tpadding: 9px 4px 9px 40px;\n\tbackground: transparent\n\t\turl(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E\")\n\t\tno-repeat 13px center;\n}\n#search-input:focus {\n\tborder: none;\n}\n\n#quote-switch {\n\t/* background-color: red; */\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n#nav-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.nav-item {\n\tmin-width: 30%;\n\theight: 30px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.nav-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-nav-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n", "",{"version":3,"sources":["webpack://./src/components/SearchField/SearchField.css"],"names":[],"mappings":"AAAA;CACC,cAAc;AACf;AACA;CACC,aAAa;CACb,eAAe;CACf,8BAA8B;CAC9B,eAAe;AAChB;;AAEA;CACC,YAAY;CACZ,YAAY;CACZ,kBAAkB;CAClB,cAAc;CACd,yBAAyB;CACzB;;uBAEsB;AACvB;AACA;CACC,YAAY;AACb;;AAEA;CACC,2BAA2B;CAC3B,aAAa;CACb,uBAAuB;CACvB,mBAAmB;AACpB;;AAEA;CACC,aAAa;CACb,eAAe;AAChB;AACA;CACC,cAAc;CACd,YAAY;CACZ,YAAY;CACZ,oCAAoC;CACpC,YAAY;AACb;AACA;CACC,oCAAoC;CACpC,YAAY;AACb;AACA;CACC,gBAAgB;CAChB,gDAAgD;AACjD","sourcesContent":["#search-field {\n\tmargin: 0 16px;\n}\n#input-field {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tjustify-content: space-between;\n\tmargin-top: 8px;\n}\n\n#search-input {\n\twidth: 100px;\n\tborder: none;\n\tborder-radius: 5px;\n\tdisplay: block;\n\tpadding: 9px 4px 9px 40px;\n\tbackground: transparent\n\t\turl(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E\")\n\t\tno-repeat 13px center;\n}\n#search-input:focus {\n\tborder: none;\n}\n\n#quote-switch {\n\t/* background-color: red; */\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n#nav-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.nav-item {\n\tmin-width: 30%;\n\theight: 30px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.nav-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-nav-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -458,18 +458,20 @@ __webpack_require__.r(__webpack_exports__);
 
 const DescriptionField = ({ coinDescription, }) => {
     const [readMore, setReadMore] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        setReadMore(false);
+    }, [coinDescription]);
     if (!coinDescription.length) {
         coinDescription = 'Description not available';
     }
     function createMarkup() {
         return { __html: coinDescription };
     }
-    setReadMore;
     return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "description-field" },
         react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", { id: "title" }, "Description"),
         readMore ? (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "description", dangerouslySetInnerHTML: createMarkup() })) : (react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null,
             react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "description-preview", dangerouslySetInnerHTML: createMarkup() }),
-            react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { id: "read-more-button", onClick: () => setReadMore(!readMore) }, "Read more")))));
+            coinDescription != 'Description not available' && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { id: "read-more-button", onClick: () => setReadMore(!readMore) }, "Read more"))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DescriptionField);
 
@@ -746,7 +748,6 @@ const PriceGraphField = ({ coinId, quote }) => {
                     });
                 });
             });
-            console.log(chartData);
         });
     }
     return (chartData && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "price-graph-field" },
@@ -814,6 +815,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 const SearchField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
     const [searchInput, setSearchInput] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');
+    const [searchInputAvailable, setSearchInputAvailable] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const [activeCoinId, setActiveCoinId] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');
     const [checked, setChecked] = react__WEBPACK_IMPORTED_MODULE_1__.useState(false);
     let [coinSuggestions, setCoinSuggestions] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
@@ -827,7 +829,15 @@ const SearchField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
         return __awaiter(this, void 0, void 0, function* () {
             const coinList = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.getStoredCoinList)();
             if (searchInput.length != 0) {
-                setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput));
+                yield setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput));
+                if (coinSuggestions.length > 0) {
+                    console.log('found');
+                    setSearchInputAvailable(true);
+                }
+                else {
+                    console.log('not found');
+                    setSearchInputAvailable(false);
+                }
             }
         });
     }
@@ -836,6 +846,15 @@ const SearchField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
             setActiveCoinId(id);
             yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.setStoredCoins)([{ id, symbol, name }]);
             yield searchCallback();
+        });
+    }
+    function handleKeyDown(event) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (event.key === 'Enter') {
+                yield getSearchData();
+                yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.setStoredCoins)(coinSuggestions);
+                searchCallback();
+            }
         });
     }
     const handleQuoteChange = () => {
@@ -847,17 +866,16 @@ const SearchField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
         }
         setChecked(!checked);
     };
-    const label = { inputProps: { 'aria-label': 'Switch demo' } };
     return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "search-field" },
         react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "input-field" },
-            react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", { id: "search-input", placeholder: "Search ticker", value: searchInput, onChange: (event) => setSearchInput(event.target.value.toLowerCase()) }),
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", { id: "search-input", placeholder: "Search ticker", value: searchInput, onKeyDown: (event) => handleKeyDown(event), onChange: (event) => setSearchInput(event.target.value.toLowerCase()), onClick: () => setSearchInput('') }),
             react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "quote-switch" },
                 "$",
-                react__WEBPACK_IMPORTED_MODULE_1__.createElement(_mui_material_Switch__WEBPACK_IMPORTED_MODULE_3__.default, { color: "warning", checked: checked, onChange: handleQuoteChange, size: "small" }),
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement(_mui_material_Switch__WEBPACK_IMPORTED_MODULE_3__.default, { color: "warning", checked: checked, onChange: handleQuoteChange }),
                 "\u20BF")),
-        react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "nav-bar" }, coinSuggestions.map((coin, index) => (react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { className: activeCoinId === coin.id || (!activeCoinId && index == 0)
+        coinSuggestions.length > 1 && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "nav-bar" }, coinSuggestions.map((coin, index) => (react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { className: activeCoinId === coin.id || (!activeCoinId && index == 0)
                 ? 'nav-item active-nav-item'
-                : 'nav-item', key: index, onClick: () => handleCoinButtonClick(coin.id, coin.symbol, coin.name) }, coin.name))))));
+                : 'nav-item', key: index, onClick: () => handleCoinButtonClick(coin.id, coin.symbol, coin.name) }, coin.name)))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (SearchField);
 
@@ -925,14 +943,13 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 const App = () => {
     const [quote, setQuote] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('usd');
-    const [apiStatus, setApiStatus] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('active');
-    const [coinTicker, setCoinTicker] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
+    const [apiStatus, setApiStatus] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
     const [name, setName] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
     const [id, setId] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
     const [icon, setIcon] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
     const [symbol, setSymbol] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
     const [marketCap, setMarketCap] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
-    const [marketCapRank, setMarketCapRank] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)(0);
+    const [marketCapRank, setMarketCapRank] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
     const [circSupply, setCircSupply] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
     const [totalSupply, setTotalSupply] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
     const [description, setDescription] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
@@ -954,46 +971,52 @@ const App = () => {
     function setCoinData() {
         return __awaiter(this, void 0, void 0, function* () {
             (0,_utils_storage__WEBPACK_IMPORTED_MODULE_11__.getStoredCoins)().then((coinIds) => {
-                (0,_utils_api__WEBPACK_IMPORTED_MODULE_10__.fetchCoinInfo)(coinIds[0].id).then((coinInfo) => {
-                    if (coinInfo != undefined) {
-                        setId(coinInfo.id);
-                        setName(coinInfo.name);
-                        setIcon(coinInfo.image.large);
-                        setSymbol(coinInfo.symbol);
-                        setDescription(coinInfo.description.en);
-                        setMarketCap(`$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.market_cap.usd)}`);
-                        setMarketCapRank(coinInfo.market_cap_rank);
-                        setCircSupply((0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.circulating_supply));
-                        setTotalSupply((0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.total_supply));
-                        setWebsiteLink(coinInfo.links.homepage[0]);
-                        setBlockExplorerLink(coinInfo.links.blockchain_site[0]);
-                        setCoingeckoLink(`https://www.coingecko.com/en/coins/${coinInfo.id}`);
-                        setTwitterLink(coinInfo.links.twitter_screen_name);
-                        setTelegramLink(coinInfo.links.telegram_channel_identifier);
-                        if (quote === 'usd') {
-                            setPrice(`$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.current_price.usd)}`);
-                            setTotalVolume(`$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.total_volume.usd)}`);
-                            setAth(`$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.ath.usd)}`);
-                            setAtl(`$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.atl.usd)}`);
+                if (coinIds.length > 0) {
+                    setApiStatus(`Fetching ${coinIds[0].symbol.toUpperCase()}`);
+                    (0,_utils_api__WEBPACK_IMPORTED_MODULE_10__.fetchCoinInfo)(coinIds[0].id).then((coinInfo) => {
+                        if (coinInfo.id != undefined && coinInfo.id != '') {
+                            setId(coinInfo.id);
+                            setName(coinInfo.name);
+                            setIcon(coinInfo.image.large);
+                            setSymbol(coinInfo.symbol);
+                            setDescription(coinInfo.description.en);
+                            setMarketCapRank((0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_cap_rank));
+                            setCircSupply((0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.circulating_supply));
+                            setTotalSupply((0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.total_supply));
+                            setWebsiteLink(coinInfo.links.homepage[0]);
+                            setBlockExplorerLink(coinInfo.links.blockchain_site[0]);
+                            setCoingeckoLink(`https://www.coingecko.com/en/coins/${coinInfo.id}`);
+                            setTwitterLink(coinInfo.links.twitter_screen_name);
+                            setTelegramLink(coinInfo.links.telegram_channel_identifier);
+                            if (quote === 'usd') {
+                                setPrice(`$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.current_price.usd)}`);
+                                setMarketCap(`$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.market_cap.usd)}`);
+                                setTotalVolume(`$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.total_volume.usd)}`);
+                                setAth(`$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.ath.usd)}`);
+                                setAtl(`$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.atl.usd)}`);
+                            }
+                            else {
+                                setPrice(`₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.current_price.btc)}`);
+                                setMarketCap(`₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.market_cap.btc)}`);
+                                setTotalVolume(`₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.total_volume.btc)}`);
+                                setAth(`₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.ath.btc)}`);
+                                setAtl(`₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.atl.btc)}`);
+                            }
+                            setApiStatus(`Fetch success`);
                         }
                         else {
-                            setPrice(`₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.current_price.btc)}`);
-                            setTotalVolume(`₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.total_volume.btc)}`);
-                            setAth(`₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.ath.btc)}`);
-                            setAtl(`₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.atl.btc)}`);
+                            console.log('Fetch error');
+                            setApiStatus(`Fetch error: ${coinIds[0].symbol.toUpperCase()}`);
                         }
-                    }
-                    else {
-                        console.log('Fetch error');
-                    }
-                });
+                    });
+                }
             });
         });
     }
     return (react__WEBPACK_IMPORTED_MODULE_8__.createElement(react__WEBPACK_IMPORTED_MODULE_8__.Fragment, null,
         react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_HeaderField__WEBPACK_IMPORTED_MODULE_2__.default, { coinName: name, coinIcon: icon }),
         react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_SearchField__WEBPACK_IMPORTED_MODULE_6__.default, { searchCallback: searchCallback, activeCoinTicker: symbol, setQuote: setQuote }),
-        react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: `${symbol.toUpperCase()} price`, attributeValue: `${price}` }),
+        apiStatus !== `Fetch success` ? (react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: `${apiStatus}`, attributeValue: ' ' })) : (react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: `${symbol.toUpperCase()} price`, attributeValue: `${price}` })),
         react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "market Cap (rank)", attributeValue: `${marketCap} (${marketCapRank})` }),
         react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "total( volume (24h)", attributeValue: `${totalVolume}` }),
         react__WEBPACK_IMPORTED_MODULE_8__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_3__.default, { attributeName: "all-time high", attributeValue: `${ath}` }),
@@ -1025,6 +1048,8 @@ function amountFormatter(amount) {
     switch (true) {
         case amount === 0 || amount === null || amount === undefined:
             return 'na';
+        case amount >= 1000000000000000:
+            return `${(amount / 1000000000000000).toPrecision(3)} Q`;
         case amount >= 1000000000000:
             return `${(amount / 1000000000000).toPrecision(3)} T`;
         case amount >= 1000000000:
@@ -1033,10 +1058,10 @@ function amountFormatter(amount) {
             return `${(amount / 1000000).toPrecision(3)} M`;
         case amount > 10000:
             return `${(amount / 1000).toPrecision(3)} K`;
-        case amount < 0.00000001:
-            return `${(amount / 0.00000001).toPrecision(3)} sat`;
-        default:
+        case amount < 0:
             return `${amount.toPrecision(4)}`;
+        default:
+            return `${amount}`;
     }
 }
 
@@ -1064,7 +1089,6 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list';
 function fetchCoinsList() {
     return __awaiter(this, void 0, void 0, function* () {
         const res = yield fetch(COINGECKO_COINS_LIST_API);
@@ -1095,6 +1119,7 @@ function fetchPriceHistoryData(coinId, quote) {
         return priceData;
     });
 }
+const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list';
 
 
 /***/ }),

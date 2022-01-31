@@ -1,3 +1,41 @@
+export async function fetchCoinsList(): Promise<CoinGeckoCoinList> {
+	const res = await fetch(COINGECKO_COINS_LIST_API)
+
+	const data: CoinGeckoCoinList = await res.json()
+	return data
+}
+
+export async function fetchCoinInfo(coinId: string): Promise<AdvancedCoinInfo> {
+	coinId = coinId ? coinId : 'bitcoin'
+	const res = await fetch(
+		`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`
+	)
+	if (!res.ok) {
+		throw new Error(`Fetch error, coin info data: ${coinId}`)
+	}
+
+	const data = await res.json()
+	return data
+}
+
+export async function fetchPriceHistoryData(
+	coinId: string,
+	quote: string
+): Promise<PriceData> {
+	coinId = coinId ? coinId : 'bitcoin'
+	quote = quote ? quote : 'usd'
+
+	const res = await fetch(
+		`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${quote}&days=30&interval=daily`
+	)
+	if (!res.ok) {
+		throw new Error(`Fetch error, price history data: ${coinId}`)
+	}
+
+	const priceData = await res.json()
+	return priceData
+}
+
 const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list'
 
 export interface SimpleCoinInfo {
@@ -56,41 +94,3 @@ interface UnixPrice {
 }
 
 export type CoinGeckoCoinList = SimpleCoinInfo[]
-
-export async function fetchCoinsList(): Promise<CoinGeckoCoinList> {
-	const res = await fetch(COINGECKO_COINS_LIST_API)
-
-	const data: CoinGeckoCoinList = await res.json()
-	return data
-}
-
-export async function fetchCoinInfo(coinId: string): Promise<AdvancedCoinInfo> {
-	coinId = coinId ? coinId : 'bitcoin'
-	const res = await fetch(
-		`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`
-	)
-	if (!res.ok) {
-		throw new Error(`Fetch error, coin info data: ${coinId}`)
-	}
-
-	const data = await res.json()
-	return data
-}
-
-export async function fetchPriceHistoryData(
-	coinId: string,
-	quote: string
-): Promise<PriceData> {
-	coinId = coinId ? coinId : 'bitcoin'
-	quote = quote ? quote : 'usd'
-
-	const res = await fetch(
-		`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${quote}&days=30&interval=daily`
-	)
-	if (!res.ok) {
-		throw new Error(`Fetch error, price history data: ${coinId}`)
-	}
-
-	const priceData = await res.json()
-	return priceData
-}

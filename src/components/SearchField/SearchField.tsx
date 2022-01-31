@@ -2,8 +2,6 @@ import './SearchField.css'
 import React, { useState, useEffect } from 'react'
 
 import Switch from '@mui/material/Switch'
-import Box from '@mui/material/Box'
-import TextField from '@mui/material/TextField'
 
 import { getStoredCoinList, setStoredCoins } from '../../utils/storage'
 import { SimpleCoinInfo } from '../../utils/api'
@@ -20,6 +18,9 @@ const SearchField: React.FC<SearchFieldProps> = ({
 	activeCoinTicker,
 }) => {
 	const [searchInput, setSearchInput] = useState<string>('')
+	const [searchInputAvailable, setSearchInputAvailable] = useState<boolean>(
+		false
+	)
 	const [activeCoinId, setActiveCoinId] = useState<string>('')
 	const [checked, setChecked] = React.useState(false)
 	let [coinSuggestions, setCoinSuggestions] = useState<SimpleCoinInfo[]>([])
@@ -36,7 +37,16 @@ const SearchField: React.FC<SearchFieldProps> = ({
 		const coinList: SimpleCoinInfo[] = await getStoredCoinList()
 
 		if (searchInput.length != 0) {
-			setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput))
+			await setCoinSuggestions(
+				coinList.filter((coin) => coin.symbol === searchInput)
+			)
+			if (coinSuggestions.length > 0) {
+				console.log('found')
+				setSearchInputAvailable(true)
+			} else {
+				console.log('not found')
+				setSearchInputAvailable(false)
+			}
 		}
 	}
 
@@ -50,6 +60,14 @@ const SearchField: React.FC<SearchFieldProps> = ({
 		await searchCallback()
 	}
 
+	async function handleKeyDown(event) {
+		if (event.key === 'Enter') {
+			await getSearchData()
+			await setStoredCoins(coinSuggestions)
+			searchCallback()
+		}
+	}
+
 	const handleQuoteChange = () => {
 		if (!checked) {
 			setQuote('btc')
@@ -58,7 +76,6 @@ const SearchField: React.FC<SearchFieldProps> = ({
 		}
 		setChecked(!checked)
 	}
-	const label = { inputProps: { 'aria-label': 'Switch demo' } }
 
 	return (
 		<div id="search-field">
@@ -67,7 +84,9 @@ const SearchField: React.FC<SearchFieldProps> = ({
 					id="search-input"
 					placeholder="Search ticker"
 					value={searchInput}
+					onKeyDown={(event) => handleKeyDown(event)}
 					onChange={(event) => setSearchInput(event.target.value.toLowerCase())}
+					onClick={() => setSearchInput('')}
 				/>
 
 				<div id="quote-switch">
@@ -76,29 +95,29 @@ const SearchField: React.FC<SearchFieldProps> = ({
 						color="warning"
 						checked={checked}
 						onChange={handleQuoteChange}
-						size="small"
 					/>
 					₿
 				</div>
 			</div>
-
-			<div id="nav-bar">
-				{coinSuggestions.map((coin, index) => (
-					<button
-						className={
-							activeCoinId === coin.id || (!activeCoinId && index == 0)
-								? 'nav-item active-nav-item'
-								: 'nav-item'
-						}
-						key={index}
-						onClick={() =>
-							handleCoinButtonClick(coin.id, coin.symbol, coin.name)
-						}
-					>
-						{coin.name}
-					</button>
-				))}
-			</div>
+			{coinSuggestions.length > 1 && (
+				<div id="nav-bar">
+					{coinSuggestions.map((coin, index) => (
+						<button
+							className={
+								activeCoinId === coin.id || (!activeCoinId && index == 0)
+									? 'nav-item active-nav-item'
+									: 'nav-item'
+							}
+							key={index}
+							onClick={() =>
+								handleCoinButtonClick(coin.id, coin.symbol, coin.name)
+							}
+						>
+							{coin.name}
+						</button>
+					))}
+				</div>
+			)}
 		</div>
 	)
 }

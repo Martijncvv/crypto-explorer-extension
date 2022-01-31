@@ -13,30 +13,28 @@ async function getSelection() {
 		.replace(/[#$?!.,:"']/g, '')
 		.toLowerCase()
 
-	if (selectedTicker === '' || selectedTicker.length > 6) {
-		return
-	}
+	if (selectedTicker !== '' && selectedTicker.length < 6) {
+		console.log('mouseup eventListener')
 
-	console.log('mouseup eventListener')
+		const coinList: SimpleCoinInfo[] = await getStoredCoinList()
 
-	const coinList: SimpleCoinInfo[] = await getStoredCoinList()
+		const filteredCoinTickers: SimpleCoinInfo[] = coinList.filter(
+			(coin) => coin.symbol === selectedTicker
+		)
 
-	const filteredCoinTickers: SimpleCoinInfo[] = coinList.filter(
-		(coin) => coin.symbol === selectedTicker
-	)
+		console.log('CS: selectedTicker: ', selectedTicker)
+		console.log('CS: filterCoinTickers: ', filteredCoinTickers)
 
-	console.log('CS: selectedTicker: ', selectedTicker)
-	console.log('CS: filterCoinTickers: ', filteredCoinTickers)
-
-	let coinIds: SimpleCoinInfo[] = []
-	filteredCoinTickers.forEach((coin: SimpleCoinInfo) => {
-		coinIds.push({
-			id: coin.id,
-			symbol: coin.symbol,
-			name: coin.name,
+		let coinIds: SimpleCoinInfo[] = []
+		filteredCoinTickers.forEach((coin: SimpleCoinInfo) => {
+			coinIds.push({
+				id: coin.id,
+				symbol: coin.symbol,
+				name: coin.name,
+			})
 		})
-	})
-	console.log('CS: coinIds: ', coinIds)
+		console.log('CS: coinIds: ', coinIds)
 
-	setStoredCoins(coinIds)
+		setStoredCoins(coinIds)
+	}
 }

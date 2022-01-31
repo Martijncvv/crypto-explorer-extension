@@ -56,7 +56,6 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 				}
 			})
 		})
-		console.log(chartData)
 	}
 
 	return (

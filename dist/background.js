@@ -23,7 +23,6 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list';
 function fetchCoinsList() {
     return __awaiter(this, void 0, void 0, function* () {
         const res = yield fetch(COINGECKO_COINS_LIST_API);
@@ -54,6 +53,7 @@ function fetchPriceHistoryData(coinId, quote) {
         return priceData;
     });
 }
+const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list';
 
 
 /***/ }),
@@ -199,12 +199,12 @@ chrome.runtime.onInstalled.addListener(() => __awaiter(void 0, void 0, void 0, f
             });
         }
     }
-    // setStoredCoinIds(['bitcoin'])
 }));
 (0,_utils_api__WEBPACK_IMPORTED_MODULE_0__.fetchCoinsList)().then((data) => {
     (0,_utils_storage__WEBPACK_IMPORTED_MODULE_1__.setStoredCoinList)(data);
     console.log('Coins fetched');
 });
+(0,_utils_storage__WEBPACK_IMPORTED_MODULE_1__.setStoredCoins)([{ id: 'bitcoin', symbol: 'btc', name: 'bitcoin' }]);
 
 })();
 

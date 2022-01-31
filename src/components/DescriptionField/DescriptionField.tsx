@@ -10,6 +10,10 @@ const DescriptionField: React.FC<DescriptionFieldProps> = ({
 }) => {
 	const [readMore, setReadMore] = useState<boolean>(false)
 
+	useEffect(() => {
+		setReadMore(false)
+	}, [coinDescription])
+
 	if (!coinDescription.length) {
 		coinDescription = 'Description not available'
 	}
@@ -17,7 +21,6 @@ const DescriptionField: React.FC<DescriptionFieldProps> = ({
 	function createMarkup() {
 		return { __html: coinDescription }
 	}
-	setReadMore
 
 	return (
 		<div id="description-field">
@@ -30,9 +33,14 @@ const DescriptionField: React.FC<DescriptionFieldProps> = ({
 						id="description-preview"
 						dangerouslySetInnerHTML={createMarkup()}
 					/>
-					<button id="read-more-button" onClick={() => setReadMore(!readMore)}>
-						Read more
-					</button>
+					{coinDescription != 'Description not available' && (
+						<button
+							id="read-more-button"
+							onClick={() => setReadMore(!readMore)}
+						>
+							Read more
+						</button>
+					)}
 				</>
 			)}
 		</div>

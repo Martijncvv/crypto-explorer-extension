@@ -10,21 +10,20 @@ import './popup.css'
 import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
-import { AdvancedCoinInfo, SimpleCoinInfo, fetchCoinInfo } from '../utils/api'
+import { AdvancedCoinInfo, fetchCoinInfo } from '../utils/api'
 import { getStoredCoins } from '../utils/storage'
 import { amountFormatter } from '../utils/amountFormatter'
 
 const App: React.FC<{}> = () => {
 	const [quote, setQuote] = useState<string>('usd')
-	const [apiStatus, setApiStatus] = useState<string>('active')
-	const [coinTicker, setCoinTicker] = useState<string>('')
+	const [apiStatus, setApiStatus] = useState<string>('')
 
 	const [name, setName] = useState<string>('')
 	const [id, setId] = useState<string>('')
 	const [icon, setIcon] = useState<string>('')
 	const [symbol, setSymbol] = useState<string>('')
 	const [marketCap, setMarketCap] = useState<string>('')
-	const [marketCapRank, setMarketCapRank] = useState<number>(0)
+	const [marketCapRank, setMarketCapRank] = useState<string>('')
 	const [circSupply, setCircSupply] = useState<string>('')
 	const [totalSupply, setTotalSupply] = useState<string>('')
 	const [description, setDescription] = useState<string>('')
@@ -50,51 +49,63 @@ const App: React.FC<{}> = () => {
 
 	async function setCoinData() {
 		getStoredCoins().then((coinIds) => {
-			fetchCoinInfo(coinIds[0].id).then((coinInfo: AdvancedCoinInfo) => {
-				if (coinInfo != undefined) {
-					setId(coinInfo.id)
-					setName(coinInfo.name)
-					setIcon(coinInfo.image.large)
-					setSymbol(coinInfo.symbol)
-					setDescription(coinInfo.description.en)
-					setMarketCap(
-						`$${amountFormatter(coinInfo.market_data.market_cap.usd)}`
-					)
-					setMarketCapRank(coinInfo.market_cap_rank)
-					setCircSupply(
-						amountFormatter(coinInfo.market_data.circulating_supply)
-					)
-					setTotalSupply(amountFormatter(coinInfo.market_data.total_supply))
+			if (coinIds.length > 0) {
+				setApiStatus(`Fetching ${coinIds[0].symbol.toUpperCase()}`)
 
-					setWebsiteLink(coinInfo.links.homepage[0])
-					setBlockExplorerLink(coinInfo.links.blockchain_site[0])
-					setCoingeckoLink(`https://www.coingecko.com/en/coins/${coinInfo.id}`)
-					setTwitterLink(coinInfo.links.twitter_screen_name)
-					setTelegramLink(coinInfo.links.telegram_channel_identifier)
+				fetchCoinInfo(coinIds[0].id).then((coinInfo: AdvancedCoinInfo) => {
+					if (coinInfo.id != undefined && coinInfo.id != '') {
+						setId(coinInfo.id)
+						setName(coinInfo.name)
+						setIcon(coinInfo.image.large)
+						setSymbol(coinInfo.symbol)
+						setDescription(coinInfo.description.en)
 
-					if (quote === 'usd') {
-						setPrice(
-							`$${amountFormatter(coinInfo.market_data.current_price.usd)}`
+						setMarketCapRank(amountFormatter(coinInfo.market_cap_rank))
+						setCircSupply(
+							amountFormatter(coinInfo.market_data.circulating_supply)
 						)
-						setTotalVolume(
-							`$${amountFormatter(coinInfo.market_data.total_volume.usd)}`
+						setTotalSupply(amountFormatter(coinInfo.market_data.total_supply))
+
+						setWebsiteLink(coinInfo.links.homepage[0])
+						setBlockExplorerLink(coinInfo.links.blockchain_site[0])
+						setCoingeckoLink(
+							`https://www.coingecko.com/en/coins/${coinInfo.id}`
 						)
-						setAth(`$${amountFormatter(coinInfo.market_data.ath.usd)}`)
-						setAtl(`$${amountFormatter(coinInfo.market_data.atl.usd)}`)
+						setTwitterLink(coinInfo.links.twitter_screen_name)
+						setTelegramLink(coinInfo.links.telegram_channel_identifier)
+
+						if (quote === 'usd') {
+							setPrice(
+								`$${amountFormatter(coinInfo.market_data.current_price.usd)}`
+							)
+							setMarketCap(
+								`$${amountFormatter(coinInfo.market_data.market_cap.usd)}`
+							)
+							setTotalVolume(
+								`$${amountFormatter(coinInfo.market_data.total_volume.usd)}`
+							)
+							setAth(`$${amountFormatter(coinInfo.market_data.ath.usd)}`)
+							setAtl(`$${amountFormatter(coinInfo.market_data.atl.usd)}`)
+						} else {
+							setPrice(
+								`₿${amountFormatter(coinInfo.market_data.current_price.btc)}`
+							)
+							setMarketCap(
+								`₿${amountFormatter(coinInfo.market_data.market_cap.btc)}`
+							)
+							setTotalVolume(
+								`₿${amountFormatter(coinInfo.market_data.total_volume.btc)}`
+							)
+							setAth(`₿${amountFormatter(coinInfo.market_data.ath.btc)}`)
+							setAtl(`₿${amountFormatter(coinInfo.market_data.atl.btc)}`)
+						}
+						setApiStatus(`Fetch success`)
 					} else {
-						setPrice(
-							`₿${amountFormatter(coinInfo.market_data.current_price.btc)}`
-						)
-						setTotalVolume(
-							`₿${amountFormatter(coinInfo.market_data.total_volume.btc)}`
-						)
-						setAth(`₿${amountFormatter(coinInfo.market_data.ath.btc)}`)
-						setAtl(`₿${amountFormatter(coinInfo.market_data.atl.btc)}`)
+						console.log('Fetch error')
+						setApiStatus(`Fetch error: ${coinIds[0].symbol.toUpperCase()}`)
 					}
-				} else {
-					console.log('Fetch error')
-				}
-			})
+				})
+			}
 		})
 	}
 
@@ -106,10 +117,15 @@ const App: React.FC<{}> = () => {
 				activeCoinTicker={symbol}
 				setQuote={setQuote}
 			/>
-			<InfoField
-				attributeName={`${symbol.toUpperCase()} price`}
-				attributeValue={`${price}`}
-			/>
+			{apiStatus !== `Fetch success` ? (
+				<InfoField attributeName={`${apiStatus}`} attributeValue={' '} />
+			) : (
+				<InfoField
+					attributeName={`${symbol.toUpperCase()} price`}
+					attributeValue={`${price}`}
+				/>
+			)}
+
 			<InfoField
 				attributeName="market Cap (rank)"
 				attributeValue={`${marketCap} (${marketCapRank})`}
