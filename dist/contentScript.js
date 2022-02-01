@@ -145,8 +145,6 @@ function getSelection() {
             console.log('mouseup eventListener');
             const coinList = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_0__.getStoredCoinList)();
             const filteredCoinTickers = coinList.filter((coin) => coin.symbol === selectedTicker);
-            console.log('CS: selectedTicker: ', selectedTicker);
-            console.log('CS: filterCoinTickers: ', filteredCoinTickers);
             let coinIds = [];
             filteredCoinTickers.forEach((coin) => {
                 coinIds.push({
@@ -155,7 +153,6 @@ function getSelection() {
                     name: coin.name,
                 });
             });
-            console.log('CS: coinIds: ', coinIds);
             (0,_utils_storage__WEBPACK_IMPORTED_MODULE_0__.setStoredCoins)(coinIds);
         }
     });

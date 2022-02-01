@@ -25,10 +25,10 @@
 		}
 	],
 	"commands": {
-		"_execute_browser_action": {
+		"_execute_action": {
 			"suggested_key": {
-				"default": "Ctrl+Shift+F",
-				"mac": "MacCtrl+Shift+F"
+				"default": "Ctrl+Shift+L",
+				"mac": "MacCtrl+Shift+L"
 			},
 			"description": "Opens CG Explorer"
 		}

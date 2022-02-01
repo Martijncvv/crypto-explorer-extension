@@ -22,9 +22,6 @@ async function getSelection() {
 			(coin) => coin.symbol === selectedTicker
 		)
 
-		console.log('CS: selectedTicker: ', selectedTicker)
-		console.log('CS: filterCoinTickers: ', filteredCoinTickers)
-
 		let coinIds: SimpleCoinInfo[] = []
 		filteredCoinTickers.forEach((coin: SimpleCoinInfo) => {
 			coinIds.push({
@@ -33,7 +30,6 @@ async function getSelection() {
 				name: coin.name,
 			})
 		})
-		console.log('CS: coinIds: ', coinIds)
 
 		setStoredCoins(coinIds)
 	}

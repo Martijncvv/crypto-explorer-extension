@@ -177,7 +177,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#search-field {\n\tmargin: 0 16px;\n}\n#input-field {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tjustify-content: space-between;\n\tmargin-top: 8px;\n}\n\n#search-input {\n\twidth: 100px;\n\tborder: none;\n\tborder-radius: 5px;\n\tdisplay: block;\n\tpadding: 9px 4px 9px 40px;\n\tbackground: transparent\n\t\turl(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E\")\n\t\tno-repeat 13px center;\n}\n#search-input:focus {\n\tborder: none;\n}\n\n#quote-switch {\n\t/* background-color: red; */\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n#nav-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.nav-item {\n\tmin-width: 30%;\n\theight: 30px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.nav-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-nav-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n", "",{"version":3,"sources":["webpack://./src/components/SearchField/SearchField.css"],"names":[],"mappings":"AAAA;CACC,cAAc;AACf;AACA;CACC,aAAa;CACb,eAAe;CACf,8BAA8B;CAC9B,eAAe;AAChB;;AAEA;CACC,YAAY;CACZ,YAAY;CACZ,kBAAkB;CAClB,cAAc;CACd,yBAAyB;CACzB;;uBAEsB;AACvB;AACA;CACC,YAAY;AACb;;AAEA;CACC,2BAA2B;CAC3B,aAAa;CACb,uBAAuB;CACvB,mBAAmB;AACpB;;AAEA;CACC,aAAa;CACb,eAAe;AAChB;AACA;CACC,cAAc;CACd,YAAY;CACZ,YAAY;CACZ,oCAAoC;CACpC,YAAY;AACb;AACA;CACC,oCAAoC;CACpC,YAAY;AACb;AACA;CACC,gBAAgB;CAChB,gDAAgD;AACjD","sourcesContent":["#search-field {\n\tmargin: 0 16px;\n}\n#input-field {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tjustify-content: space-between;\n\tmargin-top: 8px;\n}\n\n#search-input {\n\twidth: 100px;\n\tborder: none;\n\tborder-radius: 5px;\n\tdisplay: block;\n\tpadding: 9px 4px 9px 40px;\n\tbackground: transparent\n\t\turl(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E\")\n\t\tno-repeat 13px center;\n}\n#search-input:focus {\n\tborder: none;\n}\n\n#quote-switch {\n\t/* background-color: red; */\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n#nav-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.nav-item {\n\tmin-width: 30%;\n\theight: 30px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.nav-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-nav-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "input {\n\tborder: none;\n\tborder-radius: 5px;\n\tborder-color: rgba(255, 255, 255, 0);\n}\n\n#search-field {\n\tmargin: 0 16px;\n}\n#input-field {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tjustify-content: space-between;\n\tmargin-top: 8px;\n}\n\n#search-input {\n\twidth: 100px;\n\tborder: none;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n\tdisplay: block;\n\tpadding: 9px 4px 9px 40px;\n\tbackground: transparent\n\t\turl(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E\")\n\t\tno-repeat 13px center;\n}\n\n#quote-switch {\n\tmargin-right: 4px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n#nav-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.nav-item {\n\tmin-width: 30%;\n\theight: 30px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.nav-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-nav-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n", "",{"version":3,"sources":["webpack://./src/components/SearchField/SearchField.css"],"names":[],"mappings":"AAAA;CACC,YAAY;CACZ,kBAAkB;CAClB,oCAAoC;AACrC;;AAEA;CACC,cAAc;AACf;AACA;CACC,aAAa;CACb,eAAe;CACf,8BAA8B;CAC9B,eAAe;AAChB;;AAEA;CACC,YAAY;CACZ,YAAY;CACZ,gDAAgD;CAChD,cAAc;CACd,yBAAyB;CACzB;;uBAEsB;AACvB;;AAEA;CACC,iBAAiB;CACjB,aAAa;CACb,uBAAuB;CACvB,mBAAmB;AACpB;;AAEA;CACC,aAAa;CACb,eAAe;AAChB;AACA;CACC,cAAc;CACd,YAAY;CACZ,YAAY;CACZ,oCAAoC;CACpC,YAAY;AACb;AACA;CACC,oCAAoC;CACpC,YAAY;AACb;AACA;CACC,gBAAgB;CAChB,gDAAgD;AACjD","sourcesContent":["input {\n\tborder: none;\n\tborder-radius: 5px;\n\tborder-color: rgba(255, 255, 255, 0);\n}\n\n#search-field {\n\tmargin: 0 16px;\n}\n#input-field {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tjustify-content: space-between;\n\tmargin-top: 8px;\n}\n\n#search-input {\n\twidth: 100px;\n\tborder: none;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n\tdisplay: block;\n\tpadding: 9px 4px 9px 40px;\n\tbackground: transparent\n\t\turl(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E\")\n\t\tno-repeat 13px center;\n}\n\n#quote-switch {\n\tmargin-right: 4px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n#nav-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.nav-item {\n\tmin-width: 30%;\n\theight: 30px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.nav-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-nav-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -643,17 +643,22 @@ const CoinGeckoIcon = __webpack_require__(/*! ../../static/images/Coingecko_Icon
 const TwitterIcon = __webpack_require__(/*! ../../static/images/Twitter_Social_Icon_Circle_Color.png */ "./src/static/images/Twitter_Social_Icon_Circle_Color.png");
 const TelegramIcon = __webpack_require__(/*! ../../static/images/Telegram_Social_Icon_Circle_Color.png */ "./src/static/images/Telegram_Social_Icon_Circle_Color.png");
 const LinksField = ({ blockExplorerLink, coingeckoLink, twitterLink, telegramLink, websiteLink, }) => {
+    console.log('block', blockExplorerLink);
+    console.log('twitter', twitterLink);
+    console.log('telegram', telegramLink);
+    console.log('coingecko', coingeckoLink);
+    console.log('website', websiteLink);
     return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "links-field" },
-        react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", { href: websiteLink, target: "_blank" },
-            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: WebsiteIcon })),
-        react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", { href: blockExplorerLink, target: "_blank" },
-            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: BlockExplorerIcon })),
-        react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", { href: coingeckoLink, target: "_blank" },
-            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: CoinGeckoIcon })),
-        react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", { href: twitterLink, target: "_blank" },
-            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: TwitterIcon })),
-        react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", { href: telegramLink, target: "_blank" },
-            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: TelegramIcon }))));
+        websiteLink && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", { href: websiteLink, target: "_blank" },
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: WebsiteIcon }))),
+        blockExplorerLink && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", { href: blockExplorerLink, target: "_blank" },
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: BlockExplorerIcon }))),
+        coingeckoLink && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", { href: coingeckoLink, target: "_blank" },
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: CoinGeckoIcon }))),
+        twitterLink && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", { href: twitterLink, target: "_blank" },
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: TwitterIcon }))),
+        telegramLink && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", { href: telegramLink, target: "_blank" },
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: TelegramIcon })))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LinksField);
 
@@ -709,16 +714,14 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 
-// $
-// ₿
 const PriceGraphField = ({ coinId, quote }) => {
     const [chartData, setChartData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        setChartData([]);
         formatChartData();
     }, [coinId, quote]);
     function formatChartData() {
         return __awaiter(this, void 0, void 0, function* () {
-            setChartData([]);
             yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchPriceHistoryData)(coinId, quote).then((priceData) => {
                 priceData.prices.forEach(function (UnixPrice) {
                     return __awaiter(this, void 0, void 0, function* () {
@@ -815,32 +818,21 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 const SearchField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
     const [searchInput, setSearchInput] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');
-    const [searchInputAvailable, setSearchInputAvailable] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
     const [activeCoinId, setActiveCoinId] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');
     const [checked, setChecked] = react__WEBPACK_IMPORTED_MODULE_1__.useState(false);
-    let [coinSuggestions, setCoinSuggestions] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
+    const [coinSuggestions, setCoinSuggestions] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         setSearchInput(activeCoinTicker);
     }, [activeCoinTicker]);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
-        getSearchData();
+        if (searchInput.length != 0) {
+            getSearchData();
+        }
     }, [searchInput]);
     function getSearchData() {
         return __awaiter(this, void 0, void 0, function* () {
             const coinList = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.getStoredCoinList)();
-            if (searchInput.length != 0) {
-                setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput));
-                if (coinSuggestions.length > 0) {
-                    console.log('found');
-                    console.log(coinSuggestions);
-                    setSearchInputAvailable(true);
-                }
-                else {
-                    console.log('not found');
-                    console.log(coinSuggestions);
-                    setSearchInputAvailable(false);
-                }
-            }
+            setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput));
         });
     }
     function handleCoinButtonClick(id, symbol, name) {
@@ -850,11 +842,12 @@ const SearchField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
             yield searchCallback();
         });
     }
-    function handleKeyDown(event) {
+    function handleSearchEnterKeyDown(event) {
         return __awaiter(this, void 0, void 0, function* () {
             if (event.key === 'Enter') {
                 yield getSearchData();
                 yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.setStoredCoins)(coinSuggestions);
+                setActiveCoinId(coinSuggestions[0].id);
                 searchCallback();
             }
         });
@@ -870,7 +863,7 @@ const SearchField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
     };
     return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "search-field" },
         react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "input-field" },
-            react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", { id: "search-input", placeholder: "Search ticker", value: searchInput, onKeyDown: (event) => handleKeyDown(event), onChange: (event) => setSearchInput(event.target.value.toLowerCase()), onClick: () => setSearchInput('') }),
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", { id: "search-input", placeholder: "Search ticker", value: searchInput, onKeyDown: (event) => handleSearchEnterKeyDown(event), onChange: (event) => setSearchInput(event.target.value.toLowerCase()), onClick: () => setSearchInput('') }),
             react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "quote-switch" },
                 "$",
                 react__WEBPACK_IMPORTED_MODULE_1__.createElement(_mui_material_Switch__WEBPACK_IMPORTED_MODULE_3__.default, { color: "warning", checked: checked, onChange: handleQuoteChange }),
@@ -968,7 +961,10 @@ const App = () => {
     const [atl, setAtl] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
     (0,react__WEBPACK_IMPORTED_MODULE_8__.useEffect)(() => {
         setCoinData();
-    }, [quote, id]);
+    }, []);
+    (0,react__WEBPACK_IMPORTED_MODULE_8__.useEffect)(() => {
+        setCoinData();
+    }, [quote]);
     function searchCallback() {
         setCoinData();
     }

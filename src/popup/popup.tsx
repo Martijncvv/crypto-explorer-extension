@@ -41,7 +41,11 @@ const App: React.FC<{}> = () => {
 
 	useEffect(() => {
 		setCoinData()
-	}, [quote, id])
+	}, [])
+
+	useEffect(() => {
+		setCoinData()
+	}, [quote])
 
 	function searchCallback(): void {
 		setCoinData()

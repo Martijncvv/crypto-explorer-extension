@@ -18,37 +18,23 @@ const SearchField: React.FC<SearchFieldProps> = ({
 	activeCoinTicker,
 }) => {
 	const [searchInput, setSearchInput] = useState<string>('')
-	const [searchInputAvailable, setSearchInputAvailable] = useState<boolean>(
-		false
-	)
 	const [activeCoinId, setActiveCoinId] = useState<string>('')
 	const [checked, setChecked] = React.useState(false)
-	let [coinSuggestions, setCoinSuggestions] = useState<SimpleCoinInfo[]>([])
+	const [coinSuggestions, setCoinSuggestions] = useState<SimpleCoinInfo[]>([])
 
 	useEffect(() => {
 		setSearchInput(activeCoinTicker)
 	}, [activeCoinTicker])
 
 	useEffect(() => {
-		getSearchData()
+		if (searchInput.length != 0) {
+			getSearchData()
+		}
 	}, [searchInput])
 
 	async function getSearchData() {
 		const coinList: SimpleCoinInfo[] = await getStoredCoinList()
-
-		if (searchInput.length != 0) {
-			setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput))
-
-			if (coinSuggestions.length > 0) {
-				console.log('found')
-				console.log(coinSuggestions)
-				setSearchInputAvailable(true)
-			} else {
-				console.log('not found')
-				console.log(coinSuggestions)
-				setSearchInputAvailable(false)
-			}
-		}
+		setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput))
 	}
 
 	async function handleCoinButtonClick(
@@ -61,10 +47,11 @@ const SearchField: React.FC<SearchFieldProps> = ({
 		await searchCallback()
 	}
 
-	async function handleKeyDown(event) {
+	async function handleSearchEnterKeyDown(event) {
 		if (event.key === 'Enter') {
 			await getSearchData()
 			await setStoredCoins(coinSuggestions)
+			setActiveCoinId(coinSuggestions[0].id)
 			searchCallback()
 		}
 	}
@@ -85,7 +72,7 @@ const SearchField: React.FC<SearchFieldProps> = ({
 					id="search-input"
 					placeholder="Search ticker"
 					value={searchInput}
-					onKeyDown={(event) => handleKeyDown(event)}
+					onKeyDown={(event) => handleSearchEnterKeyDown(event)}
 					onChange={(event) => setSearchInput(event.target.value.toLowerCase())}
 					onClick={() => setSearchInput('')}
 				/>

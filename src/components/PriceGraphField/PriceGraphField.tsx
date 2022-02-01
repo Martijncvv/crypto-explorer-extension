@@ -15,18 +15,16 @@ interface PriceGraphFieldProps {
 	coinId: string
 	quote: string
 }
-// $
-// ₿
 
 const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 	const [chartData, setChartData] = useState<any>([])
 
 	useEffect(() => {
+		setChartData([])
 		formatChartData()
 	}, [coinId, quote])
 
 	async function formatChartData() {
-		setChartData([])
 		await fetchPriceHistoryData(coinId, quote).then((priceData: PriceData) => {
 			priceData.prices.forEach(async function(UnixPrice) {
 				let dateObject = new Date(UnixPrice[0])

@@ -22,23 +22,38 @@ const LinksField: React.FC<LinksFieldProps> = ({
 	telegramLink,
 	websiteLink,
 }) => {
+	console.log('block', blockExplorerLink)
+	console.log('twitter', twitterLink)
+	console.log('telegram', telegramLink)
+	console.log('coingecko', coingeckoLink)
+	console.log('website', websiteLink)
 	return (
 		<div id="links-field">
-			<a href={websiteLink} target="_blank">
-				<img className="link-icon" src={WebsiteIcon} />
-			</a>
-			<a href={blockExplorerLink} target="_blank">
-				<img className="link-icon" src={BlockExplorerIcon} />
-			</a>
-			<a href={coingeckoLink} target="_blank">
-				<img className="link-icon" src={CoinGeckoIcon} />
-			</a>
-			<a href={twitterLink} target="_blank">
-				<img className="link-icon" src={TwitterIcon} />
-			</a>
-			<a href={telegramLink} target="_blank">
-				<img className="link-icon" src={TelegramIcon} />
-			</a>
+			{websiteLink && (
+				<a href={websiteLink} target="_blank">
+					<img className="link-icon" src={WebsiteIcon} />
+				</a>
+			)}
+			{blockExplorerLink && (
+				<a href={blockExplorerLink} target="_blank">
+					<img className="link-icon" src={BlockExplorerIcon} />
+				</a>
+			)}
+			{coingeckoLink && (
+				<a href={coingeckoLink} target="_blank">
+					<img className="link-icon" src={CoinGeckoIcon} />
+				</a>
+			)}
+			{twitterLink && (
+				<a href={twitterLink} target="_blank">
+					<img className="link-icon" src={TwitterIcon} />
+				</a>
+			)}
+			{telegramLink && (
+				<a href={telegramLink} target="_blank">
+					<img className="link-icon" src={TelegramIcon} />
+				</a>
+			)}
 		</div>
 	)
 }
