@@ -643,11 +643,6 @@ const CoinGeckoIcon = __webpack_require__(/*! ../../static/images/Coingecko_Icon
 const TwitterIcon = __webpack_require__(/*! ../../static/images/Twitter_Social_Icon_Circle_Color.png */ "./src/static/images/Twitter_Social_Icon_Circle_Color.png");
 const TelegramIcon = __webpack_require__(/*! ../../static/images/Telegram_Social_Icon_Circle_Color.png */ "./src/static/images/Telegram_Social_Icon_Circle_Color.png");
 const LinksField = ({ blockExplorerLink, coingeckoLink, twitterLink, telegramLink, websiteLink, }) => {
-    console.log('block', blockExplorerLink);
-    console.log('twitter', twitterLink);
-    console.log('telegram', telegramLink);
-    console.log('coingecko', coingeckoLink);
-    console.log('website', websiteLink);
     return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "links-field" },
         websiteLink && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("a", { href: websiteLink, target: "_blank" },
             react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: WebsiteIcon }))),
@@ -832,7 +827,7 @@ const SearchField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
     function getSearchData() {
         return __awaiter(this, void 0, void 0, function* () {
             const coinList = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.getStoredCoinList)();
-            setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput));
+            yield setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput && !coin.id.includes('wormhole')));
         });
     }
     function handleCoinButtonClick(id, symbol, name) {
@@ -847,7 +842,8 @@ const SearchField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
             if (event.key === 'Enter') {
                 yield getSearchData();
                 yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.setStoredCoins)(coinSuggestions);
-                setActiveCoinId(coinSuggestions[0].id);
+                console.log(coinSuggestions);
+                coinSuggestions.length && setActiveCoinId(coinSuggestions[0].id);
                 searchCallback();
             }
         });
@@ -868,9 +864,11 @@ const SearchField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
                 "$",
                 react__WEBPACK_IMPORTED_MODULE_1__.createElement(_mui_material_Switch__WEBPACK_IMPORTED_MODULE_3__.default, { color: "warning", checked: checked, onChange: handleQuoteChange }),
                 "\u20BF")),
+        coinSuggestions.length === 0 && searchInput != '' && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "nav-bar" },
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { className: "nav-item" }, "Not Available"))),
         (coinSuggestions.length > 1 ||
             (coinSuggestions.length > 0 &&
-                coinSuggestions[0].id != activeCoinId)) && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "nav-bar" }, coinSuggestions.map((coin, index) => (react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { className: activeCoinId === coin.id || (!activeCoinId && index == 0)
+                coinSuggestions[0].symbol != activeCoinTicker)) && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "nav-bar" }, coinSuggestions.map((coin, index) => (react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { className: activeCoinId === coin.id || (!activeCoinId && index == 0)
                 ? 'nav-item active-nav-item'
                 : 'nav-item', key: index, onClick: () => handleCoinButtonClick(coin.id, coin.symbol, coin.name) }, coin.name)))))));
 };

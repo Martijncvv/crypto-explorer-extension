@@ -22,11 +22,6 @@ const LinksField: React.FC<LinksFieldProps> = ({
 	telegramLink,
 	websiteLink,
 }) => {
-	console.log('block', blockExplorerLink)
-	console.log('twitter', twitterLink)
-	console.log('telegram', telegramLink)
-	console.log('coingecko', coingeckoLink)
-	console.log('website', websiteLink)
 	return (
 		<div id="links-field">
 			{websiteLink && (

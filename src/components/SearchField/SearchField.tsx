@@ -34,7 +34,11 @@ const SearchField: React.FC<SearchFieldProps> = ({
 
 	async function getSearchData() {
 		const coinList: SimpleCoinInfo[] = await getStoredCoinList()
-		setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput))
+		await setCoinSuggestions(
+			coinList.filter(
+				(coin) => coin.symbol === searchInput && !coin.id.includes('wormhole')
+			)
+		)
 	}
 
 	async function handleCoinButtonClick(
@@ -51,7 +55,8 @@ const SearchField: React.FC<SearchFieldProps> = ({
 		if (event.key === 'Enter') {
 			await getSearchData()
 			await setStoredCoins(coinSuggestions)
-			setActiveCoinId(coinSuggestions[0].id)
+			console.log(coinSuggestions)
+			coinSuggestions.length && setActiveCoinId(coinSuggestions[0].id)
 			searchCallback()
 		}
 	}
@@ -87,9 +92,15 @@ const SearchField: React.FC<SearchFieldProps> = ({
 					₿
 				</div>
 			</div>
+			{coinSuggestions.length === 0 && searchInput != '' && (
+				<div id="nav-bar">
+					<button className="nav-item">Not Available</button>
+				</div>
+			)}
+
 			{(coinSuggestions.length > 1 ||
 				(coinSuggestions.length > 0 &&
-					coinSuggestions[0].id != activeCoinId)) && (
+					coinSuggestions[0].symbol != activeCoinTicker)) && (
 				<div id="nav-bar">
 					{coinSuggestions.map((coin, index) => (
 						<button
