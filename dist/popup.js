@@ -829,13 +829,15 @@ const SearchField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
         return __awaiter(this, void 0, void 0, function* () {
             const coinList = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.getStoredCoinList)();
             if (searchInput.length != 0) {
-                yield setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput));
+                setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput));
                 if (coinSuggestions.length > 0) {
                     console.log('found');
+                    console.log(coinSuggestions);
                     setSearchInputAvailable(true);
                 }
                 else {
                     console.log('not found');
+                    console.log(coinSuggestions);
                     setSearchInputAvailable(false);
                 }
             }
@@ -873,7 +875,9 @@ const SearchField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
                 "$",
                 react__WEBPACK_IMPORTED_MODULE_1__.createElement(_mui_material_Switch__WEBPACK_IMPORTED_MODULE_3__.default, { color: "warning", checked: checked, onChange: handleQuoteChange }),
                 "\u20BF")),
-        coinSuggestions.length > 1 && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "nav-bar" }, coinSuggestions.map((coin, index) => (react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { className: activeCoinId === coin.id || (!activeCoinId && index == 0)
+        (coinSuggestions.length > 1 ||
+            (coinSuggestions.length > 0 &&
+                coinSuggestions[0].id != activeCoinId)) && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "nav-bar" }, coinSuggestions.map((coin, index) => (react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { className: activeCoinId === coin.id || (!activeCoinId && index == 0)
                 ? 'nav-item active-nav-item'
                 : 'nav-item', key: index, onClick: () => handleCoinButtonClick(coin.id, coin.symbol, coin.name) }, coin.name)))))));
 };
@@ -964,7 +968,7 @@ const App = () => {
     const [atl, setAtl] = (0,react__WEBPACK_IMPORTED_MODULE_8__.useState)('');
     (0,react__WEBPACK_IMPORTED_MODULE_8__.useEffect)(() => {
         setCoinData();
-    }, [quote]);
+    }, [quote, id]);
     function searchCallback() {
         setCoinData();
     }

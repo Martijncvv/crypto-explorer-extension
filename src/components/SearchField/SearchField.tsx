@@ -37,14 +37,15 @@ const SearchField: React.FC<SearchFieldProps> = ({
 		const coinList: SimpleCoinInfo[] = await getStoredCoinList()
 
 		if (searchInput.length != 0) {
-			await setCoinSuggestions(
-				coinList.filter((coin) => coin.symbol === searchInput)
-			)
+			setCoinSuggestions(coinList.filter((coin) => coin.symbol === searchInput))
+
 			if (coinSuggestions.length > 0) {
 				console.log('found')
+				console.log(coinSuggestions)
 				setSearchInputAvailable(true)
 			} else {
 				console.log('not found')
+				console.log(coinSuggestions)
 				setSearchInputAvailable(false)
 			}
 		}
@@ -99,7 +100,9 @@ const SearchField: React.FC<SearchFieldProps> = ({
 					₿
 				</div>
 			</div>
-			{coinSuggestions.length > 1 && (
+			{(coinSuggestions.length > 1 ||
+				(coinSuggestions.length > 0 &&
+					coinSuggestions[0].id != activeCoinId)) && (
 				<div id="nav-bar">
 					{coinSuggestions.map((coin, index) => (
 						<button
