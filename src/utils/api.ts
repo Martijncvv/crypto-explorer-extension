@@ -38,6 +38,8 @@ export async function fetchPriceHistoryData(
 
 const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list'
 
+export type CoinGeckoCoinList = SimpleCoinInfo[]
+
 export interface SimpleCoinInfo {
 	id: string
 	symbol: string
@@ -81,6 +83,7 @@ interface Links {
 	telegram_channel_identifier: string
 	blockchain_site: string[]
 }
+
 export interface PriceData {
 	prices: UnixPriceArray[]
 	market_caps: UnixPriceArray[]
@@ -92,5 +95,3 @@ interface UnixPriceArray {
 interface UnixPrice {
 	value: number
 }
-
-export type CoinGeckoCoinList = SimpleCoinInfo[]

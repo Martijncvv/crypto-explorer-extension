@@ -26,6 +26,7 @@ const DescriptionField: React.FC<DescriptionFieldProps> = ({
 		<div id="description-field">
 			<p id="title">Description</p>
 			{readMore ? (
+				// insert coin description HTML code fetched from CoinGecko API
 				<div id="description" dangerouslySetInnerHTML={createMarkup()} />
 			) : (
 				<>

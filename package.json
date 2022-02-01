@@ -1,7 +1,7 @@
 {
 	"name": "crypto-explorer-extension",
 	"version": "1.0.0",
-	"description": "Chrome Extension to explorer cryptocurrencies",
+	"description": "Extension to explorer cryptocurrencies",
 	"scripts": {
 		"start": "webpack --watch --progress --config webpack.dev.js",
 		"build": "webpack --watch --progress --config webpack.prod.js"
@@ -20,7 +20,6 @@
 		"html-webpack-plugin": "^4.5.2",
 		"react": "^17.0.2",
 		"react-dom": "^17.0.2",
-		"react-google-charts": "^4.0.0",
 		"style-loader": "^2.0.0",
 		"terser-webpack-plugin": "^5.1.1",
 		"ts-loader": "^8.2.0",
@@ -34,7 +33,6 @@
 		"@emotion/styled": "^11.6.0",
 		"@mui/icons-material": "^5.3.1",
 		"@mui/material": "^5.3.1",
-		"react-helmet": "^6.1.0",
 		"recharts": "^2.1.8"
 	}
 }

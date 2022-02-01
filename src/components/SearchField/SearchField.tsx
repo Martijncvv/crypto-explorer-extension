@@ -71,7 +71,7 @@ const SearchField: React.FC<SearchFieldProps> = ({
 	}
 
 	return (
-		<div id="search-field">
+		<div id="interaction-field">
 			<div id="input-field">
 				<input
 					id="search-input"

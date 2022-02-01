@@ -1,13 +1,8 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import './options.css'
 
 const App: React.FC<{}> = () => {
-  return (
-    <div>
-      <img src="icon.png" />
-    </div>
-  )
+	return <div></div>
 }
 
 const root = document.createElement('div')

@@ -1,3 +1,4 @@
+import './popup.css'
 import DescriptionField from '../components/DescriptionField'
 import FooterField from '../components/FooterField'
 import HeaderField from '../components/HeaderField'
@@ -6,13 +7,12 @@ import LinksField from '../components/LinksField'
 import PriceGraphField from '../components/PriceGraphField'
 import SearchField from '../components/SearchField'
 
-import './popup.css'
-import React, { useState, useEffect } from 'react'
-import ReactDOM from 'react-dom'
-
 import { AdvancedCoinInfo, fetchCoinInfo } from '../utils/api'
 import { getStoredCoins } from '../utils/storage'
 import { amountFormatter } from '../utils/amountFormatter'
+
+import React, { useState, useEffect } from 'react'
+import ReactDOM from 'react-dom'
 
 const App: React.FC<{}> = () => {
 	const [quote, setQuote] = useState<string>('usd')
@@ -105,7 +105,6 @@ const App: React.FC<{}> = () => {
 						}
 						setApiStatus(`Fetch success`)
 					} else {
-						console.log('Fetch error')
 						setApiStatus(`Fetch error: ${coinIds[0].symbol.toUpperCase()}`)
 					}
 				})

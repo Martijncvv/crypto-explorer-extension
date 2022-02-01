@@ -1,6 +1,6 @@
 {
-	"name": "Crypto Explorer Extension",
-	"description": "Chrome Extension to explorer cryptocurrencies",
+	"name": "Crypto Explorer",
+	"description": "Extension to explore cryptocurrencies",
 	"version": "1.0.0",
 	"manifest_version": 3,
 	"icons": {
@@ -10,7 +10,7 @@
 	},
 	"action": {
 		"default_popup": "popup.html",
-		"default_title": "Crypto Explorer Extension",
+		"default_title": "Crypto Explorer",
 		"default_icon": "images/coingecko_logo.png"
 	},
 	"permissions": ["storage", "activeTab", "scripting"],
