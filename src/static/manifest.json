@@ -1,6 +1,6 @@
 {
 	"name": "Crypto Explorer",
-	"description": "Extension to explore cryptocurrencies",
+	"description": "Display information about a cryptocurrency by selecting a ticker (BTC/ XYZ) and pressing CTRL+SHIFT+L or use the search feature.",
 	"version": "1.0.0",
 	"manifest_version": 3,
 	"icons": {

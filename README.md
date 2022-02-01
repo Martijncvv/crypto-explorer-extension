@@ -9,3 +9,5 @@ A Google Chrome extension which displays information about a cryptocurrency in a
 <!-- <p align="center">
   <img src="images/CG_twitter_extension_screenshot_ETH_USD.png" alt="Ethereum USD pop-up on Twitter" width="800" >
 </p> -->
+
+Created by https://www.linkedin.com/in/martijnvanven/
