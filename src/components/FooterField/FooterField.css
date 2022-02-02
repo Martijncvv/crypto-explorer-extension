@@ -2,9 +2,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 	font-size: 10px;
 }
 
 #coingecko_footer_icon {
 	height: 10px;
+}
+
+p {
+	margin: 8px 0;
 }
