@@ -36,7 +36,9 @@ const SearchField: React.FC<SearchFieldProps> = ({
 		const coinList: SimpleCoinInfo[] = await getStoredCoinList()
 		await setCoinSuggestions(
 			coinList.filter(
-				(coin) => coin.symbol === searchInput && !coin.id.includes('wormhole')
+				(coin) =>
+					(coin.symbol === searchInput && !coin.id.includes('wormhole')) ||
+					coin.name.toLowerCase() === searchInput
 			)
 		)
 	}
@@ -92,9 +94,17 @@ const SearchField: React.FC<SearchFieldProps> = ({
 					₿
 				</div>
 			</div>
-			{coinSuggestions.length === 0 && searchInput != '' && (
+			{coinSuggestions.length === 0 &&
+				searchInput != '' &&
+				searchInput.length <= 6 && (
+					<div id="nav-bar">
+						<button className="nav-item">Ticker not Available</button>
+					</div>
+				)}
+
+			{coinSuggestions.length === 0 && searchInput.length > 6 && (
 				<div id="nav-bar">
-					<button className="nav-item">Not Available</button>
+					<button className="nav-item">Try searching a ticker, e.g. ETH</button>
 				</div>
 			)}
 
