@@ -8,3 +8,17 @@
 	color: rgb(100, 100, 100);
 	margin: 0 0 3px;
 }
+
+.recharts-yAxis
+	.recharts-cartesian-axis-ticks
+	.recharts-cartesian-axis-tick:first-child
+	line {
+	stroke: none;
+}
+.recharts-yAxis
+	.recharts-cartesian-axis-ticks
+	.recharts-cartesian-axis-tick:first-child
+	text
+	tspan {
+	font-size: 0;
+}

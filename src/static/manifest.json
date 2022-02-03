@@ -21,7 +21,12 @@
 	"content_scripts": [
 		{
 			"matches": [
-				"https://*.twitter.com/*, https://*.whatsapp.com/*, https://*.facebook.com/*, https://*.reddit.com/*, https://*.telegram.com/*, https://*.discord.com/*"
+				"https://*.twitter.com/*",
+				"https://*.whatsapp.com/*",
+				"https://*.facebook.com/*",
+				"https://*.reddit.com/*",
+				"https://*.telegram.com/*",
+				"https://*.discord.com/*"
 			],
 			"js": ["contentScript.js"]
 		}
