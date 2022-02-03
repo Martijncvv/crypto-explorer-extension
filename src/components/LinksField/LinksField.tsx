@@ -40,12 +40,12 @@ const LinksField: React.FC<LinksFieldProps> = ({
 				</a>
 			)}
 			{twitterLink && (
-				<a href={twitterLink} target="_blank">
+				<a href={`https://www.twitter.com/${twitterLink}`} target="_blank">
 					<img className="link-icon" src={TwitterIcon} />
 				</a>
 			)}
 			{telegramLink && (
-				<a href={telegramLink} target="_blank">
+				<a href={`https://t.me/${telegramLink}`} target="_blank">
 					<img className="link-icon" src={TelegramIcon} />
 				</a>
 			)}

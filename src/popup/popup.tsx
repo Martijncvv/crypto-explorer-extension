@@ -58,6 +58,8 @@ const App: React.FC<{}> = () => {
 
 				fetchCoinInfo(coinIds[0].id).then((coinInfo: AdvancedCoinInfo) => {
 					if (coinInfo.id != undefined && coinInfo.id != '') {
+						console.log(coinInfo)
+
 						setId(coinInfo.id)
 						setName(coinInfo.name)
 						setIcon(coinInfo.image.large)

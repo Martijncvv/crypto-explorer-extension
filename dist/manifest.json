@@ -1,7 +1,7 @@
 {
 	"name": "Crypto Explorer",
 	"description": "Display information about a cryptocurrency by selecting a ticker (BTC/ XYZ) and pressing CTRL+SHIFT+L or use the search feature.",
-	"version": "1.0.0",
+	"version": "1.0.2",
 	"manifest_version": 3,
 	"icons": {
 		"16": "images/coingecko_logo.png",
@@ -20,7 +20,9 @@
 	},
 	"content_scripts": [
 		{
-			"matches": ["<all_urls>"],
+			"matches": [
+				"https://*.twitter.com/*, https://*.whatsapp.com/*, https://*.facebook.com/*, https://*.reddit.com/*, https://*.telegram.com/*, https://*.discord.com/*"
+			],
 			"js": ["contentScript.js"]
 		}
 	],

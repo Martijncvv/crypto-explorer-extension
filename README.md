@@ -46,3 +46,10 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
 <p align="center">
   <img src="./src/static/images/CG_explorer_KITTY-USD.png" alt="Kitty USD pop-up with navbar" width="800" >
 </p>
+
+### To do's
+
+- Style graph y-axis
+- Don't close extension after link click
+- Remove 'change website' permission
+-
