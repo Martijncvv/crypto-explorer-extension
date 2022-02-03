@@ -134,7 +134,7 @@ const App: React.FC<{}> = () => {
 				attributeValue={`${marketCap} (${marketCapRank})`}
 			/>
 			<InfoField
-				attributeName="total( volume (24h)"
+				attributeName="total volume (24h)"
 				attributeValue={`${totalVolume}`}
 			/>
 			<InfoField attributeName="all-time high" attributeValue={`${ath}`} />
