@@ -1,3 +1,6 @@
+import React, { useState, useEffect } from 'react'
+import ReactDOM from 'react-dom'
+
 import './popup.css'
 import DescriptionField from '../components/DescriptionField'
 import FooterField from '../components/FooterField'
@@ -10,9 +13,6 @@ import SearchField from '../components/SearchField'
 import { AdvancedCoinInfo, fetchCoinInfo } from '../utils/api'
 import { getStoredCoins } from '../utils/storage'
 import { amountFormatter } from '../utils/amountFormatter'
-
-import React, { useState, useEffect } from 'react'
-import ReactDOM from 'react-dom'
 
 const App: React.FC<{}> = () => {
 	const [quote, setQuote] = useState<string>('usd')
@@ -28,20 +28,16 @@ const App: React.FC<{}> = () => {
 	const [totalSupply, setTotalSupply] = useState<string>('')
 	const [description, setDescription] = useState<string>('')
 
-	const [websiteLink, setWebsiteLink] = useState<string>('')
-	const [blockExplorerLink, setBlockExplorerLink] = useState<string>('')
-	const [coingeckoLink, setCoingeckoLink] = useState<string>('')
-	const [twitterLink, setTwitterLink] = useState<string>('')
-	const [telegramLink, setTelegramLink] = useState<string>('')
-
 	const [price, setPrice] = useState<string>('')
 	const [totalVolume, setTotalVolume] = useState<string>('')
 	const [ath, setAth] = useState<string>('')
 	const [atl, setAtl] = useState<string>('')
 
-	useEffect(() => {
-		setCoinData()
-	}, [])
+	const [websiteLink, setWebsiteLink] = useState<string>('')
+	const [blockExplorerLink, setBlockExplorerLink] = useState<string>('')
+	const [coingeckoLink, setCoingeckoLink] = useState<string>('')
+	const [twitterLink, setTwitterLink] = useState<string>('')
+	const [telegramLink, setTelegramLink] = useState<string>('')
 
 	useEffect(() => {
 		setCoinData()
@@ -72,14 +68,6 @@ const App: React.FC<{}> = () => {
 						)
 						setTotalSupply(amountFormatter(coinInfo.market_data.total_supply))
 
-						setWebsiteLink(coinInfo.links.homepage[0])
-						setBlockExplorerLink(coinInfo.links.blockchain_site[0])
-						setCoingeckoLink(
-							`https://www.coingecko.com/en/coins/${coinInfo.id}`
-						)
-						setTwitterLink(coinInfo.links.twitter_screen_name)
-						setTelegramLink(coinInfo.links.telegram_channel_identifier)
-
 						if (quote === 'usd') {
 							setPrice(
 								`$${amountFormatter(coinInfo.market_data.current_price.usd)}`
@@ -105,6 +93,15 @@ const App: React.FC<{}> = () => {
 							setAth(`₿${amountFormatter(coinInfo.market_data.ath.btc)}`)
 							setAtl(`₿${amountFormatter(coinInfo.market_data.atl.btc)}`)
 						}
+
+						setWebsiteLink(coinInfo.links.homepage[0])
+						setBlockExplorerLink(coinInfo.links.blockchain_site[0])
+						setCoingeckoLink(
+							`https://www.coingecko.com/en/coins/${coinInfo.id}`
+						)
+						setTwitterLink(coinInfo.links.twitter_screen_name)
+						setTelegramLink(coinInfo.links.telegram_channel_identifier)
+
 						setApiStatus(`Fetch success`)
 					} else {
 						setApiStatus(`Fetch error: ${coinIds[0].symbol.toUpperCase()}`)

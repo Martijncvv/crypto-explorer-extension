@@ -49,7 +49,7 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
 
 ### To do's
 
-- Style graph y-axis
+- Style graph y-axis, done
 - Don't close extension after link click, done
-- Remove 'change website' permission
+- Remove 'change website' permission; more specified
 -
