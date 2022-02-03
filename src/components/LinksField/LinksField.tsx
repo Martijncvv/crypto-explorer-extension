@@ -22,32 +22,48 @@ const LinksField: React.FC<LinksFieldProps> = ({
 	telegramLink,
 	websiteLink,
 }) => {
+	function handleOpenTab(link) {
+		chrome.tabs.create({ url: link, selected: false })
+	}
+
 	return (
 		<div id="links-field">
 			{websiteLink && (
-				<a href={websiteLink} target="_blank">
-					<img className="link-icon" src={WebsiteIcon} />
-				</a>
+				<img
+					className="link-icon"
+					src={WebsiteIcon}
+					onClick={() => handleOpenTab(websiteLink)}
+				/>
 			)}
 			{blockExplorerLink && (
-				<a href={blockExplorerLink} target="_blank">
-					<img className="link-icon" src={BlockExplorerIcon} />
-				</a>
+				<img
+					className="link-icon"
+					src={BlockExplorerIcon}
+					onClick={() => handleOpenTab(blockExplorerLink)}
+				/>
 			)}
 			{coingeckoLink && (
-				<a href={coingeckoLink} target="_blank">
-					<img className="link-icon" src={CoinGeckoIcon} />
-				</a>
+				<img
+					className="link-icon"
+					src={CoinGeckoIcon}
+					onClick={() => handleOpenTab(coingeckoLink)}
+				/>
 			)}
 			{twitterLink && (
-				<a href={`https://www.twitter.com/${twitterLink}`} target="_blank">
-					<img className="link-icon" src={TwitterIcon} />
-				</a>
+				<img
+					className="link-icon"
+					src={TwitterIcon}
+					onClick={() =>
+						handleOpenTab(`https://www.twitter.com/${twitterLink}`)
+					}
+				/>
 			)}
 			{telegramLink && (
-				<a href={`https://t.me/${telegramLink}`} target="_blank">
-					<img className="link-icon" src={TelegramIcon} />
-				</a>
+				<img
+					className="link-icon"
+					src={TelegramIcon}
+					onClick={() => handleOpenTab(`https://t.me/${telegramLink}`)}
+				/>
 			)}
 		</div>
 	)
