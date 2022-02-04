@@ -1,6 +1,6 @@
 # Cryptocurrency Chrome extension
 
-A Google Chrome extension which displays information about a cryptocurrency in a popup when the user selects a coin ticker (BTC/ ETH/ XYZ) and presses CTRL+SHIFT+L or uses the search feature.
+A Google Chrome extension which displays information about a cryptocurrency in a popup when the user selects a coin ticker (BTC/ ETH/ XYZ) on social media and presses CTRL+SHIFT+L or uses the search feature.
 
 Feel free to contact me via [LinkedIn](https://www.linkedin.com/in/martijnvanven/).
 

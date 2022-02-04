@@ -1,4 +1,4 @@
-import './SearchField.css'
+import './InteractionField.css'
 import React, { useState, useEffect } from 'react'
 
 import Switch from '@mui/material/Switch'
@@ -6,13 +6,13 @@ import Switch from '@mui/material/Switch'
 import { getStoredCoinList, setStoredCoins } from '../../utils/storage'
 import { SimpleCoinInfo } from '../../utils/api'
 
-interface SearchFieldProps {
+interface InteractionFieldProps {
 	searchCallback: Function
 	setQuote: Function
 	activeCoinTicker: string
 }
 
-const SearchField: React.FC<SearchFieldProps> = ({
+const InteractionField: React.FC<InteractionFieldProps> = ({
 	searchCallback,
 	setQuote,
 	activeCoinTicker,
@@ -94,20 +94,23 @@ const SearchField: React.FC<SearchFieldProps> = ({
 					₿
 				</div>
 			</div>
+
+			{/* USER FEEDBACK; TICKER NOT AVAILABLE */}
 			{coinSuggestions.length === 0 &&
-				searchInput != '' &&
-				searchInput.length <= 6 && (
+				(searchInput != '' && searchInput.length <= 6 ? (
 					<div id="nav-bar">
 						<button className="nav-item">Ticker not Available</button>
 					</div>
-				)}
+				) : (
+					/* USER FEEDBACK; SEARCH SUGGESTION */
+					<div id="nav-bar">
+						<button className="nav-item">
+							Try searching a ticker, e.g. ETH
+						</button>
+					</div>
+				))}
 
-			{coinSuggestions.length === 0 && searchInput.length > 6 && (
-				<div id="nav-bar">
-					<button className="nav-item">Try searching a ticker, e.g. ETH</button>
-				</div>
-			)}
-
+			{/* SEARCH RESULTS; NAVBAR ITEMS */}
 			{(coinSuggestions.length > 1 ||
 				(coinSuggestions.length > 0 &&
 					coinSuggestions[0].symbol != activeCoinTicker)) && (
@@ -133,4 +136,4 @@ const SearchField: React.FC<SearchFieldProps> = ({
 	)
 }
 
-export default SearchField
+export default InteractionField

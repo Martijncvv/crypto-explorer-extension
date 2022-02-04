@@ -8,7 +8,7 @@ import HeaderField from '../components/HeaderField'
 import InfoField from '../components/InfoField'
 import LinksField from '../components/LinksField'
 import PriceGraphField from '../components/PriceGraphField'
-import SearchField from '../components/SearchField'
+import InteractionField from '../components/InteractionField'
 
 import { AdvancedCoinInfo, fetchCoinInfo } from '../utils/api'
 import { getStoredCoins } from '../utils/storage'
@@ -114,7 +114,7 @@ const App: React.FC<{}> = () => {
 	return (
 		<>
 			<HeaderField coinName={name} coinIcon={icon} />
-			<SearchField
+			<InteractionField
 				searchCallback={searchCallback}
 				activeCoinTicker={symbol}
 				setQuote={setQuote}
