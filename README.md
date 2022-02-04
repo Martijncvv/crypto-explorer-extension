@@ -14,37 +14,37 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
 ## BTC/USD pop-up on Twitter with price graph tooltip
 
 <p align="center">
-  <img src="./src/static/images/CG_explorer_BTC-USD-Twitter.png" alt="Bitcoin USD pop-up on Twitter" width="800" >
+  <img src="preview_pics/CG_explorer_BTC-USD-Twitter.png" alt="Bitcoin USD pop-up on Twitter" width="800" >
 </p>
 
 ## BTC/USD pop-up
 
 <p align="center">
-  <img src="./src/static/images/CG_explorer_BTC.png" alt="Bitcoin USD pop-up" width="800" >
+  <img src="preview_pics/CG_explorer_BTC.png" alt="Bitcoin USD pop-up" width="800" >
 </p>
 
 ## ETH/USD pop-up with price graph tooltip
 
 <p align="center">
-  <img src="./src/static/images/CG_explorer_ETH-USD.png" alt="Ethereum USD pop-up" width="800" >
+  <img src="preview_pics/CG_explorer_ETH-USD.png" alt="Ethereum USD pop-up" width="800" >
 </p>
 
 ## ETH/BTC pop-up with price graph tooltip
 
 <p align="center">
-  <img src="./src/static/images/CG_explorer_ETH-BTC.png" alt="Ethereum BTC pop-up with price graph tooltip" width="800" >
+  <img src="preview_pics/CG_explorer_ETH-BTC.png" alt="Ethereum BTC pop-up with price graph tooltip" width="800" >
 </p>
 
 ## DOGE/USD pop-up on Twitter with extended description
 
 <p align="center">
-  <img src="./src/static/images/CG_explorer_DOGE-USD-Twitter.png" alt="Dogecoin USD pop-up with extended description" width="800" >
+  <img src="preview_pics/CG_explorer_DOGE-USD-Twitter.png" alt="Dogecoin USD pop-up with extended description" width="800" >
 </p>
 
 ## KITTY/USD pop-up with navigation bar of coins with the same ticker
 
 <p align="center">
-  <img src="./src/static/images/CG_explorer_KITTY-USD.png" alt="Kitty USD pop-up with navbar" width="800" >
+  <img src="preview_pics/CG_explorer_KITTY-USD.png" alt="Kitty USD pop-up with navbar" width="800" >
 </p>
 
 ### To do's
