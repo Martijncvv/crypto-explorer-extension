@@ -43,7 +43,7 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 		)
 	}
 
-	async function handleCoinButtonClick(
+	async function handleNavbarItemClick(
 		id: string,
 		symbol: string,
 		name: string
@@ -53,7 +53,7 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 		await searchCallback()
 	}
 
-	async function handleSearchEnterKeyDown(event) {
+	async function handleSearchInputKeyDownEvent(event) {
 		if (event.key === 'Enter') {
 			await getSearchData()
 			await setStoredCoins(coinSuggestions)
@@ -72,6 +72,19 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 		setChecked(!checked)
 	}
 
+	function handleNavbarItemClasses(
+		activeCoinId: string,
+		coin: SimpleCoinInfo,
+		index: number
+	): string {
+		return activeCoinId === coin.id || (!activeCoinId && index === 0)
+			? 'nav-item active-nav-item'
+			: 'nav-item'
+	}
+
+	// console.log('coinSuggestions', coinSuggestions)
+	// console.log('activeCoinTicker', activeCoinTicker)
+
 	return (
 		<div id="interaction-field">
 			<div id="input-field">
@@ -79,7 +92,7 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 					id="search-input"
 					placeholder="Search ticker"
 					value={searchInput}
-					onKeyDown={(event) => handleSearchEnterKeyDown(event)}
+					onKeyDown={(event) => handleSearchInputKeyDownEvent(event)}
 					onChange={(event) => setSearchInput(event.target.value.toLowerCase())}
 					onClick={() => setSearchInput('')}
 				/>
@@ -95,35 +108,33 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 				</div>
 			</div>
 
-			{/* USER FEEDBACK; TICKER NOT AVAILABLE */}
-			<div id="nav-bar">
-				<button className="nav-item">
-					{coinSuggestions.length === 0 &&
-						searchInput != '' &&
-						(searchInput.length <= 6 ? (
-							<>Ticker not Available</>
-						) : (
-							/* USER FEEDBACK; SEARCH SUGGESTION */
-							<>Try searching a ticker, e.g. ETH</>
-						))}
-				</button>
-			</div>
+			{/* /* USER FEEDBACK; TICKER NOT AVAILABLE */}
+			{coinSuggestions.length === 0 &&
+				searchInput != '' &&
+				(searchInput.length <= 6 ? (
+					<div id="nav-bar">
+						<button className="nav-item">Ticker not Available</button>
+					</div>
+				) : (
+					/* USER FEEDBACK; SEARCH SUGGESTION */
+					<div id="nav-bar">
+						<button className="nav-item">
+							Try searching a ticker, e.g. ETH
+						</button>
+					</div>
+				))}
 
 			{/* SEARCH RESULTS; NAVBAR ITEMS */}
 			{(coinSuggestions.length > 1 ||
-				(coinSuggestions.length > 0 &&
-					coinSuggestions[0].symbol != activeCoinTicker)) && (
+				(coinSuggestions.length != 0 &&
+					coinSuggestions[0].symbol !== activeCoinTicker)) && (
 				<div id="nav-bar">
 					{coinSuggestions.map((coin, index) => (
 						<button
-							className={
-								activeCoinId === coin.id || (!activeCoinId && index == 0)
-									? 'nav-item active-nav-item'
-									: 'nav-item'
-							}
 							key={index}
+							className={handleNavbarItemClasses(activeCoinId, coin, index)}
 							onClick={() =>
-								handleCoinButtonClick(coin.id, coin.symbol, coin.name)
+								handleNavbarItemClick(coin.id, coin.symbol, coin.name)
 							}
 						>
 							{coin.name}
