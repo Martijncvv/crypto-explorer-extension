@@ -3,7 +3,7 @@ import { SimpleCoinInfo } from '../utils/api'
 
 console.log('CONTENTSCRIPT is running')
 
-window.addEventListener('mouseup', getSelection)
+document.addEventListener('selectionchange', getSelection)
 
 async function getSelection() {
 	let selectedTicker = window
@@ -14,7 +14,7 @@ async function getSelection() {
 		.toLowerCase()
 
 	if (selectedTicker !== '' && selectedTicker.length < 6) {
-		console.log('mouseup eventListener')
+		console.log(`Potential ticker selected: ${selectedTicker}`)
 
 		const coinList: SimpleCoinInfo[] = await getStoredCoinList()
 

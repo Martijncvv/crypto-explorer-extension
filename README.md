@@ -51,5 +51,5 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
 
 - Style graph y-axis, done
 - Don't close extension after link click, done
-- Remove 'change website' permission; more specified
+- Remove 'change website' permission; semi-fix; more specified read change-permission
 -
