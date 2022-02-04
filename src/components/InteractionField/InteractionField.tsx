@@ -96,19 +96,18 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 			</div>
 
 			{/* USER FEEDBACK; TICKER NOT AVAILABLE */}
-			{coinSuggestions.length === 0 &&
-				(searchInput != '' && searchInput.length <= 6 ? (
-					<div id="nav-bar">
-						<button className="nav-item">Ticker not Available</button>
-					</div>
-				) : (
-					/* USER FEEDBACK; SEARCH SUGGESTION */
-					<div id="nav-bar">
-						<button className="nav-item">
-							Try searching a ticker, e.g. ETH
-						</button>
-					</div>
-				))}
+			<div id="nav-bar">
+				<button className="nav-item">
+					{coinSuggestions.length === 0 &&
+						searchInput != '' &&
+						(searchInput.length <= 6 ? (
+							<>Ticker not Available</>
+						) : (
+							/* USER FEEDBACK; SEARCH SUGGESTION */
+							<>Try searching a ticker, e.g. ETH</>
+						))}
+				</button>
+			</div>
 
 			{/* SEARCH RESULTS; NAVBAR ITEMS */}
 			{(coinSuggestions.length > 1 ||
