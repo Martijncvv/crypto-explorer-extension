@@ -48,65 +48,67 @@ const App: React.FC<{}> = () => {
 	}
 
 	async function setCoinData() {
-		getStoredCoins().then((coinIds) => {
+		getStoredCoins().then(async (coinIds) => {
 			if (coinIds.length > 0) {
 				setApiStatus(`Fetching ${coinIds[0].symbol.toUpperCase()}`)
 
-				fetchCoinInfo(coinIds[0].id).then((coinInfo: AdvancedCoinInfo) => {
-					if (coinInfo.id != undefined && coinInfo.id != '') {
-						console.log(coinInfo)
+				await fetchCoinInfo(coinIds[0].id).then(
+					(coinInfo: AdvancedCoinInfo) => {
+						if (coinInfo.id != undefined && coinInfo.id != '') {
+							console.log(coinInfo)
 
-						setId(coinInfo.id)
-						setName(coinInfo.name)
-						setIcon(coinInfo.image.large)
-						setSymbol(coinInfo.symbol)
-						setDescription(coinInfo.description.en)
+							setId(coinInfo.id)
+							setName(coinInfo.name)
+							setIcon(coinInfo.image.large)
+							setSymbol(coinInfo.symbol)
+							setDescription(coinInfo.description.en)
 
-						setMarketCapRank(amountFormatter(coinInfo.market_cap_rank))
-						setCircSupply(
-							amountFormatter(coinInfo.market_data.circulating_supply)
-						)
-						setTotalSupply(amountFormatter(coinInfo.market_data.total_supply))
+							setMarketCapRank(amountFormatter(coinInfo.market_cap_rank))
+							setCircSupply(
+								amountFormatter(coinInfo.market_data.circulating_supply)
+							)
+							setTotalSupply(amountFormatter(coinInfo.market_data.total_supply))
 
-						if (quote === 'usd') {
-							setPrice(
-								`$${amountFormatter(coinInfo.market_data.current_price.usd)}`
+							if (quote === 'usd') {
+								setPrice(
+									`$${amountFormatter(coinInfo.market_data.current_price.usd)}`
+								)
+								setMarketCap(
+									`$${amountFormatter(coinInfo.market_data.market_cap.usd)}`
+								)
+								setTotalVolume(
+									`$${amountFormatter(coinInfo.market_data.total_volume.usd)}`
+								)
+								setAth(`$${amountFormatter(coinInfo.market_data.ath.usd)}`)
+								setAtl(`$${amountFormatter(coinInfo.market_data.atl.usd)}`)
+							} else {
+								setPrice(
+									`₿${amountFormatter(coinInfo.market_data.current_price.btc)}`
+								)
+								setMarketCap(
+									`₿${amountFormatter(coinInfo.market_data.market_cap.btc)}`
+								)
+								setTotalVolume(
+									`₿${amountFormatter(coinInfo.market_data.total_volume.btc)}`
+								)
+								setAth(`₿${amountFormatter(coinInfo.market_data.ath.btc)}`)
+								setAtl(`₿${amountFormatter(coinInfo.market_data.atl.btc)}`)
+							}
+
+							setWebsiteLink(coinInfo.links.homepage[0])
+							setBlockExplorerLink(coinInfo.links.blockchain_site[0])
+							setCoingeckoLink(
+								`https://www.coingecko.com/en/coins/${coinInfo.id}`
 							)
-							setMarketCap(
-								`$${amountFormatter(coinInfo.market_data.market_cap.usd)}`
-							)
-							setTotalVolume(
-								`$${amountFormatter(coinInfo.market_data.total_volume.usd)}`
-							)
-							setAth(`$${amountFormatter(coinInfo.market_data.ath.usd)}`)
-							setAtl(`$${amountFormatter(coinInfo.market_data.atl.usd)}`)
+							setTwitterLink(coinInfo.links.twitter_screen_name)
+							setTelegramLink(coinInfo.links.telegram_channel_identifier)
+
+							setApiStatus(`Fetch success`)
 						} else {
-							setPrice(
-								`₿${amountFormatter(coinInfo.market_data.current_price.btc)}`
-							)
-							setMarketCap(
-								`₿${amountFormatter(coinInfo.market_data.market_cap.btc)}`
-							)
-							setTotalVolume(
-								`₿${amountFormatter(coinInfo.market_data.total_volume.btc)}`
-							)
-							setAth(`₿${amountFormatter(coinInfo.market_data.ath.btc)}`)
-							setAtl(`₿${amountFormatter(coinInfo.market_data.atl.btc)}`)
+							setApiStatus(`Fetch error: ${coinIds[0].symbol.toUpperCase()}`)
 						}
-
-						setWebsiteLink(coinInfo.links.homepage[0])
-						setBlockExplorerLink(coinInfo.links.blockchain_site[0])
-						setCoingeckoLink(
-							`https://www.coingecko.com/en/coins/${coinInfo.id}`
-						)
-						setTwitterLink(coinInfo.links.twitter_screen_name)
-						setTelegramLink(coinInfo.links.telegram_channel_identifier)
-
-						setApiStatus(`Fetch success`)
-					} else {
-						setApiStatus(`Fetch error: ${coinIds[0].symbol.toUpperCase()}`)
 					}
-				})
+				)
 			}
 		})
 	}

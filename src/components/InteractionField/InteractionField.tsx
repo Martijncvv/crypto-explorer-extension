@@ -64,11 +64,8 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 	}
 
 	const handleQuoteChange = () => {
-		if (!checked) {
-			setQuote('btc')
-		} else {
-			setQuote('usd')
-		}
+		checked ? setQuote('usd') : setQuote('btc')
+
 		setChecked(!checked)
 	}
 
@@ -82,8 +79,49 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 			: 'nav-item'
 	}
 
-	// console.log('coinSuggestions', coinSuggestions)
-	// console.log('activeCoinTicker', activeCoinTicker)
+	function renderNavbarItems() {
+		if (
+			coinSuggestions.length > 1 ||
+			(coinSuggestions.length === 1 &&
+				coinSuggestions[0].symbol !== activeCoinTicker)
+		)
+			return (
+				<div id="nav-bar">
+					{coinSuggestions.map((coin, index) => (
+						<button
+							key={index}
+							className={handleNavbarItemClasses(activeCoinId, coin, index)}
+							onClick={() =>
+								handleNavbarItemClick(coin.id, coin.symbol, coin.name)
+							}
+						>
+							{coin.name}
+						</button>
+					))}
+				</div>
+			)
+	}
+
+	function renderNavbarFeedback() {
+		/* TICKER NOT AVAILABLE */
+		if (coinSuggestions.length === 0 && searchInput != '') {
+			if (searchInput.length <= 6) {
+				return (
+					<div id="nav-bar">
+						<button className="nav-item">Ticker not Available</button>
+					</div>
+				)
+			} else
+			/* SEARCH SUGGESTION */
+				return (
+					<div id="nav-bar">
+						<button className="nav-item">
+							Try searching a ticker, e.g. ETH
+						</button>
+					</div>
+				)
+		}
+	}
 
 	return (
 		<div id="interaction-field">
@@ -108,40 +146,9 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 				</div>
 			</div>
 
-			{/* /* USER FEEDBACK; TICKER NOT AVAILABLE */}
-			{coinSuggestions.length === 0 &&
-				searchInput != '' &&
-				(searchInput.length <= 6 ? (
-					<div id="nav-bar">
-						<button className="nav-item">Ticker not Available</button>
-					</div>
-				) : (
-					/* USER FEEDBACK; SEARCH SUGGESTION */
-					<div id="nav-bar">
-						<button className="nav-item">
-							Try searching a ticker, e.g. ETH
-						</button>
-					</div>
-				))}
+			{renderNavbarFeedback()}
 
-			{/* SEARCH RESULTS; NAVBAR ITEMS */}
-			{(coinSuggestions.length > 1 ||
-				(coinSuggestions.length != 0 &&
-					coinSuggestions[0].symbol !== activeCoinTicker)) && (
-				<div id="nav-bar">
-					{coinSuggestions.map((coin, index) => (
-						<button
-							key={index}
-							className={handleNavbarItemClasses(activeCoinId, coin, index)}
-							onClick={() =>
-								handleNavbarItemClick(coin.id, coin.symbol, coin.name)
-							}
-						>
-							{coin.name}
-						</button>
-					))}
-				</div>
-			)}
+			{renderNavbarItems()}
 		</div>
 	)
 }

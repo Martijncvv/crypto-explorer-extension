@@ -35,23 +35,21 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 					' ' +
 					dateObject.toLocaleString('en-US', { day: 'numeric' })
 
-				{
-					quote === 'usd'
-						? setChartData((chartData) => [
-								...chartData,
-								{
-									date,
-									$: UnixPrice[1].toPrecision(5),
-								},
-						  ])
-						: setChartData((chartData) => [
-								...chartData,
-								{
-									date,
-									'₿': UnixPrice[1].toPrecision(5),
-								},
-						  ])
-				}
+				quote === 'usd'
+					? setChartData((chartData) => [
+							...chartData,
+							{
+								date,
+								$: UnixPrice[1].toPrecision(5),
+							},
+					  ])
+					: setChartData((chartData) => [
+							...chartData,
+							{
+								date,
+								'₿': UnixPrice[1].toPrecision(5),
+							},
+					  ])
 			})
 		})
 	}
@@ -64,14 +62,19 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 					<LineChart
 						data={chartData}
 						margin={{
-							top: 0,
+							top: 5,
 							right: 40,
 							left: 0,
 							bottom: 5,
 						}}
 					>
 						<XAxis dataKey="date" interval="preserveStartEnd" />
-						<YAxis mirror={true} interval="preserveStartEnd" />
+						<YAxis
+							mirror={true}
+							interval="preserveStartEnd"
+							type="number"
+							domain={[(dataMin) => dataMin * 0.6, 'auto']}
+						/>
 						<Tooltip />
 						{quote === 'usd' ? (
 							<Line type="monotone" dataKey="$" stroke="#ff8b4f" dot={false} />
