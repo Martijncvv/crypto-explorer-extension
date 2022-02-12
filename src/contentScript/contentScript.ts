@@ -10,7 +10,7 @@ async function getSelection() {
 		.getSelection()
 		.toString()
 		.trim()
-		.replace(/[#$?!.,:"']/g, '')
+		.replace(/[#$?!@%^&)*-_=+(.,;:><"']/g, '')
 		.toLowerCase()
 
 	if (selectedTicker !== '' && selectedTicker.length < 6) {

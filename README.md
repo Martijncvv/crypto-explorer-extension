@@ -2,8 +2,6 @@
 
 A Google Chrome extension which displays information about a cryptocurrency in a popup when the user selects a coin ticker (BTC/ ETH/ XYZ) and presses CTRL+SHIFT+L, or uses the search feature.
 
-Feel free to contact me via [LinkedIn](https://www.linkedin.com/in/martijnvanven/).
-
 ## Acknowledgements
 
 I would like to thank CoinGecko for providing real-time cryptocurrency data at no cost;
@@ -55,5 +53,6 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
 
 - Style graph y-axis, done
 - Don't close extension after link click, done
-- Remove 'change website' permission; semi-fix; more specified read change-permission
--
+- Top Trending coins CoinGecko
+- Display price at certain marketcap; if x has same MC a y then x price is z
+- Connect LunaCrush; show top influencers and recent trend stats; read top tweets.

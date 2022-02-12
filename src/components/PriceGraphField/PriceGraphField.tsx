@@ -57,7 +57,7 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 	return (
 		chartData && (
 			<div id="price-graph-field">
-				<p id="graph-title">Passed 30 days</p>
+				<p id="graph-title">Past 30 days</p>
 				<ResponsiveContainer width="100%" height="100%">
 					<LineChart
 						data={chartData}
