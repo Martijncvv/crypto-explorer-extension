@@ -49,10 +49,13 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
   <img src="preview_pics/CG_explorer_KITTY-USD.png" alt="Kitty USD pop-up with navbar" width="800" >
 </p>
 
-### To do's
+### To do's/ Ideas
 
 - Style graph y-axis, done
 - Don't close extension after link click, done
-- Top Trending coins CoinGecko
+- Ready to type on search bar the token you are looking for, done
+
+- Top Trending coins CoinGecko; idea grey out, burn if clicked
 - Display price at certain marketcap; if x has same MC a y then x price is z
 - Connect LunaCrush; show top influencers and recent trend stats; read top tweets.
+- USD chart \$BTRFLY out of range

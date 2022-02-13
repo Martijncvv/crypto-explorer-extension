@@ -2,6 +2,9 @@ import './InteractionField.css'
 import React, { useState, useEffect } from 'react'
 
 import Switch from '@mui/material/Switch'
+import IconButton from '@mui/material/IconButton'
+import WhatshotIcon from '@mui/icons-material/Whatshot'
+import WhatshotOutlinedIcon from '@mui/icons-material/WhatshotOutlined'
 
 import { getStoredCoinList, setStoredCoins } from '../../utils/storage'
 import { SimpleCoinInfo } from '../../utils/api'
@@ -129,12 +132,12 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 				<input
 					id="search-input"
 					placeholder="Search ticker"
+					autoFocus={true}
 					value={searchInput}
 					onKeyDown={(event) => handleSearchInputKeyDownEvent(event)}
 					onChange={(event) => setSearchInput(event.target.value.toLowerCase())}
 					onClick={() => setSearchInput('')}
 				/>
-
 				<div id="quote-switch">
 					$
 					<Switch
@@ -143,6 +146,12 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 						onChange={handleQuoteChange}
 					/>
 					₿
+				</div>
+				<div id="whats-hot-button">
+					<IconButton color="warning" aria-label="Search trending">
+						{/* <WhatshotOutlinedIcon /> */}
+						<WhatshotIcon />
+					</IconButton>
 				</div>
 			</div>
 

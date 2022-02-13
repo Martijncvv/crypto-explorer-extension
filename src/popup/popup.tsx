@@ -16,7 +16,7 @@ import { amountFormatter } from '../utils/amountFormatter'
 
 const App: React.FC<{}> = () => {
 	const [quote, setQuote] = useState<string>('usd')
-	const [apiStatus, setApiStatus] = useState<string>('')
+	const [apiStatus, setApiStatus] = useState<string>('Search ticker')
 
 	const [name, setName] = useState<string>('')
 	const [id, setId] = useState<string>('')
@@ -130,29 +130,34 @@ const App: React.FC<{}> = () => {
 				/>
 			)}
 
-			<InfoField
-				attributeName="market Cap (rank)"
-				attributeValue={`${marketCap} (${marketCapRank})`}
-			/>
-			<InfoField
-				attributeName="total volume (24h)"
-				attributeValue={`${totalVolume}`}
-			/>
-			<InfoField attributeName="all-time high" attributeValue={`${ath}`} />
-			<InfoField attributeName="all-time low" attributeValue={`${atl}`} />
-			<InfoField
-				attributeName="Circ. Supply (total)"
-				attributeValue={`${circSupply} (${totalSupply})`}
-			/>
-			<DescriptionField coinDescription={description} />
-			<PriceGraphField coinId={id} quote={quote} />
-			<LinksField
-				blockExplorerLink={blockExplorerLink}
-				coingeckoLink={coingeckoLink}
-				twitterLink={twitterLink}
-				telegramLink={telegramLink}
-				websiteLink={websiteLink}
-			/>
+			{apiStatus !== 'Search ticker' && (
+				<>
+					<InfoField
+						attributeName="market Cap (rank)"
+						attributeValue={`${marketCap} (${marketCapRank})`}
+					/>
+					<InfoField
+						attributeName="total volume (24h)"
+						attributeValue={`${totalVolume}`}
+					/>
+					<InfoField attributeName="all-time high" attributeValue={`${ath}`} />
+					<InfoField attributeName="all-time low" attributeValue={`${atl}`} />
+					<InfoField
+						attributeName="Circ. Supply (total)"
+						attributeValue={`${circSupply} (${totalSupply})`}
+					/>
+					<DescriptionField coinDescription={description} />
+					<PriceGraphField coinId={id} quote={quote} />
+					<LinksField
+						blockExplorerLink={blockExplorerLink}
+						coingeckoLink={coingeckoLink}
+						twitterLink={twitterLink}
+						telegramLink={telegramLink}
+						websiteLink={websiteLink}
+					/>
+				</>
+			)}
+
 			<FooterField />
 		</>
 	)

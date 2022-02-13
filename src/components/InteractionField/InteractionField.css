@@ -8,7 +8,7 @@
 }
 
 #search-input {
-	width: 100px;
+	width: 80px;
 	border: none;
 	border-bottom: solid 1px rgba(255, 139, 79, 0.8);
 	display: block;
@@ -23,10 +23,13 @@
 }
 
 #quote-switch {
-	margin-right: 4px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+#whats-hot-button {
+	margin: 0;
 }
 
 #nav-bar {
