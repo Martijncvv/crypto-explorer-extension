@@ -9,6 +9,7 @@ import InfoField from '../components/InfoField'
 import LinksField from '../components/LinksField'
 import PriceGraphField from '../components/PriceGraphField'
 import InteractionField from '../components/InteractionField'
+import CompareMcField from '../components/CompareMcField'
 
 import { AdvancedCoinInfo, fetchCoinInfo } from '../utils/api'
 import { getStoredCoins } from '../utils/storage'
@@ -136,6 +137,7 @@ const App: React.FC<{}> = () => {
 						attributeName="market Cap (rank)"
 						attributeValue={`${marketCap} (${marketCapRank})`}
 					/>
+					{/* <CompareMcField coinTicker={symbol} /> */}
 					<InfoField
 						attributeName="total volume (24h)"
 						attributeValue={`${totalVolume}`}

@@ -1,0 +1,52 @@
+#compare-mc-field {
+	display: flex;
+	margin: 0 16px;
+	padding: 12px 0 7px;
+
+	border-bottom: 1px solid rgb(231, 231, 231);
+}
+
+#search-mc-input {
+	width: 50px;
+	border: none;
+	border-bottom: solid 1px rgba(255, 139, 79, 0.8);
+	display: block;
+	margin-top: 4px;
+	padding: 4px 4px 2px 4px;
+}
+
+#search-mc-input:focus {
+	border: none;
+	outline: none;
+}
+
+#compare-mc-info {
+	box-sizing: border-box;
+	width: 61%;
+	margin: 0;
+
+	vertical-align: middle;
+	font-size: 14px;
+	/* font-weight: 650; */
+	/* text-transform: capitalize; */
+}
+
+#compare-mc-value {
+	margin: 0;
+
+	font-size: 14px;
+	text-transform: capitalize;
+}
+
+#ticker {
+	padding: 0 3px;
+	font-weight: 650;
+	text-transform: uppercase;
+}
+
+/* .attribute-value {
+	margin: 0;
+
+	font-size: 14px;
+	text-transform: capitalize;
+} */

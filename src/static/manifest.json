@@ -1,7 +1,7 @@
 {
 	"name": "Crypto Explorer",
-	"description": "Display information about a coin by selecting a ticker and press (mac)CTRL+SHIFT+L, or use the search feature.",
-	"version": "1.0.4",
+	"description": "Display information about a coin and check the top searched coins of CoinGecko in the last 24 hours.",
+	"version": "1.0.5",
 	"manifest_version": 3,
 	"icons": {
 		"16": "images/CryptoExplorer_logo_128.png",

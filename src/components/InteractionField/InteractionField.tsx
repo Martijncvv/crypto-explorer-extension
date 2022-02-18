@@ -2,10 +2,8 @@ import './InteractionField.css'
 import React, { useState, useEffect } from 'react'
 
 import IconButton from '@mui/material/IconButton'
-import Popover from '@mui/material/Popover'
 import Switch from '@mui/material/Switch'
 import WhatshotIcon from '@mui/icons-material/Whatshot'
-import WhatshotOutlinedIcon from '@mui/icons-material/WhatshotOutlined'
 
 import { getStoredCoinList, setStoredCoins } from '../../utils/storage'
 import {
@@ -44,15 +42,16 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 	}, [searchInput])
 
 	async function getSearchData() {
-		const coinList: SimpleCoinInfo[] = await getStoredCoinList()
-		await setCoinSuggestions(
-			coinList.filter(
-				(coin) =>
-					(coin.symbol === searchInput && !coin.id.includes('wormhole')) ||
-					coin.name.toLowerCase() === searchInput
+		if (!trendingCoinButtonChecked) {
+			const coinList: SimpleCoinInfo[] = await getStoredCoinList()
+			await setCoinSuggestions(
+				coinList.filter(
+					(coin) =>
+						(coin.symbol === searchInput && !coin.id.includes('wormhole')) ||
+						coin.name.toLowerCase() === searchInput
+				)
 			)
-		)
-		setTrendingCoinButtonChecked(false)
+		}
 	}
 
 	async function handleNavbarItemClick(
@@ -66,6 +65,8 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 	}
 
 	async function handleSearchInputKeyDownEvent(event) {
+		setTrendingCoinButtonChecked(false)
+		console.log(trendingCoinButtonChecked)
 		if (event.key === 'Enter') {
 			await getSearchData()
 			await setStoredCoins(coinSuggestions)
@@ -77,7 +78,6 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 
 	const handleQuoteChange = () => {
 		checked ? setQuote('usd') : setQuote('btc')
-
 		setChecked(!checked)
 	}
 
@@ -117,9 +117,6 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 	async function renderTrendingCoins() {
 		if (!trendingCoinButtonChecked) {
 			await getTrendingCoins()
-			console.log('trendingCoinButton on')
-		} else {
-			console.log('trendingCoinButton off ')
 		}
 		setTrendingCoinButtonChecked(!trendingCoinButtonChecked)
 	}
@@ -163,16 +160,20 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 	return (
 		<div id="interaction-field">
 			<div id="input-field">
-				<input
-					id="search-input"
-					placeholder="Search ticker"
-					autoFocus={true}
-					value={searchInput}
-					onKeyDown={(event) => handleSearchInputKeyDownEvent(event)}
-					onChange={(event) => setSearchInput(event.target.value.toLowerCase())}
-					onClick={() => setSearchInput('')}
-				/>
-				<div id="quote-switch">
+				<div id="left-input-field">
+					<input
+						id="search-input"
+						placeholder="Search ticker"
+						autoFocus={true}
+						value={searchInput}
+						onKeyDown={(event) => handleSearchInputKeyDownEvent(event)}
+						onChange={(event) =>
+							setSearchInput(event.target.value.toLowerCase())
+						}
+						onClick={() => setSearchInput('')}
+					/>
+				</div>
+				<div id="quote-switch-box">
 					$
 					<Switch
 						color="warning"
