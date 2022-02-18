@@ -1,13 +1,18 @@
 import './InteractionField.css'
 import React, { useState, useEffect } from 'react'
 
-import Switch from '@mui/material/Switch'
 import IconButton from '@mui/material/IconButton'
+import Popover from '@mui/material/Popover'
+import Switch from '@mui/material/Switch'
 import WhatshotIcon from '@mui/icons-material/Whatshot'
 import WhatshotOutlinedIcon from '@mui/icons-material/WhatshotOutlined'
 
 import { getStoredCoinList, setStoredCoins } from '../../utils/storage'
-import { SimpleCoinInfo } from '../../utils/api'
+import {
+	fetchTrendingCoins,
+	SimpleCoinInfo,
+	TrendingCoinList,
+} from '../../utils/api'
 
 interface InteractionFieldProps {
 	searchCallback: Function
@@ -24,6 +29,9 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 	const [activeCoinId, setActiveCoinId] = useState<string>('')
 	const [checked, setChecked] = React.useState(false)
 	const [coinSuggestions, setCoinSuggestions] = useState<SimpleCoinInfo[]>([])
+	const [trendingCoinButtonChecked, setTrendingCoinButtonChecked] = useState<
+		boolean
+	>(false)
 
 	useEffect(() => {
 		setSearchInput(activeCoinTicker)
@@ -44,6 +52,7 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 					coin.name.toLowerCase() === searchInput
 			)
 		)
+		setTrendingCoinButtonChecked(false)
 	}
 
 	async function handleNavbarItemClick(
@@ -105,6 +114,31 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 			)
 	}
 
+	async function renderTrendingCoins() {
+		if (!trendingCoinButtonChecked) {
+			await getTrendingCoins()
+			console.log('trendingCoinButton on')
+		} else {
+			console.log('trendingCoinButton off ')
+		}
+		setTrendingCoinButtonChecked(!trendingCoinButtonChecked)
+	}
+
+	async function getTrendingCoins() {
+		const trendingCoins: TrendingCoinList = await fetchTrendingCoins()
+
+		let trendingCoinInfo = []
+		await trendingCoins.coins.forEach((coin) => {
+			trendingCoinInfo.push({
+				id: coin.item.id,
+				symbol: coin.item.symbol,
+				name: coin.item.name,
+			})
+		})
+		setCoinSuggestions(trendingCoinInfo)
+		console.log(coinSuggestions)
+	}
+
 	function renderNavbarFeedback() {
 		/* TICKER NOT AVAILABLE */
 		if (coinSuggestions.length === 0 && searchInput != '') {
@@ -147,8 +181,12 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 					/>
 					₿
 				</div>
-				<div id="whats-hot-button">
-					<IconButton color="warning" aria-label="Search trending">
+				<div id="trending-coins-button">
+					<IconButton
+						aria-label="Search hot coins"
+						onClick={() => renderTrendingCoins()}
+						color={trendingCoinButtonChecked ? 'warning' : undefined}
+					>
 						{/* <WhatshotOutlinedIcon /> */}
 						<WhatshotIcon />
 					</IconButton>

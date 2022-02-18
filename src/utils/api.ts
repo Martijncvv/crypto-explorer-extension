@@ -17,6 +17,15 @@ export async function fetchCoinInfo(coinId: string): Promise<AdvancedCoinInfo> {
 	const data = await res.json()
 	return data
 }
+export async function fetchTrendingCoins(): Promise<TrendingCoinList> {
+	const res = await fetch(`https://api.coingecko.com/api/v3/search/trending`)
+	if (!res.ok) {
+		throw new Error(`Fetch error, Hot Coins}`)
+	}
+
+	const data = await res.json()
+	return data
+}
 
 export async function fetchPriceHistoryData(
 	coinId: string,
@@ -39,11 +48,27 @@ export async function fetchPriceHistoryData(
 const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list'
 
 export type CoinGeckoCoinList = SimpleCoinInfo[]
+export type TrendingCoinList = { coins: TrendingCoinInfo[] }
 
 export interface SimpleCoinInfo {
 	id: string
 	symbol: string
 	name: string
+}
+export interface TrendingCoinInfo {
+	item: {
+		id: string
+		coin_id: number
+		name: string
+		symbol: string
+		market_cap_rank: number
+		thumb: string
+		small: string
+		large: string
+		slug: string
+		price_btc: number
+		score: number
+	}
 }
 export interface AdvancedCoinInfo {
 	id: string
