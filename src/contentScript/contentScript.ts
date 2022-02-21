@@ -13,7 +13,7 @@ async function getSelection() {
 		.replace(/[#$?!.,:"']/g, '')
 		.toLowerCase()
 
-	if (selectedTicker !== '' && selectedTicker.length < 6) {
+	if (selectedTicker !== '' && selectedTicker.length < 7) {
 		console.log(`Potential ticker selected: ${selectedTicker}`)
 
 		const coinList: SimpleCoinInfo[] = await getStoredCoinList()

@@ -43,29 +43,49 @@ const App: React.FC<{}> = () => {
 	const [quote, setQuote] = useState<string>('usd')
 	const [apiStatus, setApiStatus] = useState<string>('Search ticker')
 
-	const [coinData, setCoinData] = useState<CoinData>()
-	const [priceData, setPriceData] = useState<priceData>()
+	const [coinData, setCoinData] = useState<CoinData>({
+		name: '',
+		id: '',
+		icon: '',
+		symbol: '',
+		marketCapRank: '',
+		circSupply: '',
+		totalSupply: '',
+		description: '',
+		websiteLink: '',
+		blockExplorerLink: '',
+		coingeckoLink: '',
+		twitterLink: '',
+		telegramLink: '',
+	})
+	const [priceData, setPriceData] = useState<priceData>({
+		price: '',
+		marketCap: '',
+		totalVolume: '',
+		ath: '',
+		atl: '',
+	})
 
-	const [name, setName] = useState<string>('')
-	const [id, setId] = useState<string>('')
-	const [icon, setIcon] = useState<string>('')
-	const [symbol, setSymbol] = useState<string>('')
-	const [marketCap, setMarketCap] = useState<string>('')
-	const [marketCapRank, setMarketCapRank] = useState<string>('')
-	const [circSupply, setCircSupply] = useState<string>('')
-	const [totalSupply, setTotalSupply] = useState<string>('')
-	const [description, setDescription] = useState<string>('')
+	// const [name, setName] = useState<string>('')
+	// const [id, setId] = useState<string>('')
+	// const [icon, setIcon] = useState<string>('')
+	// const [symbol, setSymbol] = useState<string>('')
+	// const [marketCap, setMarketCap] = useState<string>('')
+	// const [marketCapRank, setMarketCapRank] = useState<string>('')
+	// const [circSupply, setCircSupply] = useState<string>('')
+	// const [totalSupply, setTotalSupply] = useState<string>('')
+	// const [description, setDescription] = useState<string>('')
 
-	const [price, setPrice] = useState<string>('')
-	const [totalVolume, setTotalVolume] = useState<string>('')
-	const [ath, setAth] = useState<string>('')
-	const [atl, setAtl] = useState<string>('')
+	// const [price, setPrice] = useState<string>('')
+	// const [totalVolume, setTotalVolume] = useState<string>('')
+	// const [ath, setAth] = useState<string>('')
+	// const [atl, setAtl] = useState<string>('')
 
-	const [websiteLink, setWebsiteLink] = useState<string>('')
-	const [blockExplorerLink, setBlockExplorerLink] = useState<string>('')
-	const [coingeckoLink, setCoingeckoLink] = useState<string>('')
-	const [twitterLink, setTwitterLink] = useState<string>('')
-	const [telegramLink, setTelegramLink] = useState<string>('')
+	// const [websiteLink, setWebsiteLink] = useState<string>('')
+	// const [blockExplorerLink, setBlockExplorerLink] = useState<string>('')
+	// const [coingeckoLink, setCoingeckoLink] = useState<string>('')
+	// const [twitterLink, setTwitterLink] = useState<string>('')
+	// const [telegramLink, setTelegramLink] = useState<string>('')
 
 	useEffect(() => {
 		getCoinData()
@@ -145,18 +165,18 @@ const App: React.FC<{}> = () => {
 
 	return (
 		<>
-			<HeaderField coinName={name} coinIcon={icon} />
+			<HeaderField coinName={coinData.name} coinIcon={coinData.icon} />
 			<InteractionField
 				searchCallback={searchCallback}
-				activeCoinTicker={symbol}
+				activeCoinTicker={coinData.symbol}
 				setQuote={setQuote}
 			/>
 			{apiStatus !== `Fetch success` ? (
 				<InfoField attributeName={`${apiStatus}`} attributeValue={' '} />
 			) : (
 				<InfoField
-					attributeName={`${symbol.toUpperCase()} price`}
-					attributeValue={`${price}`}
+					attributeName={`${coinData.symbol.toUpperCase()} price`}
+					attributeValue={`${priceData.price}`}
 				/>
 			)}
 
@@ -164,27 +184,33 @@ const App: React.FC<{}> = () => {
 				<>
 					<InfoField
 						attributeName="market Cap (rank)"
-						attributeValue={`${marketCap} (${marketCapRank})`}
+						attributeValue={`${priceData.marketCap} (${coinData.marketCapRank})`}
 					/>
 					{/* <CompareMcField coinTicker={symbol} /> */}
 					<InfoField
 						attributeName="total volume (24h)"
-						attributeValue={`${totalVolume}`}
+						attributeValue={`${priceData.totalVolume}`}
 					/>
-					<InfoField attributeName="all-time high" attributeValue={`${ath}`} />
-					<InfoField attributeName="all-time low" attributeValue={`${atl}`} />
+					<InfoField
+						attributeName="all-time high"
+						attributeValue={`${priceData.ath}`}
+					/>
+					<InfoField
+						attributeName="all-time low"
+						attributeValue={`${priceData.atl}`}
+					/>
 					<InfoField
 						attributeName="Circ. Supply (total)"
-						attributeValue={`${circSupply} (${totalSupply})`}
+						attributeValue={`${coinData.circSupply} (${coinData.totalSupply})`}
 					/>
-					<DescriptionField coinDescription={description} />
-					<PriceGraphField coinId={id} quote={quote} />
+					<DescriptionField coinDescription={coinData.description} />
+					<PriceGraphField coinId={coinData.id} quote={quote} />
 					<LinksField
-						blockExplorerLink={blockExplorerLink}
-						coingeckoLink={coingeckoLink}
-						twitterLink={twitterLink}
-						telegramLink={telegramLink}
-						websiteLink={websiteLink}
+						blockExplorerLink={coinData.blockExplorerLink}
+						coingeckoLink={coinData.coingeckoLink}
+						twitterLink={coinData.twitterLink}
+						telegramLink={coinData.telegramLink}
+						websiteLink={coinData.websiteLink}
 					/>
 				</>
 			)}
