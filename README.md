@@ -1,6 +1,8 @@
-# Cryptocurrency Chrome extension
+# Cryptocurrency Explorer Chrome extension
 
-A Google Chrome extension which displays information about a cryptocurrency in a popup when the user selects a coin ticker (BTC/ ETH/ XYZ) and presses CTRL+SHIFT+L, or uses the search feature.
+A Google Chrome extension which displays information about a cryptocurrency in a popup when the user selects a coin ticker (BTC/ ETH/ XYZ) and presses (mac)CTRL+SHIFT+L. It's also possible to use the search feature or check the top searched coins of CoinGecko in the last 24 hours.
+
+[Chrome Store Extension Link](https://chrome.google.com/webstore/detail/crypto-explorer/pkaheoacmbdgnemgmcdbekniooabcnmc)
 
 ## Acknowledgements
 

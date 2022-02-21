@@ -66,27 +66,6 @@ const App: React.FC<{}> = () => {
 		atl: '',
 	})
 
-	// const [name, setName] = useState<string>('')
-	// const [id, setId] = useState<string>('')
-	// const [icon, setIcon] = useState<string>('')
-	// const [symbol, setSymbol] = useState<string>('')
-	// const [marketCap, setMarketCap] = useState<string>('')
-	// const [marketCapRank, setMarketCapRank] = useState<string>('')
-	// const [circSupply, setCircSupply] = useState<string>('')
-	// const [totalSupply, setTotalSupply] = useState<string>('')
-	// const [description, setDescription] = useState<string>('')
-
-	// const [price, setPrice] = useState<string>('')
-	// const [totalVolume, setTotalVolume] = useState<string>('')
-	// const [ath, setAth] = useState<string>('')
-	// const [atl, setAtl] = useState<string>('')
-
-	// const [websiteLink, setWebsiteLink] = useState<string>('')
-	// const [blockExplorerLink, setBlockExplorerLink] = useState<string>('')
-	// const [coingeckoLink, setCoingeckoLink] = useState<string>('')
-	// const [twitterLink, setTwitterLink] = useState<string>('')
-	// const [telegramLink, setTelegramLink] = useState<string>('')
-
 	useEffect(() => {
 		getCoinData()
 	}, [quote])
