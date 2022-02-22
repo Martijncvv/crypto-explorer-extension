@@ -188,7 +188,6 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 						onClick={() => renderTrendingCoins()}
 						color={trendingCoinButtonChecked ? 'warning' : undefined}
 					>
-						{/* <WhatshotOutlinedIcon /> */}
 						<WhatshotIcon />
 					</IconButton>
 				</div>

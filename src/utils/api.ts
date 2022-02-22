@@ -5,6 +5,16 @@ export async function fetchCoinsList(): Promise<CoinGeckoCoinList> {
 	return data
 }
 
+export async function fetchTrendingCoins(): Promise<TrendingCoinList> {
+	const res = await fetch(`https://api.coingecko.com/api/v3/search/trending`)
+	if (!res.ok) {
+		throw new Error(`Fetch error, Hot Coins}`)
+	}
+
+	const data = await res.json()
+	return data
+}
+
 export async function fetchCoinInfo(coinId: string): Promise<AdvancedCoinInfo> {
 	coinId = coinId ? coinId : 'bitcoin'
 	const res = await fetch(
@@ -12,15 +22,6 @@ export async function fetchCoinInfo(coinId: string): Promise<AdvancedCoinInfo> {
 	)
 	if (!res.ok) {
 		throw new Error(`Fetch error, coin info data: ${coinId}`)
-	}
-
-	const data = await res.json()
-	return data
-}
-export async function fetchTrendingCoins(): Promise<TrendingCoinList> {
-	const res = await fetch(`https://api.coingecko.com/api/v3/search/trending`)
-	if (!res.ok) {
-		throw new Error(`Fetch error, Hot Coins}`)
 	}
 
 	const data = await res.json()

@@ -57,6 +57,7 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
 - Don't close extension after link click, done
 - Ready to type on search bar the token you are looking for, done
 - Top Trending coins CoinGecko; idea grey out, burn if clicked, done
+- Show clickable , done
 
 - Display price at certain marketcap; if x has same MC a y then x price is z
 - Connect LunaCrush; show top influencers and recent trend stats; read top tweets.

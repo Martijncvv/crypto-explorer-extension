@@ -75,71 +75,67 @@ const App: React.FC<{}> = () => {
 	}
 
 	async function getCoinData() {
-		getStoredCoins().then(async (coinIds) => {
-			if (coinIds.length > 0) {
-				setApiStatus(`Fetching ${coinIds[0].symbol.toUpperCase()}`)
+		let coinIds = await getStoredCoins()
 
-				await fetchCoinInfo(coinIds[0].id).then(
-					(coinInfo: AdvancedCoinInfo) => {
-						if (coinInfo.id != undefined && coinInfo.id != '') {
-							console.log(coinInfo)
-							setCoinData({
-								name: coinInfo.name,
-								id: coinInfo.id,
-								icon: coinInfo.image.large,
-								symbol: coinInfo.symbol,
-								marketCapRank: amountFormatter(coinInfo.market_cap_rank),
-								circSupply: amountFormatter(
-									coinInfo.market_data.circulating_supply
-								),
-								totalSupply: amountFormatter(coinInfo.market_data.total_supply),
-								description: coinInfo.description.en,
+		if (coinIds.length > 0) {
+			setApiStatus(`Fetching ${coinIds[0].symbol.toUpperCase()}`)
 
-								websiteLink: coinInfo.links.homepage[0],
-								blockExplorerLink: coinInfo.links.blockchain_site[0],
-								coingeckoLink: `https://www.coingecko.com/en/coins/${coinInfo.id}`,
-								twitterLink: coinInfo.links.twitter_screen_name,
-								telegramLink: coinInfo.links.telegram_channel_identifier,
-							})
+			let coinInfo: AdvancedCoinInfo = await fetchCoinInfo(coinIds[0].id)
 
-							if (quote === 'usd') {
-								setPriceData({
-									price: `$${amountFormatter(
-										coinInfo.market_data.current_price.usd
-									)}`,
-									marketCap: `$${amountFormatter(
-										coinInfo.market_data.market_cap.usd
-									)}`,
-									totalVolume: `$${amountFormatter(
-										coinInfo.market_data.total_volume.usd
-									)}`,
-									ath: `$${amountFormatter(coinInfo.market_data.ath.usd)}`,
-									atl: `$${amountFormatter(coinInfo.market_data.atl.usd)}`,
-								})
-							} else {
-								setPriceData({
-									price: `₿${amountFormatter(
-										coinInfo.market_data.current_price.btc
-									)}`,
-									marketCap: `₿${amountFormatter(
-										coinInfo.market_data.market_cap.btc
-									)}`,
-									totalVolume: `₿${amountFormatter(
-										coinInfo.market_data.total_volume.btc
-									)}`,
-									ath: `₿${amountFormatter(coinInfo.market_data.ath.btc)}`,
-									atl: `₿${amountFormatter(coinInfo.market_data.atl.btc)}`,
-								})
-							}
+			if (coinInfo.id != undefined && coinInfo.id != '') {
+				console.log(coinInfo)
+				setCoinData({
+					name: coinInfo.name,
+					id: coinInfo.id,
+					icon: coinInfo.image.large,
+					symbol: coinInfo.symbol,
+					marketCapRank: amountFormatter(coinInfo.market_cap_rank),
+					circSupply: amountFormatter(coinInfo.market_data.circulating_supply),
+					totalSupply: amountFormatter(coinInfo.market_data.total_supply),
+					description: coinInfo.description.en,
 
-							setApiStatus(`Fetch success`)
-						} else {
-							setApiStatus(`Fetch error: ${coinIds[0].symbol.toUpperCase()}`)
-						}
-					}
-				)
+					websiteLink: coinInfo.links.homepage[0],
+					blockExplorerLink: coinInfo.links.blockchain_site[0],
+					coingeckoLink: `https://www.coingecko.com/en/coins/${coinInfo.id}`,
+					twitterLink: coinInfo.links.twitter_screen_name,
+					telegramLink: coinInfo.links.telegram_channel_identifier,
+				})
+
+				if (quote === 'usd') {
+					setPriceData({
+						price: `$${amountFormatter(
+							coinInfo.market_data.current_price.usd
+						)}`,
+						marketCap: `$${amountFormatter(
+							coinInfo.market_data.market_cap.usd
+						)}`,
+						totalVolume: `$${amountFormatter(
+							coinInfo.market_data.total_volume.usd
+						)}`,
+						ath: `$${amountFormatter(coinInfo.market_data.ath.usd)}`,
+						atl: `$${amountFormatter(coinInfo.market_data.atl.usd)}`,
+					})
+				} else {
+					setPriceData({
+						price: `₿${amountFormatter(
+							coinInfo.market_data.current_price.btc
+						)}`,
+						marketCap: `₿${amountFormatter(
+							coinInfo.market_data.market_cap.btc
+						)}`,
+						totalVolume: `₿${amountFormatter(
+							coinInfo.market_data.total_volume.btc
+						)}`,
+						ath: `₿${amountFormatter(coinInfo.market_data.ath.btc)}`,
+						atl: `₿${amountFormatter(coinInfo.market_data.atl.btc)}`,
+					})
+				}
+
+				setApiStatus(`Fetch success`)
+			} else {
+				setApiStatus(`Fetch error`)
 			}
-		})
+		}
 	}
 
 	return (
