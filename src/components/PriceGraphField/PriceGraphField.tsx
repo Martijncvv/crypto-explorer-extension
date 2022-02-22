@@ -24,9 +24,10 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 	}, [coinId, quote])
 
 	async function formatChartData() {
-		let priceData: PriceData = await fetchPriceHistoryData(coinId, quote)
-		setChartData([])
-		priceData.prices.forEach(async function(UnixPrice) {
+		let priceHistoryData: PriceData = await fetchPriceHistoryData(coinId, quote)
+		let priceData = [{}]
+
+		priceHistoryData.prices.forEach(async function(UnixPrice) {
 			let dateObject = new Date(UnixPrice[0])
 			let date =
 				dateObject.toLocaleString('en-US', { month: 'long' }).substring(0, 3) +
@@ -34,22 +35,17 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 				dateObject.toLocaleString('en-US', { day: 'numeric' })
 
 			quote === 'usd'
-				? setChartData((chartData) => [
-						...chartData,
-						{
-							date,
-							$: UnixPrice[1].toPrecision(5),
-						},
-				  ])
-				: setChartData((chartData) => [
-						...chartData,
-						{
-							date,
-							'₿': UnixPrice[1].toPrecision(5),
-						},
-				  ])
+				? priceData.push({
+						date,
+						$: UnixPrice[1].toPrecision(5),
+				  })
+				: priceData.push({
+						date,
+						'₿': UnixPrice[1].toPrecision(5),
+				  })
 		})
-		console.log(chartData)
+
+		setChartData(priceData)
 	}
 
 	return (
