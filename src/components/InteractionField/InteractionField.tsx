@@ -66,11 +66,11 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 
 	async function handleSearchInputKeyDownEvent(event) {
 		setTrendingCoinButtonChecked(false)
-		console.log(trendingCoinButtonChecked)
+
 		if (event.key === 'Enter') {
 			await getSearchData()
 			await setStoredCoins(coinSuggestions)
-			console.log(coinSuggestions)
+
 			coinSuggestions.length && setActiveCoinId(coinSuggestions[0].id)
 			searchCallback()
 		}
@@ -133,7 +133,6 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 			})
 		})
 		setCoinSuggestions(trendingCoinInfo)
-		console.log(coinSuggestions)
 	}
 
 	function renderNavbarFeedback() {
@@ -165,7 +164,7 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 						id="search-input"
 						placeholder="Search ticker"
 						autoFocus={true}
-						value={searchInput}
+						value={searchInput.toUpperCase()}
 						onKeyDown={(event) => handleSearchInputKeyDownEvent(event)}
 						onChange={(event) =>
 							setSearchInput(event.target.value.toLowerCase())

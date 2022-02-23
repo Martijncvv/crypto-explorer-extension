@@ -12,9 +12,7 @@ export function amountFormatter(amount: number): string {
 			return `${(amount / 1000000).toPrecision(3)} M`
 		case amount > 10000:
 			return `${(amount / 1000).toPrecision(3)} K`
-		case amount < 0:
-			return `${amount.toPrecision(4)}`
 		default:
-			return `${amount}`
+			return `${amount.toPrecision(4)}`
 	}
 }

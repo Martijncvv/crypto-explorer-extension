@@ -2,18 +2,19 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 import './popup.css'
+import CompareMcField from '../components/CompareMcField'
 import DescriptionField from '../components/DescriptionField'
 import FooterField from '../components/FooterField'
 import HeaderField from '../components/HeaderField'
 import InfoField from '../components/InfoField'
-import LinksField from '../components/LinksField'
-import PriceGraphField from '../components/PriceGraphField'
 import InteractionField from '../components/InteractionField'
-import CompareMcField from '../components/CompareMcField'
+import LinksField from '../components/LinksField'
+import MarketcapField from '../components/MarketcapField'
+import PriceGraphField from '../components/PriceGraphField'
 
+import { amountFormatter } from '../utils/amountFormatter'
 import { AdvancedCoinInfo, fetchCoinInfo } from '../utils/api'
 import { getStoredCoins } from '../utils/storage'
-import { amountFormatter } from '../utils/amountFormatter'
 
 interface CoinData {
 	name: string
@@ -21,7 +22,7 @@ interface CoinData {
 	icon: string
 	symbol: string
 	marketCapRank: string
-	circSupply: string
+	circSupply: number
 	totalSupply: string
 	description: string
 
@@ -49,7 +50,7 @@ const App: React.FC<{}> = () => {
 		icon: '',
 		symbol: '',
 		marketCapRank: '',
-		circSupply: '',
+		circSupply: 0,
 		totalSupply: '',
 		description: '',
 		websiteLink: '',
@@ -89,8 +90,8 @@ const App: React.FC<{}> = () => {
 					id: coinInfo.id,
 					icon: coinInfo.image.large,
 					symbol: coinInfo.symbol,
-					marketCapRank: amountFormatter(coinInfo.market_cap_rank),
-					circSupply: amountFormatter(coinInfo.market_data.circulating_supply),
+					marketCapRank: `${coinInfo.market_cap_rank}`,
+					circSupply: coinInfo.market_data.circulating_supply,
 					totalSupply: amountFormatter(coinInfo.market_data.total_supply),
 					description: coinInfo.description.en,
 
@@ -157,11 +158,14 @@ const App: React.FC<{}> = () => {
 
 			{apiStatus !== 'Search ticker' && (
 				<>
-					<InfoField
-						attributeName="market Cap (rank)"
-						attributeValue={`${priceData.marketCap} (${coinData.marketCapRank})`}
+					<MarketcapField
+						coinSymbol={coinData.symbol}
+						coinMarketcap={priceData.marketCap}
+						coinMarketcapRank={coinData.marketCapRank}
+						coinCircSupply={coinData.circSupply}
 					/>
-					{/* <CompareMcField coinTicker={symbol} /> */}
+					{/* <CompareMcField coinTicker={coinData.symbol} /> */}
+
 					<InfoField
 						attributeName="total volume (24h)"
 						attributeValue={`${priceData.totalVolume}`}
@@ -176,7 +180,9 @@ const App: React.FC<{}> = () => {
 					/>
 					<InfoField
 						attributeName="Circ. Supply (total)"
-						attributeValue={`${coinData.circSupply} (${coinData.totalSupply})`}
+						attributeValue={`${amountFormatter(coinData.circSupply)} (${
+							coinData.totalSupply
+						})`}
 					/>
 					<DescriptionField coinDescription={coinData.description} />
 					<PriceGraphField coinId={coinData.id} quote={quote} />
