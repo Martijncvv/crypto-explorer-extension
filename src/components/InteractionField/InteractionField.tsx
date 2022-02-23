@@ -164,6 +164,7 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 						id="search-input"
 						placeholder="Search ticker"
 						autoFocus={true}
+						autoComplete="off"
 						value={searchInput.toUpperCase()}
 						onKeyDown={(event) => handleSearchInputKeyDownEvent(event)}
 						onChange={(event) =>

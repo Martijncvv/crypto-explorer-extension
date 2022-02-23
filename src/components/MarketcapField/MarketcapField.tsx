@@ -4,7 +4,7 @@ import { getStoredCoinList } from '../../utils/storage'
 import { amountFormatter } from '../../utils/amountFormatter'
 import { SimpleCoinInfo, fetchCoinInfo } from '../../utils/api'
 
-import CompareIcon from '@mui/icons-material/Compare'
+import CompareArrowsIcon from '@mui/icons-material/CompareArrows'
 import IconButton from '@mui/material/IconButton'
 
 interface MarketcapFieldProps {
@@ -33,16 +33,23 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 	)
 
 	useEffect(() => {
+		setDisplayCompareMCField(false)
+	}, [coinSymbol])
+
+	useEffect(() => {
 		if (symbolInput.length != 0) {
 			getCoinOptions()
 		}
 	}, [symbolInput])
-	useEffect(() => {}, [displayCompareMCField])
 
-	function handleInputKeyDownEvent(event) {
+	useEffect(() => {
+		getCoinData('ethereum')
+	}, [displayCompareMCField])
+
+	async function handleInputKeyDownEvent(event) {
 		if (event.key === 'Enter') {
-			console.log('ENTER KEYDOWN')
-			getCoinOptions()
+			await getCoinOptions()
+			getCoinData(coinOptions[0].id)
 		}
 	}
 
@@ -53,6 +60,7 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 				(coin) => coin.symbol === symbolInput && !coin.id.includes('wormhole')
 			)
 		)
+		return true
 	}
 
 	async function handleCoinItemClick(id: string, symbol: string, name: string) {
@@ -113,7 +121,7 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 	return (
 		<div>
 			<div className="marketcap-field">
-				<p className="attribute-name">
+				<p className="marketcap-field-name">
 					market Cap (rank){' '}
 					<IconButton
 						aria-label="Compare coin Mcs"
@@ -121,11 +129,11 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 						color={displayCompareMCField ? 'warning' : undefined}
 						size="small"
 					>
-						<CompareIcon fontSize="small" />
+						<CompareArrowsIcon fontSize="small" />
 					</IconButton>
 				</p>
 
-				<p className="attribute-value">{`${coinMarketcap} (${coinMarketcapRank})`}</p>
+				<p className="marketcap-field-value">{`${coinMarketcap} (${coinMarketcapRank})`}</p>
 			</div>
 			{displayCompareMCField && (
 				<>
@@ -135,7 +143,8 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 								<span id="ticker"> {coinSymbol} </span> price with the MC of
 							</p>
 							<p>
-								{activeCoinName} (${amountFormatter(searchedCoinMarketCap)})
+								<span id="activeCoinName"> {activeCoinName} </span> ($
+								{amountFormatter(searchedCoinMarketCap)})
 							</p>
 						</div>
 
@@ -144,6 +153,7 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 								id="search-mc-input"
 								value={symbolInput.toUpperCase()}
 								placeholder="Ticker"
+								autoFocus={true}
 								autoComplete="off"
 								onKeyDown={(event) => handleInputKeyDownEvent(event)}
 								onChange={(event) =>

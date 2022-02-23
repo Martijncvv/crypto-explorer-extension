@@ -1,15 +1,15 @@
 .marketcap-field {
 	display: flex;
 	margin: 0 16px;
-	padding: 12px 0 7px;
 
 	border-bottom: 1px solid rgb(231, 231, 231);
 }
 
-.attribute-name {
+.marketcap-field-name {
 	box-sizing: border-box;
 	width: 61%;
 	margin: 0;
+	padding-top: 6px;
 
 	vertical-align: middle;
 	font-size: 14px;
@@ -17,8 +17,10 @@
 	text-transform: capitalize;
 }
 
-.attribute-value {
+.marketcap-field-value {
 	margin: 0;
+
+	padding: 12px 0 7px;
 
 	font-size: 14px;
 	text-transform: capitalize;
@@ -70,9 +72,12 @@
 }
 
 #ticker {
-	/* padding-right: 2px; */
 	font-weight: 650;
 	text-transform: uppercase;
+}
+
+#activeCoinName {
+	font-weight: 650;
 }
 
 #options-bar {
