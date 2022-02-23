@@ -1,1 +1,1721 @@
-(()=>{"use strict";var t,e={7476:(t,e,n)=>{n.d(e,{Z:()=>o});var i=n(3645),r=n.n(i)()((function(t){return t[1]}));r.push([t.id,"#description-field {\n\tmargin: 0 16px;\n}\n#description {\n\tmax-height: 95px;\n\tmargin-left: 1px;\n\tfont-size: 14px;\n\toverflow-y: scroll;\n}\n#description-preview {\n\tfont-size: 14px;\n\tmax-height: 90px;\n\twidth: 285px;\n\tmargin-left: 1px;\n\n\tdisplay: -webkit-box;\n\t-webkit-line-clamp: 1;\n\t-webkit-box-orient: vertical;\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n}\n\n#read-more-button {\n\theight: 20px;\n\tmargin-left: 1px;\n\tpadding: 0px;\n\n\tbackground-color: rgb(248, 248, 248);\n\tcolor: rgba(255, 139, 79, 1);\n\tborder: none;\n\tcursor: pointer;\n}\n\n#read-more-button:hover {\n\tborder-bottom: solid 2px rgba(255, 255, 255, 0);\n}\n\n#description-field a {\n\tcolor: rgba(255, 139, 79, 1);\n\ttext-decoration: none;\n}\n#description-field a:hover {\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n\n#title {\n\tmargin: 10px 0 0 0;\n\tpadding-bottom: 4px;\n\tfont-size: 14px;\n\tfont-weight: 650;\n}\n",""]);const o=r},1804:(t,e,n)=>{n.d(e,{Z:()=>o});var i=n(3645),r=n.n(i)()((function(t){return t[1]}));r.push([t.id,"#footer-field {\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tfont-size: 10px;\n}\n\n#coingecko_footer_icon {\n\theight: 10px;\n}\n\np {\n\tmargin: 8px 0;\n}\n",""]);const o=r},5137:(t,e,n)=>{n.d(e,{Z:()=>o});var i=n(3645),r=n.n(i)()((function(t){return t[1]}));r.push([t.id,"h1 {\n\tmargin: 0;\n\tfont-size: 26px;\n\tcolor: rgb(248, 248, 248);\n}\n\nimg {\n\theight: 28px;\n\tborder-radius: 5px;\n}\n\n#header {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\n\theight: 66px;\n\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n\n#img-box {\n\theight: 42px;\n\twidth: 42px;\n\tmargin: 0 16px;\n\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tborder-radius: 21px;\n\tbackground-color: rgb(248, 248, 248);\n}\n",""]);const o=r},3683:(t,e,n)=>{n.d(e,{Z:()=>o});var i=n(3645),r=n.n(i)()((function(t){return t[1]}));r.push([t.id,".info-field {\n\tdisplay: flex;\n\tmargin: 0 16px;\n\tpadding: 12px 0 7px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n}\n\n.attribute-name {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\ttext-transform: capitalize;\n}\n\n.attribute-value {\n\tmargin: 0;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n",""]);const o=r},4808:(t,e,n)=>{n.d(e,{Z:()=>o});var i=n(3645),r=n.n(i)()((function(t){return t[1]}));r.push([t.id,"#interaction-field {\n\tmargin: 2px 16px 0;\n}\n#input-field {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tjustify-content: space-between;\n}\n#left-input-field {\n\twidth: 61%;\n}\n\n#search-input {\n\twidth: 80px;\n\tmargin-top: 2px;\n\tborder: none;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n\tdisplay: block;\n\tpadding: 12px 4px 6px 30px;\n\tbackground: transparent\n\t\turl(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E\")\n\t\tno-repeat 4px center;\n\tcursor: pointer;\n}\n#search-input:focus {\n\tborder: none;\n\toutline: none;\n}\n\n#quote-switch-box {\n\tmargin-top: 2px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n#trending-coins-button {\n\tmargin: 0 -10px 0 10px;\n}\n\n#nav-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.nav-item {\n\tmin-width: 30%;\n\theight: 25px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.nav-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-nav-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n",""]);const o=r},9874:(t,e,n)=>{n.d(e,{Z:()=>o});var i=n(3645),r=n.n(i)()((function(t){return t[1]}));r.push([t.id,"#links-field {\n\tmargin-top: 14px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.link-icon {\n\theight: 18px;\n\tmargin: 0 6px;\n\tcursor: pointer;\n}\n\n.link-icon:hover {\n\t-webkit-filter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n\tfilter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n}\n",""]);const o=r},971:(t,e,n)=>{n.d(e,{Z:()=>o});var i=n(3645),r=n.n(i)()((function(t){return t[1]}));r.push([t.id,".marketcap-field {\n\tdisplay: flex;\n\tmargin: 0 16px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n}\n\n.marketcap-field-name {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\tpadding-top: 6px;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\ttext-transform: capitalize;\n}\n\n.marketcap-field-value {\n\tmargin: 0;\n\n\tpadding: 12px 0 7px;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n\n#compare-mc-field {\n\tdisplay: flex;\n\tmargin: 0 16px;\n\tpadding: 4px 0 4px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n}\n\n#search-mc-input {\n\twidth: 50px;\n\theight: 13px;\n\tmargin-top: 4px;\n\tpadding: 4px 4px 2px 4px;\n\tdisplay: block;\n\n\tborder: none;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n\tbackground-color: rgb(248, 248, 248);\n\n\tcolor: solid 1px rgba(255, 139, 79, 0.8);\n\tfont-weight: 650;\n\tcursor: pointer;\n}\n\n#search-mc-input:focus {\n\tborder: none;\n\toutline: none;\n}\n\n#compare-mc-info {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n}\n\n#compare-mc-value {\n\tmargin: 0;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n\n#ticker {\n\tfont-weight: 650;\n\ttext-transform: uppercase;\n}\n\n#activeCoinName {\n\tfont-weight: 650;\n}\n\n#options-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.options-item {\n\tmin-width: 30%;\n\theight: 25px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.options-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-options-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n",""]);const o=r},1640:(t,e,n)=>{n.d(e,{Z:()=>o});var i=n(3645),r=n.n(i)()((function(t){return t[1]}));r.push([t.id,"#price-graph-field {\n\tmargin: 8px 16px 0;\n\theight: 125px;\n\twidth: 100%;\n}\n#graph-title {\n\tfont-weight: 400;\n\tcolor: rgb(100, 100, 100);\n\tmargin: 0 0 3px;\n}\n\n.recharts-yAxis\n\t.recharts-cartesian-axis-ticks\n\t.recharts-cartesian-axis-tick:first-child\n\tline {\n\tstroke: none;\n}\n.recharts-yAxis\n\t.recharts-cartesian-axis-ticks\n\t.recharts-cartesian-axis-tick:first-child\n\ttext\n\ttspan {\n\tfont-size: 0;\n}\n",""]);const o=r},6699:(t,e,n)=>{n.d(e,{Z:()=>o});var i=n(3645),r=n.n(i)()((function(t){return t[1]}));r.push([t.id,"body {\n\twidth: 330px;\n\theight: auto;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n\n::-webkit-scrollbar {\n\twidth: 3px;\n}\n::-webkit-scrollbar-track {\n\tbox-shadow: inset 0 0 5px rgba(255, 255, 255, 0);\n}\n::-webkit-scrollbar-thumb {\n\tbackground: rgba(255, 139, 79, 0.7);\n\tborder-radius: 2px;\n}\n",""]);const o=r},7324:(t,e,n)=>{var i=n(7294),r=n(3935),o=n(3379),a=n.n(o),c=n(6699);a()(c.Z,{insert:"head",singleton:!1}),c.Z.locals;var l=n(7476);a()(l.Z,{insert:"head",singleton:!1}),l.Z.locals;const s=({coinDescription:t})=>{const[e,n]=(0,i.useState)(!1);function r(){return{__html:t}}return(0,i.useEffect)((()=>{n(!1)}),[t]),t.length||(t="Description not available"),i.createElement("div",{id:"description-field"},i.createElement("p",{id:"title"},"Description"),e?i.createElement("div",{id:"description",dangerouslySetInnerHTML:r()}):i.createElement(i.Fragment,null,i.createElement("div",{id:"description-preview",dangerouslySetInnerHTML:r()}),"Description not available"!=t&&i.createElement("button",{id:"read-more-button",onClick:()=>n(!e)},"Read more")))};var d=n(1804);a()(d.Z,{insert:"head",singleton:!1}),d.Z.locals;const u=n(3274),p=({})=>i.createElement("div",{id:"footer-field"},i.createElement("p",null,"Powered by CoinGecko API"," ",i.createElement("img",{id:"coingecko_footer_icon",src:u})," "));var m=n(5137);a()(m.Z,{insert:"head",singleton:!1}),m.Z.locals;const f=n(8432),h=({coinName:t,coinIcon:e})=>i.createElement("div",{id:"header"},e?i.createElement("div",{id:"img-box"},i.createElement("img",{src:e})):i.createElement("div",{id:"img-box"},i.createElement("img",{src:f})),i.createElement("div",null,t.length>15?i.createElement("h1",{style:{fontSize:"22px"}},t):t.length>0?i.createElement("h1",null,t):i.createElement("h1",null,"Crypto Explorer")));var g=n(3683);a()(g.Z,{insert:"head",singleton:!1}),g.Z.locals;const b=({attributeName:t,attributeValue:e})=>i.createElement("div",{className:"info-field"},i.createElement("p",{className:"attribute-name"},t),i.createElement("p",{className:"attribute-value"},e));var v=n(4808);a()(v.Z,{insert:"head",singleton:!1}),v.Z.locals;var x=n(6867),k=n(8161),y=n(7089);function w(){const t=["coins"];return new Promise((e=>{chrome.storage.local.get(t,(t=>{var n;e(null!==(n=t.coins)&&void 0!==n?n:[])}))}))}function E(t){const e={coinIds:t};return new Promise((t=>{chrome.storage.local.set(e,(()=>{t()}))}))}var C=function(t,e,n,i){return new(n||(n=Promise))((function(r,o){function a(t){try{l(i.next(t))}catch(t){o(t)}}function c(t){try{l(i.throw(t))}catch(t){o(t)}}function l(t){var e;t.done?r(t.value):(e=t.value,e instanceof n?e:new n((function(t){t(e)}))).then(a,c)}l((i=i.apply(t,e||[])).next())}))};function S(t){return C(this,void 0,void 0,(function*(){t=t||"bitcoin";const e=yield fetch(`https://api.coingecko.com/api/v3/coins/${t}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`);if(!e.ok)throw new Error(`Fetch error, coin info data: ${t}`);return yield e.json()}))}var $=function(t,e,n,i){return new(n||(n=Promise))((function(r,o){function a(t){try{l(i.next(t))}catch(t){o(t)}}function c(t){try{l(i.throw(t))}catch(t){o(t)}}function l(t){var e;t.done?r(t.value):(e=t.value,e instanceof n?e:new n((function(t){t(e)}))).then(a,c)}l((i=i.apply(t,e||[])).next())}))};const _=({searchCallback:t,setQuote:e,activeCoinTicker:n})=>{const[r,o]=(0,i.useState)(""),[a,c]=(0,i.useState)(""),[l,s]=i.useState(!1),[d,u]=(0,i.useState)([]),[p,m]=(0,i.useState)(!1);function f(){return $(this,void 0,void 0,(function*(){if(!p){const t=yield w();yield u(t.filter((t=>t.symbol===r&&!t.id.includes("wormhole")||t.name.toLowerCase()===r)))}}))}function h(t,e,n){return t===e.id||!t&&0===n?"nav-item active-nav-item":"nav-item"}return(0,i.useEffect)((()=>{o(n)}),[n]),(0,i.useEffect)((()=>{0!=r.length&&f()}),[r]),i.createElement("div",{id:"interaction-field"},i.createElement("div",{id:"input-field"},i.createElement("div",{id:"left-input-field"},i.createElement("input",{id:"search-input",placeholder:"Search ticker",autoFocus:!0,autoComplete:"off",value:r.toUpperCase(),onKeyDown:e=>function(e){return $(this,void 0,void 0,(function*(){m(!1),"Enter"===e.key&&(yield f(),yield E(d),d.length&&c(d[0].id),t())}))}(e),onChange:t=>o(t.target.value.toLowerCase()),onClick:()=>o("")})),i.createElement("div",{id:"quote-switch-box"},"$",i.createElement(k.Z,{color:"warning",checked:l,onChange:()=>{e(l?"usd":"btc"),s(!l)}}),"₿"),i.createElement("div",{id:"trending-coins-button"},i.createElement(x.Z,{"aria-label":"Search hot coins",onClick:()=>function(){return $(this,void 0,void 0,(function*(){p||(yield function(){return $(this,void 0,void 0,(function*(){const t=yield function(){return C(this,void 0,void 0,(function*(){const t=yield fetch("https://api.coingecko.com/api/v3/search/trending");if(!t.ok)throw new Error("Fetch error, Hot Coins}");return yield t.json()}))}();let e=[];yield t.coins.forEach((t=>{e.push({id:t.item.id,symbol:t.item.symbol,name:t.item.name})})),u(e)}))}()),m(!p)}))}(),color:p?"warning":void 0},i.createElement(y.Z,null)))),function(){if(0===d.length&&""!=r)return r.length<=6?i.createElement("div",{id:"nav-bar"},i.createElement("button",{className:"nav-item"},"Ticker not Available")):i.createElement("div",{id:"nav-bar"},i.createElement("button",{className:"nav-item"},"Try searching a ticker, e.g. ETH"))}(),function(){if(d.length>1||1===d.length&&d[0].symbol!==n)return i.createElement("div",{id:"nav-bar"},d.map(((e,n)=>i.createElement("button",{key:n,className:h(a,e,n),onClick:()=>function(e,n,i){return $(this,void 0,void 0,(function*(){c(e),yield E([{id:e,symbol:n,name:i}]),yield t()}))}(e.id,e.symbol,e.name)},e.name))))}())};var L=n(9874);a()(L.Z,{insert:"head",singleton:!1}),L.Z.locals;const Z=n(7683),N=n(5666),z=n(3274),P=n(3303),j=n(1524),T=({blockExplorerLink:t,coingeckoLink:e,twitterLink:n,telegramLink:r,websiteLink:o})=>{function a(t){chrome.tabs.create({url:t,selected:!1})}return i.createElement("div",{id:"links-field"},o&&i.createElement("img",{className:"link-icon",src:Z,onClick:()=>a(o)}),t&&i.createElement("img",{className:"link-icon",src:N,onClick:()=>a(t)}),e&&i.createElement("img",{className:"link-icon",src:z,onClick:()=>a(e)}),n&&i.createElement("img",{className:"link-icon",src:P,onClick:()=>a(`https://www.twitter.com/${n}`)}),r&&i.createElement("img",{className:"link-icon",src:j,onClick:()=>a(`https://t.me/${r}`)}))};var F=n(971);function M(t){switch(!0){case 0===t||null==t:return"na";case t>=1e15:return`${(t/1e15).toPrecision(3)} Q`;case t>=1e12:return`${(t/1e12).toPrecision(3)} T`;case t>=1e9:return`${(t/1e9).toPrecision(3)} B`;case t>1e6:return`${(t/1e6).toPrecision(3)} M`;case t>1e4:return`${(t/1e3).toPrecision(3)} K`;default:return`${t.toPrecision(4)}`}}a()(F.Z,{insert:"head",singleton:!1}),F.Z.locals;var O=n(622),V=function(t,e,n,i){return new(n||(n=Promise))((function(r,o){function a(t){try{l(i.next(t))}catch(t){o(t)}}function c(t){try{l(i.throw(t))}catch(t){o(t)}}function l(t){var e;t.done?r(t.value):(e=t.value,e instanceof n?e:new n((function(t){t(e)}))).then(a,c)}l((i=i.apply(t,e||[])).next())}))};const I=({coinSymbol:t,coinMarketcap:e,coinMarketcapRank:n,coinCircSupply:r})=>{const[o,a]=(0,i.useState)("ETH"),[c,l]=(0,i.useState)([{id:"ethereum",symbol:"eth",name:"Ethereum"}]),[s,d]=(0,i.useState)("ETH"),[u,p]=(0,i.useState)("Ethereum"),[m,f]=(0,i.useState)(0),[h,g]=(0,i.useState)(""),[b,v]=(0,i.useState)(!1);function k(){return V(this,void 0,void 0,(function*(){const t=yield w();return yield l(t.filter((t=>t.symbol===o&&!t.id.includes("wormhole")))),!0}))}function y(t){return V(this,void 0,void 0,(function*(){let e=yield S(t);p(e.name),f(e.market_data.market_cap.usd),function(){V(this,void 0,void 0,(function*(){g(M(m/r))}))}()}))}function E(t,e,n){return t===e.id||!t&&0===n?"options-item active-options-item":"options-item"}return(0,i.useEffect)((()=>{v(!1)}),[t]),(0,i.useEffect)((()=>{0!=o.length&&k()}),[o]),(0,i.useEffect)((()=>{y("ethereum")}),[b]),i.createElement("div",null,i.createElement("div",{className:"marketcap-field"},i.createElement("p",{className:"marketcap-field-name"},"market Cap (rank)"," ",i.createElement(x.Z,{"aria-label":"Compare coin Mcs",onClick:()=>function(){return V(this,void 0,void 0,(function*(){v(!b)}))}(),color:b?"warning":void 0,size:"small"},i.createElement(O.Z,{fontSize:"small"}))),i.createElement("p",{className:"marketcap-field-value"},`${e} (${n})`)),b&&i.createElement(i.Fragment,null,i.createElement("div",{id:"compare-mc-field"},i.createElement("div",{id:"compare-mc-info"},i.createElement("p",null,i.createElement("span",{id:"ticker"}," ",t," ")," price with the MC of"),i.createElement("p",null,i.createElement("span",{id:"activeCoinName"}," ",u," ")," ($",M(m),")")),i.createElement("div",{id:"compare-mc-value"},i.createElement("input",{id:"search-mc-input",value:o.toUpperCase(),placeholder:"Ticker",autoFocus:!0,autoComplete:"off",onKeyDown:t=>function(t){return V(this,void 0,void 0,(function*(){"Enter"===t.key&&(yield k(),y(c[0].id))}))}(t),onChange:t=>a(t.target.value.toLowerCase()),onClick:()=>a("")}),i.createElement("p",null,"$",h))),i.createElement("div",null,function(){if(c.length>1)return i.createElement("div",{id:"options-bar"},c.map(((t,e)=>i.createElement("button",{key:e,className:E(s,t,e),onClick:()=>function(t,e,n){return V(this,void 0,void 0,(function*(){yield d(t),y(t)}))}(t.id,t.symbol,t.name)},t.name))));c.length>0&&y(c[0].id)}())))};var D=n(1640);a()(D.Z,{insert:"head",singleton:!1}),D.Z.locals;var K=n(9009),H=n(557),R=n(3023),U=n(5358),A=n(9307),q=n(1004),B=function(t,e,n,i){return new(n||(n=Promise))((function(r,o){function a(t){try{l(i.next(t))}catch(t){o(t)}}function c(t){try{l(i.throw(t))}catch(t){o(t)}}function l(t){var e;t.done?r(t.value):(e=t.value,e instanceof n?e:new n((function(t){t(e)}))).then(a,c)}l((i=i.apply(t,e||[])).next())}))};const Q=({coinId:t,quote:e})=>{const[n,r]=(0,i.useState)([{date:"",$:"0"}]);return(0,i.useEffect)((()=>{!function(){B(this,void 0,void 0,(function*(){let n=yield function(t,e){return C(this,void 0,void 0,(function*(){t=t||"bitcoin",e=e||"usd";const n=yield fetch(`https://api.coingecko.com/api/v3/coins/${t}/market_chart?vs_currency=${e}&days=30&interval=daily`);if(!n.ok)throw new Error(`Fetch error, price history data: ${t}`);return yield n.json()}))}(t,e),i=[{}];n.prices.forEach((function(t){return B(this,void 0,void 0,(function*(){let n=new Date(t[0]),r=n.toLocaleString("en-US",{month:"long"}).substring(0,3)+" "+n.toLocaleString("en-US",{day:"numeric"});"usd"===e?i.push({date:r,$:t[1].toPrecision(5)}):i.push({date:r,"₿":t[1].toPrecision(5)})}))})),r(i)}))}()}),[t,e]),n&&i.createElement("div",{id:"price-graph-field"},i.createElement("p",{id:"graph-title"},"Past 30 days"),i.createElement(K.h,{width:"100%",height:"100%"},i.createElement(H.w,{data:n,margin:{top:5,right:40,left:0,bottom:5}},i.createElement(R.K,{dataKey:"date",interval:"preserveStartEnd"}),i.createElement(U.B,{mirror:!0,interval:"preserveStartEnd",type:"number",domain:[t=>.6*t,"auto"]}),i.createElement(A.u,null),"usd"===e?i.createElement(q.x,{type:"monotone",dataKey:"$",stroke:"#ff8b4f",dot:!1}):i.createElement(q.x,{type:"monotone",dataKey:"₿",stroke:"#ff8b4f",dot:!1}))))};const G=document.createElement("div");document.body.appendChild(G),r.render(i.createElement((()=>{const[t,e]=(0,i.useState)("usd"),[n,r]=(0,i.useState)("Search ticker"),[o,a]=(0,i.useState)({name:"",id:"",icon:"",symbol:"",marketCapRank:"",circSupply:0,totalSupply:"",description:"",websiteLink:"",blockExplorerLink:"",coingeckoLink:"",twitterLink:"",telegramLink:""}),[c,l]=(0,i.useState)({price:"",marketCap:"",totalVolume:"",ath:"",atl:""});function d(){return e=this,n=void 0,o=function*(){let e=yield function(){const t=["coinIds"];return new Promise((e=>{chrome.storage.local.get(t,(t=>{var n;e(null!==(n=t.coinIds)&&void 0!==n?n:[])}))}))}();if(e.length>0){r(`Fetching ${e[0].symbol.toUpperCase()}`);let n=yield S(e[0].id);null!=n.id&&""!=n.id?(console.log(n),a({name:n.name,id:n.id,icon:n.image.large,symbol:n.symbol,marketCapRank:`${n.market_cap_rank}`,circSupply:n.market_data.circulating_supply,totalSupply:M(n.market_data.total_supply),description:n.description.en,websiteLink:n.links.homepage[0],blockExplorerLink:n.links.blockchain_site[0],coingeckoLink:`https://www.coingecko.com/en/coins/${n.id}`,twitterLink:n.links.twitter_screen_name,telegramLink:n.links.telegram_channel_identifier}),l("usd"===t?{price:`$${M(n.market_data.current_price.usd)}`,marketCap:`$${M(n.market_data.market_cap.usd)}`,totalVolume:`$${M(n.market_data.total_volume.usd)}`,ath:`$${M(n.market_data.ath.usd)}`,atl:`$${M(n.market_data.atl.usd)}`}:{price:`₿${M(n.market_data.current_price.btc)}`,marketCap:`₿${M(n.market_data.market_cap.btc)}`,totalVolume:`₿${M(n.market_data.total_volume.btc)}`,ath:`₿${M(n.market_data.ath.btc)}`,atl:`₿${M(n.market_data.atl.btc)}`}),r("Fetch success")):r("Fetch error")}},new((i=void 0)||(i=Promise))((function(t,r){function a(t){try{l(o.next(t))}catch(t){r(t)}}function c(t){try{l(o.throw(t))}catch(t){r(t)}}function l(e){var n;e.done?t(e.value):(n=e.value,n instanceof i?n:new i((function(t){t(n)}))).then(a,c)}l((o=o.apply(e,n||[])).next())}));var e,n,i,o}return(0,i.useEffect)((()=>{d()}),[t]),i.createElement(i.Fragment,null,i.createElement(h,{coinName:o.name,coinIcon:o.icon}),i.createElement(_,{searchCallback:function(){d()},activeCoinTicker:o.symbol,setQuote:e}),"Fetch success"!==n?i.createElement(b,{attributeName:`${n}`,attributeValue:" "}):i.createElement(b,{attributeName:`${o.symbol.toUpperCase()} price`,attributeValue:`${c.price}`}),"Search ticker"!==n&&i.createElement(i.Fragment,null,i.createElement(I,{coinSymbol:o.symbol,coinMarketcap:c.marketCap,coinMarketcapRank:o.marketCapRank,coinCircSupply:o.circSupply}),i.createElement(b,{attributeName:"total volume (24h)",attributeValue:`${c.totalVolume}`}),i.createElement(b,{attributeName:"all-time high",attributeValue:`${c.ath}`}),i.createElement(b,{attributeName:"all-time low",attributeValue:`${c.atl}`}),i.createElement(b,{attributeName:"Circ. Supply (total)",attributeValue:`${M(o.circSupply)} (${o.totalSupply})`}),i.createElement(s,{coinDescription:o.description}),i.createElement(Q,{coinId:o.id,quote:t}),i.createElement(T,{blockExplorerLink:o.blockExplorerLink,coingeckoLink:o.coingeckoLink,twitterLink:o.twitterLink,telegramLink:o.telegramLink,websiteLink:o.websiteLink})),i.createElement(p,null))}),null),G)},5666:(t,e,n)=>{t.exports=n.p+"0a0af196205176e35353.png"},3274:(t,e,n)=>{t.exports=n.p+"23a707f9446937e08db0.png"},8432:(t,e,n)=>{t.exports=n.p+"d501345674f683c76b1d.png"},1524:(t,e,n)=>{t.exports=n.p+"224d2231fa05aa5d9c12.png"},3303:(t,e,n)=>{t.exports=n.p+"1cb2dbe4b41cba0867c8.png"},7683:(t,e,n)=>{t.exports=n.p+"fd227cb70bccec8143cc.png"}},n={};function i(t){var r=n[t];if(void 0!==r)return r.exports;var o=n[t]={id:t,loaded:!1,exports:{}};return e[t].call(o.exports,o,o.exports,i),o.loaded=!0,o.exports}i.m=e,t=[],i.O=(e,n,r,o)=>{if(!n){var a=1/0;for(s=0;s<t.length;s++){for(var[n,r,o]=t[s],c=!0,l=0;l<n.length;l++)(!1&o||a>=o)&&Object.keys(i.O).every((t=>i.O[t](n[l])))?n.splice(l--,1):(c=!1,o<a&&(a=o));c&&(t.splice(s--,1),e=r())}return e}o=o||0;for(var s=t.length;s>0&&t[s-1][2]>o;s--)t[s]=t[s-1];t[s]=[n,r,o]},i.n=t=>{var e=t&&t.__esModule?()=>t.default:()=>t;return i.d(e,{a:e}),e},i.d=(t,e)=>{for(var n in e)i.o(e,n)&&!i.o(t,n)&&Object.defineProperty(t,n,{enumerable:!0,get:e[n]})},i.g=function(){if("object"==typeof globalThis)return globalThis;try{return this||new Function("return this")()}catch(t){if("object"==typeof window)return window}}(),i.o=(t,e)=>Object.prototype.hasOwnProperty.call(t,e),i.r=t=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(t,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(t,"__esModule",{value:!0})},i.nmd=t=>(t.paths=[],t.children||(t.children=[]),t),(()=>{var t;i.g.importScripts&&(t=i.g.location+"");var e=i.g.document;if(!t&&e&&(e.currentScript&&(t=e.currentScript.src),!t)){var n=e.getElementsByTagName("script");n.length&&(t=n[n.length-1].src)}if(!t)throw new Error("Automatic publicPath is not supported in this browser");t=t.replace(/#.*$/,"").replace(/\?.*$/,"").replace(/\/[^\/]+$/,"/"),i.p=t})(),(()=>{var t={42:0};i.O.j=e=>0===t[e];var e=(e,n)=>{var r,o,[a,c,l]=n,s=0;for(r in c)i.o(c,r)&&(i.m[r]=c[r]);if(l)var d=l(i);for(e&&e(n);s<a.length;s++)o=a[s],i.o(t,o)&&t[o]&&t[o][0](),t[a[s]]=0;return i.O(d)},n=self.webpackChunkcrypto_explorer_extension=self.webpackChunkcrypto_explorer_extension||[];n.forEach(e.bind(null,0)),n.push=e.bind(null,n.push.bind(n))})();var r=i.O(void 0,[114,406],(()=>i(7324)));r=i.O(r)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/DescriptionField/DescriptionField.css":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/DescriptionField/DescriptionField.css ***!
+  \****************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#description-field {\n\tmargin: 0 16px;\n}\n#description {\n\tmax-height: 95px;\n\tmargin-left: 1px;\n\tfont-size: 14px;\n\toverflow-y: scroll;\n}\n#description-preview {\n\tfont-size: 14px;\n\tmax-height: 90px;\n\twidth: 285px;\n\tmargin-left: 1px;\n\n\tdisplay: -webkit-box;\n\t-webkit-line-clamp: 1;\n\t-webkit-box-orient: vertical;\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n}\n\n#read-more-button {\n\theight: 20px;\n\tmargin-left: 1px;\n\tpadding: 0px;\n\n\tbackground-color: rgb(248, 248, 248);\n\tcolor: rgba(255, 139, 79, 1);\n\tborder: none;\n\tcursor: pointer;\n}\n\n#read-more-button:hover {\n\tborder-bottom: solid 2px rgba(255, 255, 255, 0);\n}\n\n#description-field a {\n\tcolor: rgba(255, 139, 79, 1);\n\ttext-decoration: none;\n}\n#description-field a:hover {\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n\n#title {\n\tmargin: 10px 0 0 0;\n\tpadding-bottom: 4px;\n\tfont-size: 14px;\n\tfont-weight: 650;\n}\n", "",{"version":3,"sources":["webpack://./src/components/DescriptionField/DescriptionField.css"],"names":[],"mappings":"AAAA;CACC,cAAc;AACf;AACA;CACC,gBAAgB;CAChB,gBAAgB;CAChB,eAAe;CACf,kBAAkB;AACnB;AACA;CACC,eAAe;CACf,gBAAgB;CAChB,YAAY;CACZ,gBAAgB;;CAEhB,oBAAoB;CACpB,qBAAqB;CACrB,4BAA4B;CAC5B,gBAAgB;CAChB,uBAAuB;AACxB;;AAEA;CACC,YAAY;CACZ,gBAAgB;CAChB,YAAY;;CAEZ,oCAAoC;CACpC,4BAA4B;CAC5B,YAAY;CACZ,eAAe;AAChB;;AAEA;CACC,+CAA+C;AAChD;;AAEA;CACC,4BAA4B;CAC5B,qBAAqB;AACtB;AACA;CACC,gDAAgD;AACjD;;AAEA;CACC,kBAAkB;CAClB,mBAAmB;CACnB,eAAe;CACf,gBAAgB;AACjB","sourcesContent":["#description-field {\n\tmargin: 0 16px;\n}\n#description {\n\tmax-height: 95px;\n\tmargin-left: 1px;\n\tfont-size: 14px;\n\toverflow-y: scroll;\n}\n#description-preview {\n\tfont-size: 14px;\n\tmax-height: 90px;\n\twidth: 285px;\n\tmargin-left: 1px;\n\n\tdisplay: -webkit-box;\n\t-webkit-line-clamp: 1;\n\t-webkit-box-orient: vertical;\n\toverflow: hidden;\n\ttext-overflow: ellipsis;\n}\n\n#read-more-button {\n\theight: 20px;\n\tmargin-left: 1px;\n\tpadding: 0px;\n\n\tbackground-color: rgb(248, 248, 248);\n\tcolor: rgba(255, 139, 79, 1);\n\tborder: none;\n\tcursor: pointer;\n}\n\n#read-more-button:hover {\n\tborder-bottom: solid 2px rgba(255, 255, 255, 0);\n}\n\n#description-field a {\n\tcolor: rgba(255, 139, 79, 1);\n\ttext-decoration: none;\n}\n#description-field a:hover {\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n\n#title {\n\tmargin: 10px 0 0 0;\n\tpadding-bottom: 4px;\n\tfont-size: 14px;\n\tfont-weight: 650;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/FooterField/FooterField.css":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/FooterField/FooterField.css ***!
+  \******************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#footer-field {\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tfont-size: 10px;\n}\n\n#coingecko_footer_icon {\n\theight: 10px;\n}\n\np {\n\tmargin: 8px 0;\n}\n", "",{"version":3,"sources":["webpack://./src/components/FooterField/FooterField.css"],"names":[],"mappings":"AAAA;CACC,aAAa;CACb,uBAAuB;CACvB,mBAAmB;;CAEnB,eAAe;AAChB;;AAEA;CACC,YAAY;AACb;;AAEA;CACC,aAAa;AACd","sourcesContent":["#footer-field {\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tfont-size: 10px;\n}\n\n#coingecko_footer_icon {\n\theight: 10px;\n}\n\np {\n\tmargin: 8px 0;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/HeaderField/HeaderField.css":
+/*!******************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/HeaderField/HeaderField.css ***!
+  \******************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "h1 {\n\tmargin: 0;\n\tfont-size: 26px;\n\tcolor: rgb(248, 248, 248);\n}\n\nimg {\n\theight: 28px;\n\tborder-radius: 5px;\n}\n\n#header {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\n\theight: 66px;\n\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n\n#img-box {\n\theight: 42px;\n\twidth: 42px;\n\tmargin: 0 16px;\n\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tborder-radius: 21px;\n\tbackground-color: rgb(248, 248, 248);\n}\n", "",{"version":3,"sources":["webpack://./src/components/HeaderField/HeaderField.css"],"names":[],"mappings":"AAAA;CACC,SAAS;CACT,eAAe;CACf,yBAAyB;AAC1B;;AAEA;CACC,YAAY;CACZ,kBAAkB;AACnB;;AAEA;CACC,aAAa;CACb,mBAAmB;CACnB,2BAA2B;;CAE3B,YAAY;;CAEZ;;;;EAIC;AACF;;AAEA;CACC,YAAY;CACZ,WAAW;CACX,cAAc;;CAEd,aAAa;CACb,uBAAuB;CACvB,mBAAmB;;CAEnB,mBAAmB;CACnB,oCAAoC;AACrC","sourcesContent":["h1 {\n\tmargin: 0;\n\tfont-size: 26px;\n\tcolor: rgb(248, 248, 248);\n}\n\nimg {\n\theight: 28px;\n\tborder-radius: 5px;\n}\n\n#header {\n\tdisplay: flex;\n\talign-items: center;\n\tjustify-content: flex-start;\n\n\theight: 66px;\n\n\tbackground-image: linear-gradient(\n\t\tto right,\n\t\trgba(254, 95, 157, 1),\n\t\trgba(255, 139, 79, 1)\n\t);\n}\n\n#img-box {\n\theight: 42px;\n\twidth: 42px;\n\tmargin: 0 16px;\n\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tborder-radius: 21px;\n\tbackground-color: rgb(248, 248, 248);\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/InfoField/InfoField.css":
+/*!**************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/InfoField/InfoField.css ***!
+  \**************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".info-field {\n\tdisplay: flex;\n\tmargin: 0 16px;\n\tpadding: 12px 0 7px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n}\n\n.attribute-name {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\ttext-transform: capitalize;\n}\n\n.attribute-value {\n\tmargin: 0;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n", "",{"version":3,"sources":["webpack://./src/components/InfoField/InfoField.css"],"names":[],"mappings":"AAAA;CACC,aAAa;CACb,cAAc;CACd,mBAAmB;;CAEnB,2CAA2C;AAC5C;;AAEA;CACC,sBAAsB;CACtB,UAAU;CACV,SAAS;;CAET,sBAAsB;CACtB,eAAe;CACf,gBAAgB;CAChB,0BAA0B;AAC3B;;AAEA;CACC,SAAS;;CAET,eAAe;CACf,0BAA0B;AAC3B","sourcesContent":[".info-field {\n\tdisplay: flex;\n\tmargin: 0 16px;\n\tpadding: 12px 0 7px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n}\n\n.attribute-name {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\ttext-transform: capitalize;\n}\n\n.attribute-value {\n\tmargin: 0;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/InteractionField/InteractionField.css":
+/*!****************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/InteractionField/InteractionField.css ***!
+  \****************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#interaction-field {\n\tmargin: 2px 16px 0;\n}\n#input-field {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tjustify-content: space-between;\n}\n#left-input-field {\n\twidth: 61%;\n}\n\n#search-input {\n\twidth: 80px;\n\tmargin-top: 2px;\n\tborder: none;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n\tdisplay: block;\n\tpadding: 12px 4px 6px 30px;\n\tbackground: transparent\n\t\turl(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E\")\n\t\tno-repeat 4px center;\n\tcursor: pointer;\n}\n#search-input:focus {\n\tborder: none;\n\toutline: none;\n}\n\n#quote-switch-box {\n\tmargin-top: 2px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n#trending-coins-button {\n\tmargin: 0 -10px 0 10px;\n}\n\n#nav-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.nav-item {\n\tmin-width: 30%;\n\theight: 25px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.nav-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-nav-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n", "",{"version":3,"sources":["webpack://./src/components/InteractionField/InteractionField.css"],"names":[],"mappings":"AAAA;CACC,kBAAkB;AACnB;AACA;CACC,aAAa;CACb,eAAe;CACf,8BAA8B;AAC/B;AACA;CACC,UAAU;AACX;;AAEA;CACC,WAAW;CACX,eAAe;CACf,YAAY;CACZ,gDAAgD;CAChD,cAAc;CACd,0BAA0B;CAC1B;;sBAEqB;CACrB,eAAe;AAChB;AACA;CACC,YAAY;CACZ,aAAa;AACd;;AAEA;CACC,eAAe;CACf,aAAa;CACb,uBAAuB;CACvB,mBAAmB;AACpB;;AAEA;CACC,sBAAsB;AACvB;;AAEA;CACC,aAAa;CACb,eAAe;AAChB;AACA;CACC,cAAc;CACd,YAAY;CACZ,YAAY;CACZ,oCAAoC;CACpC,YAAY;AACb;AACA;CACC,oCAAoC;CACpC,YAAY;AACb;AACA;CACC,gBAAgB;CAChB,gDAAgD;AACjD","sourcesContent":["#interaction-field {\n\tmargin: 2px 16px 0;\n}\n#input-field {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n\tjustify-content: space-between;\n}\n#left-input-field {\n\twidth: 61%;\n}\n\n#search-input {\n\twidth: 80px;\n\tmargin-top: 2px;\n\tborder: none;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n\tdisplay: block;\n\tpadding: 12px 4px 6px 30px;\n\tbackground: transparent\n\t\turl(\"data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E\")\n\t\tno-repeat 4px center;\n\tcursor: pointer;\n}\n#search-input:focus {\n\tborder: none;\n\toutline: none;\n}\n\n#quote-switch-box {\n\tmargin-top: 2px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n#trending-coins-button {\n\tmargin: 0 -10px 0 10px;\n}\n\n#nav-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.nav-item {\n\tmin-width: 30%;\n\theight: 25px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.nav-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-nav-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/LinksField/LinksField.css":
+/*!****************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/LinksField/LinksField.css ***!
+  \****************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#links-field {\n\tmargin-top: 14px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.link-icon {\n\theight: 18px;\n\tmargin: 0 6px;\n\tcursor: pointer;\n}\n\n.link-icon:hover {\n\t-webkit-filter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n\tfilter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n}\n", "",{"version":3,"sources":["webpack://./src/components/LinksField/LinksField.css"],"names":[],"mappings":"AAAA;CACC,gBAAgB;CAChB,aAAa;CACb,uBAAuB;CACvB,mBAAmB;AACpB;;AAEA;CACC,YAAY;CACZ,aAAa;CACb,eAAe;AAChB;;AAEA;CACC,gEAAgE;CAChE,wDAAwD;AACzD","sourcesContent":["#links-field {\n\tmargin-top: 14px;\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n}\n\n.link-icon {\n\theight: 18px;\n\tmargin: 0 6px;\n\tcursor: pointer;\n}\n\n.link-icon:hover {\n\t-webkit-filter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n\tfilter: drop-shadow(0px 3px 5px rgba(255, 139, 79, 0.8));\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/MarketcapField/MarketcapField.css":
+/*!************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/MarketcapField/MarketcapField.css ***!
+  \************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".marketcap-field {\n\tdisplay: flex;\n\tmargin: 0 16px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n}\n\n.marketcap-field-name {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\tpadding-top: 6px;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\ttext-transform: capitalize;\n}\n\n.marketcap-field-value {\n\tmargin: 0;\n\n\tpadding: 12px 0 7px;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n\n#compare-mc-field {\n\tdisplay: flex;\n\tmargin: 0 16px;\n\tpadding: 4px 0 4px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n}\n\n#search-mc-input {\n\twidth: 50px;\n\theight: 13px;\n\tmargin-top: 4px;\n\tpadding: 4px 4px 2px 1px;\n\tdisplay: block;\n\n\tborder: none;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n\tbackground-color: rgb(248, 248, 248);\n\n\tcolor: solid 1px rgba(255, 139, 79, 0.8);\n\tfont-weight: 650;\n\tcursor: pointer;\n}\n\n#search-mc-input:focus {\n\tborder: none;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n\toutline: none;\n}\n\n#compare-mc-info {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n}\n\n#compare-mc-value {\n\tmargin: 0;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n\n#ticker {\n\tfont-weight: 650;\n\ttext-transform: uppercase;\n}\n\n#activeCoinName {\n\tfont-weight: 650;\n}\n\n#options-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.options-item {\n\tmin-width: 30%;\n\theight: 25px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.options-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-options-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n", "",{"version":3,"sources":["webpack://./src/components/MarketcapField/MarketcapField.css"],"names":[],"mappings":"AAAA;CACC,aAAa;CACb,cAAc;;CAEd,2CAA2C;AAC5C;;AAEA;CACC,sBAAsB;CACtB,UAAU;CACV,SAAS;CACT,gBAAgB;;CAEhB,sBAAsB;CACtB,eAAe;CACf,gBAAgB;CAChB,0BAA0B;AAC3B;;AAEA;CACC,SAAS;;CAET,mBAAmB;;CAEnB,eAAe;CACf,0BAA0B;AAC3B;;AAEA;CACC,aAAa;CACb,cAAc;CACd,kBAAkB;;CAElB,2CAA2C;AAC5C;;AAEA;CACC,WAAW;CACX,YAAY;CACZ,eAAe;CACf,wBAAwB;CACxB,cAAc;;CAEd,YAAY;CACZ,gDAAgD;CAChD,oCAAoC;;CAEpC,wCAAwC;CACxC,gBAAgB;CAChB,eAAe;AAChB;;AAEA;CACC,YAAY;CACZ,gDAAgD;CAChD,aAAa;AACd;;AAEA;CACC,sBAAsB;CACtB,UAAU;CACV,SAAS;;CAET,sBAAsB;CACtB,eAAe;AAChB;;AAEA;CACC,SAAS;;CAET,eAAe;CACf,0BAA0B;AAC3B;;AAEA;CACC,gBAAgB;CAChB,yBAAyB;AAC1B;;AAEA;CACC,gBAAgB;AACjB;;AAEA;CACC,aAAa;CACb,eAAe;AAChB;AACA;CACC,cAAc;CACd,YAAY;CACZ,YAAY;CACZ,oCAAoC;CACpC,YAAY;AACb;AACA;CACC,oCAAoC;CACpC,YAAY;AACb;AACA;CACC,gBAAgB;CAChB,gDAAgD;AACjD","sourcesContent":[".marketcap-field {\n\tdisplay: flex;\n\tmargin: 0 16px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n}\n\n.marketcap-field-name {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\tpadding-top: 6px;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\ttext-transform: capitalize;\n}\n\n.marketcap-field-value {\n\tmargin: 0;\n\n\tpadding: 12px 0 7px;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n\n#compare-mc-field {\n\tdisplay: flex;\n\tmargin: 0 16px;\n\tpadding: 4px 0 4px;\n\n\tborder-bottom: 1px solid rgb(231, 231, 231);\n}\n\n#search-mc-input {\n\twidth: 50px;\n\theight: 13px;\n\tmargin-top: 4px;\n\tpadding: 4px 4px 2px 1px;\n\tdisplay: block;\n\n\tborder: none;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n\tbackground-color: rgb(248, 248, 248);\n\n\tcolor: solid 1px rgba(255, 139, 79, 0.8);\n\tfont-weight: 650;\n\tcursor: pointer;\n}\n\n#search-mc-input:focus {\n\tborder: none;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n\toutline: none;\n}\n\n#compare-mc-info {\n\tbox-sizing: border-box;\n\twidth: 61%;\n\tmargin: 0;\n\n\tvertical-align: middle;\n\tfont-size: 14px;\n}\n\n#compare-mc-value {\n\tmargin: 0;\n\n\tfont-size: 14px;\n\ttext-transform: capitalize;\n}\n\n#ticker {\n\tfont-weight: 650;\n\ttext-transform: uppercase;\n}\n\n#activeCoinName {\n\tfont-weight: 650;\n}\n\n#options-bar {\n\tdisplay: flex;\n\tflex-wrap: wrap;\n}\n.options-item {\n\tmin-width: 30%;\n\theight: 25px;\n\tflex-grow: 1;\n\tbackground-color: rgb(248, 248, 248);\n\tborder: none;\n}\n.options-item:hover {\n\tbackground-color: rgb(190, 190, 190);\n\tborder: none;\n}\n.active-options-item {\n\tfont-weight: 650;\n\tborder-bottom: solid 1px rgba(255, 139, 79, 0.8);\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/components/PriceGraphField/PriceGraphField.css":
+/*!**************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/components/PriceGraphField/PriceGraphField.css ***!
+  \**************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "#price-graph-field {\n\tmargin: 8px 16px 0;\n\theight: 125px;\n\twidth: 100%;\n}\n#graph-title {\n\tfont-weight: 400;\n\tcolor: rgb(100, 100, 100);\n\tmargin: 0 0 3px;\n}\n\n.recharts-yAxis\n\t.recharts-cartesian-axis-ticks\n\t.recharts-cartesian-axis-tick:first-child\n\tline {\n\tstroke: none;\n}\n.recharts-yAxis\n\t.recharts-cartesian-axis-ticks\n\t.recharts-cartesian-axis-tick:first-child\n\ttext\n\ttspan {\n\tfont-size: 0;\n}\n", "",{"version":3,"sources":["webpack://./src/components/PriceGraphField/PriceGraphField.css"],"names":[],"mappings":"AAAA;CACC,kBAAkB;CAClB,aAAa;CACb,WAAW;AACZ;AACA;CACC,gBAAgB;CAChB,yBAAyB;CACzB,eAAe;AAChB;;AAEA;;;;CAIC,YAAY;AACb;AACA;;;;;CAKC,YAAY;AACb","sourcesContent":["#price-graph-field {\n\tmargin: 8px 16px 0;\n\theight: 125px;\n\twidth: 100%;\n}\n#graph-title {\n\tfont-weight: 400;\n\tcolor: rgb(100, 100, 100);\n\tmargin: 0 0 3px;\n}\n\n.recharts-yAxis\n\t.recharts-cartesian-axis-ticks\n\t.recharts-cartesian-axis-tick:first-child\n\tline {\n\tstroke: none;\n}\n.recharts-yAxis\n\t.recharts-cartesian-axis-ticks\n\t.recharts-cartesian-axis-tick:first-child\n\ttext\n\ttspan {\n\tfont-size: 0;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/popup/popup.css":
+/*!*******************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/popup/popup.css ***!
+  \*******************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "./node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);
+// Imports
+
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "body {\n\twidth: 330px;\n\theight: auto;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n\n::-webkit-scrollbar {\n\twidth: 3px;\n}\n::-webkit-scrollbar-track {\n\tbox-shadow: inset 0 0 5px rgba(255, 255, 255, 0);\n}\n::-webkit-scrollbar-thumb {\n\tbackground: rgba(255, 139, 79, 0.7);\n\tborder-radius: 2px;\n}\n", "",{"version":3,"sources":["webpack://./src/popup/popup.css"],"names":[],"mappings":"AAAA;CACC,YAAY;CACZ,YAAY;CACZ,UAAU;CACV,SAAS;CACT,oCAAoC;AACrC;;AAEA;CACC,UAAU;AACX;AACA;CACC,gDAAgD;AACjD;AACA;CACC,mCAAmC;CACnC,kBAAkB;AACnB","sourcesContent":["body {\n\twidth: 330px;\n\theight: auto;\n\tpadding: 0;\n\tmargin: 0;\n\tbackground-color: rgb(248, 248, 248);\n}\n\n::-webkit-scrollbar {\n\twidth: 3px;\n}\n::-webkit-scrollbar-track {\n\tbox-shadow: inset 0 0 5px rgba(255, 255, 255, 0);\n}\n::-webkit-scrollbar-thumb {\n\tbackground: rgba(255, 139, 79, 0.7);\n\tborder-radius: 2px;\n}\n"],"sourceRoot":""}]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./src/components/DescriptionField/DescriptionField.css":
+/*!**************************************************************!*\
+  !*** ./src/components/DescriptionField/DescriptionField.css ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_DescriptionField_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./DescriptionField.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/DescriptionField/DescriptionField.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_DescriptionField_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_DescriptionField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./src/components/FooterField/FooterField.css":
+/*!****************************************************!*\
+  !*** ./src/components/FooterField/FooterField.css ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_FooterField_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./FooterField.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/FooterField/FooterField.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_FooterField_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_FooterField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./src/components/HeaderField/HeaderField.css":
+/*!****************************************************!*\
+  !*** ./src/components/HeaderField/HeaderField.css ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_HeaderField_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./HeaderField.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/HeaderField/HeaderField.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_HeaderField_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_HeaderField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./src/components/InfoField/InfoField.css":
+/*!************************************************!*\
+  !*** ./src/components/InfoField/InfoField.css ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_InfoField_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./InfoField.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/InfoField/InfoField.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_InfoField_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_InfoField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./src/components/InteractionField/InteractionField.css":
+/*!**************************************************************!*\
+  !*** ./src/components/InteractionField/InteractionField.css ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_InteractionField_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./InteractionField.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/InteractionField/InteractionField.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_InteractionField_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_InteractionField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./src/components/LinksField/LinksField.css":
+/*!**************************************************!*\
+  !*** ./src/components/LinksField/LinksField.css ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_LinksField_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./LinksField.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/LinksField/LinksField.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_LinksField_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_LinksField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./src/components/MarketcapField/MarketcapField.css":
+/*!**********************************************************!*\
+  !*** ./src/components/MarketcapField/MarketcapField.css ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_MarketcapField_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./MarketcapField.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/MarketcapField/MarketcapField.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_MarketcapField_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_MarketcapField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./src/components/PriceGraphField/PriceGraphField.css":
+/*!************************************************************!*\
+  !*** ./src/components/PriceGraphField/PriceGraphField.css ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_PriceGraphField_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js!./PriceGraphField.css */ "./node_modules/css-loader/dist/cjs.js!./src/components/PriceGraphField/PriceGraphField.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_PriceGraphField_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_PriceGraphField_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./src/popup/popup.css":
+/*!*****************************!*\
+  !*** ./src/popup/popup.css ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_popup_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!./popup.css */ "./node_modules/css-loader/dist/cjs.js!./src/popup/popup.css");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_popup_css__WEBPACK_IMPORTED_MODULE_1__.default, options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_popup_css__WEBPACK_IMPORTED_MODULE_1__.default.locals || {});
+
+/***/ }),
+
+/***/ "./src/components/DescriptionField/DescriptionField.tsx":
+/*!**************************************************************!*\
+  !*** ./src/components/DescriptionField/DescriptionField.tsx ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _DescriptionField_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DescriptionField.css */ "./src/components/DescriptionField/DescriptionField.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+const DescriptionField = ({ coinDescription, }) => {
+    const [readMore, setReadMore] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        setReadMore(false);
+    }, [coinDescription]);
+    if (!coinDescription.length) {
+        coinDescription = 'Description not available';
+    }
+    function createMarkup() {
+        return { __html: coinDescription };
+    }
+    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "description-field" },
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", { id: "title" }, "Description"),
+        readMore ? (
+        // insert coin description HTML code fetched from CoinGecko API
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "description", dangerouslySetInnerHTML: createMarkup() })) : (react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null,
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "description-preview", dangerouslySetInnerHTML: createMarkup() }),
+            coinDescription != 'Description not available' && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { id: "read-more-button", onClick: () => setReadMore(!readMore) }, "Read more"))))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (DescriptionField);
+
+
+/***/ }),
+
+/***/ "./src/components/DescriptionField/index.tsx":
+/*!***************************************************!*\
+  !*** ./src/components/DescriptionField/index.tsx ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _DescriptionField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DescriptionField */ "./src/components/DescriptionField/DescriptionField.tsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_DescriptionField__WEBPACK_IMPORTED_MODULE_0__.default);
+
+
+/***/ }),
+
+/***/ "./src/components/FooterField/FooterField.tsx":
+/*!****************************************************!*\
+  !*** ./src/components/FooterField/FooterField.tsx ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FooterField_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FooterField.css */ "./src/components/FooterField/FooterField.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+const CoinGeckoIcon = __webpack_require__(/*! ../../static/images/Coingecko_Icon_Circle_Color.png */ "./src/static/images/Coingecko_Icon_Circle_Color.png");
+const FooterField = ({}) => {
+    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "footer-field" },
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null,
+            "Powered by CoinGecko API",
+            ' ',
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { id: "coingecko_footer_icon", src: CoinGeckoIcon }),
+            ' ')));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FooterField);
+
+
+/***/ }),
+
+/***/ "./src/components/FooterField/index.tsx":
+/*!**********************************************!*\
+  !*** ./src/components/FooterField/index.tsx ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _FooterField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./FooterField */ "./src/components/FooterField/FooterField.tsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_FooterField__WEBPACK_IMPORTED_MODULE_0__.default);
+
+
+/***/ }),
+
+/***/ "./src/components/HeaderField/HeaderField.tsx":
+/*!****************************************************!*\
+  !*** ./src/components/HeaderField/HeaderField.tsx ***!
+  \****************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _HeaderField_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HeaderField.css */ "./src/components/HeaderField/HeaderField.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+const ExtensionLogo = __webpack_require__(/*! ../../static/images/CryptoExplorer_logo_128.png */ "./src/static/images/CryptoExplorer_logo_128.png");
+const HeaderField = ({ coinName, coinIcon }) => {
+    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "header" },
+        coinIcon ? (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "img-box" },
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { src: coinIcon }))) : (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "img-box" },
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { src: ExtensionLogo }))),
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null, coinName.length > 15 ? (react__WEBPACK_IMPORTED_MODULE_1__.createElement("h1", { style: { fontSize: '22px' } }, coinName)) : coinName.length > 0 ? (react__WEBPACK_IMPORTED_MODULE_1__.createElement("h1", null, coinName)) : (react__WEBPACK_IMPORTED_MODULE_1__.createElement("h1", null, "Crypto Explorer")))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (HeaderField);
+
+
+/***/ }),
+
+/***/ "./src/components/HeaderField/index.tsx":
+/*!**********************************************!*\
+  !*** ./src/components/HeaderField/index.tsx ***!
+  \**********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _HeaderField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./HeaderField */ "./src/components/HeaderField/HeaderField.tsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_HeaderField__WEBPACK_IMPORTED_MODULE_0__.default);
+
+
+/***/ }),
+
+/***/ "./src/components/InfoField/InfoField.tsx":
+/*!************************************************!*\
+  !*** ./src/components/InfoField/InfoField.tsx ***!
+  \************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _InfoField_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InfoField.css */ "./src/components/InfoField/InfoField.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+const InfoField = ({ attributeName, attributeValue, }) => {
+    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { className: "info-field" },
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", { className: "attribute-name" }, attributeName),
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", { className: "attribute-value" }, attributeValue)));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InfoField);
+
+
+/***/ }),
+
+/***/ "./src/components/InfoField/index.tsx":
+/*!********************************************!*\
+  !*** ./src/components/InfoField/index.tsx ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _InfoField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InfoField */ "./src/components/InfoField/InfoField.tsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_InfoField__WEBPACK_IMPORTED_MODULE_0__.default);
+
+
+/***/ }),
+
+/***/ "./src/components/InteractionField/InteractionField.tsx":
+/*!**************************************************************!*\
+  !*** ./src/components/InteractionField/InteractionField.tsx ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _InteractionField_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InteractionField.css */ "./src/components/InteractionField/InteractionField.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material/IconButton */ "./node_modules/@mui/material/IconButton/IconButton.js");
+/* harmony import */ var _mui_material_Switch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/material/Switch */ "./node_modules/@mui/material/Switch/Switch.js");
+/* harmony import */ var _mui_icons_material_Whatshot__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/Whatshot */ "./node_modules/@mui/icons-material/Whatshot.js");
+/* harmony import */ var _utils_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/storage */ "./src/utils/storage.ts");
+/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/api */ "./src/utils/api.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
+
+
+
+
+
+const InteractionField = ({ searchCallback, setQuote, activeCoinTicker, }) => {
+    const [searchInput, setSearchInput] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');
+    const [activeCoinId, setActiveCoinId] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');
+    const [checked, setChecked] = react__WEBPACK_IMPORTED_MODULE_1__.useState(false);
+    const [coinSuggestions, setCoinSuggestions] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([]);
+    const [trendingCoinButtonChecked, setTrendingCoinButtonChecked] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        setSearchInput(activeCoinTicker);
+    }, [activeCoinTicker]);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        if (searchInput.length != 0) {
+            getSearchData();
+        }
+    }, [searchInput]);
+    function getSearchData() {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (!trendingCoinButtonChecked) {
+                const coinList = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.getStoredCoinList)();
+                yield setCoinSuggestions(coinList.filter((coin) => (coin.symbol === searchInput && !coin.id.includes('wormhole')) ||
+                    coin.name.toLowerCase() === searchInput));
+            }
+        });
+    }
+    function handleNavbarItemClick(id, symbol, name) {
+        return __awaiter(this, void 0, void 0, function* () {
+            setActiveCoinId(id);
+            yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.setStoredCoins)([{ id, symbol, name }]);
+            yield searchCallback();
+        });
+    }
+    function handleSearchInputKeyDownEvent(event) {
+        return __awaiter(this, void 0, void 0, function* () {
+            setTrendingCoinButtonChecked(false);
+            if (event.key === 'Enter') {
+                yield getSearchData();
+                yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.setStoredCoins)(coinSuggestions);
+                coinSuggestions.length && setActiveCoinId(coinSuggestions[0].id);
+                searchCallback();
+            }
+        });
+    }
+    const handleQuoteChange = () => {
+        checked ? setQuote('usd') : setQuote('btc');
+        setChecked(!checked);
+    };
+    function handleNavbarItemClasses(activeCoinId, coin, index) {
+        return activeCoinId === coin.id || (!activeCoinId && index === 0)
+            ? 'nav-item active-nav-item'
+            : 'nav-item';
+    }
+    function renderNavbarItems() {
+        if (coinSuggestions.length > 1 ||
+            (coinSuggestions.length === 1 &&
+                coinSuggestions[0].symbol !== activeCoinTicker))
+            return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "nav-bar" }, coinSuggestions.map((coin, index) => (react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { key: index, className: handleNavbarItemClasses(activeCoinId, coin, index), onClick: () => handleNavbarItemClick(coin.id, coin.symbol, coin.name) }, coin.name)))));
+    }
+    function renderTrendingCoins() {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (!trendingCoinButtonChecked) {
+                yield getTrendingCoins();
+            }
+            setTrendingCoinButtonChecked(!trendingCoinButtonChecked);
+        });
+    }
+    function getTrendingCoins() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const trendingCoins = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_3__.fetchTrendingCoins)();
+            let trendingCoinInfo = [];
+            yield trendingCoins.coins.forEach((coin) => {
+                trendingCoinInfo.push({
+                    id: coin.item.id,
+                    symbol: coin.item.symbol,
+                    name: coin.item.name,
+                });
+            });
+            setCoinSuggestions(trendingCoinInfo);
+        });
+    }
+    function renderNavbarFeedback() {
+        /* TICKER NOT AVAILABLE */
+        if (coinSuggestions.length === 0 && searchInput != '') {
+            if (searchInput.length <= 6) {
+                return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "nav-bar" },
+                    react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { className: "nav-item" }, "Ticker not Available")));
+            }
+            else
+                /* SEARCH SUGGESTION */
+                return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "nav-bar" },
+                    react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { className: "nav-item" }, "Try searching a ticker, e.g. ETH")));
+        }
+    }
+    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "interaction-field" },
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "input-field" },
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "left-input-field" },
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", { id: "search-input", placeholder: "Search ticker", autoFocus: true, autoComplete: "off", value: searchInput.toUpperCase(), onKeyDown: (event) => handleSearchInputKeyDownEvent(event), onChange: (event) => setSearchInput(event.target.value.toLowerCase()), onClick: () => setSearchInput('') })),
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "quote-switch-box" },
+                "$",
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement(_mui_material_Switch__WEBPACK_IMPORTED_MODULE_4__.default, { color: "warning", checked: checked, onChange: handleQuoteChange }),
+                "\u20BF"),
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "trending-coins-button" },
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5__.default, { "aria-label": "Search hot coins", onClick: () => renderTrendingCoins(), color: trendingCoinButtonChecked ? 'warning' : undefined },
+                    react__WEBPACK_IMPORTED_MODULE_1__.createElement(_mui_icons_material_Whatshot__WEBPACK_IMPORTED_MODULE_6__.default, null)))),
+        renderNavbarFeedback(),
+        renderNavbarItems()));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (InteractionField);
+
+
+/***/ }),
+
+/***/ "./src/components/InteractionField/index.tsx":
+/*!***************************************************!*\
+  !*** ./src/components/InteractionField/index.tsx ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _InteractionField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./InteractionField */ "./src/components/InteractionField/InteractionField.tsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_InteractionField__WEBPACK_IMPORTED_MODULE_0__.default);
+
+
+/***/ }),
+
+/***/ "./src/components/LinksField/LinksField.tsx":
+/*!**************************************************!*\
+  !*** ./src/components/LinksField/LinksField.tsx ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _LinksField_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LinksField.css */ "./src/components/LinksField/LinksField.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+
+
+const WebsiteIcon = __webpack_require__(/*! ../../static/images/Website_Icon_Circle_Color.png */ "./src/static/images/Website_Icon_Circle_Color.png");
+const BlockExplorerIcon = __webpack_require__(/*! ../../static/images/Coin_blockexplorer_Icon_Circle_Color.png */ "./src/static/images/Coin_blockexplorer_Icon_Circle_Color.png");
+const CoinGeckoIcon = __webpack_require__(/*! ../../static/images/Coingecko_Icon_Circle_Color.png */ "./src/static/images/Coingecko_Icon_Circle_Color.png");
+const TwitterIcon = __webpack_require__(/*! ../../static/images/Twitter_Social_Icon_Circle_Color.png */ "./src/static/images/Twitter_Social_Icon_Circle_Color.png");
+const TelegramIcon = __webpack_require__(/*! ../../static/images/Telegram_Social_Icon_Circle_Color.png */ "./src/static/images/Telegram_Social_Icon_Circle_Color.png");
+const LinksField = ({ blockExplorerLink, coingeckoLink, twitterLink, telegramLink, websiteLink, }) => {
+    function handleOpenTab(link) {
+        chrome.tabs.create({ url: link, selected: false });
+    }
+    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "links-field" },
+        websiteLink && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: WebsiteIcon, onClick: () => handleOpenTab(websiteLink) })),
+        blockExplorerLink && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: BlockExplorerIcon, onClick: () => handleOpenTab(blockExplorerLink) })),
+        coingeckoLink && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: CoinGeckoIcon, onClick: () => handleOpenTab(coingeckoLink) })),
+        twitterLink && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: TwitterIcon, onClick: () => handleOpenTab(`https://www.twitter.com/${twitterLink}`) })),
+        telegramLink && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { className: "link-icon", src: TelegramIcon, onClick: () => handleOpenTab(`https://t.me/${telegramLink}`) }))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (LinksField);
+
+
+/***/ }),
+
+/***/ "./src/components/LinksField/index.tsx":
+/*!*********************************************!*\
+  !*** ./src/components/LinksField/index.tsx ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _LinksField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LinksField */ "./src/components/LinksField/LinksField.tsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_LinksField__WEBPACK_IMPORTED_MODULE_0__.default);
+
+
+/***/ }),
+
+/***/ "./src/components/MarketcapField/MarketcapField.tsx":
+/*!**********************************************************!*\
+  !*** ./src/components/MarketcapField/MarketcapField.tsx ***!
+  \**********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _MarketcapField_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MarketcapField.css */ "./src/components/MarketcapField/MarketcapField.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _utils_storage__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/storage */ "./src/utils/storage.ts");
+/* harmony import */ var _utils_amountFormatter__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../utils/amountFormatter */ "./src/utils/amountFormatter.ts");
+/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../utils/api */ "./src/utils/api.ts");
+/* harmony import */ var _mui_icons_material_CompareArrows__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/CompareArrows */ "./node_modules/@mui/icons-material/CompareArrows.js");
+/* harmony import */ var _mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material/IconButton */ "./node_modules/@mui/material/IconButton/IconButton.js");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
+
+
+
+
+
+const MarketcapField = ({ coinSymbol, coinMarketcap, coinMarketcapRank, coinCircSupply, }) => {
+    const [symbolInput, setSymbolInput] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('ETH');
+    const [coinOptions, setCoinOptions] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([
+        { id: 'ethereum', symbol: 'eth', name: 'Ethereum' },
+    ]);
+    const [activeCoinSymbol, setActiveCoinSymbol] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('ETH');
+    const [activeCoinName, setActiveCoinName] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('Ethereum');
+    const [searchedCoinMarketCap, setSearchedCoinMarketCap] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(0);
+    const [newCoinPrice, setnewCoinPrice] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('');
+    const [displayCompareMCField, setDisplayCompareMCField] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(false);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        setDisplayCompareMCField(false);
+    }, [coinSymbol]);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        if (symbolInput.length != 0) {
+            getCoinOptions();
+        }
+    }, [symbolInput]);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        getCoinData('ethereum');
+    }, [displayCompareMCField]);
+    function handleInputKeyDownEvent(event) {
+        return __awaiter(this, void 0, void 0, function* () {
+            if (event.key === 'Enter') {
+                yield getCoinOptions();
+                getCoinData(coinOptions[0].id);
+            }
+        });
+    }
+    function getCoinOptions() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const coinList = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_2__.getStoredCoinList)();
+            yield setCoinOptions(coinList.filter((coin) => coin.symbol === symbolInput && !coin.id.includes('wormhole')));
+            return true;
+        });
+    }
+    function handleCoinItemClick(id, symbol, name) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield setActiveCoinSymbol(id);
+            getCoinData(id);
+        });
+    }
+    function renderCoinOptionItems() {
+        if (coinOptions.length > 1) {
+            return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "options-bar" }, coinOptions.map((coin, index) => (react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { key: index, className: handleOptionItemClasses(activeCoinSymbol, coin, index), onClick: () => handleCoinItemClick(coin.id, coin.symbol, coin.name) }, coin.name)))));
+        }
+        else if (coinOptions.length > 0) {
+            getCoinData(coinOptions[0].id);
+        }
+    }
+    function getCoinData(coinId) {
+        return __awaiter(this, void 0, void 0, function* () {
+            let coinInfo = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_4__.fetchCoinInfo)(coinId);
+            setActiveCoinName(coinInfo.name);
+            setSearchedCoinMarketCap(coinInfo.market_data.market_cap.usd);
+            calculatePrice();
+        });
+    }
+    function calculatePrice() {
+        return __awaiter(this, void 0, void 0, function* () {
+            let newPrice = searchedCoinMarketCap / coinCircSupply;
+            setnewCoinPrice((0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_3__.amountFormatter)(newPrice));
+        });
+    }
+    function handleOptionItemClasses(activeCoinId, coin, index) {
+        return activeCoinId === coin.id || (!activeCoinId && index === 0)
+            ? 'options-item active-options-item'
+            : 'options-item';
+    }
+    function handleDisplayCompareMCFieldButton() {
+        return __awaiter(this, void 0, void 0, function* () {
+            setDisplayCompareMCField(!displayCompareMCField);
+        });
+    }
+    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null,
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { className: "marketcap-field" },
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", { className: "marketcap-field-name" },
+                "market Cap (rank)",
+                ' ',
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement(_mui_material_IconButton__WEBPACK_IMPORTED_MODULE_5__.default, { "aria-label": "Compare coin Mcs", onClick: () => handleDisplayCompareMCFieldButton(), color: displayCompareMCField ? 'warning' : undefined, size: "small" },
+                    react__WEBPACK_IMPORTED_MODULE_1__.createElement(_mui_icons_material_CompareArrows__WEBPACK_IMPORTED_MODULE_6__.default, { fontSize: "small" }))),
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", { className: "marketcap-field-value" }, `${coinMarketcap} (${coinMarketcapRank})`)),
+        displayCompareMCField && (react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null,
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "compare-mc-field" },
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "compare-mc-info" },
+                    react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null,
+                        react__WEBPACK_IMPORTED_MODULE_1__.createElement("span", { id: "ticker" },
+                            " ",
+                            coinSymbol,
+                            " "),
+                        " price with the MC of"),
+                    react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null,
+                        react__WEBPACK_IMPORTED_MODULE_1__.createElement("span", { id: "activeCoinName" },
+                            " ",
+                            activeCoinName,
+                            " "),
+                        " ($",
+                        (0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_3__.amountFormatter)(searchedCoinMarketCap),
+                        ")")),
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "compare-mc-value" },
+                    react__WEBPACK_IMPORTED_MODULE_1__.createElement("input", { id: "search-mc-input", value: symbolInput.toUpperCase(), placeholder: "Ticker", autoFocus: true, autoComplete: "off", onKeyDown: (event) => handleInputKeyDownEvent(event), onChange: (event) => setSymbolInput(event.target.value.toLowerCase()), onClick: () => setSymbolInput('') }),
+                    react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null,
+                        "$",
+                        newCoinPrice))),
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", null, renderCoinOptionItems())))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (MarketcapField);
+
+
+/***/ }),
+
+/***/ "./src/components/MarketcapField/index.tsx":
+/*!*************************************************!*\
+  !*** ./src/components/MarketcapField/index.tsx ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _MarketcapField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MarketcapField */ "./src/components/MarketcapField/MarketcapField.tsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_MarketcapField__WEBPACK_IMPORTED_MODULE_0__.default);
+
+
+/***/ }),
+
+/***/ "./src/components/PriceGraphField/PriceGraphField.tsx":
+/*!************************************************************!*\
+  !*** ./src/components/PriceGraphField/PriceGraphField.tsx ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _PriceGraphField_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PriceGraphField.css */ "./src/components/PriceGraphField/PriceGraphField.css");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/component/ResponsiveContainer.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/chart/LineChart.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/XAxis.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/YAxis.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/component/Tooltip.js");
+/* harmony import */ var recharts__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! recharts */ "./node_modules/recharts/es6/cartesian/Line.js");
+/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utils/api */ "./src/utils/api.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
+
+
+const PriceGraphField = ({ coinId, quote }) => {
+    const [chartData, setChartData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([{ date: '', $: '0' }]);
+    (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
+        formatChartData();
+    }, [coinId, quote]);
+    function formatChartData() {
+        return __awaiter(this, void 0, void 0, function* () {
+            let priceHistoryData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchPriceHistoryData)(coinId, quote);
+            let priceData = [{}];
+            priceHistoryData.prices.forEach(function (UnixPrice) {
+                return __awaiter(this, void 0, void 0, function* () {
+                    let dateObject = new Date(UnixPrice[0]);
+                    let date = dateObject.toLocaleString('en-US', { month: 'long' }).substring(0, 3) +
+                        ' ' +
+                        dateObject.toLocaleString('en-US', { day: 'numeric' });
+                    quote === 'usd'
+                        ? priceData.push({
+                            date,
+                            $: UnixPrice[1].toPrecision(5),
+                        })
+                        : priceData.push({
+                            date,
+                            '₿': UnixPrice[1].toPrecision(5),
+                        });
+                });
+            });
+            setChartData(priceData);
+        });
+    }
+    return (chartData && (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "price-graph-field" },
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", { id: "graph-title" }, "Past 30 days"),
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_3__.ResponsiveContainer, { width: "100%", height: "100%" },
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_4__.LineChart, { data: chartData, margin: {
+                    top: 5,
+                    right: 40,
+                    left: 0,
+                    bottom: 5,
+                } },
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_5__.XAxis, { dataKey: "date", interval: "preserveStartEnd" }),
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_6__.YAxis, { mirror: true, interval: "preserveStartEnd", type: "number", domain: [(dataMin) => dataMin * 0.6, 'auto'] }),
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_7__.Tooltip, null),
+                quote === 'usd' ? (react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_8__.Line, { type: "monotone", dataKey: "$", stroke: "#ff8b4f", dot: false })) : (react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_8__.Line, { type: "monotone", dataKey: "\u20BF", stroke: "#ff8b4f", dot: false })))))));
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (PriceGraphField);
+
+
+/***/ }),
+
+/***/ "./src/components/PriceGraphField/index.tsx":
+/*!**************************************************!*\
+  !*** ./src/components/PriceGraphField/index.tsx ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _PriceGraphField__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PriceGraphField */ "./src/components/PriceGraphField/PriceGraphField.tsx");
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_PriceGraphField__WEBPACK_IMPORTED_MODULE_0__.default);
+
+
+/***/ }),
+
+/***/ "./src/popup/popup.tsx":
+/*!*****************************!*\
+  !*** ./src/popup/popup.tsx ***!
+  \*****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _popup_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./popup.css */ "./src/popup/popup.css");
+/* harmony import */ var _components_DescriptionField__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../components/DescriptionField */ "./src/components/DescriptionField/index.tsx");
+/* harmony import */ var _components_FooterField__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../components/FooterField */ "./src/components/FooterField/index.tsx");
+/* harmony import */ var _components_HeaderField__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/HeaderField */ "./src/components/HeaderField/index.tsx");
+/* harmony import */ var _components_InfoField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/InfoField */ "./src/components/InfoField/index.tsx");
+/* harmony import */ var _components_InteractionField__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/InteractionField */ "./src/components/InteractionField/index.tsx");
+/* harmony import */ var _components_LinksField__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/LinksField */ "./src/components/LinksField/index.tsx");
+/* harmony import */ var _components_MarketcapField__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/MarketcapField */ "./src/components/MarketcapField/index.tsx");
+/* harmony import */ var _components_PriceGraphField__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/PriceGraphField */ "./src/components/PriceGraphField/index.tsx");
+/* harmony import */ var _utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../utils/amountFormatter */ "./src/utils/amountFormatter.ts");
+/* harmony import */ var _utils_api__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../utils/api */ "./src/utils/api.ts");
+/* harmony import */ var _utils_storage__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../utils/storage */ "./src/utils/storage.ts");
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const App = () => {
+    const [quote, setQuote] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('usd');
+    const [apiStatus, setApiStatus] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('Search ticker');
+    const [coinData, setCoinData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+        name: '',
+        id: '',
+        icon: '',
+        symbol: '',
+        marketCapRank: '',
+        circSupply: 0,
+        totalSupply: '',
+        description: '',
+        websiteLink: '',
+        blockExplorerLink: '',
+        coingeckoLink: '',
+        twitterLink: '',
+        telegramLink: '',
+    });
+    const [priceData, setPriceData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
+        price: '',
+        marketCap: '',
+        totalVolume: '',
+        ath: '',
+        atl: '',
+    });
+    (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(() => {
+        getCoinData();
+    }, [quote]);
+    function searchCallback() {
+        getCoinData();
+    }
+    function getCoinData() {
+        return __awaiter(this, void 0, void 0, function* () {
+            let coinIds = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_13__.getStoredCoins)();
+            if (coinIds.length > 0) {
+                setApiStatus(`Fetching ${coinIds[0].symbol.toUpperCase()}`);
+                let coinInfo = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_12__.fetchCoinInfo)(coinIds[0].id);
+                if (coinInfo.id != undefined && coinInfo.id != '') {
+                    console.log(coinInfo);
+                    setCoinData({
+                        name: coinInfo.name,
+                        id: coinInfo.id,
+                        icon: coinInfo.image.large,
+                        symbol: coinInfo.symbol,
+                        marketCapRank: `${coinInfo.market_cap_rank}`,
+                        circSupply: coinInfo.market_data.circulating_supply,
+                        totalSupply: (0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__.amountFormatter)(coinInfo.market_data.total_supply),
+                        description: coinInfo.description.en,
+                        websiteLink: coinInfo.links.homepage[0],
+                        blockExplorerLink: coinInfo.links.blockchain_site[0],
+                        coingeckoLink: `https://www.coingecko.com/en/coins/${coinInfo.id}`,
+                        twitterLink: coinInfo.links.twitter_screen_name,
+                        telegramLink: coinInfo.links.telegram_channel_identifier,
+                    });
+                    if (quote === 'usd') {
+                        setPriceData({
+                            price: `$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__.amountFormatter)(coinInfo.market_data.current_price.usd)}`,
+                            marketCap: `$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__.amountFormatter)(coinInfo.market_data.market_cap.usd)}`,
+                            totalVolume: `$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__.amountFormatter)(coinInfo.market_data.total_volume.usd)}`,
+                            ath: `$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__.amountFormatter)(coinInfo.market_data.ath.usd)}`,
+                            atl: `$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__.amountFormatter)(coinInfo.market_data.atl.usd)}`,
+                        });
+                    }
+                    else {
+                        setPriceData({
+                            price: `₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__.amountFormatter)(coinInfo.market_data.current_price.btc)}`,
+                            marketCap: `₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__.amountFormatter)(coinInfo.market_data.market_cap.btc)}`,
+                            totalVolume: `₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__.amountFormatter)(coinInfo.market_data.total_volume.btc)}`,
+                            ath: `₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__.amountFormatter)(coinInfo.market_data.ath.btc)}`,
+                            atl: `₿${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__.amountFormatter)(coinInfo.market_data.atl.btc)}`,
+                        });
+                    }
+                    setApiStatus(`Fetch success`);
+                }
+                else {
+                    setApiStatus(`Fetch error`);
+                }
+            }
+        });
+    }
+    return (react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null,
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_HeaderField__WEBPACK_IMPORTED_MODULE_5__.default, { coinName: coinData.name, coinIcon: coinData.icon }),
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_InteractionField__WEBPACK_IMPORTED_MODULE_7__.default, { searchCallback: searchCallback, activeCoinTicker: coinData.symbol, setQuote: setQuote }),
+        apiStatus !== `Fetch success` ? (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_6__.default, { attributeName: `${apiStatus}`, attributeValue: ' ' })) : (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_6__.default, { attributeName: `${coinData.symbol.toUpperCase()} price`, attributeValue: `${priceData.price}` })),
+        apiStatus !== 'Search ticker' && (react__WEBPACK_IMPORTED_MODULE_0__.createElement(react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null,
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_MarketcapField__WEBPACK_IMPORTED_MODULE_9__.default, { coinSymbol: coinData.symbol, coinMarketcap: priceData.marketCap, coinMarketcapRank: coinData.marketCapRank, coinCircSupply: coinData.circSupply }),
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_6__.default, { attributeName: "total volume (24h)", attributeValue: `${priceData.totalVolume}` }),
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_6__.default, { attributeName: "all-time high", attributeValue: `${priceData.ath}` }),
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_6__.default, { attributeName: "all-time low", attributeValue: `${priceData.atl}` }),
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_6__.default, { attributeName: "Circ. Supply (total)", attributeValue: `${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_11__.amountFormatter)(coinData.circSupply)} (${coinData.totalSupply})` }),
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_DescriptionField__WEBPACK_IMPORTED_MODULE_3__.default, { coinDescription: coinData.description }),
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PriceGraphField__WEBPACK_IMPORTED_MODULE_10__.default, { coinId: coinData.id, quote: quote }),
+            react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_LinksField__WEBPACK_IMPORTED_MODULE_8__.default, { blockExplorerLink: coinData.blockExplorerLink, coingeckoLink: coinData.coingeckoLink, twitterLink: coinData.twitterLink, telegramLink: coinData.telegramLink, websiteLink: coinData.websiteLink }))),
+        react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_FooterField__WEBPACK_IMPORTED_MODULE_4__.default, null)));
+};
+const root = document.createElement('div');
+document.body.appendChild(root);
+react_dom__WEBPACK_IMPORTED_MODULE_1__.render(react__WEBPACK_IMPORTED_MODULE_0__.createElement(App, null), root);
+
+
+/***/ }),
+
+/***/ "./src/utils/amountFormatter.ts":
+/*!**************************************!*\
+  !*** ./src/utils/amountFormatter.ts ***!
+  \**************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "amountFormatter": () => (/* binding */ amountFormatter)
+/* harmony export */ });
+function amountFormatter(amount) {
+    switch (true) {
+        case amount === 0 || amount === null || amount === undefined:
+            return 'na';
+        case amount >= 1000000000000000:
+            return `${(amount / 1000000000000000).toPrecision(3)} Q`;
+        case amount >= 1000000000000:
+            return `${(amount / 1000000000000).toPrecision(3)} T`;
+        case amount >= 1000000000:
+            return `${(amount / 1000000000).toPrecision(3)} B`;
+        case amount > 1000000:
+            return `${(amount / 1000000).toPrecision(3)} M`;
+        case amount > 10000:
+            return `${(amount / 1000).toPrecision(3)} K`;
+        default:
+            return `${amount.toPrecision(4)}`;
+    }
+}
+
+
+/***/ }),
+
+/***/ "./src/utils/api.ts":
+/*!**************************!*\
+  !*** ./src/utils/api.ts ***!
+  \**************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "fetchCoinsList": () => (/* binding */ fetchCoinsList),
+/* harmony export */   "fetchTrendingCoins": () => (/* binding */ fetchTrendingCoins),
+/* harmony export */   "fetchCoinInfo": () => (/* binding */ fetchCoinInfo),
+/* harmony export */   "fetchPriceHistoryData": () => (/* binding */ fetchPriceHistoryData)
+/* harmony export */ });
+var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
+function fetchCoinsList() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const res = yield fetch(COINGECKO_COINS_LIST_API);
+        const data = yield res.json();
+        return data;
+    });
+}
+function fetchTrendingCoins() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const res = yield fetch(`https://api.coingecko.com/api/v3/search/trending`);
+        if (!res.ok) {
+            throw new Error(`Fetch error, Hot Coins}`);
+        }
+        const data = yield res.json();
+        return data;
+    });
+}
+function fetchCoinInfo(coinId) {
+    return __awaiter(this, void 0, void 0, function* () {
+        coinId = coinId ? coinId : 'bitcoin';
+        const res = yield fetch(`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`);
+        if (!res.ok) {
+            throw new Error(`Fetch error, coin info data: ${coinId}`);
+        }
+        const data = yield res.json();
+        return data;
+    });
+}
+function fetchPriceHistoryData(coinId, quote) {
+    return __awaiter(this, void 0, void 0, function* () {
+        coinId = coinId ? coinId : 'bitcoin';
+        quote = quote ? quote : 'usd';
+        const res = yield fetch(`https://api.coingecko.com/api/v3/coins/${coinId}/market_chart?vs_currency=${quote}&days=30&interval=daily`);
+        if (!res.ok) {
+            throw new Error(`Fetch error, price history data: ${coinId}`);
+        }
+        const priceData = yield res.json();
+        return priceData;
+    });
+}
+const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list';
+
+
+/***/ }),
+
+/***/ "./src/utils/storage.ts":
+/*!******************************!*\
+  !*** ./src/utils/storage.ts ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "setStoredCoinList": () => (/* binding */ setStoredCoinList),
+/* harmony export */   "getStoredCoinList": () => (/* binding */ getStoredCoinList),
+/* harmony export */   "setStoredCoins": () => (/* binding */ setStoredCoins),
+/* harmony export */   "getStoredCoins": () => (/* binding */ getStoredCoins)
+/* harmony export */ });
+function setStoredCoinList(coins) {
+    const vals = {
+        coins,
+    };
+    return new Promise((resolve) => {
+        chrome.storage.local.set(vals, () => {
+            resolve();
+        });
+    });
+}
+function getStoredCoinList() {
+    const keys = ['coins'];
+    return new Promise((resolve) => {
+        chrome.storage.local.get(keys, (res) => {
+            var _a;
+            resolve((_a = res.coins) !== null && _a !== void 0 ? _a : []);
+        });
+    });
+}
+function setStoredCoins(coinIds) {
+    const vals = {
+        coinIds,
+    };
+    return new Promise((resolve) => {
+        chrome.storage.local.set(vals, () => {
+            resolve();
+        });
+    });
+}
+function getStoredCoins() {
+    const keys = ['coinIds'];
+    return new Promise((resolve) => {
+        chrome.storage.local.get(keys, (res) => {
+            var _a;
+            resolve((_a = res.coinIds) !== null && _a !== void 0 ? _a : []);
+        });
+    });
+}
+
+
+/***/ }),
+
+/***/ "./src/static/images/Coin_blockexplorer_Icon_Circle_Color.png":
+/*!********************************************************************!*\
+  !*** ./src/static/images/Coin_blockexplorer_Icon_Circle_Color.png ***!
+  \********************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "0a0af196205176e35353.png";
+
+/***/ }),
+
+/***/ "./src/static/images/Coingecko_Icon_Circle_Color.png":
+/*!***********************************************************!*\
+  !*** ./src/static/images/Coingecko_Icon_Circle_Color.png ***!
+  \***********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "23a707f9446937e08db0.png";
+
+/***/ }),
+
+/***/ "./src/static/images/CryptoExplorer_logo_128.png":
+/*!*******************************************************!*\
+  !*** ./src/static/images/CryptoExplorer_logo_128.png ***!
+  \*******************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "d501345674f683c76b1d.png";
+
+/***/ }),
+
+/***/ "./src/static/images/Telegram_Social_Icon_Circle_Color.png":
+/*!*****************************************************************!*\
+  !*** ./src/static/images/Telegram_Social_Icon_Circle_Color.png ***!
+  \*****************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "224d2231fa05aa5d9c12.png";
+
+/***/ }),
+
+/***/ "./src/static/images/Twitter_Social_Icon_Circle_Color.png":
+/*!****************************************************************!*\
+  !*** ./src/static/images/Twitter_Social_Icon_Circle_Color.png ***!
+  \****************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "1cb2dbe4b41cba0867c8.png";
+
+/***/ }),
+
+/***/ "./src/static/images/Website_Icon_Circle_Color.png":
+/*!*********************************************************!*\
+  !*** ./src/static/images/Website_Icon_Circle_Color.png ***!
+  \*********************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "fd227cb70bccec8143cc.png";
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			id: moduleId,
+/******/ 			loaded: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Flag the module as loaded
+/******/ 		module.loaded = true;
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					result = fn();
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/global */
+/******/ 	(() => {
+/******/ 		__webpack_require__.g = (function() {
+/******/ 			if (typeof globalThis === 'object') return globalThis;
+/******/ 			try {
+/******/ 				return this || new Function('return this')();
+/******/ 			} catch (e) {
+/******/ 				if (typeof window === 'object') return window;
+/******/ 			}
+/******/ 		})();
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/node module decorator */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nmd = (module) => {
+/******/ 			module.paths = [];
+/******/ 			if (!module.children) module.children = [];
+/******/ 			return module;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"popup": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			for(moduleId in moreModules) {
+/******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 				}
+/******/ 			}
+/******/ 			if(runtime) var result = runtime(__webpack_require__);
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkIds[i]] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = self["webpackChunkcrypto_explorer_extension"] = self["webpackChunkcrypto_explorer_extension"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["vendors-node_modules_react-dom_index_js","vendors-node_modules_mui_icons-material_CompareArrows_js-node_modules_mui_icons-material_What-f75f17"], () => (__webpack_require__("./src/popup/popup.tsx")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=popup.js.map
