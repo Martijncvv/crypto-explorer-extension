@@ -60,6 +60,12 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
 - Show clickable , done
 - Display price at certain marketcap; if x has same MC a y then x price is z, done
 - More smooth chart transition, done
+- Another little addition could be have a # next to the market cap rank; WOO #166, done
 
-- Connect LunaCrush; show top influencers and recent trend stats; read top tweets.
-- USD chart \$BTRFLY out of range
+- When you search for a new coin, I think the dropdown with the coin name should be highlighted so its more obvious to click; pointer change implemented
+
+* USD chart \$BTRFLY out of range
+
+FUTURE
+
+- Connect LunaCrush; show top influencers and recent trend stats; read top tweets; paid API needed.

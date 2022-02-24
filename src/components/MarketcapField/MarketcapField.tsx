@@ -69,10 +69,23 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 		getCoinData(id)
 	}
 
+	async function getCoinData(coinId: string) {
+		let coinInfo = await fetchCoinInfo(coinId)
+		setActiveCoinName(coinInfo.name)
+		setSearchedCoinMarketCap(coinInfo.market_data.market_cap.usd)
+		calculatePrice()
+	}
+
+	async function calculatePrice() {
+		let newPrice = searchedCoinMarketCap / coinCircSupply
+
+		setnewCoinPrice(amountFormatter(newPrice))
+	}
+
 	function renderCoinOptionItems() {
 		if (coinOptions.length > 1) {
 			return (
-				<div id="options-bar">
+				<div id="coin-options-bar">
 					{coinOptions.map((coin, index) => (
 						<button
 							key={index}
@@ -91,27 +104,14 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 		}
 	}
 
-	async function getCoinData(coinId: string) {
-		let coinInfo = await fetchCoinInfo(coinId)
-		setActiveCoinName(coinInfo.name)
-		setSearchedCoinMarketCap(coinInfo.market_data.market_cap.usd)
-		calculatePrice()
-	}
-
-	async function calculatePrice() {
-		let newPrice = searchedCoinMarketCap / coinCircSupply
-
-		setnewCoinPrice(amountFormatter(newPrice))
-	}
-
 	function handleOptionItemClasses(
 		activeCoinId: string,
 		coin: SimpleCoinInfo,
 		index: number
 	): string {
 		return activeCoinId === coin.id || (!activeCoinId && index === 0)
-			? 'options-item active-options-item'
-			: 'options-item'
+			? 'coin-options-item active-coin-options-item'
+			: 'coin-options-item'
 	}
 
 	async function handleDisplayCompareMCFieldButton() {
@@ -133,7 +133,7 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 					</IconButton>
 				</p>
 
-				<p className="marketcap-field-value">{`${coinMarketcap} (${coinMarketcapRank})`}</p>
+				<p className="marketcap-field-value">{`${coinMarketcap} (#${coinMarketcapRank})`}</p>
 			</div>
 			{displayCompareMCField && (
 				<>
@@ -143,14 +143,14 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 								<span id="ticker"> {coinSymbol} </span> price with the MC of
 							</p>
 							<p>
-								<span id="activeCoinName"> {activeCoinName} </span> ($
+								<span id="active-coin-name"> {activeCoinName} </span> ($
 								{amountFormatter(searchedCoinMarketCap)})
 							</p>
 						</div>
 
 						<div id="compare-mc-value">
 							<input
-								id="search-mc-input"
+								id="compare-mc-input"
 								value={symbolInput.toUpperCase()}
 								placeholder="Ticker"
 								autoFocus={true}
