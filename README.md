@@ -1,6 +1,6 @@
 # Cryptocurrency Explorer Chrome Extension
 
-A Google Chrome extension which displays information about a cryptocurrency in a popup when the user selects a coin ticker (BTC/ ETH/ XYZ) and presses (mac)CTRL+SHIFT+L. It's also possible to use the search feature or check the top searched coins of CoinGecko in the last 24 hours.
+A Google Chrome extension which displays information about a cryptocurrency in a popup when the user selects a coin ticker (BTC/ ETH/ XYZ) and presses (mac)CTRL+SHIFT+L. It's also possible to use the search feature, check the top searched coins of CoinGecko in the last 24 hours or compare market caps of different tokens; What would the price of coin x be with the market cap of coin Y.
 
 [Chrome Store Extension Link](https://chrome.google.com/webstore/detail/crypto-explorer/pkaheoacmbdgnemgmcdbekniooabcnmc)
 
@@ -13,42 +13,30 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
 
 ## Preview Video
 
-[Crypto Explorer Chrome Extension Preview](https://www.youtube.com/watch?v=73Cn0ROcvVA)
+[Crypto Explorer Chrome Extension Preview](https://www.youtube.com/watch?v=GZUmctdYTP0)
 
-## BTC/USD pop-up on Twitter with price graph tooltip
+## BTC/USD pair with price graph tooltip
 
 <p align="center">
-  <img src="preview_pics/CG_explorer_BTC-USD-Twitter.png" alt="Bitcoin USD pop-up on Twitter" width="800" >
+  <img src="preview_pics/btc-Twitter.png" alt="Bitcoin USD pop-up on Twitter" width="800" >
 </p>
 
-## BTC/USD pop-up
+## ETH/BTC pair with extended description
 
 <p align="center">
-  <img src="preview_pics/CG_explorer_BTC.png" alt="Bitcoin USD pop-up" width="800" >
+  <img src="preview_pics/eth-btc-description.png" alt="Ethereum BTC with extended description" width="800" >
 </p>
 
-## ETH/USD pop-up with price graph tooltip
+## Compare-marketcap tool
 
 <p align="center">
-  <img src="preview_pics/CG_explorer_ETH-USD.png" alt="Ethereum USD pop-up" width="800" >
+  <img src="preview_pics/doge-mc-compare.png" alt="Ethereum BTC pop-up with price graph tooltip" width="800" >
 </p>
 
-## ETH/BTC pop-up with price graph tooltip
+## Top searched coins of CoinGecko in the last 24 hours
 
 <p align="center">
-  <img src="preview_pics/CG_explorer_ETH-BTC.png" alt="Ethereum BTC pop-up with price graph tooltip" width="800" >
-</p>
-
-## DOGE/USD pop-up on Twitter with extended description
-
-<p align="center">
-  <img src="preview_pics/CG_explorer_DOGE-USD-Twitter.png" alt="Dogecoin USD pop-up with extended description" width="800" >
-</p>
-
-## KITTY/USD pop-up with navigation bar of coins with the same ticker
-
-<p align="center">
-  <img src="preview_pics/CG_explorer_KITTY-USD.png" alt="Kitty USD pop-up with navbar" width="800" >
+  <img src="preview_pics/top-trending.png" alt="top-trending tokens" width="800" >
 </p>
 
 ### To do's/ Ideas
