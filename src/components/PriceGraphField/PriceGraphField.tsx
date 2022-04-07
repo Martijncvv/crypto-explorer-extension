@@ -26,7 +26,7 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 	async function formatChartData() {
 		let priceHistoryData: PriceData = await fetchPriceHistoryData(coinId, quote)
 		let priceData = [{}]
-
+		console.log('priceHistoryData', priceHistoryData)
 		priceHistoryData.prices.forEach(async function(UnixPrice) {
 			let dateObject = new Date(UnixPrice[0])
 			let date =
@@ -37,14 +37,14 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 			quote === 'usd'
 				? priceData.push({
 						date,
-						$: UnixPrice[1].toPrecision(5),
+						$: parseFloat(UnixPrice[1].toPrecision(5)),
 				  })
 				: priceData.push({
 						date,
-						'₿': UnixPrice[1].toPrecision(5),
+						'₿': parseFloat(UnixPrice[1].toPrecision(5)),
 				  })
 		})
-
+		console.log('priceData', priceData)
 		setChartData(priceData)
 	}
 
