@@ -1,6 +1,6 @@
 {
 	"name": "crypto-explorer-extension",
-	"version": "1.0.8",
+	"version": "1.3.0",
 	"description": "Extension to explorer cryptocurrencies.",
 	"scripts": {
 		"start": "webpack --watch --progress --config webpack.dev.js",
@@ -33,6 +33,7 @@
 		"@emotion/styled": "^11.6.0",
 		"@mui/icons-material": "^5.3.1",
 		"@mui/material": "^5.3.1",
-		"recharts": "^2.1.8"
+		"react-twitter-widgets": "^1.10.0",
+		"recharts": "^2.1.9"
 	}
 }

@@ -11,6 +11,7 @@ import InteractionField from '../components/InteractionField'
 import LinksField from '../components/LinksField'
 import MarketcapField from '../components/MarketcapField'
 import PriceGraphField from '../components/PriceGraphField'
+import TwitterFeedField from '../components/TwitterFeedField'
 
 import { amountFormatter } from '../utils/amountFormatter'
 import { AdvancedCoinInfo, fetchCoinInfo } from '../utils/api'
@@ -164,7 +165,6 @@ const App: React.FC<{}> = () => {
 						coinMarketcapRank={coinData.marketCapRank}
 						coinCircSupply={coinData.circSupply}
 					/>
-					{/* <CompareMcField coinTicker={coinData.symbol} /> */}
 
 					<InfoField
 						attributeName="total volume (24h)"
@@ -186,6 +186,7 @@ const App: React.FC<{}> = () => {
 					/>
 					<DescriptionField coinDescription={coinData.description} />
 					<PriceGraphField coinId={coinData.id} quote={quote} />
+					{/* <TwitterFeedField twitterId={coinData.twitterLink} /> */}
 					<LinksField
 						blockExplorerLink={coinData.blockExplorerLink}
 						coingeckoLink={coinData.coingeckoLink}
