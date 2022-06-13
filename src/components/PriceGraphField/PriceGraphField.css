@@ -9,16 +9,17 @@
 	margin: 0 0 3px;
 }
 
-.graph-range {
-	padding: 0 4px 0 4px;
+.graph-range-button {
+	padding: 1px 4px;
+	margin: 0 4px 0 4px;
 	background: none;
-	border: none;
-
+	border: 1px solid rgba(100, 100, 100, 0.1);
+	border-radius: 5px;
 	cursor: pointer;
 
-	color: rgb(100, 100, 100);
+	color: rgba(100, 100, 100);
 	font-weight: 500;
-	font-size: 13px;
+	font-size: 12px;
 }
 
 .recharts-yAxis

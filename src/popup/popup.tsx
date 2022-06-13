@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 import './popup.css'
-import CompareMcField from '../components/CompareMcField'
+// import CompareMcField from '../components/CompareMcField'
 import DescriptionField from '../components/DescriptionField'
 import FooterField from '../components/FooterField'
 import HeaderField from '../components/HeaderField'
@@ -43,7 +43,7 @@ interface priceData {
 
 const App: React.FC<{}> = () => {
 	const [quote, setQuote] = useState<string>('usd')
-	const [apiStatus, setApiStatus] = useState<string>('Search ticker')
+	const [apiStatus, setApiStatus] = useState<string>('Search a ticker')
 
 	const [coinData, setCoinData] = useState<CoinData>({
 		name: '',
@@ -157,7 +157,7 @@ const App: React.FC<{}> = () => {
 				/>
 			)}
 
-			{apiStatus !== 'Search ticker' && (
+			{apiStatus !== 'Search a ticker' && (
 				<>
 					<MarketcapField
 						coinSymbol={coinData.symbol}

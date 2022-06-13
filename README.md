@@ -41,6 +41,12 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
 
 ### To do's/ Ideas
 
+- twitter info
+
+- Connect LunaCrush; show top influencers and recent trend stats; read top tweets; paid API needed.
+
+#### Done
+
 - Style graph y-axis, done
 - Don't close extension after link click, done
 - Ready to type on search bar the token you are looking for, done
@@ -51,8 +57,4 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
 - Another little addition could be have a # next to the market cap rank; WOO #166, done
 - When you search for a new coin, I think the dropdown with the coin name should be highlighted so its more obvious to click; pointer change implemented
 - USD chart \$BTRFLY out of range, fixed
-
-- twitter info
-  FUTURE
-
-- Connect LunaCrush; show top influencers and recent trend stats; read top tweets; paid API needed.
+- Max days graph range, done

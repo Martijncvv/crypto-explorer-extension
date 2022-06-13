@@ -1,5 +1,6 @@
 import './PriceGraphField.css'
 import React, { useEffect, useState } from 'react'
+
 import {
 	LineChart,
 	Line,
@@ -61,7 +62,7 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 				<p id="graph-title">
 					Past
 					<button
-						className="graph-range"
+						className="graph-range-button"
 						style={{
 							color: chartRange == '30' ? 'rgba(255, 139, 79, 1)' : undefined,
 						}}
@@ -71,16 +72,17 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 					</button>
 					/
 					<button
-						className="graph-range"
+						className="graph-range-button"
 						style={{
 							color: chartRange == 'max' ? 'rgba(255, 139, 79, 1)' : undefined,
 						}}
 						onClick={() => setChartRange('max')}
 					>
-						Max
+						max
 					</button>
 					days
 				</p>
+
 				<ResponsiveContainer width="100%" height="100%">
 					<LineChart
 						data={chartData}
