@@ -10,7 +10,8 @@ import {
 	ResponsiveContainer,
 } from 'recharts'
 
-import { PriceData, fetchPriceHistoryData } from '../../utils/api'
+import { fetchPriceHistoryData } from '../../utils/api'
+import { IPriceData } from '../../models/ICoinInfo'
 
 interface PriceGraphFieldProps {
 	coinId: string
@@ -26,13 +27,13 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 	}, [coinId, quote, chartRange])
 
 	async function formatChartData() {
-		let priceHistoryData: PriceData = await fetchPriceHistoryData(
+		let priceHistoryData: IPriceData = await fetchPriceHistoryData(
 			coinId,
 			quote,
 			chartRange
 		)
 		let priceData = [{}]
-		console.log('priceHistoryData', priceHistoryData)
+
 		priceHistoryData.prices.forEach(async function(UnixPrice) {
 			let dateObject = new Date(UnixPrice[0])
 			let date =
@@ -52,7 +53,7 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 						'₿': parseFloat(UnixPrice[1].toPrecision(5)),
 				  })
 		})
-		console.log('priceData', priceData)
+
 		setChartData(priceData)
 	}
 
@@ -93,7 +94,11 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 							bottom: 5,
 						}}
 					>
-						<XAxis dataKey="date" interval="preserveStartEnd" />
+						<XAxis
+							dataKey="date"
+							interval="preserveStartEnd"
+							padding={{ right: 10 }}
+						/>
 						<YAxis
 							mirror={true}
 							interval="preserveStartEnd"

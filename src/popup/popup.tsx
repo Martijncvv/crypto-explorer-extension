@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 import './popup.css'
-// import CompareMcField from '../components/CompareMcField'
 import DescriptionField from '../components/DescriptionField'
 import FooterField from '../components/FooterField'
 import HeaderField from '../components/HeaderField'
@@ -11,21 +10,26 @@ import InteractionField from '../components/InteractionField'
 import LinksField from '../components/LinksField'
 import MarketcapField from '../components/MarketcapField'
 import PriceGraphField from '../components/PriceGraphField'
+import OnchainTxsField from '../components/OnchainTxsField'
 import TwitterFeedField from '../components/TwitterFeedField'
 
 import { amountFormatter } from '../utils/amountFormatter'
-import { AdvancedCoinInfo, fetchCoinInfo } from '../utils/api'
+import { fetchCoinInfo } from '../utils/api'
 import { getStoredCoins } from '../utils/storage'
+import { IAdvancedCoinInfo } from '../models/ICoinInfo'
 
 interface CoinData {
 	name: string
 	id: string
 	icon: string
 	symbol: string
+	price: number
 	marketCapRank: string
 	circSupply: number
 	totalSupply: string
 	description: string
+	assetPlatformId: string
+	contractAddress: string
 
 	websiteLink: string
 	blockExplorerLink: string
@@ -33,7 +37,7 @@ interface CoinData {
 	twitterLink: string
 	telegramLink: string
 }
-interface priceData {
+interface PriceData {
 	price: string
 	marketCap: string
 	totalVolume: string
@@ -50,17 +54,20 @@ const App: React.FC<{}> = () => {
 		id: '',
 		icon: '',
 		symbol: '',
+		price: 0,
 		marketCapRank: '',
 		circSupply: 0,
 		totalSupply: '',
 		description: '',
+		assetPlatformId: '',
+		contractAddress: '',
 		websiteLink: '',
 		blockExplorerLink: '',
 		coingeckoLink: '',
 		twitterLink: '',
 		telegramLink: '',
 	})
-	const [priceData, setPriceData] = useState<priceData>({
+	const [priceData, setPriceData] = useState<PriceData>({
 		price: '',
 		marketCap: '',
 		totalVolume: '',
@@ -82,7 +89,7 @@ const App: React.FC<{}> = () => {
 		if (coinIds.length > 0) {
 			setApiStatus(`Fetching ${coinIds[0].symbol.toUpperCase()}`)
 
-			let coinInfo: AdvancedCoinInfo = await fetchCoinInfo(coinIds[0].id)
+			let coinInfo: IAdvancedCoinInfo = await fetchCoinInfo(coinIds[0].id)
 
 			if (coinInfo.id != undefined && coinInfo.id != '') {
 				console.log(coinInfo)
@@ -91,10 +98,13 @@ const App: React.FC<{}> = () => {
 					id: coinInfo.id,
 					icon: coinInfo.image.large,
 					symbol: coinInfo.symbol,
+					price: coinInfo.market_data.current_price.usd,
 					marketCapRank: `${coinInfo.market_cap_rank}`,
 					circSupply: coinInfo.market_data.circulating_supply,
 					totalSupply: amountFormatter(coinInfo.market_data.total_supply),
 					description: coinInfo.description.en,
+					assetPlatformId: coinInfo.asset_platform_id,
+					contractAddress: coinInfo.contract_address,
 
 					websiteLink: coinInfo.links.homepage[0],
 					blockExplorerLink: coinInfo.links.blockchain_site[0],
@@ -186,6 +196,12 @@ const App: React.FC<{}> = () => {
 					/>
 					<DescriptionField coinDescription={coinData.description} />
 					<PriceGraphField coinId={coinData.id} quote={quote} />
+					{coinData.assetPlatformId == 'ethereum' && (
+						<OnchainTxsField
+							contractAddress={coinData.contractAddress}
+							tokenPrice={coinData.price}
+						/>
+					)}
 					{/* <TwitterFeedField twitterId={coinData.twitterLink} /> */}
 					<LinksField
 						blockExplorerLink={coinData.blockExplorerLink}

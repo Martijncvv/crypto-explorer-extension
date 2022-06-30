@@ -1,0 +1,12 @@
+#onchain-txs-field {
+	margin: 2px 16px 0;
+	height: 30px;
+	background-color: red;
+}
+
+.dex-trades-values {
+	display: flex;
+	justify-content: space-between;
+
+	padding: 10px 12px 6px;
+}

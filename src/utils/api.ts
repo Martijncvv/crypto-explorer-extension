@@ -1,3 +1,13 @@
+import {
+	IAdvancedCoinInfo,
+	CoinGeckoCoinList,
+	TrendingCoinList,
+	IPriceData,
+} from '../models/ICoinInfo'
+import ITokenEthTxs from '../models/ITokenEthTxs'
+
+const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list'
+
 export async function fetchCoinsList(): Promise<CoinGeckoCoinList> {
 	const res = await fetch(COINGECKO_COINS_LIST_API)
 
@@ -15,7 +25,9 @@ export async function fetchTrendingCoins(): Promise<TrendingCoinList> {
 	return data
 }
 
-export async function fetchCoinInfo(coinId: string): Promise<AdvancedCoinInfo> {
+export async function fetchCoinInfo(
+	coinId: string
+): Promise<IAdvancedCoinInfo> {
 	coinId = coinId ? coinId : 'bitcoin'
 	const res = await fetch(
 		`https://api.coingecko.com/api/v3/coins/${coinId}?localization=false&tickers=false&market_data=true&community_data=false&developer_data=false&sparkline=false`
@@ -32,7 +44,7 @@ export async function fetchPriceHistoryData(
 	coinId: string,
 	quote: string,
 	chartRange: string
-): Promise<PriceData> {
+): Promise<IPriceData> {
 	coinId = coinId ? coinId : 'bitcoin'
 	quote = quote ? quote : 'usd'
 
@@ -47,78 +59,19 @@ export async function fetchPriceHistoryData(
 	return priceData
 }
 
-const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list'
-
-export type CoinGeckoCoinList = SimpleCoinInfo[]
-export type TrendingCoinList = { coins: TrendingCoinInfo[] }
-
-export interface SimpleCoinInfo {
-	id: string
-	symbol: string
-	name: string
-}
-export interface TrendingCoinInfo {
-	item: {
-		id: string
-		coin_id: number
-		name: string
-		symbol: string
-		market_cap_rank: number
-		thumb: string
-		small: string
-		large: string
-		slug: string
-		price_btc: number
-		score: number
+export async function fetchEthContractTxs(
+	contractAddress: string
+): Promise<ITokenEthTxs> {
+	const res = await fetch(
+		'https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=' +
+			contractAddress +
+			'&page=1&offset=50&startblock=0&endblock=99999999&sort=desc'
+	)
+	if (!res.ok) {
+		throw new Error(`Fetch error, WOO DeX Trade info}`)
 	}
-}
-export interface AdvancedCoinInfo {
-	id: string
-	symbol: string
-	name: string
-	image: Size
-	coingecko_rank: number
-	description: Language
-	market_data: Market_data
-	market_cap_rank: number
-	links: Links
-}
-interface Market_data {
-	market_cap: Quote
-	current_price: Quote
-	total_volume: Quote
-	ath: Quote
-	atl: Quote
-	circulating_supply: number
-	total_supply: number
-}
-interface Quote {
-	usd: number
-	btc: number
-}
-interface Language {
-	en: string
-}
-interface Size {
-	large: string
-	small: string
-	thumb: string
-}
-interface Links {
-	homepage: string[]
-	twitter_screen_name: string
-	telegram_channel_identifier: string
-	blockchain_site: string[]
-}
 
-export interface PriceData {
-	prices: UnixPriceArray[]
-	market_caps: UnixPriceArray[]
-	total_volumes: UnixPriceArray[]
-}
-interface UnixPriceArray {
-	UnixPrice: UnixPrice[]
-}
-interface UnixPrice {
-	value: number
+	const data = await res.json()
+
+	return data
 }
