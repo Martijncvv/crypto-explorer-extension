@@ -1,4 +1,4 @@
-export type CoinGeckoCoinList = ISimpleCoinInfo[]
+export type ICoinGeckoCoinList = ISimpleCoinInfo[]
 export type TrendingCoinList = { coins: ITrendingCoinInfo[] }
 
 export interface ISimpleCoinInfo {

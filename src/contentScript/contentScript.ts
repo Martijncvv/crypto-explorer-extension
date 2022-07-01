@@ -1,5 +1,5 @@
+import { ISimpleCoinInfo } from '../models/ICoinInfo'
 import { getStoredCoinList, setStoredCoins } from '../utils/storage'
-import { SimpleCoinInfo } from '../utils/api'
 
 console.log('CONTENTSCRIPT is running')
 
@@ -16,14 +16,14 @@ async function getSelection() {
 	if (selectedTicker !== '' && selectedTicker.length < 7) {
 		console.log(`Potential ticker selected: ${selectedTicker}`)
 
-		const coinList: SimpleCoinInfo[] = await getStoredCoinList()
+		const coinList: ISimpleCoinInfo[] = await getStoredCoinList()
 
-		const filteredCoinTickers: SimpleCoinInfo[] = coinList.filter(
+		const filteredCoinTickers: ISimpleCoinInfo[] = coinList.filter(
 			(coin) => coin.symbol === selectedTicker
 		)
 
-		let coinIds: SimpleCoinInfo[] = []
-		filteredCoinTickers.forEach((coin: SimpleCoinInfo) => {
+		let coinIds: ISimpleCoinInfo[] = []
+		filteredCoinTickers.forEach((coin: ISimpleCoinInfo) => {
 			coinIds.push({
 				id: coin.id,
 				symbol: coin.symbol,

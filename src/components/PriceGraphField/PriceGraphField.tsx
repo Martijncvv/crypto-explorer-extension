@@ -60,8 +60,9 @@ const PriceGraphField: React.FC<PriceGraphFieldProps> = ({ coinId, quote }) => {
 	return (
 		chartData && (
 			<div id="price-graph-field">
-				<p id="graph-title">
-					Past
+				{/* <p id="price-graph-field-title">Price</p> */}
+				<p id="price-graph-field-subtitle">
+					Price past
 					<button
 						className="graph-range-button"
 						style={{

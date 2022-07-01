@@ -2,10 +2,11 @@ import './MarketcapField.css'
 import React, { useState, useEffect } from 'react'
 import { getStoredCoinList } from '../../utils/storage'
 import { amountFormatter } from '../../utils/amountFormatter'
-import { SimpleCoinInfo, fetchCoinInfo } from '../../utils/api'
+import { fetchCoinInfo } from '../../utils/api'
 
 import CompareArrowsIcon from '@mui/icons-material/CompareArrows'
 import IconButton from '@mui/material/IconButton'
+import { ISimpleCoinInfo } from '../../models/ICoinInfo'
 
 interface MarketcapFieldProps {
 	coinSymbol: string
@@ -21,7 +22,7 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 	coinCircSupply,
 }) => {
 	const [symbolInput, setSymbolInput] = useState<string>('ETH')
-	const [coinOptions, setCoinOptions] = useState<SimpleCoinInfo[]>([
+	const [coinOptions, setCoinOptions] = useState<ISimpleCoinInfo[]>([
 		{ id: 'ethereum', symbol: 'eth', name: 'Ethereum' },
 	])
 	const [activeCoinSymbol, setActiveCoinSymbol] = useState<string>('ETH')
@@ -54,7 +55,7 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 	}
 
 	async function getCoinOptions() {
-		const coinList: SimpleCoinInfo[] = await getStoredCoinList()
+		const coinList: ISimpleCoinInfo[] = await getStoredCoinList()
 		await setCoinOptions(
 			coinList.filter(
 				(coin) => coin.symbol === symbolInput && !coin.id.includes('wormhole')
@@ -106,7 +107,7 @@ const MarketcapField: React.FC<MarketcapFieldProps> = ({
 
 	function handleOptionItemClasses(
 		activeCoinId: string,
-		coin: SimpleCoinInfo,
+		coin: ISimpleCoinInfo,
 		index: number
 	): string {
 		return activeCoinId === coin.id || (!activeCoinId && index === 0)

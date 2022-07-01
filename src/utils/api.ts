@@ -1,6 +1,6 @@
 import {
 	IAdvancedCoinInfo,
-	CoinGeckoCoinList,
+	ICoinGeckoCoinList,
 	TrendingCoinList,
 	IPriceData,
 } from '../models/ICoinInfo'
@@ -8,10 +8,10 @@ import ITokenEthTxs from '../models/ITokenEthTxs'
 
 const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list'
 
-export async function fetchCoinsList(): Promise<CoinGeckoCoinList> {
+export async function fetchCoinsList(): Promise<ICoinGeckoCoinList> {
 	const res = await fetch(COINGECKO_COINS_LIST_API)
 
-	const data: CoinGeckoCoinList = await res.json()
+	const data: ICoinGeckoCoinList = await res.json()
 	return data
 }
 
@@ -65,7 +65,7 @@ export async function fetchEthContractTxs(
 	const res = await fetch(
 		'https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=' +
 			contractAddress +
-			'&page=1&offset=50&startblock=0&endblock=99999999&sort=desc'
+			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
 	)
 	if (!res.ok) {
 		throw new Error(`Fetch error, WOO DeX Trade info}`)

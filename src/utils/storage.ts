@@ -1,13 +1,13 @@
-import { CoinGeckoCoinList, SimpleCoinInfo } from './api'
+import { ICoinGeckoCoinList, ISimpleCoinInfo } from '../models/ICoinInfo'
 
 export interface LocalStorage {
-	coins?: CoinGeckoCoinList
-	coinIds?: SimpleCoinInfo[]
+	coins?: ICoinGeckoCoinList
+	coinIds?: ISimpleCoinInfo[]
 }
 
 export type LocalStorageKeys = keyof LocalStorage
 
-export function setStoredCoinList(coins: CoinGeckoCoinList): Promise<void> {
+export function setStoredCoinList(coins: ICoinGeckoCoinList): Promise<void> {
 	const vals: LocalStorage = {
 		coins,
 	}
@@ -19,7 +19,7 @@ export function setStoredCoinList(coins: CoinGeckoCoinList): Promise<void> {
 	})
 }
 
-export function getStoredCoinList(): Promise<CoinGeckoCoinList> {
+export function getStoredCoinList(): Promise<ICoinGeckoCoinList> {
 	const keys: LocalStorageKeys[] = ['coins']
 	return new Promise((resolve) => {
 		chrome.storage.local.get(keys, (res: LocalStorage) => {
@@ -28,7 +28,7 @@ export function getStoredCoinList(): Promise<CoinGeckoCoinList> {
 	})
 }
 
-export function setStoredCoins(coinIds: SimpleCoinInfo[]): Promise<void> {
+export function setStoredCoins(coinIds: ISimpleCoinInfo[]): Promise<void> {
 	const vals: LocalStorage = {
 		coinIds,
 	}
@@ -40,7 +40,7 @@ export function setStoredCoins(coinIds: SimpleCoinInfo[]): Promise<void> {
 	})
 }
 
-export function getStoredCoins(): Promise<SimpleCoinInfo[]> {
+export function getStoredCoins(): Promise<ISimpleCoinInfo[]> {
 	const keys: LocalStorageKeys[] = ['coinIds']
 	return new Promise((resolve) => {
 		chrome.storage.local.get(keys, (res: LocalStorage) => {

@@ -27,6 +27,12 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
   <img src="preview_pics/eth-btc-description.png" alt="Ethereum BTC with extended description" width="800" >
 </p>
 
+## WOO/USD pair with on-chain activity
+
+<p align="center">
+  <img src="preview_pics/woo-onchain-activity.png" alt="WOO USD pair with on-chain activity" width="800" >
+</p>
+
 ## Compare-marketcap tool
 
 <p align="center">
@@ -58,3 +64,4 @@ I would like to thank CoinGecko for providing real-time cryptocurrency data at n
 - When you search for a new coin, I think the dropdown with the coin name should be highlighted so its more obvious to click; pointer change implemented
 - USD chart \$BTRFLY out of range, fixed
 - Max days graph range, done
+- Display on-chain activity

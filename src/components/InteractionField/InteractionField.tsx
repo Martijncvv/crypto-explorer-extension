@@ -6,11 +6,8 @@ import Switch from '@mui/material/Switch'
 import WhatshotIcon from '@mui/icons-material/Whatshot'
 
 import { getStoredCoinList, setStoredCoins } from '../../utils/storage'
-import {
-	fetchTrendingCoins,
-	SimpleCoinInfo,
-	TrendingCoinList,
-} from '../../utils/api'
+import { fetchTrendingCoins } from '../../utils/api'
+import { ISimpleCoinInfo, TrendingCoinList } from '../../models/ICoinInfo'
 
 interface InteractionFieldProps {
 	searchCallback: Function
@@ -26,7 +23,7 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 	const [searchInput, setSearchInput] = useState<string>('')
 	const [activeCoinId, setActiveCoinId] = useState<string>('')
 	const [checked, setChecked] = React.useState(false)
-	const [coinSuggestions, setCoinSuggestions] = useState<SimpleCoinInfo[]>([])
+	const [coinSuggestions, setCoinSuggestions] = useState<ISimpleCoinInfo[]>([])
 	const [trendingCoinButtonChecked, setTrendingCoinButtonChecked] = useState<
 		boolean
 	>(false)
@@ -43,7 +40,7 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 
 	async function getSearchData() {
 		if (!trendingCoinButtonChecked) {
-			const coinList: SimpleCoinInfo[] = await getStoredCoinList()
+			const coinList: ISimpleCoinInfo[] = await getStoredCoinList()
 			await setCoinSuggestions(
 				coinList.filter(
 					(coin) =>
@@ -83,7 +80,7 @@ const InteractionField: React.FC<InteractionFieldProps> = ({
 
 	function handleNavbarItemClasses(
 		activeCoinId: string,
-		coin: SimpleCoinInfo,
+		coin: ISimpleCoinInfo,
 		index: number
 	): string {
 		return activeCoinId === coin.id || (!activeCoinId && index === 0)
