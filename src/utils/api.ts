@@ -125,3 +125,37 @@ export async function fetchFtmContractTxs(
 
 	return data
 }
+
+export async function fetchCroContractTxs(
+	contractAddress: string
+): Promise<ITokenTxs> {
+	const res = await fetch(
+		'https://api.cronoscan.com/api?module=account&action=tokentx&contractaddress=' +
+			contractAddress +
+			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
+	)
+	if (!res.ok) {
+		throw new Error(`Fetch error, Cronos token txs info}`)
+	}
+
+	const data = await res.json()
+
+	return data
+}
+
+export async function fetchAvaxContractTxs(
+	contractAddress: string
+): Promise<ITokenTxs> {
+	const res = await fetch(
+		'https://api.snowtrace.io/api?module=account&action=tokentx&contractaddress=' +
+			contractAddress +
+			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
+	)
+	if (!res.ok) {
+		throw new Error(`Fetch error, Avax token txs info}`)
+	}
+
+	const data = await res.json()
+
+	return data
+}

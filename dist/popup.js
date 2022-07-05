@@ -1147,30 +1147,45 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 const OnchainTxsField = ({ contractAddress, tokenPrice, platformId, }) => {
     const [chartData, setChartData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([{}]);
     const [platformTicker, setPlatformTicker] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('(Eth)');
+    const [platformExplorerUrl, setPlatformExplorerUrl] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('https://etherscan.io/tx/');
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         getTxData();
     }, [contractAddress, platformId]);
     function getTxData() {
         return __awaiter(this, void 0, void 0, function* () {
-            setChartData([{}]);
+            setPlatformTicker('Loading..');
             let priceData = [{}];
             let tokenTxData;
             switch (platformId) {
                 case 'ethereum':
-                    setPlatformTicker('(Eth)');
+                    setPlatformExplorerUrl('https://etherscan.io/tx/');
                     tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchEthContractTxs)(contractAddress);
+                    setPlatformTicker('(Eth)');
                     break;
                 case 'binance-smart-chain':
-                    setPlatformTicker('(Bsc)');
+                    setPlatformExplorerUrl('https://bscscan.com/tx/');
                     tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchBscContractTxs)(contractAddress);
+                    setPlatformTicker('(Bsc)');
                     break;
                 case 'polygon-pos':
-                    setPlatformTicker('(Poly)');
+                    setPlatformExplorerUrl('https://polygonscan.com/tx/');
                     tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchPolyContractTxs)(contractAddress);
+                    setPlatformTicker('(Poly)');
                     break;
                 case 'fantom':
-                    setPlatformTicker('(Ftm)');
+                    setPlatformExplorerUrl('https://ftmscan.com/tx/');
                     tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchFtmContractTxs)(contractAddress);
+                    setPlatformTicker('(Ftm)');
+                    break;
+                case 'cronos':
+                    setPlatformExplorerUrl('https://cronoscan.com/tx/');
+                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchCroContractTxs)(contractAddress);
+                    setPlatformTicker('(Cro)');
+                    break;
+                case 'avalanche':
+                    setPlatformExplorerUrl('https://snowtrace.io/tx/');
+                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchAvaxContractTxs)(contractAddress);
+                    setPlatformTicker('(Avax)');
                     break;
             }
             tokenTxData.result.forEach((tx) => {
@@ -1188,36 +1203,20 @@ const OnchainTxsField = ({ contractAddress, tokenPrice, platformId, }) => {
         let dateObject = new Date(unixTimestamp * 1000);
         let hours = dateObject.getHours();
         let minutes = '0' + dateObject.getMinutes();
+        let day = dateObject.toLocaleString('en-US', { day: 'numeric' });
+        let month = dateObject
+            .toLocaleString('en-US', { month: 'long' })
+            .substring(0, 3);
         // let seconds = '0' + dateObject.getSeconds()
-        return hours + ':' + minutes.substr(-2);
+        return `${hours}:${minutes.substr(-2)}`;
     };
     const handleClick = (data) => {
-        if (platformId == 'ethereum') {
-            chrome.tabs.create({
-                url: `https://etherscan.io/tx/${data.hash}`,
-                selected: false,
-            });
-        }
-        else if (platformId == 'binance-smart-chain') {
-            chrome.tabs.create({
-                url: `https://bscscan.com/tx/${data.hash}`,
-                selected: false,
-            });
-        }
-        else if (platformId == 'polygon-pos') {
-            chrome.tabs.create({
-                url: `https://polygonscan.com/tx/${data.hash}`,
-                selected: false,
-            });
-        }
-        else if (platformId == 'fantom') {
-            chrome.tabs.create({
-                url: `https://ftmscan.com/tx/${data.hash}`,
-                selected: false,
-            });
-        }
+        chrome.tabs.create({
+            url: platformExplorerUrl + data.hash,
+            selected: false,
+        });
     };
-    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "onchain-txs-field" },
+    return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "onchain-txs-field" }, chartData.length > 0 && (react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null,
         react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "onchain-txs-field-subtitle" },
             "Past 200 txs in $ ",
             platformTicker),
@@ -1233,7 +1232,7 @@ const OnchainTxsField = ({ contractAddress, tokenPrice, platformId, }) => {
                 react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_7__.Tooltip, null),
                 react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_8__.Bar, { dataKey: "$", fill: "#ff8b4f", onClick: (event) => handleClick(event) }),
                 react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_9__.ReferenceLine, { y: 0, stroke: "#000" }),
-                react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_10__.Brush, { dataKey: "date", height: 6, stroke: "#ff8b4f" })))));
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_10__.Brush, { dataKey: "date", height: 6, stroke: "#ff8b4f" })))))));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (OnchainTxsField);
 
@@ -1415,6 +1414,15 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 const App = () => {
     const [quote, setQuote] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('usd');
     const [apiStatus, setApiStatus] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)('Search a ticker');
+    const [onchainActivity, setOnchainActivity] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(false);
+    const onchainActivityPlatforms = [
+        'ethereum',
+        'binance-smart-chain',
+        'polygon-pos',
+        'fantom',
+        'cronos',
+        'avalanche',
+    ];
     const [coinData, setCoinData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
         name: '',
         id: '',
@@ -1449,6 +1457,7 @@ const App = () => {
     function getCoinData() {
         return __awaiter(this, void 0, void 0, function* () {
             let coinIds = yield (0,_utils_storage__WEBPACK_IMPORTED_MODULE_14__.getStoredCoins)();
+            setOnchainActivity(false);
             if (coinIds.length > 0) {
                 setApiStatus(`Fetching ${coinIds[0].symbol.toUpperCase()}`);
                 let coinInfo = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_13__.fetchCoinInfo)(coinIds[0].id);
@@ -1472,6 +1481,9 @@ const App = () => {
                         twitterLink: coinInfo.links.twitter_screen_name,
                         telegramLink: coinInfo.links.telegram_channel_identifier,
                     });
+                    if (onchainActivityPlatforms.includes(coinInfo.asset_platform_id)) {
+                        setOnchainActivity(true);
+                    }
                     if (quote === 'usd') {
                         setPriceData({
                             price: `$${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinInfo.market_data.current_price.usd)}`,
@@ -1510,10 +1522,7 @@ const App = () => {
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_InfoField__WEBPACK_IMPORTED_MODULE_6__.default, { attributeName: "Circ. Supply (total)", attributeValue: `${(0,_utils_amountFormatter__WEBPACK_IMPORTED_MODULE_12__.amountFormatter)(coinData.circSupply)} (${coinData.totalSupply})` }),
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_DescriptionField__WEBPACK_IMPORTED_MODULE_3__.default, { coinDescription: coinData.description }),
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_PriceGraphField__WEBPACK_IMPORTED_MODULE_10__.default, { coinId: coinData.id, quote: quote }),
-            (coinData.assetPlatformId == 'ethereum' ||
-                coinData.assetPlatformId == 'binance-smart-chain' ||
-                coinData.assetPlatformId == 'polygon-pos' ||
-                coinData.assetPlatformId == 'fantom') && (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_OnchainTxsField__WEBPACK_IMPORTED_MODULE_11__.default, { contractAddress: coinData.contractAddress, tokenPrice: coinData.price, platformId: coinData.assetPlatformId })),
+            onchainActivity && (react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_OnchainTxsField__WEBPACK_IMPORTED_MODULE_11__.default, { contractAddress: coinData.contractAddress, tokenPrice: coinData.price, platformId: coinData.assetPlatformId })),
             react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_LinksField__WEBPACK_IMPORTED_MODULE_8__.default, { blockExplorerLink: coinData.blockExplorerLink, coingeckoLink: coinData.coingeckoLink, twitterLink: coinData.twitterLink, telegramLink: coinData.telegramLink, websiteLink: coinData.websiteLink }))),
         react__WEBPACK_IMPORTED_MODULE_0__.createElement(_components_FooterField__WEBPACK_IMPORTED_MODULE_4__.default, null)));
 };
@@ -1571,7 +1580,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "fetchEthContractTxs": () => (/* binding */ fetchEthContractTxs),
 /* harmony export */   "fetchBscContractTxs": () => (/* binding */ fetchBscContractTxs),
 /* harmony export */   "fetchPolyContractTxs": () => (/* binding */ fetchPolyContractTxs),
-/* harmony export */   "fetchFtmContractTxs": () => (/* binding */ fetchFtmContractTxs)
+/* harmony export */   "fetchFtmContractTxs": () => (/* binding */ fetchFtmContractTxs),
+/* harmony export */   "fetchCroContractTxs": () => (/* binding */ fetchCroContractTxs),
+/* harmony export */   "fetchAvaxContractTxs": () => (/* binding */ fetchAvaxContractTxs)
 /* harmony export */ });
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -1666,6 +1677,30 @@ function fetchFtmContractTxs(contractAddress) {
             '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
         if (!res.ok) {
             throw new Error(`Fetch error, Ftm token txs info}`);
+        }
+        const data = yield res.json();
+        return data;
+    });
+}
+function fetchCroContractTxs(contractAddress) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const res = yield fetch('https://api.cronoscan.com/api?module=account&action=tokentx&contractaddress=' +
+            contractAddress +
+            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
+        if (!res.ok) {
+            throw new Error(`Fetch error, Cronos token txs info}`);
+        }
+        const data = yield res.json();
+        return data;
+    });
+}
+function fetchAvaxContractTxs(contractAddress) {
+    return __awaiter(this, void 0, void 0, function* () {
+        const res = yield fetch('https://api.snowtrace.io/api?module=account&action=tokentx&contractaddress=' +
+            contractAddress +
+            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
+        if (!res.ok) {
+            throw new Error(`Fetch error, Avax token txs info}`);
         }
         const data = yield res.json();
         return data;

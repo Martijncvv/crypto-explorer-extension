@@ -48,6 +48,16 @@ interface PriceData {
 const App: React.FC<{}> = () => {
 	const [quote, setQuote] = useState<string>('usd')
 	const [apiStatus, setApiStatus] = useState<string>('Search a ticker')
+	const [onchainActivity, setOnchainActivity] = useState<boolean>(false)
+
+	const onchainActivityPlatforms: string[] = [
+		'ethereum',
+		'binance-smart-chain',
+		'polygon-pos',
+		'fantom',
+		'cronos',
+		'avalanche',
+	]
 
 	const [coinData, setCoinData] = useState<CoinData>({
 		name: '',
@@ -85,6 +95,7 @@ const App: React.FC<{}> = () => {
 
 	async function getCoinData() {
 		let coinIds = await getStoredCoins()
+		setOnchainActivity(false)
 
 		if (coinIds.length > 0) {
 			setApiStatus(`Fetching ${coinIds[0].symbol.toUpperCase()}`)
@@ -112,6 +123,10 @@ const App: React.FC<{}> = () => {
 					twitterLink: coinInfo.links.twitter_screen_name,
 					telegramLink: coinInfo.links.telegram_channel_identifier,
 				})
+
+				if (onchainActivityPlatforms.includes(coinInfo.asset_platform_id)) {
+					setOnchainActivity(true)
+				}
 
 				if (quote === 'usd') {
 					setPriceData({
@@ -196,10 +211,7 @@ const App: React.FC<{}> = () => {
 					/>
 					<DescriptionField coinDescription={coinData.description} />
 					<PriceGraphField coinId={coinData.id} quote={quote} />
-					{(coinData.assetPlatformId == 'ethereum' ||
-						coinData.assetPlatformId == 'binance-smart-chain' ||
-						coinData.assetPlatformId == 'polygon-pos' ||
-						coinData.assetPlatformId == 'fantom') && (
+					{onchainActivity && (
 						<OnchainTxsField
 							contractAddress={coinData.contractAddress}
 							tokenPrice={coinData.price}

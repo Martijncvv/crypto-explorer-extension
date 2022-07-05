@@ -5,6 +5,8 @@ import {
 	fetchBscContractTxs,
 	fetchPolyContractTxs,
 	fetchFtmContractTxs,
+	fetchCroContractTxs,
+	fetchAvaxContractTxs,
 } from '../../utils/api'
 import ITokenTxs from '../../models/ITokenTxs'
 
@@ -43,32 +45,50 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 }) => {
 	const [chartData, setChartData] = useState<any>([{}])
 	const [platformTicker, setPlatformTicker] = useState<string>('(Eth)')
+	const [platformExplorerUrl, setPlatformExplorerUrl] = useState<string>(
+		'https://etherscan.io/tx/'
+	)
 
 	useEffect(() => {
 		getTxData()
 	}, [contractAddress, platformId])
 
 	async function getTxData() {
-		setChartData([{}])
+		setPlatformTicker('Loading..')
+
 		let priceData = [{}]
 		let tokenTxData: ITokenTxs
 
 		switch (platformId) {
 			case 'ethereum':
-				setPlatformTicker('(Eth)')
+				setPlatformExplorerUrl('https://etherscan.io/tx/')
 				tokenTxData = await fetchEthContractTxs(contractAddress)
+				setPlatformTicker('(Eth)')
 				break
 			case 'binance-smart-chain':
-				setPlatformTicker('(Bsc)')
+				setPlatformExplorerUrl('https://bscscan.com/tx/')
 				tokenTxData = await fetchBscContractTxs(contractAddress)
+				setPlatformTicker('(Bsc)')
 				break
 			case 'polygon-pos':
-				setPlatformTicker('(Poly)')
+				setPlatformExplorerUrl('https://polygonscan.com/tx/')
 				tokenTxData = await fetchPolyContractTxs(contractAddress)
+				setPlatformTicker('(Poly)')
 				break
 			case 'fantom':
-				setPlatformTicker('(Ftm)')
+				setPlatformExplorerUrl('https://ftmscan.com/tx/')
 				tokenTxData = await fetchFtmContractTxs(contractAddress)
+				setPlatformTicker('(Ftm)')
+				break
+			case 'cronos':
+				setPlatformExplorerUrl('https://cronoscan.com/tx/')
+				tokenTxData = await fetchCroContractTxs(contractAddress)
+				setPlatformTicker('(Cro)')
+				break
+			case 'avalanche':
+				setPlatformExplorerUrl('https://snowtrace.io/tx/')
+				tokenTxData = await fetchAvaxContractTxs(contractAddress)
+				setPlatformTicker('(Avax)')
 				break
 		}
 
@@ -92,77 +112,68 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 		let dateObject = new Date(unixTimestamp * 1000)
 		let hours = dateObject.getHours()
 		let minutes = '0' + dateObject.getMinutes()
+		let day = dateObject.toLocaleString('en-US', { day: 'numeric' })
+		let month = dateObject
+			.toLocaleString('en-US', { month: 'long' })
+			.substring(0, 3)
 		// let seconds = '0' + dateObject.getSeconds()
 
-		return hours + ':' + minutes.substr(-2)
+		return `${hours}:${minutes.substr(-2)}`
 	}
 
 	const handleClick = (data) => {
-		if (platformId == 'ethereum') {
-			chrome.tabs.create({
-				url: `https://etherscan.io/tx/${data.hash}`,
-				selected: false,
-			})
-		} else if (platformId == 'binance-smart-chain') {
-			chrome.tabs.create({
-				url: `https://bscscan.com/tx/${data.hash}`,
-				selected: false,
-			})
-		} else if (platformId == 'polygon-pos') {
-			chrome.tabs.create({
-				url: `https://polygonscan.com/tx/${data.hash}`,
-				selected: false,
-			})
-		} else if (platformId == 'fantom') {
-			chrome.tabs.create({
-				url: `https://ftmscan.com/tx/${data.hash}`,
-				selected: false,
-			})
-		}
+		chrome.tabs.create({
+			url: platformExplorerUrl + data.hash,
+			selected: false,
+		})
 	}
 
 	return (
 		<div id="onchain-txs-field">
-			<div id="onchain-txs-field-subtitle">
-				Past 200 txs in $ {platformTicker}
-			</div>
-			<ResponsiveContainer width="100%" height="100%">
-				<BarChart
-					width={500}
-					height={300}
-					data={chartData}
-					margin={{
-						top: 5,
-						right: 40,
-						left: 0,
-						bottom: 16,
-					}}
-					style={{ cursor: 'pointer' }}
-				>
-					<XAxis
-						dataKey="date"
-						interval="preserveStartEnd"
-						padding={{ right: 10 }}
-					/>
-					<YAxis
-						scale="linear"
-						mirror={true}
-						interval="preserveStartEnd"
-						type="number"
-						domain={['auto', (dataMax) => Math.round(dataMax * 1.1)]}
-					/>
-					<Tooltip />
+			{chartData.length > 0 && (
+				<>
+					<div id="onchain-txs-field-subtitle">
+						Past 200 txs in $ {platformTicker}
+					</div>
+					<ResponsiveContainer width="100%" height="100%">
+						<BarChart
+							width={500}
+							height={300}
+							data={chartData}
+							margin={{
+								top: 5,
+								right: 40,
+								left: 0,
+								bottom: 16,
+							}}
+							style={{ cursor: 'pointer' }}
+						>
+							<XAxis
+								dataKey="date"
+								interval="preserveStartEnd"
+								padding={{ right: 10 }}
+							/>
+							<YAxis
+								scale="linear"
+								mirror={true}
+								interval="preserveStartEnd"
+								type="number"
+								domain={['auto', (dataMax) => Math.round(dataMax * 1.1)]}
+							/>
+							<Tooltip />
 
-					<Bar
-						dataKey="$"
-						fill="#ff8b4f"
-						onClick={(event) => handleClick(event)}
-					/>
+							<Bar
+								dataKey="$"
+								fill="#ff8b4f"
+								onClick={(event) => handleClick(event)}
+							/>
 
-					<ReferenceLine y={0} stroke="#000" />
-					<Brush dataKey="date" height={6} stroke="#ff8b4f" />
-				</BarChart>
-			</ResponsiveContainer>
+							<ReferenceLine y={0} stroke="#000" />
+							<Brush dataKey="date" height={6} stroke="#ff8b4f" />
+						</BarChart>
+					</ResponsiveContainer>
+				</>
+			)}
 		</div>
 	)
 }
