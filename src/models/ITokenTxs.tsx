@@ -1,4 +1,4 @@
-export interface ITokenEthTxInfo {
+export interface ITokenTxInfo {
 	blockHash: string
 	blockNumber: string
 	confirmations: string
@@ -20,8 +20,8 @@ export interface ITokenEthTxInfo {
 	value: string
 }
 
-export default interface ITokenEthTxs {
+export default interface ITokenTxs {
 	message: string
-	result: ITokenEthTxInfo[]
+	result: ITokenTxInfo[]
 	status: string
 }

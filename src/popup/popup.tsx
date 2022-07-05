@@ -196,12 +196,17 @@ const App: React.FC<{}> = () => {
 					/>
 					<DescriptionField coinDescription={coinData.description} />
 					<PriceGraphField coinId={coinData.id} quote={quote} />
-					{coinData.assetPlatformId == 'ethereum' && (
+					{(coinData.assetPlatformId == 'ethereum' ||
+						coinData.assetPlatformId == 'binance-smart-chain' ||
+						coinData.assetPlatformId == 'polygon-pos' ||
+						coinData.assetPlatformId == 'fantom') && (
 						<OnchainTxsField
 							contractAddress={coinData.contractAddress}
 							tokenPrice={coinData.price}
+							platformId={coinData.assetPlatformId}
 						/>
 					)}
+
 					{/* <TwitterFeedField twitterId={coinData.twitterLink} /> */}
 					<LinksField
 						blockExplorerLink={coinData.blockExplorerLink}

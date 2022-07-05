@@ -1,29 +1,31 @@
 import './OnchainTxsField.css'
 import React, { useState, useEffect, PureComponent } from 'react'
-import { fetchEthContractTxs } from '../../utils/api'
-import ITokenEthTxs, { ITokenEthTxInfo } from '../../models/ITokenEthTxs'
-import { amountFormatter } from '../../utils/amountFormatter'
+import {
+	fetchEthContractTxs,
+	fetchBscContractTxs,
+	fetchPolyContractTxs,
+	fetchFtmContractTxs,
+} from '../../utils/api'
+import ITokenTxs from '../../models/ITokenTxs'
 
 import {
 	BarChart,
 	Bar,
-	Cell,
 	XAxis,
 	YAxis,
-	CartesianGrid,
 	ReferenceLine,
 	Brush,
 	Tooltip,
-	Legend,
 	ResponsiveContainer,
 } from 'recharts'
 
 interface OnchainTxsFieldProps {
 	contractAddress: string
 	tokenPrice: number
+	platformId: string
 }
 
-interface IEthTokenTxCleaned {
+interface ITokenTxCleaned {
 	from: string
 	to: string
 	age: string
@@ -37,37 +39,40 @@ interface IEthTokenTxCleaned {
 const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 	contractAddress,
 	tokenPrice,
+	platformId,
 }) => {
-	const [tokenTxData, setTokenTxData] = useState<IEthTokenTxCleaned[]>()
 	const [chartData, setChartData] = useState<any>([{}])
-	const [firstTimestamp, setFirstTimestamp] = useState<string>()
-	const [finalTimestamp, setFinalTimestamp] = useState<string>()
+	const [platformTicker, setPlatformTicker] = useState<string>('(Eth)')
 
-	console.log('contractAddress')
-	console.log(contractAddress)
 	useEffect(() => {
 		getTxData()
-	}, [contractAddress])
+	}, [contractAddress, platformId])
 
 	async function getTxData() {
-		const tokenTxData: ITokenEthTxs = await fetchEthContractTxs(contractAddress)
-		const cleanedTxsInfo: IEthTokenTxCleaned[] = []
-
+		setChartData([{}])
 		let priceData = [{}]
+		let tokenTxData: ITokenTxs
+
+		switch (platformId) {
+			case 'ethereum':
+				setPlatformTicker('(Eth)')
+				tokenTxData = await fetchEthContractTxs(contractAddress)
+				break
+			case 'binance-smart-chain':
+				setPlatformTicker('(Bsc)')
+				tokenTxData = await fetchBscContractTxs(contractAddress)
+				break
+			case 'polygon-pos':
+				setPlatformTicker('(Poly)')
+				tokenTxData = await fetchPolyContractTxs(contractAddress)
+				break
+			case 'fantom':
+				setPlatformTicker('(Ftm)')
+				tokenTxData = await fetchFtmContractTxs(contractAddress)
+				break
+		}
 
 		tokenTxData.result.forEach((tx) => {
-			cleanedTxsInfo.push({
-				amount: parseInt(tx.value) / 10 ** parseInt(tx.tokenDecimal),
-				value:
-					(parseInt(tx.value) / 10 ** parseInt(tx.tokenDecimal)) * tokenPrice,
-				age: getAgeFormat(tx.timeStamp),
-				txHash: tx.hash,
-				from: tx.from.slice(2, 6),
-				to: tx.to.slice(2, 6),
-				colour: `#${tx.from.slice(2, 8)}`,
-				date: dateFormat(tx.timeStamp),
-			})
-
 			priceData.unshift({
 				date: dateFormat(tx.timeStamp),
 				$: parseFloat(
@@ -81,38 +86,6 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 		})
 
 		setChartData(priceData)
-
-		setTokenTxData(cleanedTxsInfo)
-		console.log('cleanedTxsInfo')
-		console.log(cleanedTxsInfo)
-	}
-
-	const getAgeFormat = (unixTimestamp) => {
-		const hoursPassed = Math.floor(
-			(Date.now() / 1000 - parseInt(unixTimestamp)) / 3600
-		)
-		const minutesPassed = Math.floor(
-			(Date.now() / 1000 - parseInt(unixTimestamp) - hoursPassed * 3600) / 60
-		)
-
-		switch (true) {
-			case unixTimestamp === null ||
-				unixTimestamp == NaN ||
-				unixTimestamp === undefined:
-				return 'error'
-
-			case hoursPassed > 1:
-				return `${hoursPassed} hrs ${minutesPassed} mins`
-			case hoursPassed == 1:
-				return `${hoursPassed} hr ${minutesPassed} mins`
-
-			case minutesPassed > 1:
-				return `${minutesPassed} mins`
-			case minutesPassed == 1:
-				return `${minutesPassed} min`
-			case minutesPassed == 0:
-				return `<1 min`
-		}
 	}
 
 	const dateFormat = (unixTimestamp) => {
@@ -125,16 +98,34 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 	}
 
 	const handleClick = (data) => {
-		console.log(data)
-		chrome.tabs.create({
-			url: `https://etherscan.io/tx/${data.hash}`,
-			selected: false,
-		})
+		if (platformId == 'ethereum') {
+			chrome.tabs.create({
+				url: `https://etherscan.io/tx/${data.hash}`,
+				selected: false,
+			})
+		} else if (platformId == 'binance-smart-chain') {
+			chrome.tabs.create({
+				url: `https://bscscan.com/tx/${data.hash}`,
+				selected: false,
+			})
+		} else if (platformId == 'polygon-pos') {
+			chrome.tabs.create({
+				url: `https://polygonscan.com/tx/${data.hash}`,
+				selected: false,
+			})
+		} else if (platformId == 'fantom') {
+			chrome.tabs.create({
+				url: `https://ftmscan.com/tx/${data.hash}`,
+				selected: false,
+			})
+		}
 	}
 
 	return (
 		<div id="onchain-txs-field">
-			<div id="onchain-txs-field-subtitle">Past 200 txs in $ (Eth)</div>
+			<div id="onchain-txs-field-subtitle">
+				Past 200 txs in $ {platformTicker}
+			</div>
 			<ResponsiveContainer width="100%" height="100%">
 				<BarChart
 					width={500}
@@ -167,29 +158,11 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 						fill="#ff8b4f"
 						onClick={(event) => handleClick(event)}
 					/>
-					{/* <Bar dataKey="value" stroke="#ff8b4f" /> */}
+
 					<ReferenceLine y={0} stroke="#000" />
 					<Brush dataKey="date" height={6} stroke="#ff8b4f" />
 				</BarChart>
 			</ResponsiveContainer>
-
-			{/* <div className="dex-trades-values">
-				<div>From</div>
-				<div>To</div>
-				<div>Amount</div>
-				<div>Value</div>
-				<div>Age</div>
-			</div>
-
-			{tokenTxData?.length > 0 &&
-				tokenTxData.map((txData, index) => (
-					<div className="dex-trades-values" key={index}>
-						<div>{txData.from}</div>
-						<div>{amountFormatter(txData.amount)}</div>
-						<div>{`$${amountFormatter(txData.value)}`}</div>
-						<div>{txData.age}</div>
-					</div>
-				))} */}
 		</div>
 	)
 }

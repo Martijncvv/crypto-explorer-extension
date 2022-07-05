@@ -4,7 +4,7 @@ import {
 	TrendingCoinList,
 	IPriceData,
 } from '../models/ICoinInfo'
-import ITokenEthTxs from '../models/ITokenEthTxs'
+import ITokenTxs from '../models/ITokenTxs'
 
 const COINGECKO_COINS_LIST_API = 'https://api.coingecko.com/api/v3/coins/list'
 
@@ -61,14 +61,64 @@ export async function fetchPriceHistoryData(
 
 export async function fetchEthContractTxs(
 	contractAddress: string
-): Promise<ITokenEthTxs> {
+): Promise<ITokenTxs> {
 	const res = await fetch(
 		'https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=' +
 			contractAddress +
 			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
 	)
 	if (!res.ok) {
-		throw new Error(`Fetch error, WOO DeX Trade info}`)
+		throw new Error(`Fetch error, Eth token txs info}`)
+	}
+
+	const data = await res.json()
+
+	return data
+}
+export async function fetchBscContractTxs(
+	contractAddress: string
+): Promise<ITokenTxs> {
+	const res = await fetch(
+		'https://api.bscscan.com/api?module=account&action=tokentx&contractaddress=' +
+			contractAddress +
+			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
+	)
+	if (!res.ok) {
+		throw new Error(`Fetch error, Bsc token txs info}`)
+	}
+
+	const data = await res.json()
+
+	return data
+}
+
+export async function fetchPolyContractTxs(
+	contractAddress: string
+): Promise<ITokenTxs> {
+	const res = await fetch(
+		'https://api.polygonscan.com/api?module=account&action=tokentx&contractaddress=' +
+			contractAddress +
+			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
+	)
+	if (!res.ok) {
+		throw new Error(`Fetch error, Polygon token txs info}`)
+	}
+
+	const data = await res.json()
+
+	return data
+}
+
+export async function fetchFtmContractTxs(
+	contractAddress: string
+): Promise<ITokenTxs> {
+	const res = await fetch(
+		'https://api.ftmscan.com/api?module=account&action=tokentx&contractaddress=' +
+			contractAddress +
+			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
+	)
+	if (!res.ok) {
+		throw new Error(`Fetch error, Ftm token txs info}`)
 	}
 
 	const data = await res.json()
