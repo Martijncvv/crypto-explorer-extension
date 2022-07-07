@@ -47,7 +47,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#footer-field {\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tfont-size: 10px;\n}\n\n#coingecko_footer_icon {\n\theight: 10px;\n}\n\np {\n\tmargin: 8px 0;\n}\n", "",{"version":3,"sources":["webpack://./src/components/FooterField/FooterField.css"],"names":[],"mappings":"AAAA;CACC,aAAa;CACb,uBAAuB;CACvB,mBAAmB;;CAEnB,eAAe;AAChB;;AAEA;CACC,YAAY;AACb;;AAEA;CACC,aAAa;AACd","sourcesContent":["#footer-field {\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tfont-size: 10px;\n}\n\n#coingecko_footer_icon {\n\theight: 10px;\n}\n\np {\n\tmargin: 8px 0;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#footer-field {\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tfont-size: 10px;\n}\n\n#coingecko_footer_icon {\n\theight: 10px;\n\tmargin: 0 4px;\n}\n#etherscan_footer_icon {\n\theight: 10px;\n}\n\np {\n\tmargin: 8px 0;\n}\n", "",{"version":3,"sources":["webpack://./src/components/FooterField/FooterField.css"],"names":[],"mappings":"AAAA;CACC,aAAa;CACb,uBAAuB;CACvB,mBAAmB;;CAEnB,eAAe;AAChB;;AAEA;CACC,YAAY;CACZ,aAAa;AACd;AACA;CACC,YAAY;AACb;;AAEA;CACC,aAAa;AACd","sourcesContent":["#footer-field {\n\tdisplay: flex;\n\tjustify-content: center;\n\talign-items: center;\n\n\tfont-size: 10px;\n}\n\n#coingecko_footer_icon {\n\theight: 10px;\n\tmargin: 0 4px;\n}\n#etherscan_footer_icon {\n\theight: 10px;\n}\n\np {\n\tmargin: 8px 0;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -622,13 +622,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const CoinGeckoIcon = __webpack_require__(/*! ../../static/images/Coingecko_Icon_Circle_Color.png */ "./src/static/images/Coingecko_Icon_Circle_Color.png");
+const EtherscanIcon = __webpack_require__(/*! ../../static/images/Etherscan_logo_circle.png */ "./src/static/images/Etherscan_logo_circle.png");
 const FooterField = ({}) => {
     return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "footer-field" },
-        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null,
-            "Powered by CoinGecko API",
-            ' ',
-            react__WEBPACK_IMPORTED_MODULE_1__.createElement("img", { id: "coingecko_footer_icon", src: CoinGeckoIcon }),
-            ' ')));
+        react__WEBPACK_IMPORTED_MODULE_1__.createElement("p", null, "Powered by CoinGecko & Etherscan API")));
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (FooterField);
 
@@ -1792,6 +1789,16 @@ module.exports = __webpack_require__.p + "23a707f9446937e08db0.png";
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 module.exports = __webpack_require__.p + "d501345674f683c76b1d.png";
+
+/***/ }),
+
+/***/ "./src/static/images/Etherscan_logo_circle.png":
+/*!*****************************************************!*\
+  !*** ./src/static/images/Etherscan_logo_circle.png ***!
+  \*****************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "dab39d73699d49468b92.png";
 
 /***/ }),
 

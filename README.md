@@ -13,6 +13,7 @@ A Google Chrome extension which displays information about a cryptocurrency in a
 
 I would like to thank CoinGecko for providing real-time cryptocurrency data at no cost;
 [CoinGecko-API](https://www.coingecko.com/en/api).
+[Etherscan-API](https://docs.etherscan.io/).
 
 # Previews
 
