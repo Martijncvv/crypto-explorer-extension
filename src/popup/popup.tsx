@@ -57,6 +57,7 @@ const App: React.FC<{}> = () => {
 		'fantom',
 		'cronos',
 		'avalanche',
+		'celo',
 	]
 
 	const [coinData, setCoinData] = useState<CoinData>({

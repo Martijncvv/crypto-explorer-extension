@@ -14,12 +14,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "fetchTrendingCoins": () => (/* binding */ fetchTrendingCoins),
 /* harmony export */   "fetchCoinInfo": () => (/* binding */ fetchCoinInfo),
 /* harmony export */   "fetchPriceHistoryData": () => (/* binding */ fetchPriceHistoryData),
-/* harmony export */   "fetchEthContractTxs": () => (/* binding */ fetchEthContractTxs),
-/* harmony export */   "fetchBscContractTxs": () => (/* binding */ fetchBscContractTxs),
-/* harmony export */   "fetchPolyContractTxs": () => (/* binding */ fetchPolyContractTxs),
-/* harmony export */   "fetchFtmContractTxs": () => (/* binding */ fetchFtmContractTxs),
-/* harmony export */   "fetchCroContractTxs": () => (/* binding */ fetchCroContractTxs),
-/* harmony export */   "fetchAvaxContractTxs": () => (/* binding */ fetchAvaxContractTxs)
+/* harmony export */   "fetchTokenTxs": () => (/* binding */ fetchTokenTxs)
 /* harmony export */ });
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -71,73 +66,17 @@ function fetchPriceHistoryData(coinId, quote, chartRange) {
         return priceData;
     });
 }
-function fetchEthContractTxs(contractAddress) {
+function fetchTokenTxs(domainName, contractAddress, txAmount) {
     return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch('https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=' +
+        const res = yield fetch('https://api.' +
+            domainName +
+            '/api?module=account&action=tokentx&contractaddress=' +
             contractAddress +
-            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
+            '&page=1&offset=' +
+            txAmount +
+            '&startblock=0&endblock=99999999&sort=desc');
         if (!res.ok) {
             throw new Error(`Fetch error, Eth token txs info}`);
-        }
-        const data = yield res.json();
-        return data;
-    });
-}
-function fetchBscContractTxs(contractAddress) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch('https://api.bscscan.com/api?module=account&action=tokentx&contractaddress=' +
-            contractAddress +
-            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
-        if (!res.ok) {
-            throw new Error(`Fetch error, Bsc token txs info}`);
-        }
-        const data = yield res.json();
-        return data;
-    });
-}
-function fetchPolyContractTxs(contractAddress) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch('https://api.polygonscan.com/api?module=account&action=tokentx&contractaddress=' +
-            contractAddress +
-            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
-        if (!res.ok) {
-            throw new Error(`Fetch error, Polygon token txs info}`);
-        }
-        const data = yield res.json();
-        return data;
-    });
-}
-function fetchFtmContractTxs(contractAddress) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch('https://api.ftmscan.com/api?module=account&action=tokentx&contractaddress=' +
-            contractAddress +
-            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
-        if (!res.ok) {
-            throw new Error(`Fetch error, Ftm token txs info}`);
-        }
-        const data = yield res.json();
-        return data;
-    });
-}
-function fetchCroContractTxs(contractAddress) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch('https://api.cronoscan.com/api?module=account&action=tokentx&contractaddress=' +
-            contractAddress +
-            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
-        if (!res.ok) {
-            throw new Error(`Fetch error, Cronos token txs info}`);
-        }
-        const data = yield res.json();
-        return data;
-    });
-}
-function fetchAvaxContractTxs(contractAddress) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch('https://api.snowtrace.io/api?module=account&action=tokentx&contractaddress=' +
-            contractAddress +
-            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
-        if (!res.ok) {
-            throw new Error(`Fetch error, Avax token txs info}`);
         }
         const data = yield res.json();
         return data;

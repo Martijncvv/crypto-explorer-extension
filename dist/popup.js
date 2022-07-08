@@ -1144,45 +1144,59 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 const OnchainTxsField = ({ contractAddress, tokenPrice, platformId, }) => {
     const [chartData, setChartData] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)([{}]);
     const [platformTicker, setPlatformTicker] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('(Eth)');
-    const [platformExplorerUrl, setPlatformExplorerUrl] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('https://etherscan.io/tx/');
+    const [domainName, setDomainName] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)('etherscan.io');
+    const [txsAmount, setTxsAmount] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(200);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         getTxData();
     }, [contractAddress, platformId]);
     function getTxData() {
         return __awaiter(this, void 0, void 0, function* () {
+            let domain = 'etherscan.io';
             setPlatformTicker('Loading..');
             let priceData = [{}];
             let tokenTxData;
+            console.log('yes');
             switch (platformId) {
                 case 'ethereum':
-                    setPlatformExplorerUrl('https://etherscan.io/tx/');
-                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchEthContractTxs)(contractAddress);
+                    setDomainName(domain);
+                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchTokenTxs)(domain, contractAddress, txsAmount);
                     setPlatformTicker('(Eth)');
                     break;
                 case 'binance-smart-chain':
-                    setPlatformExplorerUrl('https://bscscan.com/tx/');
-                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchBscContractTxs)(contractAddress);
+                    domain = 'bscscan.com';
+                    setDomainName(domain);
+                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchTokenTxs)(domain, contractAddress, txsAmount);
                     setPlatformTicker('(Bsc)');
                     break;
                 case 'polygon-pos':
-                    setPlatformExplorerUrl('https://polygonscan.com/tx/');
-                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchPolyContractTxs)(contractAddress);
+                    domain = 'polygonscan.com';
+                    setDomainName(domain);
+                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchTokenTxs)(domain, contractAddress, txsAmount);
                     setPlatformTicker('(Poly)');
                     break;
                 case 'fantom':
-                    setPlatformExplorerUrl('https://ftmscan.com/tx/');
-                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchFtmContractTxs)(contractAddress);
+                    domain = 'ftmscan.com';
+                    setDomainName(domain);
+                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchTokenTxs)(domain, contractAddress, txsAmount);
                     setPlatformTicker('(Ftm)');
                     break;
                 case 'cronos':
-                    setPlatformExplorerUrl('https://cronoscan.com/tx/');
-                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchCroContractTxs)(contractAddress);
+                    domain = 'cronoscan.com';
+                    setDomainName(domain);
+                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchTokenTxs)(domain, contractAddress, txsAmount);
                     setPlatformTicker('(Cro)');
                     break;
                 case 'avalanche':
-                    setPlatformExplorerUrl('https://snowtrace.io/tx/');
-                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchAvaxContractTxs)(contractAddress);
+                    domain = 'snowtrace.io';
+                    setDomainName(domain);
+                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchTokenTxs)(domain, contractAddress, txsAmount);
                     setPlatformTicker('(Avax)');
+                    break;
+                case 'celo':
+                    domain = 'celoscan.io';
+                    setDomainName(domain);
+                    tokenTxData = yield (0,_utils_api__WEBPACK_IMPORTED_MODULE_2__.fetchTokenTxs)(domain, contractAddress, txsAmount);
+                    setPlatformTicker('(Celo)');
                     break;
             }
             tokenTxData.result.forEach((tx) => {
@@ -1209,7 +1223,7 @@ const OnchainTxsField = ({ contractAddress, tokenPrice, platformId, }) => {
     };
     const handleClick = (data) => {
         chrome.tabs.create({
-            url: platformExplorerUrl + data.hash,
+            url: 'https://' + domainName + '/tx/' + data.hash,
             selected: false,
         });
     };
@@ -1419,6 +1433,7 @@ const App = () => {
         'fantom',
         'cronos',
         'avalanche',
+        'celo',
     ];
     const [coinData, setCoinData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
         name: '',
@@ -1574,12 +1589,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "fetchTrendingCoins": () => (/* binding */ fetchTrendingCoins),
 /* harmony export */   "fetchCoinInfo": () => (/* binding */ fetchCoinInfo),
 /* harmony export */   "fetchPriceHistoryData": () => (/* binding */ fetchPriceHistoryData),
-/* harmony export */   "fetchEthContractTxs": () => (/* binding */ fetchEthContractTxs),
-/* harmony export */   "fetchBscContractTxs": () => (/* binding */ fetchBscContractTxs),
-/* harmony export */   "fetchPolyContractTxs": () => (/* binding */ fetchPolyContractTxs),
-/* harmony export */   "fetchFtmContractTxs": () => (/* binding */ fetchFtmContractTxs),
-/* harmony export */   "fetchCroContractTxs": () => (/* binding */ fetchCroContractTxs),
-/* harmony export */   "fetchAvaxContractTxs": () => (/* binding */ fetchAvaxContractTxs)
+/* harmony export */   "fetchTokenTxs": () => (/* binding */ fetchTokenTxs)
 /* harmony export */ });
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
@@ -1631,73 +1641,17 @@ function fetchPriceHistoryData(coinId, quote, chartRange) {
         return priceData;
     });
 }
-function fetchEthContractTxs(contractAddress) {
+function fetchTokenTxs(domainName, contractAddress, txAmount) {
     return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch('https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=' +
+        const res = yield fetch('https://api.' +
+            domainName +
+            '/api?module=account&action=tokentx&contractaddress=' +
             contractAddress +
-            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
+            '&page=1&offset=' +
+            txAmount +
+            '&startblock=0&endblock=99999999&sort=desc');
         if (!res.ok) {
             throw new Error(`Fetch error, Eth token txs info}`);
-        }
-        const data = yield res.json();
-        return data;
-    });
-}
-function fetchBscContractTxs(contractAddress) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch('https://api.bscscan.com/api?module=account&action=tokentx&contractaddress=' +
-            contractAddress +
-            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
-        if (!res.ok) {
-            throw new Error(`Fetch error, Bsc token txs info}`);
-        }
-        const data = yield res.json();
-        return data;
-    });
-}
-function fetchPolyContractTxs(contractAddress) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch('https://api.polygonscan.com/api?module=account&action=tokentx&contractaddress=' +
-            contractAddress +
-            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
-        if (!res.ok) {
-            throw new Error(`Fetch error, Polygon token txs info}`);
-        }
-        const data = yield res.json();
-        return data;
-    });
-}
-function fetchFtmContractTxs(contractAddress) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch('https://api.ftmscan.com/api?module=account&action=tokentx&contractaddress=' +
-            contractAddress +
-            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
-        if (!res.ok) {
-            throw new Error(`Fetch error, Ftm token txs info}`);
-        }
-        const data = yield res.json();
-        return data;
-    });
-}
-function fetchCroContractTxs(contractAddress) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch('https://api.cronoscan.com/api?module=account&action=tokentx&contractaddress=' +
-            contractAddress +
-            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
-        if (!res.ok) {
-            throw new Error(`Fetch error, Cronos token txs info}`);
-        }
-        const data = yield res.json();
-        return data;
-    });
-}
-function fetchAvaxContractTxs(contractAddress) {
-    return __awaiter(this, void 0, void 0, function* () {
-        const res = yield fetch('https://api.snowtrace.io/api?module=account&action=tokentx&contractaddress=' +
-            contractAddress +
-            '&page=1&offset=200&startblock=0&endblock=99999999&sort=desc');
-        if (!res.ok) {
-            throw new Error(`Fetch error, Avax token txs info}`);
         }
         const data = yield res.json();
         return data;

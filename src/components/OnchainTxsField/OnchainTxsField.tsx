@@ -1,13 +1,6 @@
 import './OnchainTxsField.css'
 import React, { useState, useEffect, PureComponent } from 'react'
-import {
-	fetchEthContractTxs,
-	fetchBscContractTxs,
-	fetchPolyContractTxs,
-	fetchFtmContractTxs,
-	fetchCroContractTxs,
-	fetchAvaxContractTxs,
-} from '../../utils/api'
+import { fetchTokenTxs } from '../../utils/api'
 import ITokenTxs from '../../models/ITokenTxs'
 
 import {
@@ -45,50 +38,61 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 }) => {
 	const [chartData, setChartData] = useState<any>([{}])
 	const [platformTicker, setPlatformTicker] = useState<string>('(Eth)')
-	const [platformExplorerUrl, setPlatformExplorerUrl] = useState<string>(
-		'https://etherscan.io/tx/'
-	)
+	const [domainName, setDomainName] = useState<string>('etherscan.io')
+	const [txsAmount, setTxsAmount] = useState<number>(200)
 
 	useEffect(() => {
 		getTxData()
 	}, [contractAddress, platformId])
 
 	async function getTxData() {
+		let domain: string = 'etherscan.io'
 		setPlatformTicker('Loading..')
 
 		let priceData = [{}]
 		let tokenTxData: ITokenTxs
-
+		console.log('yes')
 		switch (platformId) {
 			case 'ethereum':
-				setPlatformExplorerUrl('https://etherscan.io/tx/')
-				tokenTxData = await fetchEthContractTxs(contractAddress)
+				setDomainName(domain)
+				tokenTxData = await fetchTokenTxs(domain, contractAddress, txsAmount)
 				setPlatformTicker('(Eth)')
 				break
 			case 'binance-smart-chain':
-				setPlatformExplorerUrl('https://bscscan.com/tx/')
-				tokenTxData = await fetchBscContractTxs(contractAddress)
+				domain = 'bscscan.com'
+				setDomainName(domain)
+				tokenTxData = await fetchTokenTxs(domain, contractAddress, txsAmount)
 				setPlatformTicker('(Bsc)')
 				break
 			case 'polygon-pos':
-				setPlatformExplorerUrl('https://polygonscan.com/tx/')
-				tokenTxData = await fetchPolyContractTxs(contractAddress)
+				domain = 'polygonscan.com'
+				setDomainName(domain)
+				tokenTxData = await fetchTokenTxs(domain, contractAddress, txsAmount)
 				setPlatformTicker('(Poly)')
 				break
 			case 'fantom':
-				setPlatformExplorerUrl('https://ftmscan.com/tx/')
-				tokenTxData = await fetchFtmContractTxs(contractAddress)
+				domain = 'ftmscan.com'
+				setDomainName(domain)
+				tokenTxData = await fetchTokenTxs(domain, contractAddress, txsAmount)
 				setPlatformTicker('(Ftm)')
 				break
 			case 'cronos':
-				setPlatformExplorerUrl('https://cronoscan.com/tx/')
-				tokenTxData = await fetchCroContractTxs(contractAddress)
+				domain = 'cronoscan.com'
+				setDomainName(domain)
+				tokenTxData = await fetchTokenTxs(domain, contractAddress, txsAmount)
 				setPlatformTicker('(Cro)')
 				break
 			case 'avalanche':
-				setPlatformExplorerUrl('https://snowtrace.io/tx/')
-				tokenTxData = await fetchAvaxContractTxs(contractAddress)
+				domain = 'snowtrace.io'
+				setDomainName(domain)
+				tokenTxData = await fetchTokenTxs(domain, contractAddress, txsAmount)
 				setPlatformTicker('(Avax)')
+				break
+			case 'celo':
+				domain = 'celoscan.io'
+				setDomainName(domain)
+				tokenTxData = await fetchTokenTxs(domain, contractAddress, txsAmount)
+				setPlatformTicker('(Celo)')
 				break
 		}
 
@@ -123,7 +127,7 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 
 	const handleClick = (data) => {
 		chrome.tabs.create({
-			url: platformExplorerUrl + data.hash,
+			url: 'https://' + domainName + '/tx/' + data.hash,
 			selected: false,
 		})
 	}

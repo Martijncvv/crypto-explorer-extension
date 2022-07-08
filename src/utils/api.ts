@@ -59,100 +59,22 @@ export async function fetchPriceHistoryData(
 	return priceData
 }
 
-export async function fetchEthContractTxs(
-	contractAddress: string
+export async function fetchTokenTxs(
+	domainName: string,
+	contractAddress: string,
+	txAmount: number
 ): Promise<ITokenTxs> {
 	const res = await fetch(
-		'https://api.etherscan.io/api?module=account&action=tokentx&contractaddress=' +
+		'https://api.' +
+			domainName +
+			'/api?module=account&action=tokentx&contractaddress=' +
 			contractAddress +
-			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
+			'&page=1&offset=' +
+			txAmount +
+			'&startblock=0&endblock=99999999&sort=desc'
 	)
 	if (!res.ok) {
 		throw new Error(`Fetch error, Eth token txs info}`)
-	}
-
-	const data = await res.json()
-
-	return data
-}
-export async function fetchBscContractTxs(
-	contractAddress: string
-): Promise<ITokenTxs> {
-	const res = await fetch(
-		'https://api.bscscan.com/api?module=account&action=tokentx&contractaddress=' +
-			contractAddress +
-			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
-	)
-	if (!res.ok) {
-		throw new Error(`Fetch error, Bsc token txs info}`)
-	}
-
-	const data = await res.json()
-
-	return data
-}
-
-export async function fetchPolyContractTxs(
-	contractAddress: string
-): Promise<ITokenTxs> {
-	const res = await fetch(
-		'https://api.polygonscan.com/api?module=account&action=tokentx&contractaddress=' +
-			contractAddress +
-			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
-	)
-	if (!res.ok) {
-		throw new Error(`Fetch error, Polygon token txs info}`)
-	}
-
-	const data = await res.json()
-
-	return data
-}
-
-export async function fetchFtmContractTxs(
-	contractAddress: string
-): Promise<ITokenTxs> {
-	const res = await fetch(
-		'https://api.ftmscan.com/api?module=account&action=tokentx&contractaddress=' +
-			contractAddress +
-			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
-	)
-	if (!res.ok) {
-		throw new Error(`Fetch error, Ftm token txs info}`)
-	}
-
-	const data = await res.json()
-
-	return data
-}
-
-export async function fetchCroContractTxs(
-	contractAddress: string
-): Promise<ITokenTxs> {
-	const res = await fetch(
-		'https://api.cronoscan.com/api?module=account&action=tokentx&contractaddress=' +
-			contractAddress +
-			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
-	)
-	if (!res.ok) {
-		throw new Error(`Fetch error, Cronos token txs info}`)
-	}
-
-	const data = await res.json()
-
-	return data
-}
-
-export async function fetchAvaxContractTxs(
-	contractAddress: string
-): Promise<ITokenTxs> {
-	const res = await fetch(
-		'https://api.snowtrace.io/api?module=account&action=tokentx&contractaddress=' +
-			contractAddress +
-			'&page=1&offset=200&startblock=0&endblock=99999999&sort=desc'
-	)
-	if (!res.ok) {
-		throw new Error(`Fetch error, Avax token txs info}`)
 	}
 
 	const data = await res.json()
