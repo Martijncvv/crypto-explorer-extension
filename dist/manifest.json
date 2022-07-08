@@ -1,7 +1,7 @@
 {
 	"name": "Crypto Explorer",
 	"description": "Display information about a coin, check the top searched coins of CoinGecko in the last 24 hours and compare their market caps.",
-	"version": "1.2.2",
+	"version": "1.2.3",
 	"manifest_version": 3,
 	"icons": {
 		"16": "images/CryptoExplorer_logo_128.png",

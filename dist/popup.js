@@ -203,7 +203,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_cssWithMappingToString_js__WEBPACK_IMPORTED_MODULE_0___default()));
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "#onchain-txs-field {\n\tmargin: 24px 16px 0;\n\tpadding-right: 20px;\n\theight: 125px;\n\twidth: 100%;\n\t/* background-color: rgba(255, 0, 0, 0.314); */\n}\n\n#onchain-txs-field-title {\n\tmargin: 4px 0 0 0;\n\tpadding: 0 0 2px 0;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\t/* background-color: rgba(0, 255, 13, 0.314); */\n}\n\n#onchain-txs-field-subtitle {\n\tfont-weight: 400;\n\tcolor: rgb(100, 100, 100);\n\tmargin: 0 0 3px;\n}\n\n.dex-trades-values {\n\tdisplay: flex;\n\tjustify-content: space-between;\n\n\tpadding: 10px 12px 6px;\n}\n", "",{"version":3,"sources":["webpack://./src/components/OnchainTxsField/OnchainTxsField.css"],"names":[],"mappings":"AAAA;CACC,mBAAmB;CACnB,mBAAmB;CACnB,aAAa;CACb,WAAW;CACX,8CAA8C;AAC/C;;AAEA;CACC,iBAAiB;CACjB,kBAAkB;CAClB,eAAe;CACf,gBAAgB;CAChB,+CAA+C;AAChD;;AAEA;CACC,gBAAgB;CAChB,yBAAyB;CACzB,eAAe;AAChB;;AAEA;CACC,aAAa;CACb,8BAA8B;;CAE9B,sBAAsB;AACvB","sourcesContent":["#onchain-txs-field {\n\tmargin: 24px 16px 0;\n\tpadding-right: 20px;\n\theight: 125px;\n\twidth: 100%;\n\t/* background-color: rgba(255, 0, 0, 0.314); */\n}\n\n#onchain-txs-field-title {\n\tmargin: 4px 0 0 0;\n\tpadding: 0 0 2px 0;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\t/* background-color: rgba(0, 255, 13, 0.314); */\n}\n\n#onchain-txs-field-subtitle {\n\tfont-weight: 400;\n\tcolor: rgb(100, 100, 100);\n\tmargin: 0 0 3px;\n}\n\n.dex-trades-values {\n\tdisplay: flex;\n\tjustify-content: space-between;\n\n\tpadding: 10px 12px 6px;\n}\n"],"sourceRoot":""}]);
+___CSS_LOADER_EXPORT___.push([module.id, "#onchain-txs-field {\n\tmargin: 24px 16px 0;\n\tpadding-right: 20px;\n\theight: 125px;\n\twidth: 100%;\n\t/* background-color: rgba(255, 0, 0, 0.314); */\n}\n\n#onchain-txs-field-title {\n\tmargin: 4px 0 0 0;\n\tpadding: 0 0 2px 0;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\t/* background-color: rgba(0, 255, 13, 0.314); */\n}\n\n#onchain-txs-field-subtitle {\n\tfont-weight: 400;\n\tcolor: rgb(100, 100, 100);\n\tmargin: 0 0 3px;\n}\n\n.txs-amount-button {\n\tpadding: 1px 4px;\n\tmargin: 0 4px 0 4px;\n\tbackground: none;\n\tborder: 1px solid rgba(100, 100, 100, 0.1);\n\tborder-radius: 5px;\n\tcursor: pointer;\n\n\tcolor: rgba(100, 100, 100);\n\tfont-weight: 500;\n\tfont-size: 12px;\n}\n\n.dex-trades-values {\n\tdisplay: flex;\n\tjustify-content: space-between;\n\n\tpadding: 10px 12px 6px;\n}\n", "",{"version":3,"sources":["webpack://./src/components/OnchainTxsField/OnchainTxsField.css"],"names":[],"mappings":"AAAA;CACC,mBAAmB;CACnB,mBAAmB;CACnB,aAAa;CACb,WAAW;CACX,8CAA8C;AAC/C;;AAEA;CACC,iBAAiB;CACjB,kBAAkB;CAClB,eAAe;CACf,gBAAgB;CAChB,+CAA+C;AAChD;;AAEA;CACC,gBAAgB;CAChB,yBAAyB;CACzB,eAAe;AAChB;;AAEA;CACC,gBAAgB;CAChB,mBAAmB;CACnB,gBAAgB;CAChB,0CAA0C;CAC1C,kBAAkB;CAClB,eAAe;;CAEf,0BAA0B;CAC1B,gBAAgB;CAChB,eAAe;AAChB;;AAEA;CACC,aAAa;CACb,8BAA8B;;CAE9B,sBAAsB;AACvB","sourcesContent":["#onchain-txs-field {\n\tmargin: 24px 16px 0;\n\tpadding-right: 20px;\n\theight: 125px;\n\twidth: 100%;\n\t/* background-color: rgba(255, 0, 0, 0.314); */\n}\n\n#onchain-txs-field-title {\n\tmargin: 4px 0 0 0;\n\tpadding: 0 0 2px 0;\n\tfont-size: 14px;\n\tfont-weight: 650;\n\t/* background-color: rgba(0, 255, 13, 0.314); */\n}\n\n#onchain-txs-field-subtitle {\n\tfont-weight: 400;\n\tcolor: rgb(100, 100, 100);\n\tmargin: 0 0 3px;\n}\n\n.txs-amount-button {\n\tpadding: 1px 4px;\n\tmargin: 0 4px 0 4px;\n\tbackground: none;\n\tborder: 1px solid rgba(100, 100, 100, 0.1);\n\tborder-radius: 5px;\n\tcursor: pointer;\n\n\tcolor: rgba(100, 100, 100);\n\tfont-weight: 500;\n\tfont-size: 12px;\n}\n\n.dex-trades-values {\n\tdisplay: flex;\n\tjustify-content: space-between;\n\n\tpadding: 10px 12px 6px;\n}\n"],"sourceRoot":""}]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -1148,14 +1148,13 @@ const OnchainTxsField = ({ contractAddress, tokenPrice, platformId, }) => {
     const [txsAmount, setTxsAmount] = (0,react__WEBPACK_IMPORTED_MODULE_1__.useState)(200);
     (0,react__WEBPACK_IMPORTED_MODULE_1__.useEffect)(() => {
         getTxData();
-    }, [contractAddress, platformId]);
+    }, [contractAddress, platformId, txsAmount]);
     function getTxData() {
         return __awaiter(this, void 0, void 0, function* () {
             let domain = 'etherscan.io';
             setPlatformTicker('Loading..');
             let priceData = [{}];
             let tokenTxData;
-            console.log('yes');
             switch (platformId) {
                 case 'ethereum':
                     setDomainName(domain);
@@ -1199,6 +1198,8 @@ const OnchainTxsField = ({ contractAddress, tokenPrice, platformId, }) => {
                     setPlatformTicker('(Celo)');
                     break;
             }
+            console.log('tokenTxData');
+            console.log(tokenTxData);
             tokenTxData.result.forEach((tx) => {
                 priceData.unshift({
                     date: dateFormat(tx.timeStamp),
@@ -1219,9 +1220,10 @@ const OnchainTxsField = ({ contractAddress, tokenPrice, platformId, }) => {
             .toLocaleString('en-US', { month: 'long' })
             .substring(0, 3);
         // let seconds = '0' + dateObject.getSeconds()
-        return `${hours}:${minutes.substr(-2)}`;
+        // return `${hours}:${minutes.substr(-2)} ${day} ${month}`
+        return `${hours}:${minutes.substr(-2)} ${day} ${month} `;
     };
-    const handleClick = (data) => {
+    const handleBarClick = (data) => {
         chrome.tabs.create({
             url: 'https://' + domainName + '/tx/' + data.hash,
             selected: false,
@@ -1229,7 +1231,17 @@ const OnchainTxsField = ({ contractAddress, tokenPrice, platformId, }) => {
     };
     return (react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "onchain-txs-field" }, chartData.length > 0 && (react__WEBPACK_IMPORTED_MODULE_1__.createElement(react__WEBPACK_IMPORTED_MODULE_1__.Fragment, null,
         react__WEBPACK_IMPORTED_MODULE_1__.createElement("div", { id: "onchain-txs-field-subtitle" },
-            "Past 200 txs in $ ",
+            "Past",
+            ' ',
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { className: "txs-amount-button", style: {
+                    color: txsAmount == 200 ? 'rgba(255, 139, 79, 1)' : undefined,
+                }, onClick: () => setTxsAmount(200) }, "200"),
+            ' ',
+            "/",
+            react__WEBPACK_IMPORTED_MODULE_1__.createElement("button", { className: "txs-amount-button", style: {
+                    color: txsAmount == 1000 ? 'rgba(255, 139, 79, 1)' : undefined,
+                }, onClick: () => setTxsAmount(1000) }, "1000"),
+            "txs in $ ",
             platformTicker),
         react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_3__.ResponsiveContainer, { width: "100%", height: "100%" },
             react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_4__.BarChart, { width: 500, height: 300, data: chartData, margin: {
@@ -1238,10 +1250,10 @@ const OnchainTxsField = ({ contractAddress, tokenPrice, platformId, }) => {
                     left: 0,
                     bottom: 16,
                 }, style: { cursor: 'pointer' } },
-                react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_5__.XAxis, { dataKey: "date", interval: "preserveStartEnd", padding: { right: 10 } }),
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_5__.XAxis, { dataKey: "date", interval: "preserveEnd", padding: { right: 10 } }),
                 react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_6__.YAxis, { scale: "linear", mirror: true, interval: "preserveStartEnd", type: "number", domain: ['auto', (dataMax) => Math.round(dataMax * 1.1)] }),
                 react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_7__.Tooltip, null),
-                react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_8__.Bar, { dataKey: "$", fill: "#ff8b4f", onClick: (event) => handleClick(event) }),
+                react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_8__.Bar, { dataKey: "$", fill: "#ff8b4f", onClick: (event) => handleBarClick(event) }),
                 react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_9__.ReferenceLine, { y: 0, stroke: "#000" }),
                 react__WEBPACK_IMPORTED_MODULE_1__.createElement(recharts__WEBPACK_IMPORTED_MODULE_10__.Brush, { dataKey: "date", height: 6, stroke: "#ff8b4f" })))))));
 };

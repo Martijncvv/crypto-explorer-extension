@@ -43,7 +43,7 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 
 	useEffect(() => {
 		getTxData()
-	}, [contractAddress, platformId])
+	}, [contractAddress, platformId, txsAmount])
 
 	async function getTxData() {
 		let domain: string = 'etherscan.io'
@@ -51,7 +51,7 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 
 		let priceData = [{}]
 		let tokenTxData: ITokenTxs
-		console.log('yes')
+
 		switch (platformId) {
 			case 'ethereum':
 				setDomainName(domain)
@@ -95,7 +95,8 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 				setPlatformTicker('(Celo)')
 				break
 		}
-
+		console.log('tokenTxData')
+		console.log(tokenTxData)
 		tokenTxData.result.forEach((tx) => {
 			priceData.unshift({
 				date: dateFormat(tx.timeStamp),
@@ -121,11 +122,11 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 			.toLocaleString('en-US', { month: 'long' })
 			.substring(0, 3)
 		// let seconds = '0' + dateObject.getSeconds()
-
-		return `${hours}:${minutes.substr(-2)}`
+		// return `${hours}:${minutes.substr(-2)} ${day} ${month}`
+		return `${hours}:${minutes.substr(-2)} ${day} ${month} `
 	}
 
-	const handleClick = (data) => {
+	const handleBarClick = (data) => {
 		chrome.tabs.create({
 			url: 'https://' + domainName + '/tx/' + data.hash,
 			selected: false,
@@ -137,7 +138,27 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 			{chartData.length > 0 && (
 				<>
 					<div id="onchain-txs-field-subtitle">
-						Past 200 txs in $ {platformTicker}
+						Past{' '}
+						<button
+							className="txs-amount-button"
+							style={{
+								color: txsAmount == 200 ? 'rgba(255, 139, 79, 1)' : undefined,
+							}}
+							onClick={() => setTxsAmount(200)}
+						>
+							200
+						</button>{' '}
+						/
+						<button
+							className="txs-amount-button"
+							style={{
+								color: txsAmount == 1000 ? 'rgba(255, 139, 79, 1)' : undefined,
+							}}
+							onClick={() => setTxsAmount(1000)}
+						>
+							1000
+						</button>
+						txs in $ {platformTicker}
 					</div>
 					<ResponsiveContainer width="100%" height="100%">
 						<BarChart
@@ -154,7 +175,7 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 						>
 							<XAxis
 								dataKey="date"
-								interval="preserveStartEnd"
+								interval="preserveEnd"
 								padding={{ right: 10 }}
 							/>
 							<YAxis
@@ -169,7 +190,7 @@ const OnchainTxsField: React.FC<OnchainTxsFieldProps> = ({
 							<Bar
 								dataKey="$"
 								fill="#ff8b4f"
-								onClick={(event) => handleClick(event)}
+								onClick={(event) => handleBarClick(event)}
 							/>
 
 							<ReferenceLine y={0} stroke="#000" />
