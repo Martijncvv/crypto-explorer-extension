@@ -3,7 +3,7 @@
 A Google Chrome extension which displays information about a cryptocurrency in a popup when the user selects a coin ticker (BTC/ ETH/ XYZ) and presses (mac)CTRL+SHIFT+U.
 
 - Use the search bar.
-- Display recent on-chain activity of ERC20 (Eth) and BEP20 (Bsc) tokens.
+- Display recent on-chain activity of Eth, Bsc, Poly, Ftm, Cro, Avax and Celo tokens.
 - Check the top trending coins of CoinGecko in the last 24 hours.
 - Compare Marketcap feature; What would the price of coin x be with the market cap of coin Y.
 
